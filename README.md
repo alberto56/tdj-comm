@@ -17,6 +17,7 @@
 * Une page à propos avec la mission, avec des données chiffrées (année de fondation, budget, arbres plantés)
 * Carousel des slides
 * Carte du monde et/ou carte de chaque pays
+* SEO
 
 ## Tâches
 
