@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Terre DesJeunes</title>
+
+        <!-- CSS FILES -->        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+
+
+    </head>
+    <style>
+        .like-icon, .dislike-icon {
+            cursor: pointer;
+            color: gray;
+        }
+    
+        .like-icon:hover, .dislike-icon:hover {
+            color: #007bff;
+        }
+    
+        .like-count, .dislike-count {
+            margin-left: 4px;
+            margin-right: 10px;
+        }
+    
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        img {
+            border-radius: 50%;
+        }
+        #countrySidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+#countryList img {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+}
+.list-group-item {
+    cursor: pointer;
+}
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+#countrySidebar ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#countrySidebar ul li:hover {
+    background-color: #e9ecef;
+}
+
+#countrySidebar ul li img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.comment-box {
+    margin-top: 15px;
+}
+
+    </style>
+    
+    <body id="section_1">
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-geo-alt me-2"></i>
+                            Boulevard; Montreal 20, 0150 Oslo, Norway
+                        </p>
+
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@company.com">
+                                info@terredesjeunes.org
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-youtube"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <span>
+                        Terre Desjeunes
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Causes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Volunteer</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link click-scroll dropdown-toggle" href="index.html" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="news.html">News Listing</a></li>
+
+                                <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Connexion</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+                <!-- Modal -->
+                <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="authModalLabel">Welcome Terre Des Jeunes</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs" id="authTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Connexion</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Inscription</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-3" id="authTabContent">
+                                    <!-- Connexion Form -->
+                                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="emailLogin" class="form-label">Adress Email</label>
+                                                <input type="email" class="form-control" id="emailLogin" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="passwordLogin" class="form-label">Mot de passe</label>
+                                                <input type="password" class="form-control" id="passwordLogin" required>
+                                            </div>
+                                            <button type="submit" class="btn custom-btn custom-border-btn btn w-100">Se connecter</button>
+                                        </form>
+                                    </div>
+                                    <!-- Inscription Form -->
+                                    <!-- Formulaire d'inscription professionnel -->
+                                    <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                                        <form>
+                                            <div class="row">
+                                                <!-- Nom Complet -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="fullName" class="form-label">Nom Complet</label>
+                                                    <input type="text" class="form-control" id="fullName" required>
+                                                </div>
+                                                <!-- Email -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="emailSignup" class="form-label">Adress Email</label>
+                                                    <input type="email" class="form-control" id="emailSignup" required>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <!-- Mot de passe -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="passwordSignup" class="form-label">Mot de passe</label>
+                                                    <input type="password" class="form-control" id="passwordSignup" required>
+                                                </div>
+                                                <!-- Confirmer le mot de passe -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="confirmPassword" class="form-label">Confirmer le mot de passe</label>
+                                                    <input type="password" class="form-control" id="confirmPassword" required>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <!-- Pays -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="country" class="form-label">Pays</label>
+                                                    <select class="form-select" id="country" required>
+                                                        <option value="" disabled selected>Choisissez votre pays</option>
+                                                        <option value="CD" data-flag="cd">Republic Dem Of Congo</option>
+                                                        <option value="BI" data-flag="bi">Burundi</option>
+                                                        <option value="US" data-flag="us">États-Unis</option>
+                                                        <option value="FR" data-flag="fr">France</option>
+                                                        <option value="NG" data-flag="ng">Nigeria</option>
+                                                        <option value="IN" data-flag="in">Inde</option>
+                                                        <option value="GB" data-flag="gb">Royaume-Uni</option>
+                                                        <option value="DE" data-flag="de">Allemagne</option>
+                                                        <!-- Ajoutez d'autres pays ici -->
+                                                    </select>
+                                                </div>
+                                                <!-- Antenne -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="antenna" class="form-label">Antenne TDJ</label>
+                                                    <input type="text" class="form-control" id="antenna" required>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row">
+                                                <!-- Fonction -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="role" class="form-label">Fonction au sein de TDJ</label>
+                                                    <input type="text" class="form-control" id="role" required>
+                                                </div>
+                                                <!-- Téléphone -->
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="phone" class="form-label">Numéro de téléphone</label>
+                                                    <input type="tel" class="form-control" id="phone" required>
+                                                </div>
+                                            </div>
+        
+                                            <button type="submit" class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
+                                        </form>
+                                    </div>
+        
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           <!-- main principal -->
+           <main class="container my-5">
+            <h2 class="text-center mb-4">Rapports Disponibles</h2>
+        
+            <!-- Boutons pour basculer entre les sections -->
+            <div class="text-center mb-4">
+                <button id="annualReportsBtn" class="btn btn-primary mx-2">Rapports Annuels</button>
+                <button id="monthlyReportsBtn" class="btn btn-secondary mx-2">Rapports Mensuels</button>
+            </div>
+        
+            <!-- Section des rapports annuels -->
+            <div id="annualReports" class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ajoutez d'autres rapports annuels ici -->
+            </div>
+            <div id="annualReports" class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres rapports annuels ici -->
+            </div>
+            <div id="annualReports" class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Annuel 2023</h5>
+                            <p class="card-text">Découvrez les actions menées tout au long de l'année 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/france.png" alt="France" title="France" style="width: 24px; height: 24px;"> France
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ajoutez d'autres rapports annuels ici -->
+            </div>
+        
+            <!-- Section des rapports mensuels (masquée par défaut) -->
+            <div id="monthlyReports" class="row d-none">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rapport Mensuel - Janvier 2023</h5>
+                            <p class="card-text">Découvrez les activités de janvier 2023.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span>
+                                    <img src="flags/burundi.png" alt="Burundi" title="Burundi" style="width: 24px; height: 24px;"> Burundi
+                                </span>
+                                <div>
+                                    <a href="#" class="btn btn-primary btn-sm me-2">Lire</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Télécharger</a>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                                    <span class="like-count">0</span>
+                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                                    <span class="dislike-count">0</span>
+                                </div>
+                                <div>
+                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    <i class="bi bi-share" title="Partager"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Ajoutez d'autres rapports mensuels ici -->
+            </div>
+        </main>
+        <!-- Test 2 -->
+
+
+        <!-- Teste desttt -->
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-3">
+                    <h5>Filtrer par pays</h5>
+                    <ul id="countryList" class="list-group"></ul>
+                </div>
+        
+                <!-- Rapports -->
+                <div class="col-md-9">
+                    <main id="reports" class="container my-5">
+                        <h2 class="text-center mb-4">Rapports Disponibles</h2>
+                        <div id="reportContainer" class="row">
+                            <!-- Rapports dynamiques ici -->
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="images/logo.png" class="logo img-fluid" alt="terredesjeunes">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+
+                            <a href="tel: 120-240-9600" class="site-footer-link">
+                                120-240-9600
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@terredesjeunes.org" class="site-footer-link">
+                                donate@terredesjeunes.org
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3">
+                            <i class="bi-geo-alt me-2"></i>
+                            Boulevard, Montreal 20, 0150 Oslo, Norway
+                        </p>
+
+                        <a href="#" class="custom-btn btn mt-3">Get Direction</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        
+                        
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-linkedin"></a>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+                <!-- Include Bootstrap JS files -->
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <!-- JAVASCRIPT FILES -->
+        <script>
+            // Basculer entre les rapports annuels et mensuels
+            document.getElementById('annualReportsBtn').addEventListener('click', function () {
+                document.getElementById('annualReports').classList.remove('d-none');
+                document.getElementById('monthlyReports').classList.add('d-none');
+                this.classList.add('btn-primary');
+                this.classList.remove('btn-secondary');
+                document.getElementById('monthlyReportsBtn').classList.add('btn-secondary');
+                document.getElementById('monthlyReportsBtn').classList.remove('btn-primary');
+            });
+        
+            document.getElementById('monthlyReportsBtn').addEventListener('click', function () {
+                document.getElementById('monthlyReports').classList.remove('d-none');
+                document.getElementById('annualReports').classList.add('d-none');
+                this.classList.add('btn-primary');
+                this.classList.remove('btn-secondary');
+                document.getElementById('annualReportsBtn').classList.add('btn-secondary');
+                document.getElementById('annualReportsBtn').classList.remove('btn-primary');
+            });
+        
+            // Gérer les likes et dislikes
+            document.querySelectorAll('.like-icon').forEach(icon => {
+                icon.addEventListener('click', function () {
+                    let likes = parseInt(this.getAttribute('data-likes')) + 1;
+                    this.setAttribute('data-likes', likes);
+                    this.nextElementSibling.textContent = likes;
+                });
+            });
+        
+            document.querySelectorAll('.dislike-icon').forEach(icon => {
+                icon.addEventListener('click', function () {
+                    let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
+                    this.setAttribute('data-dislikes', dislikes);
+                    this.nextElementSibling.textContent = dislikes;
+                });
+            });
+            // Récupération des pays et de leurs drapeaux depuis l'API
+    const countryAPI = 'https://restcountries.com/v3.1/all';
+    const countryList = document.getElementById('countryList');
+    const reportsContainer = document.getElementById('reportsContainer');
+
+    const reportsData = [
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Burundi' },
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Haiti' },
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Congo RDC' },
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Burkina Faso' },
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Mali' },
+        { title: 'Rapport Annuel 2023', description: 'Actions de l’année 2023', country: 'Côte d’Ivoire' }
+    ];
+
+    // Charger les pays dans la sidebar
+    fetch(countryAPI)
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach((country) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <img src="${country.flags.png}" alt="${country.name.common}">
+                    ${country.name.common}
+                `;
+                li.addEventListener('click', () => filterReportsByCountry(country.name.common));
+                countryList.appendChild(li);
+            });
+        });
+
+    // Filtrer les rapports par pays
+    function filterReportsByCountry(countryName) {
+        reportsContainer.innerHTML = '';
+        const filteredReports = reportsData.filter((report) => report.country === countryName);
+
+        if (filteredReports.length === 0) {
+            reportsContainer.innerHTML = `<p class="text-center">Aucun rapport disponible pour ${countryName}.</p>`;
+        } else {
+            filteredReports.forEach((report) => {
+                const card = createReportCard(report);
+                reportsContainer.appendChild(card);
+            });
+        }
+    }
+
+    // Générer les cartes de rapport
+    function createReportCard(report) {
+        const col = document.createElement('div');
+        col.className = 'col-md-4';
+        col.innerHTML = `
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${report.title}</h5>
+                    <p class="card-text">${report.description}</p>
+                    <button class="btn btn-primary btn-sm">Lire</button>
+                </div>
+                <div class="comment-box">
+                    <input type="text" placeholder="Ajouter un commentaire..." class="form-control">
+                </div>
+            </div>
+        `;
+        return col;
+    }
+
+    // Charger les rapports par défaut
+    reportsData.forEach((report) => {
+        const card = createReportCard(report);
+        reportsContainer.appendChild(card);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+    const countryListElement = document.getElementById("countryList");
+    const reportContainer = document.getElementById("reportContainer");
+
+    // Requête à l'API REST Countries
+    fetch("https://restcountries.com/v3.1/all")
+        .then(response => response.json())
+        .then(countries => {
+            // Trier les pays par nom
+            countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+            // Ajouter les pays dans la sidebar
+            countries.forEach(country => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("list-group-item");
+                listItem.innerHTML = `
+                    <img src="${country.flags.svg}" alt="${country.name.common} Flag" />
+                    ${country.name.common}
+                `;
+                listItem.addEventListener("click", () => {
+                    displayReportsForCountry(country.name.common);
+                });
+                countryListElement.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error("Erreur lors de la récupération des pays:", error));
+
+    // Exemple de rapports (remplacez par des données réelles)
+    const exampleReports = [
+        { country: "France", title: "Rapport Annuel France 2023", description: "Description du rapport France 2023" },
+        { country: "Burundi", title: "Rapport Annuel Burundi 2023", description: "Description du rapport Burundi 2023" },
+        { country: "Haiti", title: "Rapport Annuel Haïti 2023", description: "Description du rapport Haïti 2023" },
+    ];
+
+    // Afficher les rapports pour un pays
+    function displayReportsForCountry(country) {
+        reportContainer.innerHTML = ""; // Vider les rapports existants
+
+        const filteredReports = exampleReports.filter(report => report.country === country);
+        if (filteredReports.length > 0) {
+            filteredReports.forEach(report => {
+                const reportCard = document.createElement("div");
+                reportCard.classList.add("col-md-4");
+                reportCard.innerHTML = `
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">${report.title}</h5>
+                            <p class="card-text">${report.description}</p>
+                            <a href="#" class="btn btn-primary btn-sm">Lire</a>
+                        </div>
+                    </div>
+                `;
+                reportContainer.appendChild(reportCard);
+            });
+        } else {
+            reportContainer.innerHTML = `<p class="text-center">Aucun rapport disponible pour ${country}.</p>`;
+        }
+    }
+});
+
+        </script>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
+
+
+
