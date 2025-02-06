@@ -42,10 +42,11 @@
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #0d7e38;
+  --primary-color:                #029640;
   --secondary-color:              #5a6f80;
   --section-bg-color:             #f0f8ff;
-  --site-footer-bg-color:         #44525d;
+  /* --site-footer-bg-color:         #44525d; */
+  --site-footer-bg-color: #029640;
   --custom-btn-bg-color:          #597081;
   --custom-btn-bg-hover-color:    #5bc1ac;
   --dark-color:                   #000000;
@@ -294,8 +295,8 @@ strong {
 -----------------------------------------*/
 .avatar-image {
   border-radius: var(--border-radius-large);
-  width: 65px;
-  height: 65px;
+  width: 50spx;
+  height: 50px;
   object-fit: cover;
 }
 
@@ -369,7 +370,7 @@ strong {
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
@@ -1416,8 +1417,8 @@ blockquote::before {
   display: block;
   margin-right: 5px;
   text-align: center;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 28px;
   line-height: 38px;
 }
 
@@ -1734,7 +1735,7 @@ select.form-select option[data-flag]:before {
 }
 
 select.form-select option[data-flag="us"]:before {
-  background-image: url('../images/flags/us.svg');
+  background-image: url('https://cdn.jsdelivr.net/npm/flag-icon-css/flags/4x3/us.svg');
 }
 
 select.form-select option[data-flag="fr"]:before {
@@ -1756,10 +1757,13 @@ select.form-select option[data-flag="gb"]:before {
 select.form-select option[data-flag="de"]:before {
   background-image: url('https://cdn.jsdelivr.net/npm/flag-icon-css/flags/4x3/de.svg');
 }
+
+/* partenaires */
 .partner-logo {
-  max-width: 120px;
-  max-height: 80px;
+  max-width: 290px;
+  max-height: 170px;
   object-fit: contain;
+  padding: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -1771,12 +1775,14 @@ select.form-select option[data-flag="de"]:before {
   padding: 50px 0;
 }
 
+/* .slide up main */
 
 .slider {
+  align-items: center;
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  height: 200px;
+  max-width: 1400px;
+  height: 140px;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -1786,7 +1792,7 @@ select.form-select option[data-flag="de"]:before {
   display: flex;
   width: 300%; /* Trois slides */
   height: 100%;
-  animation: slide-animation 12s infinite linear;
+  animation: slide-animation 15s infinite linear;
 }
 
 .slide {
@@ -1796,8 +1802,8 @@ select.form-select option[data-flag="de"]:before {
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 1200px;
+  height: 160px;
   object-fit: cover;
 }
 
@@ -1849,5 +1855,81 @@ select.form-select option[data-flag="de"]:before {
   text-decoration: underline;
 }
 
+/* like systeme and rapport */
 
+.like-icon, .dislike-icon {
+  cursor: pointer;
+  color: gray;
+}
+
+.like-icon:hover, .dislike-icon:hover {
+  color: #007bff;
+}
+
+.like-count, .dislike-count {
+  margin-left: 4px;
+  margin-right: 10px;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* 
+img {
+  border-radius: 50%;
+} */
+#countrySidebar {
+width: 250px;
+background-color: #f8f9fa;
+position: fixed;
+height: 100vh;
+overflow-y: auto;
+}
+#countryList img {
+width: 24px;
+height: 16px;
+margin-right: 8px;
+}
+.list-group-item {
+cursor: pointer;
+}
+.list-group-item:hover {
+background-color: #f0f0f0;
+}
+
+#countrySidebar ul li {
+margin-bottom: 10px;
+cursor: pointer;
+display: flex;
+align-items: center;
+transition: background-color 0.3s;
+}
+
+#countrySidebar ul li:hover {
+background-color: #e9ecef;
+}
+
+#countrySidebar ul li img {
+margin-right: 10px;
+width: 24px;
+height: 24px;
+}
+
+.card {
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+transform: scale(1.05);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.comment-box {
+margin-top: 15px;
+}
 
