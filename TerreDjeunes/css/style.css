@@ -42,16 +42,17 @@
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #029640;
-  --secondary-color:              #5a6f80;
+  --primary-color:                #027933;
+   --secondary-color:             #F5FFFE;/*#5a6f80; */
+   --secondary-colors:            #202f3b;
   --section-bg-color:             #f0f8ff;
-  /* --site-footer-bg-color:         #44525d; */
-  --site-footer-bg-color: #029640;
-  --custom-btn-bg-color:          #597081;
-  --custom-btn-bg-hover-color:    #5bc1ac;
+  /* --site-footer-bg-color:         #027933; #F5FFFE */
+  --site-footer-bg-color:         #027933;
+   --custom-btn-bg-color:         /*#F5FFFE;*/ #597081; 
+  --custom-btn-bg-hover-color:    #027933;
   --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #e9eaeb;
+  --p-color:                      #070b14;
+  --border-color:                 #939597;
 
   --body-font-family:             'Metropolis', sans-serif;
 
@@ -109,7 +110,7 @@ h1 {
 }
 
 h2 {
-  color: var(--secondary-color);
+  color: var(--secondary-colors);
   font-size: var(--h2-font-size);
   letter-spacing: -2px;
 }
@@ -232,7 +233,7 @@ strong {
 }
 
 .progress-bar {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
 }
 
 
@@ -240,7 +241,7 @@ strong {
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
-  color: var(--secondary-color);
+  color: var(--secondary-colors);
 }
 
 
@@ -279,7 +280,7 @@ strong {
 .custom-text-box-icon {
   background: var(--section-bg-color);
   border-radius: var(--border-radius-large);
-  color: var(--secondary-color);
+  color: var(--secondary-colors);
   font-size: var(--h6-font-size);
   text-align: center;
   display: inline-block;
@@ -305,10 +306,10 @@ strong {
   CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
   border: 2px solid transparent;
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: var(--secondary-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-normal);
   line-height: normal;
@@ -362,7 +363,7 @@ strong {
 }
 
 .navbar-brand small {
-  color: var(--secondary-color);
+  color: var(--secondary-colors);
   display: block;
   font-size: 10px;
   line-height: normal;
@@ -569,8 +570,8 @@ strong {
 
 #hero-slide .carousel-caption {
   background: var(--white-color);
-  clip-path: polygon(100% 100%, 100% 150px, 0 100%);
-  color: var(--secondary-color);
+  clip-path: polygon(100% 100%, 100% 100px, 0 100%);
+  color: var(--secondary-colors);
   top: 1px;
   bottom: -1px;
   right: 0;
@@ -607,7 +608,7 @@ strong {
 
 .carousel-control-next-icon, 
 .carousel-control-prev-icon {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-colors);
   border-radius: var(--border-radius-large);
   background-size: 60% 60%;
   width: 80px;
@@ -692,7 +693,7 @@ strong {
 
 .counter-number,
 .counter-text {
-  color: var(--secondary-color);
+  color: var(--secondary-colors);
   display: block;
 }
 
@@ -709,7 +710,7 @@ strong {
   VOLUNTEER              
 -----------------------------------------*/
 .volunteer-section {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
   position: relative;
   overflow: hidden;
 }
@@ -719,10 +720,10 @@ strong {
   background: var(--primary-color);
   border-radius: 50%;
   position: absolute;
-  bottom: -110px;
-  right: -80px;
-  width: 350px;
-  height: 350px;
+  bottom: -310px;
+  right: -90px;
+  /* width: 250px;
+  height: 250px; */
 }
 
 .volunteer-form {
@@ -735,8 +736,8 @@ strong {
   border-radius: 100%;
   display: block;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -746,7 +747,7 @@ strong {
 }
 
 .volunteer-section .custom-block-body p {
-  line-height: 1.7;
+  line-height: 1.9;
 }
 
 
@@ -754,7 +755,7 @@ strong {
   DONATE              
 -----------------------------------------*/
 .donate-section {
-  background-image: url('../images/different-people-doing-volunteer-work.jpg');
+  background-image: url('../images/medium-shot-volunteers-with-clothing-donations.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -776,7 +777,7 @@ strong {
   NEWS         
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../images/news/close-up-volunteer-oganizing-stuff-donation.jpg');
+  background-image: url('../images/news/medium-shot-volunteers-with-clothing-donations.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -800,7 +801,7 @@ strong {
 }
 
 .news-category-block {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -873,7 +874,7 @@ blockquote::before {
 }
 
 .badge {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
   border-radius: var(--border-radius-medium);
   font-weight: var(--font-weight-normal);
   line-height: normal;
@@ -1065,6 +1066,7 @@ blockquote::before {
   background: var(--section-bg-color);
   border-radius: var(--border-radius-small);
   padding: 40px;
+  color: #000000;
 }
 
 .contact-info-wrap {
@@ -1097,7 +1099,7 @@ blockquote::before {
 
 .custom-form .form-control:hover,
 .custom-form .form-control:focus {
-  border-color: var(--secondary-color);
+  border-color: var(--secondary-colors);
 }
 
 .custom-form label {
@@ -1138,7 +1140,7 @@ blockquote::before {
 }
 
 .custom-form .input-group-text {
-  background: var(--secondary-color);
+  background: var(--secondary-colors);
   border: 0;
   color: var(--white-color);
 }
@@ -1176,7 +1178,7 @@ blockquote::before {
 
 .form-check-radio .form-check-input:hover,
 .form-check-radio .form-check-input:checked {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-colors);
   border-color: var(--white-color);
 }
 
@@ -1206,7 +1208,7 @@ blockquote::before {
   background: var(--custom-btn-bg-color);
   border: none;
   border-radius: var(--border-radius-large);
-  color: var(--white-color);
+  color: var(--secondary-colors);
   font-size: var(--p-font-size);
   font-weight: var(--font-weight-semibold);
   transition: all 0.3s;
@@ -1306,8 +1308,8 @@ blockquote::before {
 }
 
 .subscribe-form {
-  /* background: var(--section-bg-color); */
-  background-color: #0d7e38;
+  background: var(--section-bg-color); 
+  /* background-color: #0d7e38; */
   border-radius: var(--border-radius-small);
   padding: 30px;
 }
@@ -1336,7 +1338,7 @@ blockquote::before {
 }
 
 .site-footer-bottom {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-colors);
   position: relative;
   z-index: 2;
   margin-top: 70px;
@@ -1349,7 +1351,7 @@ blockquote::before {
 }
 
 .site-footer-bottom a:hover {
-	color: #FF6;
+	color: rgb(1, 8, 12);
 }
 
 .site-footer-link {
@@ -1617,7 +1619,7 @@ blockquote::before {
 
   .contact-info-wrap {
     padding-top: 0;
-    background-color:  #0d7e38;;
+    background-color: var(--secondary-color);
   }
 
   .site-footer {
