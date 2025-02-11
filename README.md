@@ -23,6 +23,14 @@
 
 * [Tableau de bord des tâches](https://github.com/users/alberto56/projects/16/views/1)
 
-## Site web GitHub Pages
+## Site web beta
+
+* <https://alberto56.github.io/tdj-comm/TerreDjeunes/>
+
+## Documentation
 
 * <https://alberto56.github.io/tdj-comm/>
+
+## GitHub
+
+* <https://github.com/alberto56/tdj-comm>
