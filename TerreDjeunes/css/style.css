@@ -1794,7 +1794,7 @@ select.form-select option[data-flag="de"]:before {
   display: flex;
   width: 300%; /* Trois slides */
   height: 100%;
-  animation: slide-animation 15s infinite linear;
+  animation: slide-animation 25s infinite linear;
 }
 
 .slide {
@@ -1814,7 +1814,7 @@ select.form-select option[data-flag="de"]:before {
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
+  color: #027933;
   font-size: 2rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -1826,9 +1826,9 @@ select.form-select option[data-flag="de"]:before {
 /* Animation pour le défilement */
 @keyframes slide-animation {
   0% { transform: translateX(0%); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
+  40% { transform: translateX(-100%); }
+  70% { transform: translateX(-200%); }
+  100% { transform: translateX(5%); }
 }
 .flag {
   width: 30px;
@@ -1850,7 +1850,8 @@ select.form-select option[data-flag="de"]:before {
   transform: translateY(-5px);
 }
 .read-more {
-  color: #007bff;
+  color: #027933;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
 }
 .read-more:hover {
@@ -1859,18 +1860,28 @@ select.form-select option[data-flag="de"]:before {
 
 /* like systeme and rapport */
 
-.like-icon, .dislike-icon {
+.like-icon {
   cursor: pointer;
-  color: gray;
+  color: #027933;
+}
+.dislike-icon{
+  cursor: pointer;
+  color: #f80814;
 }
 
 .like-icon:hover, .dislike-icon:hover {
-  color: #007bff;
+  color: #027933;
 }
 
-.like-count, .dislike-count {
+.like-count{
   margin-left: 4px;
   margin-right: 10px;
+  color: #027933;
+}
+.dislike-count {
+  margin-left: 4px;
+  margin-right: 10px;
+  color: #f80814;
 }
 
 .card {
@@ -1881,10 +1892,7 @@ select.form-select option[data-flag="de"]:before {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-/* 
-img {
-  border-radius: 50%;
-} */
+ 
 #countrySidebar {
 width: 250px;
 background-color: #f8f9fa;
