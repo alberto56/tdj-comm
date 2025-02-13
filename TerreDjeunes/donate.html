@@ -71,10 +71,15 @@
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
+                    <img src="images/logo/pro22.png" class="logo img-fluid swiper-wrapper" alt="" style="width: 40%; height: auto;">
+                    <!-- <span>Terre Des jeunes</span>  -->
+                </a>
+    
+                <!-- <a class="navbar-brand" href="index.html">
                     <span>
                         Terre Desjeunes
                     </span>
-                </a>
+                </a> -->
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -118,6 +123,12 @@
                         <li class="nav-item ms-3">
                             <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Connexion</a>
                         </li>
+                        <li class="nav-item ms-3">
+                            <select id="languageSwitcher" class="form-select">
+                                <option value="en" selected>En</option>
+                                <option value="fr">Fr</option>
+                            </select>
+                        </li>
                         
                     </ul>
                 </div>
@@ -128,7 +139,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="authModalLabel">Welcome Terre DesJeunes</h5>
+                                <h5 class="modal-title" id="authModalLabel">Welcome Terre Des Jeunes</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -382,11 +393,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
-                        <img src="images/logo.png" class="logo img-fluid" alt="">
+                        <img src="images/logo/LOGO 3.png" class="logo img-fluid" alt="">
+                        <p class="text-white section-padding ">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement 
+                            et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes. </p>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <h5 class="site-footer-title mb-3">Quick Links</h5>
+                        <h5 class="site-footer-title mb-3" style="color: antiquewhite;">Quick Links</h5>
 
                         <ul class="footer-menu">
                             <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
@@ -402,7 +415,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+                        <h5 class="site-footer-title mb-3" style="color: antiquewhite;">Contact Infomation</h5>
 
                         <p class="text-white d-flex mb-2">
                             <i class="bi-telephone me-2"></i>
@@ -471,6 +484,47 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/counter.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+            
+        const translations = {
+            en: {
+                home: "Home",
+                about: "About",
+                causes: "Causes",
+                volunteer: "Volunteer",
+                news: "News",
+                news_listing: "News Listing",
+                news_detail: "News Detail",
+                contact: "Contact",
+                donate: "Donate",
+                connexion: "Connexion"
+            },
+            fr: {
+                home: "Accueil",
+                about: "À propos",
+                causes: "Causes",
+                volunteer: "Bénévolat",
+                news: "Actualités",
+                news_listing: "Liste des actualités",
+                news_detail: "Détail des actualités",
+                contact: "Contact",
+                donate: "Faire un don",
+                connexion: "Connexion"
+            }
+        };
+
+        document.getElementById("languageSwitcher").addEventListener("change", function () {
+            const selectedLang = this.value;
+            document.querySelectorAll("[data-key]").forEach(element => {
+                const key = element.getAttribute("data-key");
+                if (translations[selectedLang] && translations[selectedLang][key]) {
+                    element.textContent = translations[selectedLang][key];
+                }
+            });
+        });
+
+
+        </script>
 
     </body>
 </html>
