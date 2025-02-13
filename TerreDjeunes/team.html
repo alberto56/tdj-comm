@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Équipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome pour les icônes -->
+    <style>
+ /* Icônes sociales */
+.social-icons i {
+    margin: 0 10px;
+    font-size: 1.8rem; /* Taille des icônes */
+    color: #333; /* Couleur par défaut des icônes */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
+}
+
+.social-icons i:hover {
+    color: #027933; /* Couleur au survol */
+    transform: scale(1.2); /* Agrandir l'icône au survol */
+}
+
+.social-icons a {
+    text-decoration: none; /* Supprimer la décoration des liens */
+}
+
+
+.social-icons i:hover {
+    color: #027933; /* Couleur bleue lors du survol */
+    transform: scale(1.2); /* Agrandir l'icône lors du survol */
+}
+
+.social-icons a {
+    text-decoration: none; /* Supprimer la décoration de texte pour les liens */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Notre Équipe</h2>
+        <div class="row g-4" id="team-members">
+            <!-- Les cartes seront générées ici -->
+        </div>
+    </div>
+
+    <!-- Modal pour afficher les détails d'un membre -->
+    <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modal-name"></h3>
+                    <p id="modal-role"></p>
+                    <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const teamMembers = [
+            { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée par la création de solutions logicielles innovantes." },
+            { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean se spécialise dans la conception d'expériences utilisateurs exceptionnelles." },
+            { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une scientifique pionnière dans le domaine de la physique nucléaire.", social:"facebook" },
+            { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques a une vaste expérience en gestion de projets et leadership." },
+            { name: "Elena Rossi", role: "Marketing", image: "https://via.placeholder.com/150", bio: "Elena est une experte en stratégie marketing digital et branding." },
+            { name: "David Cohen", role: "Développeur Backend", image: "https://via.placeholder.com/150", bio: "David est un développeur backend avec une grande expertise dans les systèmes distribués." },
+            { name: "Lucie Morel", role: "Chef de Projet", image: "https://via.placeholder.com/150", bio: "Lucie gère des projets complexes avec une organisation méticuleuse et une vision claire." },
+            { name: "Omar Sy", role: "Acteur", image: "https://via.placeholder.com/150", bio: "Omar est un acteur talentueux avec une carrière impressionnante dans le cinéma." },
+            { name: "Nina Dupuis", role: "Graphiste", image: "https://via.placeholder.com/150", bio: "Nina crée des visuels percutants qui communiquent efficacement les messages." },
+            { name: "Paul Girard", role: "Consultant", image: "https://via.placeholder.com/150", bio: "Paul aide les entreprises à améliorer leurs processus grâce à son expertise en stratégie." },
+            { name: "Emma Laurent", role: "HR", image: "https://via.placeholder.com/150", bio: "Emma se concentre sur la gestion des ressources humaines et le bien-être des employés." },
+            { name: "Hugo Bernard", role: "Développeur Frontend", image: "https://via.placeholder.com/150", bio: "Hugo est un développeur frontend passionné par l'optimisation de l'expérience utilisateur." },
+            { name: "Sophie Lambert", role: "Designer Produit", image: "https://via.placeholder.com/150", bio: "Sophie conçoit des produits qui combinent esthétique et fonctionnalité." },
+            { name: "Antoine Dubois", role: "DevOps", image: "https://via.placeholder.com/150", bio: "Antoine gère les infrastructures et automatise les processus pour améliorer la productivité." },
+            { name: "Charlotte Fournier", role: "Rédactrice", image: "https://via.placeholder.com/150", bio: "Charlotte crée du contenu qui capte l'attention et engage le public." }
+        ];
+
+        // Génération des cartes avec les icônes sociales
+const teamContainer = document.getElementById('team-members');
+teamContainer.innerHTML = teamMembers.map((member, social, index) => `
+    <div class="col-md-6 col-lg-4">
+        <div class="card mb-3" style="cursor: pointer;" onclick="showModal(${index})">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${member.image}" class="img-fluid rounded-start" alt="${member.name}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${member.name}</h5>
+                        <p class="card-text">${member.role}</p>
+                        <p class="card-text"><small class="text-muted">Dernière mise à jour il y a 3 minutes</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`).join('');
+
+
+        // Afficher la modale avec la biographie
+        function showModal(index) {
+            const member = teamMembers[index];
+            document.getElementById('modal-name').innerText = member.name;
+            document.getElementById('modal-role').innerText = member.role;
+            document.getElementById('modal-bio').innerText = member.bio;
+            const modal = new bootstrap.Modal(document.getElementById('memberModal'));
+            modal.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
