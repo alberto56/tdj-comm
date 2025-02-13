@@ -1943,3 +1943,22 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 margin-top: 15px;
 }
 
+
+/* icons de membres*/
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Optionnel: ajout d'une ombre douce */
+}
+
+.custom-btn .fas {
+  color: #000; /* Change la couleur de l'icône à noire ou à une autre couleur de votre choix */
+  font-size: 18px; /* Ajustez la taille de l'icône si nécessaire */
+}
+
