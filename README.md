@@ -25,7 +25,7 @@
 
 ## Site web beta
 
-* <https://alberto56.github.io/tdj-comm/TerreDjeunes/>
+* <https://alberto56.github.io/tdj-comm/>
 
 ## Documentation
 
