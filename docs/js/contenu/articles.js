@@ -15,7 +15,6 @@ class Articles extends Infos {
 
 
     response.forEach((node) => {
-      console.log(node);
       articles.push({
         title: node.title,
         description: node.excerpt,

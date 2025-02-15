@@ -1,4 +1,4 @@
-class Membres extends Infos {
+class Activites extends Infos {
   url() {
     // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
     return 'https://contenu.terredesjeunes.org/api/v1/activites.json';
