@@ -44,8 +44,6 @@ class Infos {
       }
     }
 
-    console.log('appending node');
-    console.log(template);
     $(this.selecteur()).append(template);
   }
 

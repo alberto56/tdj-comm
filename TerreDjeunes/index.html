@@ -1218,7 +1218,6 @@
 
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script>
         // API keys et URLs (remplacez par vos propres clés)
         const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
@@ -1243,35 +1242,8 @@
         const countryList = document.getElementById("countryList");
 
         // Charger les articles par défaut
-        function loadDefaultNews() {
-            const defaultArticles = [
-                {
-                    title: "Burundi : Une avancée économique remarquable",
-                    description: "Le Burundi connaît une croissance économique notable en 2024...",
-                    image: "images/news/462.jpg",
-                    url: "#"
-                },
-                {
-                    title: "Côte d'Ivoire : Nouvelles opportunités agricoles",
-                    description: "Les réformes agricoles continuent de transformer la Côte d'Ivoire...",
-                    image: "images/news/medium-shot-people-collecting-foodstuff.jpg",
-                    url: "#"
 
-                },
-                {
-                    title: "Ghana : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
-                    image: "images/news/medium-shot-volunteers-with-clothing-donations.jpg",
-                    url: "#"
-                }
-                ,
-                {
-                    title: "Mali : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
-                    image: "images/news/452.jpg",
-                    url: "#"
-                }
-            ];
+        function loadDefaultNews(defaultArticles) {
 
             defaultArticles.forEach(article => {
                 const newsBlock = document.createElement("div");
@@ -1367,7 +1339,6 @@
         }
 
         // Initialisation
-        loadDefaultNews();
         loadCountryFlags();
 
         // Gérer les likes et dislikes
@@ -1416,9 +1387,13 @@
     </script>
     <script src="js/contenu/infos.js"></script>
     <script src="js/contenu/membres.js"></script>
+    <script src="js/contenu/articles.js"></script>
     <script>
         $( document ).ready(function() {
             (new Membres()).init();
+            (new Articles()).populateArticles(function (news) {
+                loadDefaultNews(news);
+            });
         });
     </script>
 
