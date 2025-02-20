@@ -85,19 +85,19 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#top" data-key="home">Home</a>
+                                <a class="nav-link click-scroll" href="index.html" data-key="home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2" data-key="about">About</a>
+                                <a class="nav-link click-scroll" href="about.html" data-key="about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3" data-key="causes">Causes</a>
+                                <a class="nav-link click-scroll" href="index.html" data-key="causes">Causes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4" data-key="volunteer">Volunteer</a>
+                                <a class="nav-link click-scroll" href="index.html" data-key="volunteer">Volunteer</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                                <a class="nav-link click-scroll dropdown-toggle" href="index.html"
                                     id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false" data-key="news">News</a>
                                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
@@ -107,7 +107,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_6" data-key="contact">Contact</a>
+                                <a class="nav-link click-scroll" href="index.html" data-key="contact">Contact</a>
                             </li>
                             <li class="nav-item ms-3">
                                 <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"
@@ -358,8 +358,8 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/counter.js"></script>
         <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
@@ -373,10 +373,10 @@
     const reportContainer = document.getElementById("reportContainer");
 
     const exampleReports = [
-        { country: "France", title: "Rapport Annuel France 2023", description: "Description du rapport France 2023", link: "https://example.com/rapport-france.pdf" },
-        { country: "Burundi", title: "Rapport Annuel Burundi 2023", description: "Description du rapport Burundi 2023", link: "https://example.com/rapport-burundi.pdf" },
+        { country: "France", title: "Rapport Annuel France 2023", description: "Description du rapport France 2024", link: "https://example.com/rapport-france.pdf" },
+        { country: "Burundi", title: "Rapport Annuel Burundi 2023", description: "Description du rapport Burundi 2022", link: "https://example.com/rapport-burundi.pdf" },
         { country: "Haiti", title: "Rapport Annuel Haïti 2023", description: "Description du rapport Haïti 2023", link: "https://example.com/rapport-haiti.pdf" },
-        { country: "Congo RDC", title: "Rapport Annuel Congo RDC 2023", description: "Description du rapport Congo RDC 2023", link: "https://example.com/rapport-congo.pdf" }
+       
     ];
 
     fetch("https://restcountries.com/v3.1/all")
@@ -411,7 +411,7 @@
     }
 
     function displayReportsForCountry(country) {
-        reportContainer.innerHTML = "";
+        reportContainer.innerHTML = " ";
         const filteredReports = exampleReports.filter(report => report.country === country);
         
         if (filteredReports.length > 0) {
