@@ -1241,35 +1241,7 @@
         const countryList = document.getElementById("countryList");
 
         // Charger les articles par défaut
-        function loadDefaultNews() {
-            const defaultArticles = [
-                {
-                    title: "Burundi : Une avancée économique remarquable",
-                    description: "Le Burundi connaît une croissance économique notable en 2024...",
-                    image: "images/news/462.jpg",
-                    url: "news-detail.html"
-                },
-                {
-                    title: "Côte d'Ivoire : Nouvelles opportunités agricoles",
-                    description: "Les réformes agricoles continuent de transformer la Côte d'Ivoire...",
-                    image: "images/news/medium-shot-people-collecting-foodstuff.jpg",
-                    url: "news-detail.html"
-
-                },
-                {
-                    title: "Ghana : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
-                    image: "images/news/medium-shot-volunteers-with-clothing-donations.jpg",
-                    url: "news-detail.html"
-                }
-                ,
-                {
-                    title: "Mali : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
-                    image: "images/news/452.jpg",
-                    url: "news-detail.html"
-                }
-            ];
+        function loadDefaultNews(defaultArticles) {
 
             defaultArticles.forEach(article => {
                 const newsBlock = document.createElement("div");
