@@ -1393,6 +1393,7 @@
     <script>
         $( document ).ready(function() {
             (new Membres()).init();
+            (new Activites()).init();
             (new Articles()).populateArticles(function (news) {
                 loadDefaultNews(news);
             });
