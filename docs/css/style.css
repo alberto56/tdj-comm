@@ -1,41 +1,4 @@
-
-
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Light.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )
@@ -54,7 +17,7 @@
   --p-color:                      #070b14;
   --border-color:                 #939597;
 
-  --body-font-family:             'Metropolis', sans-serif;
+  --body-font-family:             'Open Sans', sans-serif;
 
   --h1-font-size:                 52px;
   --h2-font-size:                 46px;
