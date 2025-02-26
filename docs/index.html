@@ -8,8 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Terre DesJeunes</title>
-
+    <title>Terre Des Jeunes</title>
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +20,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <!-- CHARGEMENT DE JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link href="css/style.css" rel="stylesheet">
 
@@ -75,7 +75,7 @@
             </div>
         </div>
     </header>
-    <!-- nav  -->
+    <!-- nav dejaaa -->
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -122,12 +122,6 @@
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal"
                             data-bs-target="#authModal" data-key="connexion">Connexion</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <select id="languageSwitcher" class="form-select">
-                            <option value="en" selected>En</option>
-                            <option value="fr">Fr</option>
-                        </select>
                     </li>
                 </ul>
             </div>
@@ -259,61 +253,80 @@
 
                     <div class="col-lg-12 col-12 p-0">
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="images/slide/78.jpg"
-                                        class="carousel-image img-fluid" alt="...">
+                                        class="d-block w-100 carousel-image " alt="...">
 
-                                    <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1 class="text-center">CHAQUE GESTE COMPTE</h1>
+                                    <div class="">
+                                        <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
 
-                                        <p>UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                                        <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item active">
                                     <img src="images/slide/452.jpg"
-                                        class="carousel-image img-fluid" alt="...">
+                                        class="d-block w-100 carousel-image " alt="...">
+                                        <div class=" ">
+                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+    
+                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                                        </div>
 
-                                    <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1 class="text-center">CHAQUE GESTE COMPTE</h1>
-
-                                        <p>UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                    </div>
                                 </div>
                                 <div class="carousel-item active">
                                     <img src="images/slide/65.jpg"
-                                        class="carousel-image img-fluid" alt="...">
-
-                                    <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>CHAQUE GESTE COMPTE</h1>
-
-                                        <p>UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                    </div>
+                                        class="d-block w-100 carousel-image " alt="...">
+                                        <div class=" ">
+                                            <h5 class="text-center">CHAQUE GESTE COMPTE </h5>
+    
+                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                                        </div>
                                 </div>
 
                                 <div class="carousel-item">
                                     <img src="images/slide/img1.jpg"
-                                        class="carousel-image img-fluid" alt="...">
-
-                                    <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>Non-profit</h1>
-
-                                        <p>UN AUTRE EST POSSIBLE, NOUS LE CREONS</p>
-                                    </div>
+                                        class="d-block w-100 carousel-image " alt="...">
+                                        <div class="">
+                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+    
+                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                                        </div>
                                 </div>
 
-                                <div class="carousel-item">
+                                <div class="carousel-item"data-bs-interval="2000">
                                     <img src="images/slide/462.jpg"
-                                        class="carousel-image img-fluid" alt="...">
-
-                                    <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1> Arbres Plantés</h1>
-
-                                        <p>UN AUTRE EST POSSIBLE, NOUS LE CREONS</p>
-                                    </div>
+                                        class="d-block w-100 carousel-image " alt="...">
+                                        <div class="">
+                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+    
+                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                                        </div>
                                 </div>
-                            </div>
-
+                            </div> 
+                            <!-- <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                  <img src="images/slide/1.jpg" class="d-block w-100 carousel-image" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Arbres Plantés</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                  <img src="images/slide/462.jpg" class="d-block w-100 carousel-image" alt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="..." class="d-block w-100 carousel-imagealt="...">
+                                  <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                  </div>
+                                </div>
+                              </div> -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
                                 data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -379,18 +392,18 @@
                                         <div class="d-flex">
                                             <span class="counter-number" data-from="1" data-to="1985"
                                                 data-speed="1000"></span>
-                                            <span class="counter-number-text"></span>
+                                            <span class="counter-number-text">1985</span>
                                         </div>
-
+    
                                         <span class="counter-text">Fondations en Italy</span>
                                     </div>
                                     <div class="counter-thumb">
                                         <div class="d-flex">
                                             <span class="counter-number" data-from="1" data-to="1110"
-                                                data-speed="1000"></span>
+                                                data-speed="1000"> 142080</span>
                                             <span class="counter-number-text">M</span>
                                         </div>
-
+    
                                         <span class="counter-text">Arbres plantes</span>
                                     </div>
                                 <!--<div class="counter-thumb mt-4">
@@ -399,7 +412,7 @@
                                                 data-speed="1000"></span>
                                             <span class="counter-number-text">M</span>
                                         </div>
-
+    
                                         <span class="counter-text">Arbres Plantés</span>
                                     </div> -->
                                 </div>
@@ -513,12 +526,12 @@
                     <div class="col-lg-7 col-12 ms-auto">
                         <h2 class="mb-0"> Trouvez nos rapport d'activités</h2>
                         <a href="rapports.html" class="custom-btn btn smoothscroll">Fouilles les Rapport</a>
-                        <a href="#" class="me-6">Rapports annuels</a>
+                        <a href="rapports.html" class="me-6">Rapports annuels</a>
                     </div>
 
                     <div class="col-lg-5 col-12 ms-auto">
                         <h2 class="mb-0">Make an impact.</h2>
-                        <a href="#" class="me-4">Make a donation</a>
+                        <a href="donate.html" class="me-4">Make a donation</a>
                         <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a>
                     </div>
 
@@ -887,7 +900,7 @@
                                     class="img-fluid avatar-image" alt="">
 
                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                    <p class="mb-0">Severina Sandra</p>
+                                    <p class="mb-0">Lydie Sandra</p>
                                     <p class="mb-0"><strong>HR & Office Manager</strong></p>
                                 </div>
                             </div>
@@ -925,7 +938,7 @@
                         <form class="custom-form contact-form" action="#" method="post" role="form">
                             <h2>Contact form</h2>
 
-                            <p class="mb-4">Or, you can just send an email:
+                            <p class="mb-4">Or, Tu peux juste envoyer un email:
                                 <a href="#">info@terredesjeunes.org</a>
                             </p>
                             <div class="row">
@@ -946,7 +959,7 @@
                             <textarea name="message" rows="5" class="form-control" id="message"
                                 placeholder="What can we help you?"></textarea>
 
-                            <button type="submit" class="form-control">Send Message</button>
+                            <button type="submit" class="form-control">Envoyer Message</button>
                         </form>
                     </div>
 
@@ -1015,15 +1028,14 @@
                     <h5 class="site-footer-title mb-3  text-white" >Quick Links</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Our Story</a></li>
+                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Notre Historque</a></li>
 
-                        <li class="footer-menu-item"><a href="news.html" class="footer-menu-link">Newsroom</a></li>
+                        <li class="footer-menu-item"><a href="news.html" class="footer-menu-link">Actualités</a></li>
 
                         <li class="footer-menu-item"><a href="" class="footer-menu-link">Causes</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Dévenir un Bénévolat</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
                     </ul>
                 </div>
 
@@ -1102,46 +1114,6 @@
     <script src="js/custom.js"></script>
 
     <script>
-        const translations = {
-            en: {
-                home: "Home",
-                about: "About",
-                causes: "Causes",
-                volunteer: "Volunteer",
-                news: "News",
-                news_listing: "News Listing",
-                news_detail: "News Detail",
-                contact: "Contact",
-                donate: "Donate",
-                connexion: "Connexion"
-            },
-            fr: {
-                home: "Accueil",
-                about: "À propos",
-                causes: "Causes",
-                volunteer: "Bénévolat",
-                news: "Actualités",
-                news_listing: "Liste des actualités",
-                news_detail: "Détail des actualités",
-                contact: "Contact",
-                donate: "Faire un don",
-                connexion: "Connexion"
-            }
-        };
-
-        document.getElementById("languageSwitcher").addEventListener("change", function () {
-            const selectedLang = this.value;
-            document.querySelectorAll("[data-key]").forEach(element => {
-                const key = element.getAttribute("data-key");
-                if (translations[selectedLang] && translations[selectedLang][key]) {
-                    element.textContent = translations[selectedLang][key];
-                }
-            });
-        });
-
-
-    </script>
-    <script>
 
         // API keys et URLs (remplacez par vos propres clés)
         const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
@@ -1192,7 +1164,6 @@
                                     <span class="dislike-count">0</span>
                                 </div>
                                 <div>
-                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
                                     <i class="bi bi-share" title="Partager"></i>
                                 </div>
                             </div>
@@ -1253,7 +1224,7 @@
                 <img src="${article.urlToImage || 'C:\Users\rodri\OneDrive\Documents\GitHub\TerreDjeunes\images\news'}" alt="${article.title}" class="img-fluid">
                 <h4>${article.title}</h4>
                 <p>${article.description || "Pas de description disponible."}</p>
-                <a href="${article.url}" class="btn btn-primary read-more" target="_blank">Read More</a>
+                <a href="${article.url}" class="btn btn-primary read-more" target="_blank"><b>Lire plus</b></a>
             </div>
         `;
                 newsContainer.appendChild(newsBlock);
