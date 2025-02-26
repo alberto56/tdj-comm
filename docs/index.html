@@ -1118,44 +1118,52 @@
         const recentNewsContainer = document.getElementById("recentNewsContainer");
         const countryList = document.getElementById("countryList");
 
-        // Charger les articles par défaut
-        function loadDefaultNews(defaultArticles) {
+    
+        // Fonction pour tronquer le texte à 10 mots
+function truncateText(text, wordLimit) {
+    const words = text.split(" ");
+    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
+}
 
-            defaultArticles.forEach(article => {
-                const newsBlock = document.createElement("div");
-                newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
-                newsBlock.innerHTML = `
+// Charger les articles par défaut
+function loadDefaultNews(defaultArticles) {
+    const newsContainer = document.getElementById("news-container"); // Assurez-vous que cet ID existe
+    newsContainer.innerHTML = ""; // Réinitialisation avant ajout
 
-                 <div class="card shadow-sm mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">${article.title}</h5>
-                            <img src="${article.image}" alt="${article.title}" class="img-fluid" style:"height:30px">
-                            <p class="card-text">${article.description}.</p>
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <div>
-                                    <a href="${article.url}" class=" read-more">Read More</a>
-                                    <div class="card shadow-sm mb-4">
+    defaultArticles.forEach(article => {
+        const newsBlock = document.createElement("div");
+        newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
 
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
-                                    <span class="like-count">0</span>
-                                    <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
-                                    <span class="dislike-count">0</span>
-                                </div>
-                                <div>
-                                    <i class="bi bi-share" title="Partager"></i>
-                                </div>
-                            </div>
-                        </div>
+        newsBlock.innerHTML = `
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${article.title}</h5>
+                    <img src="${article.image}" alt="${article.title}" class="img-fluid" style="height:150px; width:100%; object-fit:cover;">
+                    
+                    <p class="card-text mt-2">${truncateText(article.description, 10)}</p> 
+                    
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <a href="${article.url}" class="read-more">Lire plus</a>
                     </div>
 
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
+                            <span class="like-count">0</span>
+                            <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
+                            <span class="dislike-count">0</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-share" title="Partager"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
-                newsContainer.appendChild(newsBlock);
-            });
-        }
+
+        newsContainer.appendChild(newsBlock);
+    });
+}
 
         // Charger les drapeaux des pays et afficher la liste des pays
         async function loadCountryFlags() {
@@ -1217,22 +1225,23 @@
         loadDefaultNews();
         loadCountryFlags();
 
+        
         // Gérer les likes et dislikes
         document.querySelectorAll('.like-icon').forEach(icon => {
-            icon.addEventListener('click', function () {
-                let likes = parseInt(this.getAttribute('data-likes')) + 1;
-                this.setAttribute('data-likes', likes);
-                this.nextElementSibling.textContent = likes;
-            });
-        });
+                    icon.addEventListener('click', function () {
+                        let likes = parseInt(this.getAttribute('data-likes')) + 1;
+                        this.setAttribute('data-likes', likes);
+                        this.nextElementSibling.textContent = likes;
+                    });
+                });
 
-        document.querySelectorAll('.dislike-icon').forEach(icon => {
-            icon.addEventListener('click', function () {
-                let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
-                this.setAttribute('data-dislikes', dislikes);
-                this.nextElementSibling.textContent = dislikes;
-            });
-        });
+                document.querySelectorAll('.dislike-icon').forEach(icon => {
+                    icon.addEventListener('click', function () {
+                        let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
+                        this.setAttribute('data-dislikes', dislikes);
+                        this.nextElementSibling.textContent = dislikes;
+                    });
+                });
     </script>
     </script>
 <!-- sections team -->
