@@ -585,8 +585,8 @@
                             </button>
                         </form>
 
-                        <!-- Filtrer par pays -->
-                        <div class="category-block d-flex flex-column">
+                         <!-- Filtrer par pays -->
+                         <div class="category-block d-flex flex-column">
                             <h5>Filtrer par pays</h5>
                             <ul id="countryList" class="list-group"></ul>
                         </div>
@@ -1097,6 +1097,7 @@
 
     <script>
 
+        
         // API keys et URLs (remplacez par vos propres clés)
         const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
         const API_KEY = "VOTRE_API_NEWS_API";
@@ -1111,14 +1112,12 @@
             { name: "Mali" },
             { name: "Burkina Faso" },
             { name: "Niger" },
-
+           
         ];
 
         const newsContainer = document.getElementById("newsContainer");
         const recentNewsContainer = document.getElementById("recentNewsContainer");
         const countryList = document.getElementById("countryList");
-
-    
  // Fonction pour tronquer le texte à 10 mots
 function truncateText(text, wordLimit) {
     const words = text.split(" ");
