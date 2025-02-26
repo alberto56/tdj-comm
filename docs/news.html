@@ -71,52 +71,55 @@
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="">
-                    <!-- <b class="" style="color: black;">Terre Des jeunes </p> -->
+                    <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="" >
+                    <!-- <span>Terre Des jeunes</span>  -->
                 </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+    
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                            <a class="nav-link click-scroll" href="#top" data-key="home">Accueil</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">About</a>
+                            <a class="nav-link click-scroll" href="#section_2" data-key="about">À propos</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Causes</a>
+                            <a class="nav-link click-scroll" href="#section_3" data-key="causes">Causes</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Volunteer</a>
+                            <a class="nav-link click-scroll" href="#section_4" data-key="volunteer">Bénévolat</a>
                         </li>
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
-                             role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-
+                            <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                                id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-key="news">Actualités</a>
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="news.html">News Listing</a></li>
+                                <li><a class="dropdown-item" href="news.html" data-key="news_listing">Liste des actualités</a></li>
+                                </li>
                             </ul>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Contact</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
+                            <a class="nav-link click-scroll" href="#section_6" data-key="contact">Contact</a>
                         </li>
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Connexion</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"
+                                data-key="donate">Faire un Don</a>
                         </li>
-                        
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal"
+                                data-bs-target="#authModal" data-key="connexion">Connexion</a>
+                        </li>
+                        <!-- <li class="nav-item ms-3">
+                            <select id="languageSwitcher" class="form-select">
+                                <option value="en" selected>En</option>
+                                <option value="fr">Fr</option>
+                            </select>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -240,7 +243,7 @@
                     <div class="row">
 
                         <div class="col-lg-12 col-12">
-                            <h1 class="text-white">News Listing</h1>
+                            <h1 class="text-white">Détail des actualités</h1>
                         </div>
 
                     </div>
@@ -278,8 +281,11 @@
                         </div>
 
                         <h5 class="mt-5 mb-3">Actualités récentes</h5>
-                        <div class="col-lg-4 col-12 mx-auto">
-                            <div id="recentNewsContainer" class="row"></div>
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <div id="recentNewsContainer" class="row">
+                                
+                            </div>
+
                         </div>
 
                     </div>
@@ -287,7 +293,7 @@
             </div>
         </section>
         </main>
-
+ <!-- footer -->
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
@@ -387,7 +393,7 @@
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
 
-    <script>
+    <!-- <script>
         const translations = {
             en: {
                 home: "Home",
@@ -426,7 +432,7 @@
         });
 
 
-    </script>
+    </script> -->
   
     <script>
         // API keys et URLs (remplacez par vos propres clés)
@@ -456,27 +462,27 @@
             const defaultArticles = [
                 {
                     title: "Burundi : Une avancée économique remarquable",
-                    description: "Le Burundi connaît une croissance économique notable en 2024...",
+                    description: "",
                     image: "images/news/462.jpg",
                     url: "news-detail.html"
                 },
                 {
                     title: "Côte d'Ivoire : Nouvelles opportunités agricoles",
-                    description: "Les réformes agricoles continuent de transformer la Côte d'Ivoire...",
+                    description: "",
                     image: "images/news/medium-shot-people-collecting-foodstuff.jpg",
                     url: "news-detail.html"
 
                 },
                 {
                     title: "Ghana : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
+                    description: "",
                     image: "images/news/medium-shot-volunteers-with-clothing-donations.jpg",
                     url: "news-detail.html"
                 }
                 ,
                 {
                     title: "Mali : Développement durable et énergie verte",
-                    description: "Le Ghana investit massivement dans les énergies renouvelables...",
+                    description: "",
                     image: "images/news/452.jpg",
                     url: "news-detail.html"
                 }
@@ -507,7 +513,7 @@
                                     <span class="dislike-count">0</span>
                                 </div>
                                 <div>
-                                    <i class="bi bi-chat-dots" title="Commentaire"></i>
+                                    
                                     <i class="bi bi-share" title="Partager"></i>
                                 </div>
                             </div>

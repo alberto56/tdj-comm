@@ -15,6 +15,8 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/style.css" rel="stylesheet">
+        <!-- CHARGEMENT DE JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     </head>
@@ -68,57 +70,62 @@
             </div>
         </header>
             <!-- nav  -->
-    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="" >
-                <!-- <span>Terre Des jeunes</span>  -->
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="causes">Causes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="volunteer">Volunteer</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="news.html"
-                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-key="home">News</a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="news.html" data-key="news_listing">News Listing</a></li>
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="" >
+                        <!-- <span>Terre Des jeunes</span>  -->
+                    </a>
+        
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html" data-key="home">Accueil</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html" data-key="about">À propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html" data-key="causes">Causes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html" data-key="volunteer">Bénévolat</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                                    id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" data-key="news">Actualités</a>
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="news.html" data-key="news_listing">Liste des actualités</a></li>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html" data-key="contact">Contact</a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"
+                                    data-key="donate">Faire un Don</a>
+                            </li>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#authModal" data-key="connexion">Connexion</a>
+                            </li>
+                            <!-- <li class="nav-item ms-3">
+                                <select id="languageSwitcher" class="form-select">
+                                    <option value="en" selected>En</option>
+                                    <option value="fr">Fr</option>
+                                </select>
+                            </li> -->
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="contact">Contact</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"
-                            data-key="donate">Donate</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal"
-                            data-bs-target="#authModal" data-key="connexion">Connexion</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
+                    </div>
+                </div>
+            </nav>
 
 
     <!-- Modal -->
@@ -245,7 +252,7 @@
                     <div class="row">
 
                         <div class="col-lg-12 col-12">
-                            <h1 class="text-white">News Detail</h1>
+                            <h1 class="text-white">Actualités</h1>
                         </div>
 
                     </div>

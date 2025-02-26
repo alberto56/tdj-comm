@@ -21,6 +21,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- CHARGEMENT DE JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <link href="css/style.css" rel="stylesheet">
@@ -79,8 +81,8 @@
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="">
-                <!-- <span>Terre Des jeunes</span> -->
+                <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="" >
+                <!-- <span>Terre Des jeunes</span>  -->
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -91,24 +93,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="">Home</a>
+                        <a class="nav-link click-scroll" href="#top" data-key="home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll active" href="about.html" data-key="home">About</a>
+                        <a class="nav-link click-scroll" href="#section_2" data-key="about">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="causes">Causes</a>
+                        <a class="nav-link click-scroll" href="#section_3" data-key="causes">Causes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.html" data-key="volunteer">Volunteer</a>
+                        <a class="nav-link click-scroll" href="#section_4" data-key="volunteer">Bénévolat</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="index.html"
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
                             id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-key="news">News</a>
+                            aria-expanded="false" data-key="news">Actualités</a>
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="news.html" data-key="news_listing">News Listing</a></li>
-                    
+                            <li><a class="dropdown-item" href="news.html" data-key="news_listing">Liste des actualités</a></li>
                             </li>
                         </ul>
                     </li>
@@ -117,18 +118,18 @@
                     </li>
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="donate.html"
-                            data-key="donate">Donate</a>
+                            data-key="donate">Faire un Don</a>
                     </li>
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal"
                             data-bs-target="#authModal" data-key="connexion">Connexion</a>
                     </li>
-                    <li class="nav-item ms-3">
+                    <!-- <li class="nav-item ms-3">
                         <select id="languageSwitcher" class="form-select">
                             <option value="en" selected>En</option>
                             <option value="fr">Fr</option>
                         </select>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -607,7 +608,6 @@ En résumé, Terre des jeunes intègre une éducation environnementale pour pré
     </footer>
    
    <!-- Include Bootstrap JS files -->
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
    <!-- JAVASCRIPT FILES -->
@@ -659,7 +659,6 @@ En résumé, Terre des jeunes intègre une éducation environnementale pour pré
 
 
    </script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    </script>
@@ -685,9 +684,6 @@ En résumé, Terre des jeunes intègre une éducation environnementale pour pré
        });
    </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- sections team -->
 
 
 
