@@ -703,9 +703,9 @@
                         </div>
                         <div class="col-lg-4"></div>
                     </div>
-                    <div class="row g-4 mettre-membres-ici " id="team-members">
+                    <div class="row g-4  " id="team-members">
                         <!-- Les cartes seront générées ici -->
-                          <!-- voir js/contenu/membres.js -->
+                          <!-- voir js/contenu/membres.js -mettre-membres-ici -->
                     </div>
                 </div>
                    <!-- Modal pour afficher les détails d'un membre -->
@@ -1266,7 +1266,7 @@ const teamMembers = [
     { name: "Hugo Lemaitre", role: "Développeur Frontend", image: "images/members/hugo.jpg", bio: "Hugo crée des interfaces modernes et réactives.", social: { github: "#", linkedin: "#" } },
     { name: "Isabelle Moreau", role: "Chargée de communication", image: "images/members/isabelle.jpg", bio: "Isabelle gère la communication interne et externe.", social: { twitter: "#", linkedin: "#" } }
 ];
-        const teamContainer = document.getElementById('mettre-membres-ici team-members');
+        const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
         teamContainer.innerHTML = `
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
                     ${teamMembers.map((member, index) => `
