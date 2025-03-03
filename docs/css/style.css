@@ -1,7 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/OpenSans_Condensed-Regular.woff2') format('woff2'),
+      url('../fonts/Open_Sans/OpenSans_Condensed-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/OpenSans_Condensed-Light.woff2') format('woff2'),
+      url('../fonts/Open_Sans/OpenSans_Condensed-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/OpenSans_Condensed-SemiBold.woff2') format('woff2'),
+      url('../fonts/Open_Sans/OpenSans_Condensed-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/Open_Sans/OpenSans_Condensed-Bold.woff2') format('woff2'),
+      url('../fonts/Open_Sans/OpenSans_Condensed-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )
+  CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
@@ -11,13 +48,13 @@
   --section-bg-color:             #f0f8ff;
   /* --site-footer-bg-color:         #027933; #F5FFFE */
   --site-footer-bg-color:         #027933;
-   --custom-btn-bg-color:         /*#F5FFFE;*/ #597081;
+   --custom-btn-bg-color:         /*#F5FFFE;*/ #597081; 
   --custom-btn-bg-hover-color:    #027933;
   --dark-color:                   #000000;
   --p-color:                      #070b14;
   --border-color:                 #939597;
 
-  --body-font-family:             'Open Sans', sans-serif;
+  --body-font-family:             'Metropolis', sans-serif;
 
   --h1-font-size:                 52px;
   --h2-font-size:                 46px;
@@ -40,12 +77,12 @@
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family); 
 }
 
 
 /*---------------------------------------
-  TYPOGRAPHY
+  TYPOGRAPHY               
 -----------------------------------------*/
 
 h2,
@@ -107,7 +144,7 @@ ul li {
   font-weight: var(--font-weight-normal);
 }
 
-a,
+a, 
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -129,7 +166,7 @@ strong {
 
 
 /*---------------------------------------
-  SECTION
+  SECTION               
 -----------------------------------------*/
 .section-padding {
   padding-top: 100px;
@@ -156,7 +193,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM BLOCK
+  CUSTOM BLOCK               
 -----------------------------------------*/
 .custom-block-wrap {
   background: var(--white-color);
@@ -188,7 +225,7 @@ strong {
 
 
 /*---------------------------------------
-  PROGRESS BAR
+  PROGRESS BAR               
 -----------------------------------------*/
 .progress {
   background: var(--border-color);
@@ -201,7 +238,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM ICON COLOR
+  CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
   color: var(--secondary-colors);
@@ -209,7 +246,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM LIST
+  CUSTOM LIST               
 -----------------------------------------*/
 .custom-list {
   margin-bottom: 0;
@@ -224,7 +261,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM TEXT BOX
+  CUSTOM TEXT BOX               
 -----------------------------------------*/
 .custom-text-box {
   background: var(--white-color);
@@ -255,7 +292,7 @@ strong {
 
 
 /*---------------------------------------
-  AVATAR IMAGE - TESTIMONIAL, AUTHOR
+  AVATAR IMAGE - TESTIMONIAL, AUTHOR               
 -----------------------------------------*/
 .avatar-image {
   border-radius: var(--border-radius-large);
@@ -266,7 +303,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM BUTTON
+  CUSTOM BUTTON               
 -----------------------------------------*/
 .custom-btn {
   background: var(--secondary-colors);
@@ -305,7 +342,7 @@ strong {
 
 
 /*---------------------------------------
-  NAVIGATION
+  NAVIGATION              
 -----------------------------------------*/
 .navbar {
   background: var(--white-color);
@@ -354,7 +391,7 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
   background: transparent;
   color: var(--primary-color);
@@ -383,9 +420,9 @@ strong {
   padding-top: 0;
 }
 
-.dropdown-item.active,
+.dropdown-item.active, 
 .dropdown-item:active,
-.dropdown-item:focus,
+.dropdown-item:focus, 
 .dropdown-item:hover {
   background: transparent;
   color: var(--primary-color);
@@ -484,7 +521,7 @@ strong {
 
 
 /*---------------------------------------
-  SITE HEADER
+  SITE HEADER              
 -----------------------------------------*/
 .site-header {
   background: var(--primary-color);
@@ -513,7 +550,7 @@ strong {
 
 
 /*---------------------------------------
-  HERO & HERO SLIDE
+  HERO & HERO SLIDE         
 -----------------------------------------*/
 .hero-section-full-height {
   height: 680px;
@@ -521,7 +558,7 @@ strong {
   position: relative;
 }
 
-.carousel:hover .carousel-control-next-icon,
+.carousel:hover .carousel-control-next-icon, 
 .carousel:hover .carousel-control-prev-icon {
   opacity: 1;
 }
@@ -533,14 +570,14 @@ strong {
 
 #hero-slide .carousel-caption {
   background: var(--white-color);
-  clip-path: polygon(100% 100%, 100% 100px, 0 100%);
-  color: var(--secondary-colors);
+  
+  color:whitesmoke;
   top: 1px;
   bottom: -1px;
   right: 0;
   left: auto;
   text-align: right;
-  min-width: 680px;
+  min-width: 300px;
   min-height: 680px;
   padding: 100px 100px 50px 100px;
 }
@@ -549,6 +586,7 @@ strong {
   display: block;
   width: 100%;
   min-height: 680px;
+  border-radius: 10;
 }
 
 #hero-slide .carousel-indicators-wrap {
@@ -564,12 +602,12 @@ strong {
   justify-content: inherit;
 }
 
-.carousel-control-next,
+.carousel-control-next, 
 .carousel-control-prev {
   opacity: 1;
 }
 
-.carousel-control-next-icon,
+.carousel-control-next-icon, 
 .carousel-control-prev-icon {
   background-color: var(--secondary-colors);
   border-radius: var(--border-radius-large);
@@ -580,14 +618,14 @@ strong {
   transition: all 0.5s;
 }
 
-.carousel-control-next-icon:hover,
+.carousel-control-next-icon:hover, 
 .carousel-control-prev-icon:hover {
   background-color: var(--primary-color);
 }
 
 
 /*---------------------------------------
-  FEATURE BLOCK
+  FEATURE BLOCK              
 -----------------------------------------*/
 .featured-block {
   text-align: center;
@@ -625,7 +663,7 @@ strong {
 
 
 /*---------------------------------------
-  ABOUT
+  ABOUT              
 -----------------------------------------*/
 .about-section {
   background-repeat: no-repeat;
@@ -647,7 +685,7 @@ strong {
 
 
 /*---------------------------------------
-  COUNTER NUMBERS
+  COUNTER NUMBERS              
 -----------------------------------------*/
 .counter-thumb {
   margin: 20px;
@@ -670,7 +708,7 @@ strong {
 
 
 /*---------------------------------------
-  VOLUNTEER
+  VOLUNTEER              
 -----------------------------------------*/
 .volunteer-section {
   background: var(--secondary-colors);
@@ -715,7 +753,7 @@ strong {
 
 
 /*---------------------------------------
-  DONATE
+  DONATE              
 -----------------------------------------*/
 .donate-section {
   background-image: url('../images/medium-shot-volunteers-with-clothing-donations.jpg');
@@ -737,7 +775,7 @@ strong {
 
 
 /*---------------------------------------
-  NEWS
+  NEWS         
 -----------------------------------------*/
 .news-detail-header-section {
   background-image: url('../images/news/medium-shot-volunteers-with-clothing-donations.jpg');
@@ -893,7 +931,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  TESTIMONIAL CAROUSEL
+  TESTIMONIAL CAROUSEL              
 -----------------------------------------*/
 .testimonial-section {
   position: relative;
@@ -996,30 +1034,30 @@ blockquote::before {
 #testimonial-carousel .carousel-indicators li {
   text-indent: inherit;
   background: transparent;
-  margin: 0 10px;
+  margin: 0 10px; 
 }
 
 #testimonial-carousel .carousel-indicators li,
 #testimonial-carousel .carousel-indicators li::before {
   width: 45px;
-  height: 45px;
+  height: 45px; 
 }
 
 #testimonial-carousel .carousel-indicators .avatar-image {
   width: 45px;
-  height: 45px;
+  height: 45px; 
 }
 
 #testimonial-carousel .carousel-indicators .active,
 #testimonial-carousel .carousel-indicators .active .avatar-image {
   background: transparent;
-  width: 50px;
+  width: 50px; 
   height: 50px;
 }
 
 
 /*---------------------------------------
-  CONTACT
+  CONTACT               
 -----------------------------------------*/
 .contact-section {
   background: var(--white-color);
@@ -1046,7 +1084,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  CUSTOM FORM
+  CUSTOM FORM               
 -----------------------------------------*/
 .custom-form .form-control,
 .input-group-file {
@@ -1186,11 +1224,11 @@ blockquote::before {
 
 
 /*---------------------------------------
-  CONTACT SEARCH & DONATE & SUBCRIBE FORM
+  CONTACT SEARCH & DONATE & SUBCRIBE FORM              
 -----------------------------------------*/
 .contact-form .form-control {
   background: var(--white-color);
-
+  
 }
 
 .search-form {
@@ -1271,7 +1309,7 @@ blockquote::before {
 }
 
 .subscribe-form {
-  background: var(--section-bg-color);
+  background: var(--section-bg-color); 
   /* background-color: #0d7e38; */
   border-radius: var(--border-radius-small);
   padding: 30px;
@@ -1293,7 +1331,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  SITE FOOTER
+  SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
   background-color: var(--site-footer-bg-color);
@@ -1337,7 +1375,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  FOOTER MENU
+  FOOTER MENU               
 -----------------------------------------*/
 .footer-menu {
   column-count: 2;
@@ -1361,7 +1399,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  SOCIAL ICON
+  SOCIAL ICON               
 -----------------------------------------*/
 .social-icon {
   margin: 0;
@@ -1394,7 +1432,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  RESPONSIVE STYLES
+  RESPONSIVE STYLES               
 -----------------------------------------*/
 @media screen and (min-width: 1600px) {
   .featured-block {
@@ -1405,7 +1443,7 @@ blockquote::before {
     width: 450px;
     height: 450px;
   }
-
+  
   .volunteer-image {
     width: 350px;
     height: 350px;
@@ -1469,7 +1507,7 @@ blockquote::before {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 8px 20px;
   }
-
+  
   .dropdown:hover .dropdown-menu {
     display: block;
     position: relative;
@@ -1487,7 +1525,7 @@ blockquote::before {
     height: inherit;
   }
 
-  .carousel:hover .carousel-control-next-icon,
+  .carousel:hover .carousel-control-next-icon, 
   .carousel:hover .carousel-control-prev-icon {
     opacity: 1;
   }
@@ -1504,7 +1542,7 @@ blockquote::before {
     right: 12px;
   }
 
-  .carousel-control-next-icon,
+  .carousel-control-next-icon, 
   .carousel-control-prev-icon {
     opacity: 1;
     width: 60px;
@@ -1575,7 +1613,7 @@ blockquote::before {
     padding: 30px;
   }
 
-  .counter-number,
+  .counter-number, 
   .counter-number-text {
     font-size: var(--h2-font-size);
   }
@@ -1645,7 +1683,7 @@ blockquote::before {
     padding-bottom: 30px;
   }
 
-  .carousel-control-next-icon,
+  .carousel-control-next-icon, 
   .carousel-control-prev-icon {
     width: 45px;
     height: 45px;
@@ -1855,7 +1893,7 @@ select.form-select option[data-flag="de"]:before {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
+ 
 #countrySidebar {
 width: 250px;
 background-color: #f8f9fa;
@@ -1925,15 +1963,177 @@ margin-top: 15px;
   font-size: 18px; /* Ajustez la taille de l'icône si nécessaire */
 }
 
-/**
- * S'assurer que les images des bios sont toutes carrées.
- */
-.bio-image-wrapper {
-  width: 257px;
-  height: 257px;
-  overflow: hidden;
+
+
+/* page view articles */
+
+/* body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+} */
+
+.main-content {
+    flex: 3;
+    padding-right: 20px;
+}
+.sidebar {
+    flex: 1;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 1.5em;
+}
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+img.article-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px 0; /* Spacing around the image */
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #35424a;
+    color: #ffffff;
+}
+.recent-articles {
+    margin-top: 20px;
+}
+.recent-articles h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.recent-articles ul {
+    list-style: none;
+    padding: 0;
+}
+.recent-articles ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    transition: background 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+}
+.recent-articles ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.recent-articles ul li:hover {
+    background: #e9ecef;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.recent-articles ul li a {
+    text-decoration: none;
+    color: #35424a;
+    font-weight: bold;
+    flex: 1; /* Allow link to take remaining space */
+}
+.recent-articles ul li a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .main-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
 }
 
-.bio-image-wrapper img {
-  width: 100%;
-}
+/* team scripts */
+                /* Icônes sociales */
+                .social-icons i {
+                  margin: 0 10px;
+                  font-size: 1.8rem; /* Taille des icônes */
+                  color: #333; /* Couleur par défaut des icônes */
+                  cursor: pointer;
+                  transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
+              }
+              
+              .social-icons i:hover {
+                  color: #027933; /* Couleur au survol */
+                  transform: scale(1.2); /* Agrandir l'icône au survol */
+              }
+              
+              .social-icons a {
+                  text-decoration: none; /* Supprimer la décoration des liens */
+              }
+              
+              
+              .social-icons i:hover {
+                  color: #027933; /* Couleur bleue lors du survol */
+                  transform: scale(1.2); /* Agrandir l'icône lors du survol */
+              }
+              
+              .social-icons a {
+                  text-decoration: none; /* Supprimer la décoration de texte pour les liens */
+              }
+
+              /* Ajustement du logo et du texte */
+        .navbar-brand img {
+          height: 50px;
+          width: auto;
+      }
+
+      .navbar-brand h2 {
+          font-size: 1.2rem;
+          margin-bottom: 0;
+      }
+
+      /* Ajustement du bouton toggle */
+      .navbar-toggler {
+          border: none;
+          outline: none;
+      }
+
+      /* Ajustement du menu en mobile */
+      @media (max-width: 991px) {
+          .navbar-nav {
+              text-align: center;
+          }
+          
+          .nav-item {
+              padding: 10px 0;
+          }
+
+          .custom-btn {
+              width: 100%; /* Boutons pleine largeur */
+          }
+      }
