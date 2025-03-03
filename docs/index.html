@@ -80,7 +80,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo/LOGO_11.png" class="logo img-fluid swiper-wrapper" alt="" >
-                <!-- <span>Terre Des jeunes</span>  -->
+                <span>Terre Des jeunes</span>  
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -640,6 +640,17 @@
 
                     </div>
                 </div>
+                <div class="col-lg-4">
+                    <a href="news.html" class="custom-btn btn smoothscroll   text-2xl font-bold text-center mb-6">
+                        Voir les articles
+                        <span class="icon-circle">
+    
+                          <i class="fas fa-arrow-right"></i>
+                        </span>
+    
+                      </a>
+                </div>
+                <div class="col-lg-4"></div>
             </div>
         </section>
         <!-- sections padding icones  -->
@@ -690,29 +701,51 @@
         </section>
         <!-- createur et membres terre des jeunes-->
             <section class=" about-section section-padding mx-auto py-10">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre Des Jeunes</h2>
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre Des Jeunes</h2>
+                        </div>
+                        <div class="col-lg-4">
+                            <a  class="custom-btn btn smoothscroll text-2xl font-bold text-center mb-6">
+                                Voir les membres de Terre Des Jeunes
+                                <span class="icon-circle">
+    
+                                  <i class="fas fa-arrow-right"></i>
+                                </span>
+    
+                              </a>
+    
+                        </div>
+                        <div class="col-lg-4"></div>
                     </div>
-                    <div class="col-lg-4">
-                        <a href="team.html" class="custom-btn btn smoothscroll text-2xl font-bold text-center mb-6">
-                            Voir les membres de Terre Des Jeunes
-                            <span class="icon-circle">
-
-                              <i class="fas fa-arrow-right"></i>
-                            </span>
-
-                          </a>
-
+                    <div class="row g-4 mettre-membres-ici " id="team-members">
+                        <!-- Les cartes seront générées ici -->
+                          <!-- voir js/contenu/membres.js -->
                     </div>
-                    <div class="col-lg-4"></div>
                 </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper mettre-membres-ici">
-                        <!-- voir js/contenu/membres.js -->
+                   <!-- Modal pour afficher les détails d'un membre -->
+            <!-- Conteneur des cartes des membres -->
+            <div id="team-members" class="row"></div>
+            
+            <!-- Modal pour afficher les détails d'un membre -->
+            <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3 id="modal-name"></h3>
+                            <p id="modal-role"></p>
+                            <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
+                            <div id="modal-social" class="social-icons"></div>
+                        </div>
                     </div>
-                    <!-- <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div> -->
+                </div>
+            </div>
+            </section>
                 </div>
             </section>
         <!-- volunteersections -->
@@ -1118,55 +1151,34 @@
         const newsContainer = document.getElementById("newsContainer");
         const recentNewsContainer = document.getElementById("recentNewsContainer");
         const countryList = document.getElementById("countryList");
- // Fonction pour tronquer le texte à 10 mots
-function truncateText(text, wordLimit) {
-    const words = text.split(" ");
-    return words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text;
-}
 
 function loadDefaultNews(defaultArticles) {
+    const newsContainer = document.getElementById("news-container"); // Assurez-vous que l'élément existe
+    newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
     defaultArticles.forEach(article => {
         const newsBlock = document.createElement("div");
         newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
 
-        let image = '';
-        if (typeof article.image !== "undefined") {
-            image = `<img src="${article.image}" alt="${article.title}" class="img-fluid" style:"height:30px">`;
-        }
+        // S'assurer que le titre a au moins 20 caractères
+        const truncatedTitle = article.title.length >= 20 ? article.title : article.title.padEnd(20, ".");
 
         newsBlock.innerHTML = `
-
-        <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">${article.title}</h5>
-                    ${image}
-                    <p class="card-text mt-2">${truncateText(article.description, 10)}</p>
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <div>
-                            <a href="${article.url}" class=" read-more">Lire plus</a>
-                            <div class="card shadow-sm mb-4">
-
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <i class="bi bi-hand-thumbs-up like-icon" data-likes="0"></i>
-                            <span class="like-count">0</span>
-                            <i class="bi bi-hand-thumbs-down dislike-icon" data-dislikes="0"></i>
-                            <span class="dislike-count">0</span>
-                        </div>
-                        <div>
-                            <i class="bi bi-share" title="Partager"></i>
-                        </div>
-                    </div>
+            <div class="card shadow-sm mb-4" style="border: none;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">${truncatedTitle}</h5>
+                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
+                        style="width: 100%; height: 200px; object-fit: cover;"> 
+                    <p class="card-text d-none">${article.description}</p> <!-- Description cachée -->
+                    <a href="news-details.html?articleId=${article.id}" class="btn btn-primary mt-2">Lire plus</a>
                 </div>
             </div>
+        `;
 
-`;
         newsContainer.appendChild(newsBlock);
     });
 }
+
 
         // Charger les drapeaux des pays et afficher la liste des pays
         async function loadCountryFlags() {
@@ -1225,6 +1237,7 @@ function loadDefaultNews(defaultArticles) {
         }
 
         // Initialisation
+        loadDefaultNews();
         loadCountryFlags();
 
 
@@ -1248,28 +1261,44 @@ function loadDefaultNews(defaultArticles) {
     </script>
 <!-- sections team -->
     <script>
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            // navigation: {
-            //     nextEl: '.swiper-button-next',
-            //     prevEl: '.swiper-button-prev',
-            // },
-            breakpoints: {
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 40,
-                },
-            },
-        });
+        const teamContainer = document.getElementById('mettre-membres-ici');
+        teamContainer.innerHTML = `
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
+                    ${teamMembers.map((member, index) => `
+                        <div class="col">
+                            <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
+                                <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}" 
+                                    style="width: 120px; height: 120px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">${member.name}</h5>
+                                    <p class="card-text text-muted">${member.role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+                function showModal(index) {
+                    const member = teamMembers[index];
+                    document.getElementById('modal-name').innerText = member.name;
+                    document.getElementById('modal-role').innerText = member.role;
+                    document.getElementById('modal-bio').innerText = member.bio;
+            
+                    // Générer dynamiquement les icônes sociales
+                    const socialContainer = document.getElementById('modal-social');
+                    socialContainer.innerHTML = '';
+                    if (member.social) {
+                        Object.entries(member.social).forEach(([platform, url]) => {
+                            socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
+                        });
+                    }
+            
+                    // Afficher le modal correctement
+                    const modalElement = document.getElementById('memberModal');
+                    const modalInstance = new bootstrap.Modal(modalElement);
+                    modalInstance.show();
+                }
     </script>
 
     <!-- ne pas retirer! C'est ici qu'on obtient les infos du content
@@ -1284,10 +1313,6 @@ function loadDefaultNews(defaultArticles) {
             (new Activites()).init();
             (new Articles()).populateArticles(function (news) {
                 loadDefaultNews(news);
-            }, {
-                not: [
-                    'Actions internes',
-                ],
             });
         });
     </script>
