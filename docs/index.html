@@ -1129,12 +1129,18 @@ function loadDefaultNews(defaultArticles) {
     defaultArticles.forEach(article => {
         const newsBlock = document.createElement("div");
         newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
+
+        let image = '';
+        if (typeof article.image !== "undefined") {
+            image = `<img src="${article.image}" alt="${article.title}" class="img-fluid" style:"height:30px">`;
+        }
+
         newsBlock.innerHTML = `
 
-         <div class="card shadow-sm mb-4">
+        <div class="card shadow-sm mb-4">
                 <div class="card-body">
                     <h5 class="card-title">${article.title}</h5>
-                    <img src="${article.image}" alt="${article.title}" class="img-fluid" style:"height:30px">
+                    ${image}
                     <p class="card-text mt-2">${truncateText(article.description, 10)}</p>
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <div>
@@ -1219,7 +1225,6 @@ function loadDefaultNews(defaultArticles) {
         }
 
         // Initialisation
-        loadDefaultNews();
         loadCountryFlags();
 
 
@@ -1279,6 +1284,10 @@ function loadDefaultNews(defaultArticles) {
             (new Activites()).init();
             (new Articles()).populateArticles(function (news) {
                 loadDefaultNews(news);
+            }, {
+                not: [
+                    'Actions internes',
+                ],
             });
         });
     </script>

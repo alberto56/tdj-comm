@@ -4,23 +4,45 @@ class Articles extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/all.json';
   }
 
-  populateArticles(callback) {
+  populateArticles(callback, options) {
     this._callback = callback;
-    this.init();
+    this.init(options);
   }
 
-  fetchResponseParsed(response) {
+  fetchResponseParsed(response, options) {
     const callback = this._callback;
     let articles = [];
 
 
     response.forEach((node) => {
-      articles.push({
+      let show = true;
+
+      if (typeof options !== 'undefined' && typeof options.not !== 'undefined') {
+        node.categories.forEach((category) => {
+          options.not.forEach((not) => {
+            if (category === not) {
+              show = false;
+            }
+          });
+        });
+      }
+
+      if (!show) {
+        return;
+      }
+      let article = {
         title: node.title,
         description: node.excerpt,
-        image: 'https://contenu.terredesjeunes.org' + node.img[0],
-        url: 'https://contenu.terredesjeunes.org' + node.url,
-      });
+      }
+
+      if (typeof node.img[0] != 'undefined') {
+        article.image = 'https://contenu.terredesjeunes.org' + node.img[0];
+      }
+      if (typeof node.url != 'undefined') {
+        article.url = 'https://contenu.terredesjeunes.org' + node.url;
+      }
+
+      articles.push(article);
     });
     callback(articles);
   }

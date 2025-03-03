@@ -1,6 +1,6 @@
 class Infos {
-  init() {
-    this.fetchData();
+  init(options) {
+    this.fetchData(options);
   }
 
   url() {
@@ -20,15 +20,15 @@ class Infos {
   }
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
-  fetchData() {
+  fetchData(options) {
     const that = this;
     this.fetch((response) => {
-      that.fetchResponseParsed(JSON.parse(response));
+      that.fetchResponseParsed(JSON.parse(response), options);
     });
   }
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
-  fetchResponseParsed(response) {
+  fetchResponseParsed(response, options) {
     response.forEach((node) => {
       this.fetchResponseSingle(node);
     });
