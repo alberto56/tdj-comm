@@ -1245,7 +1245,28 @@ function loadDefaultNews(defaultArticles) {
     </script>
 <!-- sections team -->
     <script>
-        const teamContainer = document.getElementById('mettre-membres-ici');
+         //   team terre des jeunes
+const teamMembers = [
+    { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée.", social: { facebook: "#", instagram: "#", linkedin: "#" } },
+    { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
+    { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une pionnière de la physique nucléaire.", social: { facebook: "#", linkedin: "#" } },
+    { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
+    { name: "Elena Rossi", role: "Marketing", image: "https://via.placeholder.com/150", bio: "Experte en marketing digital.", social: { twitter: "#" } },
+    { name: "Jean Tyh", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
+
+    // Ajout de 10 nouvelles personnes
+    { name: "Lucas Morel", role: "Développeur Backend", image: "images/members/lucas.jpg", bio: "Lucas est expert en bases de données et API.", social: { github: "#", linkedin: "#" } },
+    { name: "Emma Dubois", role: "Rédactrice", image: "images/members/emma.jpg", bio: "Emma écrit des contenus engageants pour le web.", social: { twitter: "#", linkedin: "#" } },
+    { name: "Omar Benali", role: "Chef de produit", image: "images/members/omar.jpg", bio: "Omar définit la vision produit et les stratégies de croissance.", social: { linkedin: "#" } },
+    { name: "Sophie Lemaire", role: "Data Analyst", image: "images/members/sophie.jpg", bio: "Sophie analyse les données pour aider à la prise de décision.", social: { linkedin: "#", github: "#" } },
+    { name: "Nicolas Tremblay", role: "Ingénieur DevOps", image: "images/members/nicolas.jpg", bio: "Nicolas automatise et sécurise les infrastructures cloud.", social: { github: "#", linkedin: "#" } },
+    { name: "Laura Fontaine", role: "Graphiste", image: "images/members/laura.jpg", bio: "Laura crée des designs captivants pour le branding.", social: { instagram: "#", dribbble: "#" } },
+    { name: "Antoine Girard", role: "Responsable RH", image: "images/members/antoine.jpg", bio: "Antoine gère le recrutement et le bien-être des employés.", social: { linkedin: "#" } },
+    { name: "Carla Mendes", role: "Consultante SEO", image: "images/members/carla.jpg", bio: "Carla optimise les sites web pour un meilleur référencement.", social: { twitter: "#", linkedin: "#" } },
+    { name: "Hugo Lemaitre", role: "Développeur Frontend", image: "images/members/hugo.jpg", bio: "Hugo crée des interfaces modernes et réactives.", social: { github: "#", linkedin: "#" } },
+    { name: "Isabelle Moreau", role: "Chargée de communication", image: "images/members/isabelle.jpg", bio: "Isabelle gère la communication interne et externe.", social: { twitter: "#", linkedin: "#" } }
+];
+        const teamContainer = document.getElementById('mettre-membres-ici team-members');
         teamContainer.innerHTML = `
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
                     ${teamMembers.map((member, index) => `
