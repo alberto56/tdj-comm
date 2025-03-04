@@ -83,13 +83,13 @@
                 <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre Des Jeunes">
                 <h2 class="fw-bold">Terre Des Jeunes</h2>
             </a>
-    
+
             <!-- Bouton Toggle (pour mobile) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Menu de Navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -628,10 +628,10 @@
                     <a href="news.html" class="custom-btn btn smoothscroll   text-2xl font-bold text-center mb-6">
                         Voir les articles
                         <span class="icon-circle">
-    
+
                           <i class="fas fa-arrow-right"></i>
                         </span>
-    
+
                       </a>
                 </div>
                 <div class="col-lg-4"></div>
@@ -694,12 +694,12 @@
                             <a  class="custom-btn btn smoothscroll text-2xl font-bold text-center mb-6">
                                 Voir les membres de Terre Des Jeunes
                                 <span class="icon-circle">
-    
+
                                   <i class="fas fa-arrow-right"></i>
                                 </span>
-    
+
                               </a>
-    
+
                         </div>
                         <div class="col-lg-4"></div>
                     </div>
@@ -711,7 +711,7 @@
                    <!-- Modal pour afficher les détails d'un membre -->
             <!-- Conteneur des cartes des membres -->
             <div id="team-members" class="row"></div>
-            
+
             <!-- Modal pour afficher les détails d'un membre -->
             <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -1137,7 +1137,7 @@
         const countryList = document.getElementById("countryList");
 
 function loadDefaultNews(defaultArticles) {
-    const newsContainer = document.getElementById("news-container"); // Assurez-vous que l'élément existe
+    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
     newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
     defaultArticles.forEach(article => {
@@ -1152,8 +1152,7 @@ function loadDefaultNews(defaultArticles) {
                 <div class="card-body text-center">
                     <h5 class="card-title">${truncatedTitle}</h5>
                     <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
-                        style="width: 100%; height: 200px; object-fit: cover;"> 
-                    <p class="card-text d-none">${article.description}</p> <!-- Description cachée -->
+                        style="width: 100%; height: 200px; object-fit: cover;">
                     <a href="news-details.html?articleId=${article.id}" class="btn btn-primary mt-2">Lire plus</a>
                 </div>
             </div>
@@ -1221,7 +1220,6 @@ function loadDefaultNews(defaultArticles) {
         }
 
         // Initialisation
-        loadDefaultNews();
         loadCountryFlags();
 
 
@@ -1246,33 +1244,23 @@ function loadDefaultNews(defaultArticles) {
 <!-- sections team -->
     <script>
          //   team terre des jeunes
-const teamMembers = [
+
+        const teamMembers = [
     { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée.", social: { facebook: "#", instagram: "#", linkedin: "#" } },
     { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
     { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une pionnière de la physique nucléaire.", social: { facebook: "#", linkedin: "#" } },
     { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
-    { name: "Elena Rossi", role: "Marketing", image: "https://via.placeholder.com/150", bio: "Experte en marketing digital.", social: { twitter: "#" } },
-    { name: "Jean Tyh", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
+    ];
 
-    // Ajout de 10 nouvelles personnes
-    { name: "Lucas Morel", role: "Développeur Backend", image: "images/members/lucas.jpg", bio: "Lucas est expert en bases de données et API.", social: { github: "#", linkedin: "#" } },
-    { name: "Emma Dubois", role: "Rédactrice", image: "images/members/emma.jpg", bio: "Emma écrit des contenus engageants pour le web.", social: { twitter: "#", linkedin: "#" } },
-    { name: "Omar Benali", role: "Chef de produit", image: "images/members/omar.jpg", bio: "Omar définit la vision produit et les stratégies de croissance.", social: { linkedin: "#" } },
-    { name: "Sophie Lemaire", role: "Data Analyst", image: "images/members/sophie.jpg", bio: "Sophie analyse les données pour aider à la prise de décision.", social: { linkedin: "#", github: "#" } },
-    { name: "Nicolas Tremblay", role: "Ingénieur DevOps", image: "images/members/nicolas.jpg", bio: "Nicolas automatise et sécurise les infrastructures cloud.", social: { github: "#", linkedin: "#" } },
-    { name: "Laura Fontaine", role: "Graphiste", image: "images/members/laura.jpg", bio: "Laura crée des designs captivants pour le branding.", social: { instagram: "#", dribbble: "#" } },
-    { name: "Antoine Girard", role: "Responsable RH", image: "images/members/antoine.jpg", bio: "Antoine gère le recrutement et le bien-être des employés.", social: { linkedin: "#" } },
-    { name: "Carla Mendes", role: "Consultante SEO", image: "images/members/carla.jpg", bio: "Carla optimise les sites web pour un meilleur référencement.", social: { twitter: "#", linkedin: "#" } },
-    { name: "Hugo Lemaitre", role: "Développeur Frontend", image: "images/members/hugo.jpg", bio: "Hugo crée des interfaces modernes et réactives.", social: { github: "#", linkedin: "#" } },
-    { name: "Isabelle Moreau", role: "Chargée de communication", image: "images/members/isabelle.jpg", bio: "Isabelle gère la communication interne et externe.", social: { twitter: "#", linkedin: "#" } }
-];
+    populateTeamMembers(teamMembers);
+    function populateTeamMembers(teamMembers) {
         const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
         teamContainer.innerHTML = `
                 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
                     ${teamMembers.map((member, index) => `
                         <div class="col">
                             <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
-                                <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}" 
+                                <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
                                     style="width: 120px; height: 120px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">${member.name}</h5>
@@ -1284,12 +1272,15 @@ const teamMembers = [
                 </div>
             `;
 
+    }
+
+
                 function showModal(index) {
                     const member = teamMembers[index];
                     document.getElementById('modal-name').innerText = member.name;
                     document.getElementById('modal-role').innerText = member.role;
                     document.getElementById('modal-bio').innerText = member.bio;
-            
+
                     // Générer dynamiquement les icônes sociales
                     const socialContainer = document.getElementById('modal-social');
                     socialContainer.innerHTML = '';
@@ -1298,7 +1289,7 @@ const teamMembers = [
                             socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
                         });
                     }
-            
+
                     // Afficher le modal correctement
                     const modalElement = document.getElementById('memberModal');
                     const modalInstance = new bootstrap.Modal(modalElement);
@@ -1358,11 +1349,12 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="js/contenu/activites.js"></script>
     <script>
         $( document ).ready(function() {
-            (new Membres()).init();
             (new Activites()).init();
             (new Articles()).populateArticles(function (news) {
                 loadDefaultNews(news);
-            });
+            }, {
+                not: ['Actions internes'],
+             });
         });
     </script>
 

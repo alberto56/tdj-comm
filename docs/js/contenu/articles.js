@@ -13,7 +13,6 @@ class Articles extends Infos {
     const callback = this._callback;
     let articles = [];
 
-
     response.forEach((node) => {
       let show = true;
 

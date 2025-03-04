@@ -4,7 +4,7 @@ class Membres extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/bios.json';
   }
 
-  selecteur() {
+  loadDefault() {
     return '.mettre-membres-ici';
   }
 
