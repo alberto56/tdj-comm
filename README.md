@@ -25,7 +25,7 @@
 
 ## Site web beta
 
-* <https://alberto56.github.io/tdj-comm/>
+* <https://beta.terredesjeunes.org>
 
 ## Documentation
 
