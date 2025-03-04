@@ -1,44 +1,44 @@
+/**
+ * Polices de Google fonts
+ */
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/Open_Sans/OpenSans_Condensed-Regular.woff2') format('woff2'),
-      url('../fonts/Open_Sans/OpenSans_Condensed-Regular.woff') format('woff');
-  font-weight: normal;
+/* .open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
-  font-display: swap;
+  font-variation-settings:
+    "wdth" 100;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/Open_Sans/OpenSans_Condensed-Light.woff2') format('woff2'),
-      url('../fonts/Open_Sans/OpenSans_Condensed-Light.woff') format('woff');
-  font-weight: 300;
+.changa-<uniquifier> {
+  font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
-  font-display: swap;
+} */
+
+* {
+  font-family: "Open Sans", sans-serif;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/Open_Sans/OpenSans_Condensed-SemiBold.woff2') format('woff2'),
-      url('../fonts/Open_Sans/OpenSans_Condensed-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+.logo {
+  font-family: "Changa", sans-serif;
+  font-weight: 400 !important;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/Open_Sans/OpenSans_Condensed-Bold.woff2') format('woff2'),
-      url('../fonts/Open_Sans/OpenSans_Condensed-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+.navbar-brand .logo {
+  font-size: 1.7rem !important;
 }
 
+.my-dark-on-light .logo {
+  color: #027933;
+}
 
 /*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
+  CUSTOM PROPERTIES ( VARIABLES )
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
@@ -48,7 +48,7 @@
   --section-bg-color:             #f0f8ff;
   /* --site-footer-bg-color:         #027933; #F5FFFE */
   --site-footer-bg-color:         #027933;
-   --custom-btn-bg-color:         /*#F5FFFE;*/ #597081; 
+   --custom-btn-bg-color:         /*#F5FFFE;*/ #597081;
   --custom-btn-bg-hover-color:    #027933;
   --dark-color:                   #000000;
   --p-color:                      #070b14;
@@ -77,12 +77,12 @@
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
 }
 
 
 /*---------------------------------------
-  TYPOGRAPHY               
+  TYPOGRAPHY
 -----------------------------------------*/
 
 h2,
@@ -144,7 +144,7 @@ ul li {
   font-weight: var(--font-weight-normal);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -166,7 +166,7 @@ strong {
 
 
 /*---------------------------------------
-  SECTION               
+  SECTION
 -----------------------------------------*/
 .section-padding {
   padding-top: 100px;
@@ -193,7 +193,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM BLOCK               
+  CUSTOM BLOCK
 -----------------------------------------*/
 .custom-block-wrap {
   background: var(--white-color);
@@ -225,7 +225,7 @@ strong {
 
 
 /*---------------------------------------
-  PROGRESS BAR               
+  PROGRESS BAR
 -----------------------------------------*/
 .progress {
   background: var(--border-color);
@@ -238,7 +238,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM ICON COLOR               
+  CUSTOM ICON COLOR
 -----------------------------------------*/
 .custom-icon {
   color: var(--secondary-colors);
@@ -246,7 +246,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM LIST               
+  CUSTOM LIST
 -----------------------------------------*/
 .custom-list {
   margin-bottom: 0;
@@ -261,7 +261,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM TEXT BOX               
+  CUSTOM TEXT BOX
 -----------------------------------------*/
 .custom-text-box {
   background: var(--white-color);
@@ -292,7 +292,7 @@ strong {
 
 
 /*---------------------------------------
-  AVATAR IMAGE - TESTIMONIAL, AUTHOR               
+  AVATAR IMAGE - TESTIMONIAL, AUTHOR
 -----------------------------------------*/
 .avatar-image {
   border-radius: var(--border-radius-large);
@@ -303,7 +303,7 @@ strong {
 
 
 /*---------------------------------------
-  CUSTOM BUTTON               
+  CUSTOM BUTTON
 -----------------------------------------*/
 .custom-btn {
   background: var(--secondary-colors);
@@ -342,7 +342,7 @@ strong {
 
 
 /*---------------------------------------
-  NAVIGATION              
+  NAVIGATION
 -----------------------------------------*/
 .navbar {
   background: var(--white-color);
@@ -391,7 +391,7 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   background: transparent;
   color: var(--primary-color);
@@ -420,9 +420,9 @@ strong {
   padding-top: 0;
 }
 
-.dropdown-item.active, 
+.dropdown-item.active,
 .dropdown-item:active,
-.dropdown-item:focus, 
+.dropdown-item:focus,
 .dropdown-item:hover {
   background: transparent;
   color: var(--primary-color);
@@ -521,7 +521,7 @@ strong {
 
 
 /*---------------------------------------
-  SITE HEADER              
+  SITE HEADER
 -----------------------------------------*/
 .site-header {
   background: var(--primary-color);
@@ -550,7 +550,7 @@ strong {
 
 
 /*---------------------------------------
-  HERO & HERO SLIDE         
+  HERO & HERO SLIDE
 -----------------------------------------*/
 .hero-section-full-height {
   height: 680px;
@@ -558,7 +558,7 @@ strong {
   position: relative;
 }
 
-.carousel:hover .carousel-control-next-icon, 
+.carousel:hover .carousel-control-next-icon,
 .carousel:hover .carousel-control-prev-icon {
   opacity: 1;
 }
@@ -570,7 +570,7 @@ strong {
 
 #hero-slide .carousel-caption {
   background: var(--white-color);
-  
+
   color:whitesmoke;
   top: 1px;
   bottom: -1px;
@@ -602,12 +602,12 @@ strong {
   justify-content: inherit;
 }
 
-.carousel-control-next, 
+.carousel-control-next,
 .carousel-control-prev {
   opacity: 1;
 }
 
-.carousel-control-next-icon, 
+.carousel-control-next-icon,
 .carousel-control-prev-icon {
   background-color: var(--secondary-colors);
   border-radius: var(--border-radius-large);
@@ -618,14 +618,14 @@ strong {
   transition: all 0.5s;
 }
 
-.carousel-control-next-icon:hover, 
+.carousel-control-next-icon:hover,
 .carousel-control-prev-icon:hover {
   background-color: var(--primary-color);
 }
 
 
 /*---------------------------------------
-  FEATURE BLOCK              
+  FEATURE BLOCK
 -----------------------------------------*/
 .featured-block {
   text-align: center;
@@ -663,7 +663,7 @@ strong {
 
 
 /*---------------------------------------
-  ABOUT              
+  ABOUT
 -----------------------------------------*/
 .about-section {
   background-repeat: no-repeat;
@@ -685,7 +685,7 @@ strong {
 
 
 /*---------------------------------------
-  COUNTER NUMBERS              
+  COUNTER NUMBERS
 -----------------------------------------*/
 .counter-thumb {
   margin: 20px;
@@ -708,7 +708,7 @@ strong {
 
 
 /*---------------------------------------
-  VOLUNTEER              
+  VOLUNTEER
 -----------------------------------------*/
 .volunteer-section {
   background: var(--secondary-colors);
@@ -753,7 +753,7 @@ strong {
 
 
 /*---------------------------------------
-  DONATE              
+  DONATE
 -----------------------------------------*/
 .donate-section {
   background-image: url('../images/medium-shot-volunteers-with-clothing-donations.jpg');
@@ -775,7 +775,7 @@ strong {
 
 
 /*---------------------------------------
-  NEWS         
+  NEWS
 -----------------------------------------*/
 .news-detail-header-section {
   background-image: url('../images/news/medium-shot-volunteers-with-clothing-donations.jpg');
@@ -931,7 +931,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  TESTIMONIAL CAROUSEL              
+  TESTIMONIAL CAROUSEL
 -----------------------------------------*/
 .testimonial-section {
   position: relative;
@@ -1034,30 +1034,30 @@ blockquote::before {
 #testimonial-carousel .carousel-indicators li {
   text-indent: inherit;
   background: transparent;
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 #testimonial-carousel .carousel-indicators li,
 #testimonial-carousel .carousel-indicators li::before {
   width: 45px;
-  height: 45px; 
+  height: 45px;
 }
 
 #testimonial-carousel .carousel-indicators .avatar-image {
   width: 45px;
-  height: 45px; 
+  height: 45px;
 }
 
 #testimonial-carousel .carousel-indicators .active,
 #testimonial-carousel .carousel-indicators .active .avatar-image {
   background: transparent;
-  width: 50px; 
+  width: 50px;
   height: 50px;
 }
 
 
 /*---------------------------------------
-  CONTACT               
+  CONTACT
 -----------------------------------------*/
 .contact-section {
   background: var(--white-color);
@@ -1084,7 +1084,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  CUSTOM FORM               
+  CUSTOM FORM
 -----------------------------------------*/
 .custom-form .form-control,
 .input-group-file {
@@ -1224,11 +1224,11 @@ blockquote::before {
 
 
 /*---------------------------------------
-  CONTACT SEARCH & DONATE & SUBCRIBE FORM              
+  CONTACT SEARCH & DONATE & SUBCRIBE FORM
 -----------------------------------------*/
 .contact-form .form-control {
   background: var(--white-color);
-  
+
 }
 
 .search-form {
@@ -1309,7 +1309,7 @@ blockquote::before {
 }
 
 .subscribe-form {
-  background: var(--section-bg-color); 
+  background: var(--section-bg-color);
   /* background-color: #0d7e38; */
   border-radius: var(--border-radius-small);
   padding: 30px;
@@ -1331,7 +1331,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  SITE FOOTER              
+  SITE FOOTER
 -----------------------------------------*/
 .site-footer {
   background-color: var(--site-footer-bg-color);
@@ -1375,7 +1375,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  FOOTER MENU               
+  FOOTER MENU
 -----------------------------------------*/
 .footer-menu {
   column-count: 2;
@@ -1399,7 +1399,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  SOCIAL ICON               
+  SOCIAL ICON
 -----------------------------------------*/
 .social-icon {
   margin: 0;
@@ -1432,7 +1432,7 @@ blockquote::before {
 
 
 /*---------------------------------------
-  RESPONSIVE STYLES               
+  RESPONSIVE STYLES
 -----------------------------------------*/
 @media screen and (min-width: 1600px) {
   .featured-block {
@@ -1443,7 +1443,7 @@ blockquote::before {
     width: 450px;
     height: 450px;
   }
-  
+
   .volunteer-image {
     width: 350px;
     height: 350px;
@@ -1507,7 +1507,7 @@ blockquote::before {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 8px 20px;
   }
-  
+
   .dropdown:hover .dropdown-menu {
     display: block;
     position: relative;
@@ -1525,7 +1525,7 @@ blockquote::before {
     height: inherit;
   }
 
-  .carousel:hover .carousel-control-next-icon, 
+  .carousel:hover .carousel-control-next-icon,
   .carousel:hover .carousel-control-prev-icon {
     opacity: 1;
   }
@@ -1542,7 +1542,7 @@ blockquote::before {
     right: 12px;
   }
 
-  .carousel-control-next-icon, 
+  .carousel-control-next-icon,
   .carousel-control-prev-icon {
     opacity: 1;
     width: 60px;
@@ -1613,7 +1613,7 @@ blockquote::before {
     padding: 30px;
   }
 
-  .counter-number, 
+  .counter-number,
   .counter-number-text {
     font-size: var(--h2-font-size);
   }
@@ -1683,7 +1683,7 @@ blockquote::before {
     padding-bottom: 30px;
   }
 
-  .carousel-control-next-icon, 
+  .carousel-control-next-icon,
   .carousel-control-prev-icon {
     width: 45px;
     height: 45px;
@@ -1893,7 +1893,7 @@ select.form-select option[data-flag="de"]:before {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
- 
+
 #countrySidebar {
 width: 250px;
 background-color: #f8f9fa;
@@ -2086,22 +2086,22 @@ footer {
                   cursor: pointer;
                   transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
               }
-              
+
               .social-icons i:hover {
                   color: #027933; /* Couleur au survol */
                   transform: scale(1.2); /* Agrandir l'icône au survol */
               }
-              
+
               .social-icons a {
                   text-decoration: none; /* Supprimer la décoration des liens */
               }
-              
-              
+
+
               .social-icons i:hover {
                   color: #027933; /* Couleur bleue lors du survol */
                   transform: scale(1.2); /* Agrandir l'icône lors du survol */
               }
-              
+
               .social-icons a {
                   text-decoration: none; /* Supprimer la décoration de texte pour les liens */
               }
@@ -2128,7 +2128,7 @@ footer {
           .navbar-nav {
               text-align: center;
           }
-          
+
           .nav-item {
               padding: 10px 0;
           }
