@@ -519,14 +519,6 @@
                                     <!-- voir js/contenu/activites.js -->
                                 </div>
                             </div>
-
-                            <!-- Slide 2 -->
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <!-- Ajouter 3 nouveaux items ici -->
-                                    <!-- Copiez et adaptez les colonnes de Slide 1 pour remplir ce slide -->
-                                </div>
-                            </div>
                         </div>
 
                         <!-- Carousel Controls -->
@@ -1252,7 +1244,6 @@ function loadDefaultNews(defaultArticles) {
     { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
     ];
 
-    populateTeamMembers(teamMembers);
     function populateTeamMembers(teamMembers) {
         const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
         teamContainer.innerHTML = `
@@ -1349,6 +1340,9 @@ document.addEventListener("DOMContentLoaded", function () {
     <script src="js/contenu/activites.js"></script>
     <script>
         $( document ).ready(function() {
+            (new Membres()).populateTeamMemberss(function(team) {
+                populateTeamMembers(team);
+            });
             (new Activites()).init();
             (new Articles()).populateArticles(function (news) {
                 loadDefaultNews(news);
