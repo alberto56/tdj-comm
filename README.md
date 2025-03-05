@@ -4,9 +4,9 @@
 
 * Bohui MELAIRE (github: TDJCI)
 * Prince NZELA MULOKO (github: MulokoPrince)
-* Albert ALBALA (github: alberto56), secrétaire-trésorier de TDJ transnational
+* Albert ALBALA (github: alberto56), secrétaire-trésorier de TDJ transnational, Montréal (Canada), albert.albala@gmail.com
 
-## Liste de fonctionalités 
+## Liste de fonctionalités
 
 * Bouton de dons
 * Section en anglais (page de présentation en anglais)
