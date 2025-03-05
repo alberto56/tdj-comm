@@ -1263,6 +1263,7 @@ blockquote::before {
     max-width: 100px;
     margin-right: 15px;
 }
+
 .news-block {
   border: 1px solid #ddd;
   border-radius: 8px;
