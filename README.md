@@ -3,7 +3,7 @@
 ## Personnes impliquées
 
 * Bohui MELAIRE (github: TDJCI)
-* Prince NZELA MULOKO (github: MulokoPrince)
+* Prince NZELA MULOKO (github: MulokoPrince), Webmaster TDJ RDC, Uivira(RDCONGO), mulokoprince@gmail.com
 * Albert ALBALA (github: alberto56), secrétaire-trésorier de TDJ transnational, Montréal (Canada), albert.albala@gmail.com
 
 ## Liste de fonctionalités

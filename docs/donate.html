@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Terre DesJeunes</title>
+        <title>Terre des jeunes</title>
 
         <!-- CSS FILES -->        
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -68,72 +68,47 @@
             </div>
         </header>
 
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo/pro22.png" class="logo img-fluid swiper-wrapper" alt="" style="width: 40%; height: auto;">
-                    <!-- <span>Terre Des jeunes</span>  -->
-                </a>
-    
-                <!-- <a class="navbar-brand" href="index.html">
-                    <span>
-                        Terre Desjeunes
-                    </span>
-                </a> -->
+<!-- naveee bar -->
+<nav class=" navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+        <!-- Logo + Nom -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Terre Des Jeunes">
+            <h2 class="fw-bold">Terre Des Jeunes</h2>
+        </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Bouton Toggle (pour mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Causes</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Volunteer</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link click-scroll dropdown-toggle" href="index.html" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">News</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="news.html">News Listing</a></li>
-
-                                <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Contact</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
-                        </li>
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="#" data-bs-toggle="modal" data-bs-target="#authModal">Connexion</a>
-                        </li>
-                        <li class="nav-item ms-3">
-                            <select id="languageSwitcher" class="form-select">
-                                <option value="en" selected>En</option>
-                                <option value="fr">Fr</option>
-                            </select>
-                        </li>
-                        
+        <!-- Menu de Navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Causes</a></li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Bénévolat</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="news.html" id="navbarLightDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Actualités</a>
+                    <ul class="dropdown-menu dropdown-menu-light">
+                        <li><a class="dropdown-item" href="news.html">Liste des actualités</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
+                </li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link custom-btn custom-border-btn btn btn-primary" href="donate.html">Faire un Don</a>
+                </li>
+                <li class="nav-item ms-lg-3">
+                    <a class="nav-link custom-btn custom-border-btn btn btn-secondary" href="#" data-bs-toggle="modal"
+                        data-bs-target="#authModal">Connexion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
                 <!-- Modal -->
                 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -245,6 +220,7 @@
                 </div>
         <main>
 
+            <!-- sections nations  -->
             <section class="donate-section">
                 <div class="section-overlay"></div>
                 <div class="container">
@@ -252,11 +228,11 @@
 
                         <div class="col-lg-6 col-12 mx-auto">
                             <form class="custom-form donate-form" action="#" method="get" role="form">
-                                <h3 class="mb-4">Make a donation</h3>
+                                <h3 class="mb-4">Fait un Don</h3>
 
                                 <div class="row">
                                     <div class="col-lg-12 col-12">
-                                        <h5 class="mb-3">Donation Frequency</h5>
+                                        <h5 class="mb-3">Frequence de Donation</h5>
                                     </div>
 
                                     <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
@@ -264,7 +240,7 @@
                                             <input class="form-check-input" type="radio" name="DonationFrequency" id="DonationFrequencyOne" checked>
                                             
                                             <label class="form-check-label" for="DonationFrequencyOne">
-                                                One Time
+                                                Journalières
                                             </label>
                                         </div>
                                     </div>
@@ -274,13 +250,13 @@
                                             <input class="form-check-input" type="radio" name="DonationFrequency" id="DonationFrequencyMonthly">
                                             
                                             <label class="form-check-label" for="DonationFrequencyMonthly">
-                                                Monthly
+                                                Mensuellement
                                             </label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12 col-12">
-                                        <h5 class="mt-2 mb-3">Select an amount</h5>
+                                        <h5 class="mt-2 mb-3">Sélectionnez un montant</h5>
                                     </div>
 
                                     <div class="col-lg-3 col-md-6 col-6 form-check-group">
@@ -346,7 +322,7 @@
                                     </div>
 
                                     <div class="col-lg-12 col-12">
-                                        <h5 class="mt-1">Personal Info</h5>
+                                        <h5 class="mt-1">Infos Personnelles </h5>
                                     </div>
 
                                     <div class="col-lg-6 col-12 mt-2">
@@ -358,7 +334,7 @@
                                     </div>
 
                                     <div class="col-lg-12 col-12">
-                                        <h5 class="mt-4 pt-1">Choose Payment</h5>
+                                        <h5 class="mt-4 pt-1">Choisissez le mode de paiement:</h5>
                                     </div>
 
                                     <div class="col-lg-12 col-12 mt-2">
@@ -378,7 +354,11 @@
                                             </label>
                                         </div>
 
-                                        <button type="submit" class="form-control mt-4">Submit Donation</button>
+                                        <button type="submit" class="form-control mt-4">
+                                        
+                                            <i class="bi-send custom-icon ms-1 colors-white"> Envoyer</i>
+                                            
+                                            </button>
                                     </div>
                                 </div>
                             </form>

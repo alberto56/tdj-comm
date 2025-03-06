@@ -494,8 +494,8 @@
 
                     <div class="col-lg-7 col-12 ms-auto">
                         <h2 class="mb-0"> Trouvez nos rapport d'activités</h2>
-                        <a href="rapports.html" class="custom-btn btn smoothscroll"> Rapports d'activités </a>
-                        <a href="rapports.html" class="me-6"> Rapports annuels </a>
+                        <a href="rapports.html" class="custom-btn btn smoothscroll">Fouilles les Rapport</a>
+                        <a href="rapports.html" class="me-6">Rapports annuels</a>
                     </div>
 
                     <div class="col-lg-5 col-12 ms-auto">
@@ -742,10 +742,10 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-4">Bénevole</h2>
+                        <h2 class="text-white mb-4">Bénévole</h2>
 
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h4 class="mb-4">Dévenir Bénevole au Terre des jeunes</h4>
+                            <h4 class="mb-4">Dévenir Bénévole au Terre des jeunes</h4>
 
                             <div class="row">
                                 <div class="col-lg-6 col-12">
@@ -778,7 +778,7 @@
                             <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
                                 placeholder="Comment (Optional)"></textarea>
 
-                            <button type="submit" class="form-control">Submit</button>
+                            <button type="submit" class="form-control"> Acceptez</button>
                         </form>
                     </div>
 
@@ -787,7 +787,7 @@
                             class="volunteer-image img-fluid img-responsive center-block d-block d-lg-block mx-auto" alt="">
 
                         <div class="custom-block-body text-center">
-                            <h4 class="text-white mt-lg-3 mb-lg-3">A propos du Bénévolat</h4>
+                            <h4 class="text-white mt-lg-3 mb-lg-3">Apropos de Bénevolant</h4>
 
                             <p class="text-white">
                                 Le bénévolat à Terre des Jeunes est une belle opportunité pour les jeunes de s'impliquer dans des projets significatifs. En travaillant ensemble, ils développent des compétences précieuses, créent des liens solides et contribuent à des causes qui leur tiennent à cœur.
@@ -974,7 +974,7 @@
     <!-- sections nos partenaires -->
     <section class="container mx-auto" id="parteners">
         <div class="col-lg-12 col-12 text-center mb-4">
-            <h2>Nos Partenaires</h2>
+            <h2>Partenaires de Terre des jeunes</h2>
             <p class="text-muted">Découvrez nos précieux partenaires qui soutiennent nos causes.</p>
         </div>
         <div class="swiper-container">
@@ -1028,7 +1028,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <h5 class="site-footer-title mb-3  text-white" >Quick Links</h5>
+                    <h5 class="site-footer-title mb-3  text-white" >Liens Direct</h5>
 
                     <ul class="footer-menu">
                         <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Notre Historque</a></li>
@@ -1043,7 +1043,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                    <h5 class="site-footer-title mb-3  text-white">Contact Infomation</h5>
+                    <h5 class="site-footer-title mb-3  text-white">Infos Contact</h5>
 
                     <p class="text-white d-flex mb-2">
                         <i class="bi-telephone me-2"></i>
@@ -1139,91 +1139,37 @@
         const newsContainer = document.getElementById("newsContainer");
         const recentNewsContainer = document.getElementById("recentNewsContainer");
         const countryList = document.getElementById("countryList");
- 
-    function loadDefaultNews(defaultArticles) {
-    const newsContainer = document.getElementById("news-container"); 
-    if (!newsContainer) return; // Vérifier si l'élément existe
 
-    newsContainer.innerHTML = ""; // Vider le conteneur
+function loadDefaultNews(defaultArticles) {
+    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+    newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
-    // Limiter à 4 articles maximum, mais afficher au moins 4
-    const minArticles = 4;
-    const articlesToDisplay = defaultArticles.slice(0, minArticles);
-
-    while (articlesToDisplay.length < minArticles) {
-        articlesToDisplay.push({
-            id: "placeholder",
-            title: "Article en attente...",
-            image: "placeholder.jpg",
-            description: "Plus d'articles à venir bientôt."
-        });
-    }
-
-    articlesToDisplay.forEach(article => {
+    defaultArticles.forEach(article => {
         const newsBlock = document.createElement("div");
         newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
 
-        // Limiter le titre à 50 caractères sans couper un mot
-        const truncatedTitle = truncateText(article.title, 50);
+        // S'assurer que le titre a au moins 20 caractères
+        const truncatedTitle = article.title.length >= 20 ? article.title : article.title.padEnd(20, ".");
+        let lirePlus = '';
+        if (typeof article.url !== 'undefined') {
+          lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
+        }
 
         newsBlock.innerHTML = `
             <div class="card shadow-sm mb-4" style="border: none;">
                 <div class="card-body text-center">
                     <h5 class="card-title">${truncatedTitle}</h5>
-                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded news-img"> 
-                    <p class="card-text d-none">${article.description}</p> <!-- Description cachée -->
-                    <a href="news-details.html?articleId=${article.id}" class="btn btn-primary mt-2">Lire plus</a>
+                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
+                        style="width: 100%; height: 200px; object-fit: cover;">
+                    ${lirePlus}
                 </div>
             </div>
         `;
 
         newsContainer.appendChild(newsBlock);
     });
-
-    // Appliquer une taille uniforme après chargement des images
-    uniformizeImages();
 }
 
-// Fonction pour tronquer le texte sans couper un mot
-function truncateText(text, maxLength) {
-    if (text.length <= maxLength) return text;
-    let truncated = text.substring(0, maxLength);
-    return truncated.substring(0, truncated.lastIndexOf(" ")) + "..."; // Coupe à l'espace le plus proche
-}
-
-// Fonction pour ajuster la hauteur de toutes les images après chargement
-function uniformizeImages() {
-    const images = document.querySelectorAll(".news-img");
-    let minHeight = 200; // Hauteur minimum souhaitée
-    let maxHeight = 0;
-
-    // Trouver la hauteur la plus grande
-    images.forEach(img => {
-        img.onload = () => {
-            if (img.naturalHeight > maxHeight) {
-                maxHeight = img.naturalHeight;
-            }
-            applyUniformHeight(images, Math.max(minHeight, maxHeight));
-        };
-    });
-}
-
-// Appliquer une hauteur uniforme à toutes les images
-function applyUniformHeight(images, height) {
-    images.forEach(img => {
-        img.style.height = `${height}px`;
-        img.style.objectFit = "cover"; // Pour garder un bon cadrage
-    });
-}
-
-
-// Appliquer une hauteur uniforme à toutes les images
-function applyUniformHeight(images, height) {
-    images.forEach(img => {
-        img.style.height = `${height}px`;
-        img.style.objectFit = "cover"; // Pour garder un bon cadrage
-    });
-}
 
         // Charger les drapeaux des pays et afficher la liste des pays
         async function loadCountryFlags() {
