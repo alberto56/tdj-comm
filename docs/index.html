@@ -524,18 +524,11 @@
                         <button class="carousel-control-prev" type="button" data-bs-target="#causesCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-                            <span class="visually-hidden">Previous</span>
-
                             <span class="visually-hidden"></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#causesCarousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-
-                            <span class="visually-hidden">Next</span>
-
                             <span class="visually-hidden"></span>
                         </button>
                     </div>
@@ -545,81 +538,14 @@
          <!-- sections d'articles -->
         <section class="news-section section-padding" id="section_5">
             <div class="container">
+                <div class="col-lg-12 col-12 mb-5">
+                    <h2>Dernières nouvelles</h2>
+                </div>
                 <div id="countries" class="row">
-                    <div class="col-lg-12 col-12 mb-5">
-                        <h2>Dernières nouvelles</h2>
-                    </div>
-
-                    <div class="col-lg-7 col-12">
+                    <div class="col-lg-12 col-12">
                         <div id="newsContainer" class="row">
                             <!-- Les articles par défaut seront chargés ici -->
                         </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-12 mx-auto">
-                        <!-- Formulaire de recherche -->
-                        <form class="custom-form search-form mb-4" id="searchForm" role="form">
-                            <input name="search" type="search" class="form-control" id="search"
-                                placeholder="Rechercher un article" aria-label="Search">
-                            <button type="submit" class="form-control">
-                                <i class="bi-search"></i>
-                            </button>
-                        </form>
-
-                         <!-- Filtrer par pays -->
-                         <div class="category-block d-flex flex-column">
-                            <h5>Filtrer par pays</h5>
-                            <ul id="countryList" class="list-group"></ul>
-                        </div>
-
-                        <h5 class="mt-5 mb-3">Actualités récentes</h5>
-                        <div class="col-lg-4 col-12 mx-auto">
-                            <!-- <div id="recentNewsContainer" class="row"> -->
-
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/462.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a></h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 16, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="images/news/452.jpg" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a></h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 16, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- </div> -->
-                        </div>
-
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -1068,7 +994,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="text-white mb-0">&copy; 2023 Terre des Jeunes. Tous droits réservés.</p>
+                        <p class="text-white mb-0">&copy; 2025 Terre des Jeunes. Tous droits réservés.</p>
                     </div>
                 </div>
             </div>
@@ -1118,11 +1044,11 @@
     newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
     // Limiter le nombre d'articles affichés à 4
-    const articlesToShow = defaultArticles.slice(0, 4);
+    const articlesToShow = defaultArticles.slice(0, 6);
 
     articlesToShow.forEach(article => {
         const newsBlock = document.createElement("div");
-        newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
+        newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
 
         // Tronquer le titre à 50 caractères max
         const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
