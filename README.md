@@ -8,12 +8,9 @@
 
 ## Développement local
 
-    docker run --rm \
-      --volume="$PWD/docs:/srv/jekyll" \
-      jekyll/minimal:4 \
-      jekyll build --trace --incremental
+    docker compose up
 
-Ensuite aller à ./docs/_site
+Ensuite aller http://0.0.0.0:4000
 
 ## Liste de fonctionalités
 
