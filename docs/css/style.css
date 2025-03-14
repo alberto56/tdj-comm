@@ -2139,3 +2139,14 @@ footer {
               width: 100%; /* Boutons pleine largeur */
           }
       }
+
+.localdev-warning {
+  background: red;
+  padding: 200px 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.localdev-warning code {
+  color: white;
+}

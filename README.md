@@ -6,6 +6,12 @@
 * Prince NZELA MULOKO (github: MulokoPrince), Webmaster TDJ RDC, Uvira(RDCONGO), mulokoprince@gmail.com
 * Albert ALBALA (github: alberto56), secrétaire-trésorier de TDJ transnational, Montréal (Canada), albert.albala@gmail.com
 
+## Développement local
+
+    docker compose up
+
+Ensuite aller http://0.0.0.0:4000
+
 ## Liste de fonctionalités
 
 * Bouton de dons

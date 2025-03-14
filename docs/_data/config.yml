@@ -1,0 +1,2 @@
+# Just so we can display a warning if we're not on Jekyll
+jekyll: true
