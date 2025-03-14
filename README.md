@@ -6,6 +6,15 @@
 * Prince NZELA MULOKO (github: MulokoPrince), Webmaster TDJ RDC, Uvira(RDCONGO), mulokoprince@gmail.com
 * Albert ALBALA (github: alberto56), secrétaire-trésorier de TDJ transnational, Montréal (Canada), albert.albala@gmail.com
 
+## Développement local
+
+    docker run --rm \
+      --volume="$PWD/docs:/srv/jekyll" \
+      jekyll/minimal:4 \
+      jekyll build --trace --incremental
+
+Ensuite aller à ./docs/_site
+
 ## Liste de fonctionalités
 
 * Bouton de dons
