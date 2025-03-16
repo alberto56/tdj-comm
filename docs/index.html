@@ -2,19 +2,15 @@
 ---
 <!doctype html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Terre des jeunes</title>
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -23,1276 +19,1124 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- CHARGEMENT DE JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <link href="css/style.css" rel="stylesheet">
-
-</head>
-
-<body id="section_1">
-
+  </head>
+  <body id="section_1">
     {% if site.data.config.jekyll != true%}
     <div class="localdev-warning">
-        Attention! Vous devez générer le site avec Docker. SVP faire:
-        <code>
-            docker-compose up
-        </code>
-        Puis visiter http://0.0.0.0:4000
+      Attention! Vous devez générer le site avec Docker. SVP faire:
+      <code>
+      docker-compose up
+      </code>
+      Puis visiter http://0.0.0.0:4000
     </div>
     {% endif %}
-
     <header class="site-header">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-8 col-12 d-flex flex-wrap">
-                    <p class="d-flex me-4 mb-0">
-                        <i class="bi-geo-alt me-2"></i>
-                        Boulevard; Montreal 20, 0150 Oslo, Norway
-                    </p>
-
-                    <p class="d-flex mb-0">
-                        <i class="bi-envelope me-2"></i>
-
-                        <a href="mailto:info@company.com">
-                            info@terredesjeunes.org
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                    <ul class="social-icon">
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-whatsapp"></a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-12 d-flex flex-wrap">
+            <p class="d-flex me-4 mb-0">
+              <i class="bi-geo-alt me-2"></i>
+              Boulevard; Montreal 20, 0150 Oslo, Norway
+            </p>
+            <p class="d-flex mb-0">
+              <i class="bi-envelope me-2"></i>
+              <a href="mailto:info@company.com">
+              info@terredesjeunes.org
+              </a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+            <ul class="social-icon">
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-twitter"></a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-facebook"></a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-instagram"></a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-youtube"></a>
+              </li>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-whatsapp"></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </header>
     <!-- nav dejaaa -->
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-        <div class="container">
-            <!-- Logo + Nom -->
-            <a class="navbar-brand d-flex align-items-center my-dark-on-light" href="index.html">
-                <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre des jeunes">
-                <h2 class="fw-bold logo">Terre des jeunes</h2>
-            </a>
-
-            <!-- Bouton Toggle (pour mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Menu de Navigation -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Causes</a></li>
-                    <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Bénévolat</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Actualités</a>
-                        <ul class="dropdown-menu dropdown-menu-light">
-                            <li><a class="dropdown-item" href="news.html">Liste des actualités</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link custom-btn custom-border-btn btn btn-primary" href="donate.html">Faire un Don</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link custom-btn custom-border-btn btn btn-secondary" href="#" data-bs-toggle="modal"
-                            data-bs-target="#authModal">Connexion</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <!-- Logo + Nom -->
+        <a class="navbar-brand d-flex align-items-center my-dark-on-light" href="index.html">
+          <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre des jeunes">
+          <h2 class="fw-bold logo">Terre des jeunes</h2>
+        </a>
+        <!-- Bouton Toggle (pour mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu de Navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">À propos</a></li>
+            <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Causes</a></li>
+            <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Bénévolat</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Actualités</a>
+              <ul class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item" href="news.html">Liste des actualités</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link custom-btn custom-border-btn btn btn-primary" href="donate.html">Faire un Don</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link custom-btn custom-border-btn btn btn-secondary" href="#" data-bs-toggle="modal"
+                data-bs-target="#authModal">Connexion</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-
-
     <!-- Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="authModalLabel">Welcome Terre des jeunes</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav nav-tabs" id="authTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab"
-                                aria-controls="login" aria-selected="true">Connexion</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab"
-                                aria-controls="signup" aria-selected="false">Inscription</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-3 " id="authTabContent">
-                        <!-- Connexion Form -->
-                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                            <form class="col-12">
-                                <div class="mb-3">
-                                    <label for="emailLogin" class="form-label">Adress Email</label>
-                                    <input type="email" class="form-control" id="emailLogin" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="passwordLogin" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" id="passwordLogin" required>
-                                </div>
-                                <button type="submit" class="btn custom-btn custom-border-btn btn w-100">Se
-                                    connecter</button>
-                            </form>
-                        </div>
-                        <!-- Inscription Form -->
-                        <!-- Formulaire d'inscription professionnel -->
-                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                            <form>
-                                <div class="row">
-                                    <!-- Nom Complet -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="fullName" class="form-label">Nom Complet</label>
-                                        <input type="text" class="form-control" id="fullName" required>
-                                    </div>
-                                    <!-- Email -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="emailSignup" class="form-label">Adress Email</label>
-                                        <input type="email" class="form-control" id="emailSignup" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <!-- Mot de passe -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="passwordSignup" class="form-label">Mot de passe</label>
-                                        <input type="password" class="form-control" id="passwordSignup" required>
-                                    </div>
-                                    <!-- Confirmer le mot de passe -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="confirmPassword" class="form-label">Confirmer le mot de
-                                            passe</label>
-                                        <input type="password" class="form-control" id="confirmPassword" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <!-- Pays -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="country" class="form-label">Pays</label>
-                                        <select class="form-select" id="country" required>
-                                            <option value="" disabled selected>Choisissez votre pays</option>
-                                            <option value="CD" data-flag="cd">Republic Dem Of Congo</option>
-                                            <option value="BI" data-flag="bi">Burundi</option>
-                                            <option value="US" data-flag="us">États-Unis</option>
-                                            <option value="FR" data-flag="fr">France</option>
-                                            <option value="NG" data-flag="ng">Nigeria</option>
-                                            <option value="IN" data-flag="in">Inde</option>
-                                            <option value="GB" data-flag="gb">Royaume-Uni</option>
-                                            <option value="DE" data-flag="de">Allemagne</option>
-                                            <!-- Ajoutez d'autres pays ici -->
-                                        </select>
-                                    </div>
-                                    <!-- Antenne -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="antenna" class="form-label">Antenne TDJ</label>
-                                        <input type="text" class="form-control" id="antenna" required>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <!-- Fonction -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="role" class="form-label">Fonction au sein de TDJ</label>
-                                        <input type="text" class="form-control" id="role" required>
-                                    </div>
-                                    <!-- Téléphone -->
-                                    <div class="col-md-6 mb-3">
-                                        <label for="phone" class="form-label">Numéro de téléphone</label>
-                                        <input type="tel" class="form-control" id="phone" required>
-                                    </div>
-                                </div>
-
-                                <button type="submit"
-                                    class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
-                            </form>
-                        </div>
-
-
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="authModalLabel">Welcome Terre des jeunes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="authTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab"
+                  aria-controls="login" aria-selected="true">Connexion</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab"
+                  aria-controls="signup" aria-selected="false">Inscription</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-3 " id="authTabContent">
+              <!-- Connexion Form -->
+              <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <form class="col-12">
+                  <div class="mb-3">
+                    <label for="emailLogin" class="form-label">Adress Email</label>
+                    <input type="email" class="form-control" id="emailLogin" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="passwordLogin" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="passwordLogin" required>
+                  </div>
+                  <button type="submit" class="btn custom-btn custom-border-btn btn w-100">Se
+                  connecter</button>
+                </form>
+              </div>
+              <!-- Inscription Form -->
+              <!-- Formulaire d'inscription professionnel -->
+              <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                <form>
+                  <div class="row">
+                    <!-- Nom Complet -->
+                    <div class="col-md-6 mb-3">
+                      <label for="fullName" class="form-label">Nom Complet</label>
+                      <input type="text" class="form-control" id="fullName" required>
                     </div>
-                </div>
+                    <!-- Email -->
+                    <div class="col-md-6 mb-3">
+                      <label for="emailSignup" class="form-label">Adress Email</label>
+                      <input type="email" class="form-control" id="emailSignup" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <!-- Mot de passe -->
+                    <div class="col-md-6 mb-3">
+                      <label for="passwordSignup" class="form-label">Mot de passe</label>
+                      <input type="password" class="form-control" id="passwordSignup" required>
+                    </div>
+                    <!-- Confirmer le mot de passe -->
+                    <div class="col-md-6 mb-3">
+                      <label for="confirmPassword" class="form-label">Confirmer le mot de
+                      passe</label>
+                      <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <!-- Pays -->
+                    <div class="col-md-6 mb-3">
+                      <label for="country" class="form-label">Pays</label>
+                      <select class="form-select" id="country" required>
+                        <option value="" disabled selected>Choisissez votre pays</option>
+                        <option value="CD" data-flag="cd">Republic Dem Of Congo</option>
+                        <option value="BI" data-flag="bi">Burundi</option>
+                        <option value="US" data-flag="us">États-Unis</option>
+                        <option value="FR" data-flag="fr">France</option>
+                        <option value="NG" data-flag="ng">Nigeria</option>
+                        <option value="IN" data-flag="in">Inde</option>
+                        <option value="GB" data-flag="gb">Royaume-Uni</option>
+                        <option value="DE" data-flag="de">Allemagne</option>
+                        <!-- Ajoutez d'autres pays ici -->
+                      </select>
+                    </div>
+                    <!-- Antenne -->
+                    <div class="col-md-6 mb-3">
+                      <label for="antenna" class="form-label">Antenne TDJ</label>
+                      <input type="text" class="form-control" id="antenna" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <!-- Fonction -->
+                    <div class="col-md-6 mb-3">
+                      <label for="role" class="form-label">Fonction au sein de TDJ</label>
+                      <input type="text" class="form-control" id="role" required>
+                    </div>
+                    <!-- Téléphone -->
+                    <div class="col-md-6 mb-3">
+                      <label for="phone" class="form-label">Numéro de téléphone</label>
+                      <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                  </div>
+                  <button type="submit"
+                    class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-
     <!-- sections main principal -->
     <main>
-        <!-- slider header -->
-        <section class="hero-section hero-section-full-height ">
-            <div class="container-fluid">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 p-0">
-                        <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/slide/78.jpg"
-                                        class="d-block w-100 carousel-image " alt="...">
-
-                                    <div class="">
-                                        <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
-
-                                        <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item active">
-                                    <img src="images/slide/452.jpg"
-                                        class="d-block w-100 carousel-image " alt="...">
-                                        <div class=" ">
-                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
-
-                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                        </div>
-
-                                </div>
-                                <div class="carousel-item active">
-                                    <img src="images/slide/65.jpg"
-                                        class="d-block w-100 carousel-image " alt="...">
-                                        <div class=" ">
-                                            <h5 class="text-center">CHAQUE GESTE COMPTE </h5>
-
-                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                        </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <img src="images/slide/img1.jpg"
-                                        class="d-block w-100 carousel-image " alt="...">
-                                        <div class="">
-                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
-
-                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                        </div>
-                                </div>
-
-                                <div class="carousel-item"data-bs-interval="2000">
-                                    <img src="images/slide/462.jpg"
-                                        class="d-block w-100 carousel-image " alt="...">
-                                        <div class="">
-                                            <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
-
-                                            <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
-                                        </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden"></span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden"></span>
-                            </button>
-                        </div>
+      <!-- slider header -->
+      <section class="hero-section hero-section-full-height ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12 col-12 p-0">
+              <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/slide/78.jpg"
+                      class="d-block w-100 carousel-image " alt="...">
+                    <div class="">
+                      <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+                      <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
                     </div>
-
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="images/slide/452.jpg"
+                      class="d-block w-100 carousel-image " alt="...">
+                    <div class=" ">
+                      <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+                      <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="images/slide/65.jpg" class="d-block w-100 carousel-image " alt="...">
+                    <div class=" ">
+                      <h5 class="text-center">CHAQUE GESTE COMPTE </h5>
+                      <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide/img1.jpg"
+                      class="d-block w-100 carousel-image " alt="...">
+                    <div class="">
+                      <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+                      <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/slide/462.jpg"
+                      class="d-block w-100 carousel-image " alt="...">
+                    <div class="">
+                      <h5 class="text-center">CHAQUE GESTE COMPTE</h5>
+                      <p class="text-center">UN AUTRE MONDE EST POSSIBLE, NOUS LE CREONS</p>
+                    </div>
+                  </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
+                  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
+                  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+                </button>
+              </div>
             </div>
-        </section>
-
-<!-- BIENVENUE -->
-        <section class="section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-10 col-12 text-center mx-auto">
-                        <h2 class="mb-5">BIENVENUE DANS L'UNIVERS DE TERRE DES JEUNES</h2>
-                    </div>
-                    <div class="slider">
-                        <div class="slides">
-                            <!-- Slide 1 -->
-                            <div class="slide">
-                                <img src="images/banner/TTTTT1.jpg" alt="Slide 1">
-                                <!-- <h5>UN AUTRE EST POSSIBLE, NOUS LE CRÉONS</h5> -->
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="slide">
-                                <img src="images/banner/TTTTT22.jpg" alt="Slide 2">
-
-                                <!-- <h5>ENSEMBLE, RÉALISONS NOS RÊVES</h5> -->
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="slide">
-                                <img src="images/banner/TTTTT1.jpg" alt="Slide 3">
-
-                                <!-- <h5>TRANSFORMONS L'IMPOSSIBLE EN RÉALITÉ</h5> -->
-                            </div>
-                        </div>
-                    </div>
-
+          </div>
+        </div>
+      </section>
+      <!-- BIENVENUE -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-12 text-center mx-auto">
+              <h2 class="mb-5">BIENVENUE DANS L'UNIVERS DE TERRE DES JEUNES</h2>
+            </div>
+            <div class="slider">
+              <div class="slides">
+                <!-- Slide 1 -->
+                <div class="slide">
+                  <img src="images/banner/TTTTT1.jpg" alt="Slide 1">
+                  <!-- <h5>UN AUTRE EST POSSIBLE, NOUS LE CRÉONS</h5> -->
                 </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                  <img src="images/banner/TTTTT22.jpg" alt="Slide 2">
+                  <!-- <h5>ENSEMBLE, RÉALISONS NOS RÊVES</h5> -->
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                  <img src="images/banner/TTTTT1.jpg" alt="Slide 3">
+                  <!-- <h5>TRANSFORMONS L'IMPOSSIBLE EN RÉALITÉ</h5> -->
+                </div>
+              </div>
             </div>
-        </section>
-        <!-- Mission de terredesjeunes -->
-        <section class="section-padding section-bg" id="section_2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-12 mb-5 mb-lg-0">
-                        <img src="images/c.jpg"
-                         class="custom-text-box-image img-fluid " alt="" style="width: 600px; height: 680px;">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-12">
-                                <div class="custom-text-box  d-lg-block mb-lg-0">
-                                    <div class="counter-thumb">
-                                        <div class="d-flex">
-                                            <span class="counter-number" data-from="1" data-to="1985"
-                                                data-speed="1000"></span>
-                                            <span class="counter-number-text"></span>
-                                        </div>
-
-                                        <span class="counter-text">Fondations en Italy</span>
-                                    </div>
-                                    <div class="counter-thumb">
-                                        <div class="d-flex">
-                                            <span class="counter-number" data-from="1" data-to="1110"
-                                                data-speed="1000"></span>
-                                            <span class="counter-number-text">M</span>
-                                        </div>
-
-                                        <span class="counter-text">Arbres plantes</span>
-                                    </div>
-                                <!--<div class="counter-thumb mt-4">
-                                        <div class="d-flex">
-                                            <span class="counter-number" data-from="1" data-to="1200"
-                                                data-speed="1000"></span>
-                                            <span class="counter-number-text">M</span>
-                                        </div>
-
-                                        <span class="counter-text">Arbres Plantés</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
+          </div>
+        </div>
+      </section>
+      <!-- Mission de terredesjeunes -->
+      <section class="section-padding section-bg" id="section_2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-12 mb-5 mb-lg-0">
+              <img src="images/c.jpg"
+                class="custom-text-box-image img-fluid " alt="" style="width: 600px; height: 680px;">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <div class="custom-text-box  d-lg-block mb-lg-0">
+                    <div class="counter-thumb">
+                      <div class="d-flex">
+                        <span class="counter-number" data-from="1" data-to="1985"
+                          data-speed="1000"></span>
+                        <span class="counter-number-text"></span>
+                      </div>
+                      <span class="counter-text">Fondations en Italy</span>
                     </div>
-                    <div class="col-lg-4 col-12">
-                        <div class="custom-text-box">
-                            <h2 class="mb-2"> Historque</h2>
-
-                            <h5 class="mb-3">Terre des jeunes, Organisation à but non lucratif</h5>
-
-                            <p class="mb-0"> <span>
-                                    Nous sommes <b>Terre des jeunes</b>, un organisme sans but lucratif visant à
-                                    sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la
-                                    gestion locale ou régionale du patrimoine naturel et culturel, par et pour les
-                                    jeunes eux-mêmes. Notre réseau d'antennes indépendantes repose sur le bénévolat et
-                                    la gestion locale par les jeunes pour traiter des problématiques
-                                    environnementales comme la déforestation, tout en valorisant les connaissances
-                                    locales et traditionnelles.
-
-                                </span>
-
-                            </p>
-                            <ul class="custom-list mt-2">
-                                <h5>Activités</h5>
-                                <li class="custom-list-item d-flex">
-                                    <i class="bi-check custom-text-box-icon me-2"></i>
-                                    Campagnes : Plantation d'arbres, recyclage et tri-selectif
-                                </li>
-
-                                <li class="custom-list-item d-flex">
-                                    <i class="bi-check custom-text-box-icon me-2"></i>
-                                    Education : Activités éducatives pour les jeunes.
-                                </li>
-                                <li class="custom-list-item d-flex">
-                                    <i class="bi-check custom-text-box-icon me-2"></i>
-                                    Banque Agricole de graines
-                                </li>
-                                <a href="about.html" class="nav-link custom-btn custom-border-btn btn">Read-more</a>
-                            </ul>
-
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-12">
-                                <div class="custom-text-box mb-lg-0">
-                                    <h5 class="mb-3">Mission de Terre des jeunes</h5>
-
-                                    <p>Is to build the new worldwide charties with the youngs people</p>
-
-                                    <ul class="custom-list mt-2">
-                                        <li class="custom-list-item d-flex">
-                                            <i class="bi-check custom-text-box-icon me-2"></i>
-                                            Terre DesJeunes
-                                        </li>
-
-                                        <li class="custom-list-item d-flex">
-                                            <i class="bi-check custom-text-box-icon me-2"></i>
-                                            build your future with us
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="counter-thumb">
+                      <div class="d-flex">
+                        <span class="counter-number" data-from="1" data-to="1110"
+                          data-speed="1000"></span>
+                        <span class="counter-number-text">M</span>
+                      </div>
+                      <span class="counter-text">Arbres plantes</span>
                     </div>
-          <!-- col riel bio -->
+                    <!--<div class="counter-thumb mt-4">
+                      <div class="d-flex">
+                          <span class="counter-number" data-from="1" data-to="1200"
+                              data-speed="1000"></span>
+                          <span class="counter-number-text">M</span>
+                      </div>
+
+                      <span class="counter-text">Arbres Plantés</span>
+                      </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="custom-text-box">
+                <h2 class="mb-2"> Historque</h2>
+                <h5 class="mb-3">Terre des jeunes, Organisation à but non lucratif</h5>
+                <p class="mb-0"> <span>
+                  Nous sommes <b>Terre des jeunes</b>, un organisme sans but lucratif visant à
+                  sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la
+                  gestion locale ou régionale du patrimoine naturel et culturel, par et pour les
+                  jeunes eux-mêmes. Notre réseau d'antennes indépendantes repose sur le bénévolat et
+                  la gestion locale par les jeunes pour traiter des problématiques
+                  environnementales comme la déforestation, tout en valorisant les connaissances
+                  locales et traditionnelles.
+                  </span>
+                </p>
+                <h5>Activités</h5>
+                <ul class="custom-list mt-2">
+                  <li class="custom-list-item d-flex">
+                    <i class="bi-check custom-text-box-icon me-2"></i>
+                    Campagnes : Plantation d'arbres, recyclage et tri-selectif
+                  </li>
+                  <li class="custom-list-item d-flex">
+                    <i class="bi-check custom-text-box-icon me-2"></i>
+                    Education : Activités éducatives pour les jeunes.
+                  </li>
+                  <li class="custom-list-item d-flex">
+                    <i class="bi-check custom-text-box-icon me-2"></i>
+                    Banque Agricole de graines
+                    <a href="about.html" class="nav-link custom-btn custom-border-btn btn">Read-more</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <div class="custom-text-box mb-lg-0">
+                    <h5 class="mb-3">Mission de Terre des jeunes</h5>
+                    <p>Is to build the new worldwide charties with the youngs people</p>
+                    <ul class="custom-list mt-2">
+                      <li class="custom-list-item d-flex">
+                        <i class="bi-check custom-text-box-icon me-2"></i>
+                        Terre DesJeunes
+                      </li>
+                      <li class="custom-list-item d-flex">
+                        <i class="bi-check custom-text-box-icon me-2"></i>
+                        build your future with us
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- col riel bio -->
             <div class="col-lg-5 col-12 mb-5 mb-lg-0">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-8 col-12">
-                            <img src="images/members/membercreat.jpg"
-                                class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" style="width: 510px; height: 350px;">
-                        </div>
-
-                        <div class="col-lg-7 col-md-6 col-12">
-                            <div class="custom-text-block">
-                                <h2 class="mb-0 text-center">Riel Huaorani</h2>
-
-                                <p class="text-muted mb-lg-8 mb-md-4 text-center">Fondateur Terre des jeunes</p>
-                                <p>
-                                    Une organisation dédiée à la préservation de l'environnement, promeut l'éducation à l'environnement comme clé pour le développement durable. Elle vise à promouvoir des dynamiques sociales,
-                                    à travers une approche participative et critique au sein des communautés et des réseaux de solidarité.
-                                En résumé, Terre des jeunes intègre une éducation environnementale pour préparer la prochaine génération à relever les défis du développement durable.
-                                </p>
-                                <ul class="social-icon mt-4">
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
-                                    </li>
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-instagram"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-            </div>
+              <div class="row">
+                <div class="col-lg-5 col-md-8 col-12">
+                  <img src="images/members/membercreat.jpg"
+                    class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" style="width: 510px; height: 350px;">
                 </div>
-            </div>
-        </section>
-
-                <!-- cta sections de rapports clic -->
-        <section class="cta-section section-padding section-bg mt-4">
-            <div class="container">
-                <div class="row ">
-
-                    <div class="col-lg-7 col-12 ms-auto">
-                        <h2 class="mb-0"> Trouvez nos rapport d'activités</h2>
-                        <a href="rapports.html" class="custom-btn btn smoothscroll">Rapport D'activités</a>
-                        <a href="rapports.html" class="me-6">Rapports annuels</a>
-                    </div>
-
-                    <div class="col-lg-5 col-12 ms-auto">
-                        <h2 class="mb-0">Avoir un impact.</h2>
-                        <a href="donate.html" class="me-4">Faire un don</a>
-                        <a href="#section_4" class="custom-btn btn smoothscroll">Dévenir un Bénévole</a>
-                    </div>
-
+                <div class="col-lg-7 col-md-6 col-12">
+                  <div class="custom-text-block">
+                    <h2 class="mb-0 text-center">Riel Huaorani</h2>
+                    <p class="text-muted mb-lg-8 mb-md-4 text-center">Fondateur Terre des jeunes</p>
+                    <p>
+                      Une organisation dédiée à la préservation de l'environnement, promeut l'éducation à l'environnement comme clé pour le développement durable. Elle vise à promouvoir des dynamiques sociales,
+                      à travers une approche participative et critique au sein des communautés et des réseaux de solidarité.
+                      En résumé, Terre des jeunes intègre une éducation environnementale pour préparer la prochaine génération à relever les défis du développement durable.
+                    </p>
+                    <ul class="social-icon mt-4">
+                      <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-twitter"></a>
+                      </li>
+                      <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-facebook"></a>
+                      </li>
+                      <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-instagram"></a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- section our Causes -->
-        <section class="section-padding" id="section_3">
-            <div class="container">
+          </div>
+        </div>
+      </section>
+      <!-- cta sections de rapports clic -->
+      <section class="cta-section section-padding section-bg mt-4">
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-7 col-12 ms-auto">
+              <h2 class="mb-0"> Trouvez nos rapport d'activités</h2>
+              <a href="rapports.html" class="custom-btn btn smoothscroll">Rapport D'activités</a>
+              <a href="rapports.html" class="me-6">Rapports annuels</a>
+            </div>
+            <div class="col-lg-5 col-12 ms-auto">
+              <h2 class="mb-0">Avoir un impact.</h2>
+              <a href="donate.html" class="me-4">Faire un don</a>
+              <a href="#section_4" class="custom-btn btn smoothscroll">Dévenir un Bénévole</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section our Causes -->
+      <section class="section-padding" id="section_3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-12 text-center mb-4">
+            </div>
+            <div id="causesCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row mettre-activites-ici">
+                    <!-- voir js/contenu/activites.js -->
+                  </div>
+                </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#causesCarousel"
+                data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+              <span class="visually-hidden"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#causesCarousel"
+                data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+              <span class="visually-hidden"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- sections d'articles -->
+      <section class="news-section section-padding" id="section_5">
+        <div class="container">
+          <div class="col-lg-12 col-12 mb-5">
+            <h2>Dernières nouvelles</h2>
+          </div>
+          <div id="countries" class="row">
+            <div class="col-lg-12 col-12">
+              <div id="newsContainer" class="row">
+                <!-- Les articles par défaut seront chargés ici -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <a href="news.html" class="custom-btn btn smoothscroll   text-2xl font-bold text-center mb-6">
+            Voir les articles
+            <span class="icon-circle">
+            <i class="fas fa-arrow-right"></i>
+            </span>
+            </a>
+          </div>
+          <div class="col-lg-4"></div>
+        </div>
+      </section>
+      <!-- sections padding icones  -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="#section_4" class="d-block">
+                  <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
+                  <p class="featured-block-text">Dévenir un <strong>Bénévole</strong></p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="donate.html" class="d-block">
+                  <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
+                  <p class="featured-block-text"><strong>Prendre soin</strong> De la Terre</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="donate.html" class="d-block">
+                  <img src="images/icons/receive.png" class="featured-block-image img-fluid" alt="">
+                  <p class="featured-block-text">Faire un<strong> Don</strong></p>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="donate.html" class="d-block">
+                  <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
+                  <p class="featured-block-text"><strong>Programme</strong> Scolaire</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- createur et membres Terre des jeunes-->
+      <section class=" about-section section-padding mx-auto py-10">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre des jeunes</h2>
+            </div>
+            <div class="col-lg-4">
+              <a  class="custom-btn btn smoothscroll text-2xl font-bold text-center mb-6">
+              Voir les membres de Terre des jeunes
+              <span class="icon-circle">
+              <i class="fas fa-arrow-right"></i>
+              </span>
+              </a>
+            </div>
+            <div class="col-lg-4"></div>
+          </div>
+          <div class="row g-4  " id="team-members_UNIQUE">
+            <!-- Les cartes seront générées ici -->
+            <!-- voir js/contenu/membres.js -mettre-membres-ici -->
+          </div>
+        </div>
+        <!-- Modal pour afficher les détails d'un membre -->
+        <!-- Conteneur des cartes des membres -->
+        <div id="team-members" class="row"></div>
+        <!-- Modal pour afficher les détails d'un membre -->
+        <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h3 id="modal-name"></h3>
+                <p id="modal-role"></p>
+                <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
+                <div id="modal-social" class="social-icons"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- volunteersections -->
+      <section class="volunteer-section section-padding" id="section_4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <h2 class="text-white mb-4">Bénévole</h2>
+              <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                <h4 class="mb-4">Dévenir Bénevole au Terre des jeunes</h4>
                 <div class="row">
-                    <div class="col-lg-12 col-12 text-center mb-4">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
+                      placeholder="Jack Doe" required>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <input type="email" name="volunteer-email" id="volunteer-email"
+                      pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                      required>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                      class="form-control" placeholder="Subject" required>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="input-group input-group-file">
+                      <input type="file" class="form-control" id="inputGroupFile02">
+                      <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
+                      <i class="bi-cloud-arrow-up ms-auto"></i>
                     </div>
-
-                    <div id="causesCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
-                            <div class="carousel-item active">
-                                <div class="row mettre-activites-ici">
-                                    <!-- voir js/contenu/activites.js -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carousel Controls -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#causesCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-
-                            <span class="visually-hidden"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#causesCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-
-                            <span class="visually-hidden">Next</span>
-                            <span class="visually-hidden"></span>
-                        </button>
-                    </div>
+                  </div>
                 </div>
+                <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                  placeholder="Comment (Optional)"></textarea>
+                <button type="submit" class="form-control">Submit</button>
+              </form>
             </div>
-        </section>
-         <!-- sections d'articles -->
-        <section class="news-section section-padding" id="section_5">
-            <div class="container">
-                <div class="col-lg-12 col-12 mb-5">
-                    <h2>Dernières nouvelles</h2>
-                </div>
-                <div id="countries" class="row">
-                    <div class="col-lg-12 col-12">
-                        <div id="newsContainer" class="row">
-                            <!-- Les articles par défaut seront chargés ici -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <a href="news.html" class="custom-btn btn smoothscroll   text-2xl font-bold text-center mb-6">
-                        Voir les articles
-                        <span class="icon-circle">
-
-                          <i class="fas fa-arrow-right"></i>
-                        </span>
-
-                      </a>
-                </div>
-                <div class="col-lg-4"></div>
+            <div class="col-lg-6  col-xs-9 col-md-8  col-12">
+              <img src="images/c.jpg"
+                class="volunteer-image img-fluid img-responsive center-block d-block d-lg-block mx-auto" alt="">
+              <div class="custom-block-body text-center">
+                <h4 class="text-white mt-lg-3 mb-lg-3" data-var="benevolat_page_accueil_titre">Apropos de Bénevolat</h4>
+                <p class="text-white">
+                  Le bénévolat à Terre des jeunes est une belle opportunité pour les jeunes de s'impliquer dans des projets significatifs. En travaillant ensemble, ils développent des compétences précieuses, créent des liens solides et contribuent à des causes qui leur tiennent à cœur.
+                  Ce partage d'expériences enrichit leur parcours personnel et professionnel.
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- sections padding icones  -->
-        <section class="section-padding">
-            <div class="container">
+          </div>
+        </div>
+      </section>
+      <!-- testimonial sections -->
+      <section class="testimonial-section section-padding section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-12 mx-auto">
+              <h2 class="mb-lg-3">Temoignage des antennes</h2>
+              <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <h4 class="carousel-title">
+                        Nous avons planté plus de 500 000 arbres,
+                        créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
+                      </h4>
+                      <small class="carousel-name"><span class="carousel-name-title">Antenne Cote d'Ivoire</span>,
+                      Bohui</small>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <h4 class="carousel-title">Nous avons planté des eucalyptus, moringas, acacias, ficus et palmiers,
+                        favorisant la biodiversité et répondant aux besoins écologiques de notre région.
+                      </h4>
+                      <small class="carousel-name"><span class="carousel-name-title">SOLIFED RDC</span>,
+                      Partenaire</small>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <h4 class="carousel-title">
+                        Nous, l'Antenne du Burundi, avons planté plus de 100 000 arbres,
+                        créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
+                      </h4>
+                      <small class="carousel-name"><span class="carousel-name-title">Antenne Burundi</span>,
+                      Terre des jeunes</small>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <h4 class="carousel-title">
+                        L'Haïti témoignent de leurs activités en plantant des arbres, promouvant le recyclage et
+                        développant des solutions de bioénergie durable.
+                      </h4>
+                      <small class="carousel-name"><span class="carousel-name-title">Antenne Haiti</span>,
+                      Terre des jeunes</small>
+                    </div>
+                  </div>
+                  <ol class="carousel-indicators">
+                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                      <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                        class="img-fluid rounded-circle avatar-image" alt="avatar">
+                    </li>
+                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                      <img src="images/avatar/portrait-young-redhead-bearded-male.jpg"
+                        class="img-fluid rounded-circle avatar-image" alt="avatar">
+                    </li>
+                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                      <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                        class="img-fluid rounded-circle avatar-image" alt="avatar">
+                    </li>
+                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                      <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                        class="img-fluid rounded-circle avatar-image" alt="avatar">
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact-section -->
+      <section class="contact-section section-padding" id="section_6">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+              <div class="contact-info-wrap">
+                <h2>Get in touch</h2>
+                <div class="contact-image-wrap d-flex flex-wrap">
+                  <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                    class="img-fluid avatar-image" alt="">
+                  <div class="d-flex flex-column justify-content-center ms-3">
+                    <p class="mb-0">Lydie Sandra</p>
+                    <p class="mb-0"><strong>HR & Office Manager</strong></p>
+                  </div>
+                </div>
+                <div class="contact-info">
+                  <h5 class="mb-3">Contact Infomation</h5>
+                  <p class="d-flex mb-2">
+                    <i class="bi-geo-alt me-2"></i>
+                    Boulevard. Montreal 20, 0150 Oslo, Norway
+                  </p>
+                  <p class="d-flex mb-2">
+                    <i class="bi-telephone me-2"></i>
+                    <a href="tel:120-240-9600">
+                    120-240-9600
+                    </a>
+                  </p>
+                  <p class="d-flex">
+                    <i class="bi-envelope me-2"></i>
+                    <a href="mailto:info@terredesjeunes.org">
+                    donate@terredesjeunes.org
+                    </a>
+                  </p>
+                  <a href="#" class="custom-btn btn mt-3">Get Direction</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-12 mx-auto">
+              <form class="custom-form contact-form" action="#" method="post" role="form">
+                <h2>Contact form</h2>
+                <p class="mb-4">Or, Tu peux juste envoyer un email:
+                  <a href="#">info@terredesjeunes.org</a>
+                </p>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#section_4" class="d-block">
-                                <img src="images/icons/hands.png" class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text">Dévenir un <strong>Bénévole</strong></p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="images/icons/heart.png" class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text"><strong>Prendre soin</strong> De la Terre</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="images/icons/receive.png" class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text">Faire un<strong> Don</strong></p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="images/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text"><strong>Programme</strong> Scolaire</p>
-                            </a>
-                        </div>
-                    </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <input type="text" name="first-name" id="first-name" class="form-control"
+                      placeholder="Jack" required>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <input type="text" name="last-name" id="last-name" class="form-control"
+                      placeholder="Doe" required>
+                  </div>
                 </div>
+                <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                  placeholder="Jackdoe@gmail.com" required>
+                <textarea name="message" rows="5" class="form-control" id="message"
+                  placeholder="What can we help you?"></textarea>
+                <button type="submit" class="form-control">Envoyer Message</button>
+              </form>
             </div>
-        </section>
-        <!-- createur et membres Terre des jeunes-->
-            <section class=" about-section section-padding mx-auto py-10">
-                <div class="container py-5">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre des jeunes</h2>
-                        </div>
-                        <div class="col-lg-4">
-                            <a  class="custom-btn btn smoothscroll text-2xl font-bold text-center mb-6">
-                                Voir les membres de Terre des jeunes
-                                <span class="icon-circle">
-
-                                  <i class="fas fa-arrow-right"></i>
-                                </span>
-
-                              </a>
-
-                        </div>
-                        <div class="col-lg-4"></div>
-                    </div>
-                    <div class="row g-4  " id="team-members">
-                        <!-- Les cartes seront générées ici -->
-                          <!-- voir js/contenu/membres.js -mettre-membres-ici -->
-                    </div>
-                </div>
-                   <!-- Modal pour afficher les détails d'un membre -->
-            <!-- Conteneur des cartes des membres -->
-            <div id="team-members" class="row"></div>
-
-            <!-- Modal pour afficher les détails d'un membre -->
-            <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3 id="modal-name"></h3>
-                            <p id="modal-role"></p>
-                            <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
-                            <div id="modal-social" class="social-icons"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section>
-                </div>
-            </section>
-        <!-- volunteersections -->
-        <section class="volunteer-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-4">Bénévole</h2>
-
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h4 class="mb-4">Dévenir Bénevole au Terre des jeunes</h4>
-
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                        placeholder="Jack Doe" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="email" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
-                                        class="form-control" placeholder="Subject" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="input-group input-group-file">
-                                        <input type="file" class="form-control" id="inputGroupFile02">
-
-                                        <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
-
-                                        <i class="bi-cloud-arrow-up ms-auto"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
-                                placeholder="Comment (Optional)"></textarea>
-
-                            <button type="submit" class="form-control">Submit</button>
-                        </form>
-                    </div>
-
-                    <div class="col-lg-6  col-xs-9 col-md-8  col-12">
-                        <img src="images/c.jpg"
-                            class="volunteer-image img-fluid img-responsive center-block d-block d-lg-block mx-auto" alt="">
-
-                        <div class="custom-block-body text-center">
-                            <h4 class="text-white mt-lg-3 mb-lg-3" data-var="benevolat_page_accueil_titre">Apropos de Bénevolat</h4>
-
-                            <p class="text-white">
-                                Le bénévolat à Terre des jeunes est une belle opportunité pour les jeunes de s'impliquer dans des projets significatifs. En travaillant ensemble, ils développent des compétences précieuses, créent des liens solides et contribuent à des causes qui leur tiennent à cœur.
-                                Ce partage d'expériences enrichit leur parcours personnel et professionnel.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- testimonial sections -->
-        <section class="testimonial-section section-padding section-bg">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-8 col-12 mx-auto">
-                        <h2 class="mb-lg-3">Temoignage des antennes</h2>
-
-                        <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">
-                                            Nous avons planté plus de 500 000 arbres,
-                                            créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
-                                        </h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Antenne Cote d'Ivoire</span>,
-                                            Bohui</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">Nous avons planté des eucalyptus, moringas, acacias, ficus et palmiers,
-                                             favorisant la biodiversité et répondant aux besoins écologiques de notre région.</h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">SOLIFED RDC</span>,
-                                            Partenaire</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">
-                                            Nous, l'Antenne du Burundi, avons planté plus de 100 000 arbres,
-                                            créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
-                                        </h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Antenne Burundi</span>,
-                                            Terre des jeunes</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">
-                                            L'Haïti témoignent de leurs activités en plantant des arbres, promouvant le recyclage et
-                                            développant des solutions de bioénergie durable.
-                                        </h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Antenne Haiti</span>,
-                                            Terre des jeunes</small>
-                                    </div>
-                                </div>
-
-                                <ol class="carousel-indicators">
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                        <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                        <img src="images/avatar/portrait-young-redhead-bearded-male.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                        <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                        <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-                                </ol>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- contact-section -->
-        <section class="contact-section section-padding" id="section_6">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                        <div class="contact-info-wrap">
-                            <h2>Get in touch</h2>
-
-                            <div class="contact-image-wrap d-flex flex-wrap">
-                                <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
-                                    class="img-fluid avatar-image" alt="">
-
-                                <div class="d-flex flex-column justify-content-center ms-3">
-                                    <p class="mb-0">Lydie Sandra</p>
-                                    <p class="mb-0"><strong>HR & Office Manager</strong></p>
-                                </div>
-                            </div>
-
-                            <div class="contact-info">
-                                <h5 class="mb-3">Contact Infomation</h5>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-geo-alt me-2"></i>
-                                    Boulevard. Montreal 20, 0150 Oslo, Norway
-                                </p>
-
-                                <p class="d-flex mb-2">
-                                    <i class="bi-telephone me-2"></i>
-
-                                    <a href="tel: 120-240-9600">
-                                        120-240-9600
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <i class="bi-envelope me-2"></i>
-
-                                    <a href="mailto:info@terredesjeunes.org">
-                                        donate@terredesjeunes.org
-                                    </a>
-                                </p>
-
-                                <a href="#" class="custom-btn btn mt-3">Get Direction</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Contact form</h2>
-
-                            <p class="mb-4">Or, Tu peux juste envoyer un email:
-                                <a href="#">info@terredesjeunes.org</a>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Jack" required>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Doe" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="Jackdoe@gmail.com" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="What can we help you?"></textarea>
-
-                            <button type="submit" class="form-control">Envoyer Message</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-
     <!-- sections nos partenaires -->
     <section class="container mx-auto" id="parteners">
-        <div class="col-lg-12 col-12 text-center mb-4">
-            <h2>Partenaires de Terre des jeunes</h2>
-            <p class="text-muted">Découvrez nos précieux partenaires qui soutiennent nos causes.</p>
+      <div class="col-lg-12 col-12 text-center mb-4">
+        <h2>Partenaires de Terre des jeunes</h2>
+        <p class="text-muted">Découvrez nos précieux partenaires qui soutiennent nos causes.</p>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="https://www.ctc-n.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
+              <img src="images/partenaires/03.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
+              <p class="text-center">CTCN</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://www.un.org/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
+              <img src="images/partenaires/04.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
+              <p class="text-center">ONU</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://partenaire2.com" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
+              <img src="images/partenaires/02.jpg" alt="Partenaire 2" class="mb-2 mx-auto" style="height: 50px;">
+              <p class="text-center">CYCLONE NORD-SUD</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://www.biothermica.com/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
+              <img src="images/partenaires/01.jpg" alt="Partenaire 3" class="mb-2 mx-auto" style="height: 50px;">
+              <p class="text-center">BIOTERMICA </p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://www.bioenergiehaiti.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
+              <img src="images/partenaires/05.jpg" alt="Partenaire 3" class="mb-2 mx-auto" style="height: 50px;">
+              <p class="text-center">BIOENERGIEHAITI</p>
+            </a>
+          </div>
+          <!-- Ajoutez plus de partenaires ici -->
         </div>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="https://www.ctc-n.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-                        <img src="images/partenaires/03.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
-                        <p class="text-center">CTCN</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="https://www.un.org/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-                        <img src="images/partenaires/04.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
-                        <p class="text-center">ONU</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="https://partenaire2.com" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-                        <img src="images/partenaires/02.jpg" alt="Partenaire 2" class="mb-2 mx-auto"style="height: 50px;">
-                        <p class="text-center">CYCLONE NORD-SUD</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="https://www.biothermica.com/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-                        <img src="images/partenaires/01.jpg" alt="Partenaire 3" class="mb-2 mx-auto"style="height: 50px;">
-                        <p class="text-center">BIOTERMICA </p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="https://www.bioenergiehaiti.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-                        <img src="images/partenaires/05.jpg" alt="Partenaire 3" class="mb-2 mx-auto"style="height: 50px;">
-                        <p class="text-center">BIOENERGIEHAITI</p>
-                    </a>
-                </div>
-                <!-- Ajoutez plus de partenaires ici -->
-            </div>
-            <!-- Ajoutez des boutons de navigation si nécessaire -->
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-        </div>
+        <!-- Ajoutez des boutons de navigation si nécessaire -->
+        <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+      </div>
     </section>
-
     <!-- footer sections -->
     <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <!-- Section Logo et Description -->
+          <div class="col-lg-3 col-12 mb-4">
+            <img src="images/logo/LOGO%203.png" class="logo img-fluid" alt="Logo Terre des Jeunes">
+            <p class="text-white mt-3">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes.</p>
+          </div>
+          <!-- Section Liens Directs -->
+          <div class="col-lg-3 col-md-6 col-12 mb-4">
+            <h5 class="site-footer-title mb-3 text-white">Liens Directs</h5>
+            <ul class="footer-menu list-unstyled">
+              <li class="footer-menu-item"><a href="about.html" class="footer-menu-link text-white">Notre Historique</a></li>
+              <li class="footer-menu-item"><a href="news.html" class="footer-menu-link text-white">Actualités</a></li>
+              <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link text-white">Causes</a></li>
+              <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link text-white">Devenir un Bénévole</a></li>
+            </ul>
+          </div>
+          <!-- Section Infos Contact -->
+          <div class="col-lg-3 col-md-6 col-12 mb-4">
+            <h5 class="site-footer-title mb-3 text-white">Infos Contact</h5>
+            <p class="text-white d-flex align-items-center mb-2">
+              <i class="bi-telephone me-2"></i>
+              <a href="tel:120-240-9600" class="site-footer-link text-white">120-240-9600</a>
+            </p>
+            <p class="text-white d-flex align-items-center mb-2">
+              <i class="bi-envelope me-2"></i>
+              <a href="mailto:info@terredesjeunes.org" class="site-footer-link text-white">donate@terredesjeunes.org</a>
+            </p>
+            <p class="text-white d-flex align-items-center mb-3">
+              <i class="bi-geo-alt me-2"></i>
+              Boulevard, Montreal 20, 0150 Oslo, Norway
+            </p>
+            <a href="#" class="custom-btn btn btn-primary mt-2">Get Direction</a>
+          </div>
+          <!-- Section Réseaux Sociaux -->
+          <div class="col-lg-3 col-md-6 col-12 mb-4">
+            <h5 class="site-footer-title mb-3 text-white">Suivez-nous</h5>
+            <ul class="social-icon list-unstyled d-flex">
+              <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-twitter text-white"></a></li>
+              <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-facebook text-white"></a></li>
+              <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-instagram text-white"></a></li>
+              <li class="social-icon-item"><a href="#" class="social-icon-link bi-linkedin text-white"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="site-footer-bottom py-3">
         <div class="container">
-            <div class="row">
-                <!-- Section Logo et Description -->
-                <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo/LOGO 3.png" class="logo img-fluid" alt="Logo Terre des Jeunes">
-                    <p class="text-white mt-3">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes.</p>
-                </div>
-
-                <!-- Section Liens Directs -->
-                <div class="col-lg-3 col-md-6 col-12 mb-4">
-                    <h5 class="site-footer-title mb-3 text-white">Liens Directs</h5>
-                    <ul class="footer-menu list-unstyled">
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link text-white">Notre Historique</a></li>
-                        <li class="footer-menu-item"><a href="news.html" class="footer-menu-link text-white">Actualités</a></li>
-                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link text-white">Causes</a></li>
-                        <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link text-white">Devenir un Bénévole</a></li>
-                    </ul>
-                </div>
-
-                <!-- Section Infos Contact -->
-                <div class="col-lg-3 col-md-6 col-12 mb-4">
-                    <h5 class="site-footer-title mb-3 text-white">Infos Contact</h5>
-                    <p class="text-white d-flex align-items-center mb-2">
-                        <i class="bi-telephone me-2"></i>
-                        <a href="tel:120-240-9600" class="site-footer-link text-white">120-240-9600</a>
-                    </p>
-                    <p class="text-white d-flex align-items-center mb-2">
-                        <i class="bi-envelope me-2"></i>
-                        <a href="mailto:info@terredesjeunes.org" class="site-footer-link text-white">donate@terredesjeunes.org</a>
-                    </p>
-                    <p class="text-white d-flex align-items-center mb-3">
-                        <i class="bi-geo-alt me-2"></i>
-                        Boulevard, Montreal 20, 0150 Oslo, Norway
-                    </p>
-                    <a href="#" class="custom-btn btn btn-primary mt-2">Get Direction</a>
-                </div>
-
-                <!-- Section Réseaux Sociaux -->
-                <div class="col-lg-3 col-md-6 col-12 mb-4">
-                    <h5 class="site-footer-title mb-3 text-white">Suivez-nous</h5>
-                    <ul class="social-icon list-unstyled d-flex">
-                        <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-twitter text-white"></a></li>
-                        <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-facebook text-white"></a></li>
-                        <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-instagram text-white"></a></li>
-                        <li class="social-icon-item"><a href="#" class="social-icon-link bi-linkedin text-white"></a></li>
-                    </ul>
-                </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="text-white mb-0">&copy; 2025 Terre des Jeunes. Tous droits réservés.</p>
             </div>
+          </div>
         </div>
-
-        <!-- Footer Bottom -->
-        <div class="site-footer-bottom py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p class="text-white mb-0">&copy; 2025 Terre des Jeunes. Tous droits réservés.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </footer>
     <!-- Include Bootstrap JS files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-
     <!-- JAVASCRIPT FILES -->
-
     <script   src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/click-scroll.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
-
     <script>
+      // API keys et URLs (remplacez par vos propres clés)
+      const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
+      const API_KEY = "VOTRE_API_NEWS_API";
+      const REST_COUNTRIES_API = "https://restcountries.com/v3.1/name/";
+
+      // Pays africains et autres sélectionnés
+      // Pays africains et autres sélectionnés
+      const countries = [
+          { name: "Burundi" },
+          { name: "Côte d'Ivoire" },
+          { name: "Ghana" },
+          { name: "Haïti" },
+          { name: "Mali" },
+          { name: "Burkina Faso" },
+          { name: "Niger" },
+          { name: "République Démocratique du Congo", englishName: "Democratic Republic of the Congo" } // Ajout du nom en anglais
+      ];
+
+      const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+      const recentNewsContainer = document.getElementById("recentNewsContainer");
+      const countryList = document.getElementById("countryList");
+
+      function loadDefaultNews(defaultArticles) {
+      const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+
+      newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
+
+      // Limiter le nombre d'articles affichés à 4
+      const articlesToShow = defaultArticles.slice(0, 6);
+
+      articlesToShow.forEach(article => {
+      const newsBlock = document.createElement("div");
+      newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
+
+      // Tronquer le titre à 50 caractères max
+      const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
+
+      let lirePlus = '';
+      if (typeof article.url !== 'undefined') {
+          lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
+      }
+
+      newsBlock.innerHTML = `
+          <div class="card shadow-sm mb-4" style="border: none;">
+              <div class="card-body text-center">
+                  <h5 class="card-title">${truncatedTitle}</h5>
+                  <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                      <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
+                          style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  ${lirePlus}
+              </div>
+          </div>
+      `;
+
+      newsContainer.appendChild(newsBlock);
+      });
+      }
 
 
-        // API keys et URLs (remplacez par vos propres clés)
-        const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
-        const API_KEY = "VOTRE_API_NEWS_API";
-        const REST_COUNTRIES_API = "https://restcountries.com/v3.1/name/";
+      // Charger les drapeaux des pays et afficher la liste des pays
+      async function loadCountryFlags() {
+          for (const country of countries) {
+              try {
+                  const response = await fetch(`${REST_COUNTRIES_API}${encodeURIComponent(country.name)}`);
+                  const data = await response.json();
+                  const flag = data[0]?.flags?.png || "";
 
-        // Pays africains et autres sélectionnés
-        // Pays africains et autres sélectionnés
-        const countries = [
-            { name: "Burundi" },
-            { name: "Côte d'Ivoire" },
-            { name: "Ghana" },
-            { name: "Haïti" },
-            { name: "Mali" },
-            { name: "Burkina Faso" },
-            { name: "Niger" },
-            { name: "République Démocratique du Congo", englishName: "Democratic Republic of the Congo" } // Ajout du nom en anglais
-        ];
+                  const li = document.createElement("li");
+                  li.className = "list-group-item d-flex align-items-center country-item";
+                  li.innerHTML = `
+              <img src="${flag}" class="flag" alt="Drapeau de ${country.name}">
+              ${country.name}
+          `;
+                  li.onclick = () => fetchNewsByCountry(country.name);
+                  countryList.appendChild(li);
+              } catch (error) {
+                  console.error(`Erreur lors de la récupération du drapeau pour ${country.name}:`, error);
+              }
+          }
+      }
 
-        const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
-        const recentNewsContainer = document.getElementById("recentNewsContainer");
-        const countryList = document.getElementById("countryList");
+      // Récupérer les actualités par pays
+      async function fetchNewsByCountry(countryName) {
+          try {
+              const response = await fetch(`${NEWS_API_URL}?q=${encodeURIComponent(countryName)}&apiKey=${API_KEY}`);
+              const data = await response.json();
 
-        function loadDefaultNews(defaultArticles) {
-    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+              if (data.articles?.length) {
+                  displayNews(data.articles);
+              } else {
+                  newsContainer.innerHTML = `<p>Aucune actualité trouvée pour ${countryName}.</p>`;
+              }
+          } catch (error) {
+              console.error(`Erreur lors de la récupération des actualités pour ${countryName}:`, error);
+          }
+      }
 
-    newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
+      // Afficher les actualités dans le conteneur principal
+      function displayNews(articles) {
+          newsContainer.innerHTML = "";
+          articles.forEach(article => {
+              const newsBlock = document.createElement("div");
+              newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
+              newsBlock.innerHTML = `
+          <div class="news-block"  style:"height:30px">
+              <img src="${article.urlToImage || 'C:\Users\rodri\OneDrive\Documents\GitHub\TerreDjeunes\images\news'}" alt="${article.title}" class="img-fluid">
+              <h4>${article.title}</h4>
+              <p>${article.description || "Pas de description disponible."}</p>
+              <a href="${article.url}" class="btn btn-primary read-more" target="_blank"><b>Lire plus</b></a>
+          </div>
+      `;
+              newsContainer.appendChild(newsBlock);
+          });
+      }
 
-    // Limiter le nombre d'articles affichés à 4
-    const articlesToShow = defaultArticles.slice(0, 6);
-
-    articlesToShow.forEach(article => {
-        const newsBlock = document.createElement("div");
-        newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
-
-        // Tronquer le titre à 50 caractères max
-        const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
-
-        let lirePlus = '';
-        if (typeof article.url !== 'undefined') {
-            lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
-        }
-
-        newsBlock.innerHTML = `
-            <div class="card shadow-sm mb-4" style="border: none;">
-                <div class="card-body text-center">
-                    <h5 class="card-title">${truncatedTitle}</h5>
-                    <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                        <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    ${lirePlus}
-                </div>
-            </div>
-        `;
-
-        newsContainer.appendChild(newsBlock);
-    });
-}
-
-
-        // Charger les drapeaux des pays et afficher la liste des pays
-        async function loadCountryFlags() {
-            for (const country of countries) {
-                try {
-                    const response = await fetch(`${REST_COUNTRIES_API}${encodeURIComponent(country.name)}`);
-                    const data = await response.json();
-                    const flag = data[0]?.flags?.png || "";
-
-                    const li = document.createElement("li");
-                    li.className = "list-group-item d-flex align-items-center country-item";
-                    li.innerHTML = `
-                <img src="${flag}" class="flag" alt="Drapeau de ${country.name}">
-                ${country.name}
-            `;
-                    li.onclick = () => fetchNewsByCountry(country.name);
-                    countryList.appendChild(li);
-                } catch (error) {
-                    console.error(`Erreur lors de la récupération du drapeau pour ${country.name}:`, error);
-                }
-            }
-        }
-
-        // Récupérer les actualités par pays
-        async function fetchNewsByCountry(countryName) {
-            try {
-                const response = await fetch(`${NEWS_API_URL}?q=${encodeURIComponent(countryName)}&apiKey=${API_KEY}`);
-                const data = await response.json();
-
-                if (data.articles?.length) {
-                    displayNews(data.articles);
-                } else {
-                    newsContainer.innerHTML = `<p>Aucune actualité trouvée pour ${countryName}.</p>`;
-                }
-            } catch (error) {
-                console.error(`Erreur lors de la récupération des actualités pour ${countryName}:`, error);
-            }
-        }
-
-        // Afficher les actualités dans le conteneur principal
-        function displayNews(articles) {
-            newsContainer.innerHTML = "";
-            articles.forEach(article => {
-                const newsBlock = document.createElement("div");
-                newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
-                newsBlock.innerHTML = `
-            <div class="news-block"  style:"height:30px">
-                <img src="${article.urlToImage || 'C:\Users\rodri\OneDrive\Documents\GitHub\TerreDjeunes\images\news'}" alt="${article.title}" class="img-fluid">
-                <h4>${article.title}</h4>
-                <p>${article.description || "Pas de description disponible."}</p>
-                <a href="${article.url}" class="btn btn-primary read-more" target="_blank"><b>Lire plus</b></a>
-            </div>
-        `;
-                newsContainer.appendChild(newsBlock);
-            });
-        }
-
-        // Initialisation
-        loadCountryFlags();
+      // Initialisation
+      loadCountryFlags();
 
 
-        // Gérer les likes et dislikes
-        document.querySelectorAll('.like-icon').forEach(icon => {
-                    icon.addEventListener('click', function () {
-                        let likes = parseInt(this.getAttribute('data-likes')) + 1;
-                        this.setAttribute('data-likes', likes);
-                        this.nextElementSibling.textContent = likes;
-                    });
-                });
+      // Gérer les likes et dislikes
+      document.querySelectorAll('.like-icon').forEach(icon => {
+                  icon.addEventListener('click', function () {
+                      let likes = parseInt(this.getAttribute('data-likes')) + 1;
+                      this.setAttribute('data-likes', likes);
+                      this.nextElementSibling.textContent = likes;
+                  });
+              });
 
-                document.querySelectorAll('.dislike-icon').forEach(icon => {
-                    icon.addEventListener('click', function () {
-                        let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
-                        this.setAttribute('data-dislikes', dislikes);
-                        this.nextElementSibling.textContent = dislikes;
-                    });
-                });
-    </script>
-    </script>
-<!-- sections team -->
-    <script>
-         //   team Terre des jeunes
-
-        const teamMembers = [
-    { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée.", social: { facebook: "#", instagram: "#", linkedin: "#" } },
-    { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
-    { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une pionnière de la physique nucléaire.", social: { facebook: "#", linkedin: "#" } },
-    { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
-    ];
-
-    function populateTeamMembers(teamMembers) {
-        const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
-        teamContainer.innerHTML = `
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
-                    ${teamMembers.map((member, index) => `
-                        <div class="col">
-                            <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
-                                <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
-                                    style="width: 120px; height: 120px; object-fit: cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">${member.name}</h5>
-                                    <p class="card-text text-muted">${member.role}</p>
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-    }
-
-
-                function showModal(index) {
-                    const member = teamMembers[index];
-                    document.getElementById('modal-name').innerText = member.name;
-                    document.getElementById('modal-role').innerText = member.role;
-                    document.getElementById('modal-bio').innerText = member.bio;
-
-                    // Générer dynamiquement les icônes sociales
-                    const socialContainer = document.getElementById('modal-social');
-                    socialContainer.innerHTML = '';
-                    if (member.social) {
-                        Object.entries(member.social).forEach(([platform, url]) => {
-                            socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
-                        });
-                    }
-
-                    // Afficher le modal correctement
-                    const modalElement = document.getElementById('memberModal');
-                    const modalInstance = new bootstrap.Modal(modalElement);
-                    modalInstance.show();
-                }
+              document.querySelectorAll('.dislike-icon').forEach(icon => {
+                  icon.addEventListener('click', function () {
+                      let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
+                      this.setAttribute('data-dislikes', dislikes);
+                      this.nextElementSibling.textContent = dislikes;
+                  });
+              });
     </script>
     <!-- sections team -->
     <script>
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 2,
-            spaceBetween: 20,
-            // navigation: {
-            //     nextEl: '.swiper-button-next',
-            //     prevEl: '.swiper-button-prev',
-            // },
-            breakpoints: {
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 40,
-                },
-            },
-        });
+      //   team Terre des jeunes
+
+      const teamMembers = [
+      { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée.", social: { facebook: "#", instagram: "#", linkedin: "#" } },
+      { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
+      { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une pionnière de la physique nucléaire.", social: { facebook: "#", linkedin: "#" } },
+      { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
+      ];
+
+      function populateTeamMembers(teamMembers) {
+      const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
+      teamContainer.innerHTML = `
+             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
+                 ${teamMembers.map((member, index) => `
+                     <div class="col">
+                         <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
+                             <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
+                                 style="width: 120px; height: 120px; object-fit: cover;">
+                             <div class="card-body">
+                                 <h5 class="card-title">${member.name}</h5>
+                                 <p class="card-text text-muted">${member.role}</p>
+                             </div>
+                         </div>
+                     </div>
+                 `).join('')}
+             </div>
+         `;
+
+      }
+
+
+             function showModal(index) {
+                 const member = teamMembers[index];
+                 document.getElementById('modal-name').innerText = member.name;
+                 document.getElementById('modal-role').innerText = member.role;
+                 document.getElementById('modal-bio').innerText = member.bio;
+
+                 // Générer dynamiquement les icônes sociales
+                 const socialContainer = document.getElementById('modal-social');
+                 socialContainer.innerHTML = '';
+                 if (member.social) {
+                     Object.entries(member.social).forEach(([platform, url]) => {
+                         socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
+                     });
+                 }
+
+                 // Afficher le modal correctement
+                 const modalElement = document.getElementById('memberModal');
+                 const modalInstance = new bootstrap.Modal(modalElement);
+                 modalInstance.show();
+             }
+    </script>
+    <!-- sections team -->
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          // navigation: {
+          //     nextEl: '.swiper-button-next',
+          //     prevEl: '.swiper-button-prev',
+          // },
+          breakpoints: {
+              640: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+              },
+              768: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+              },
+              1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 40,
+              },
+          },
+      });
     </script>
     <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script pour fermer le menu après un clic en mobile -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const navbarToggler = document.querySelector(".navbar-toggler");
+          const navLinks = document.querySelectorAll(".nav-link");
 
-<!-- Script pour fermer le menu après un clic en mobile -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            if (navbarToggler.getAttribute("aria-expanded") === "true") {
-                navbarToggler.click(); // Fermer le menu après le clic sur un lien
-            }
-        });
-    });
-});
-</script>
-
-
+          navLinks.forEach(link => {
+              link.addEventListener("click", function () {
+                  if (navbarToggler.getAttribute("aria-expanded") === "true") {
+                      navbarToggler.click(); // Fermer le menu après le clic sur un lien
+                  }
+              });
+          });
+      });
+    </script>
     <!-- ne pas retirer! C'est ici qu'on obtient les infos du content
-     manager! -->
+      manager! -->
     <script src="js/contenu/infos.js"></script>
     <script src="js/contenu/membres.js"></script>
     <script src="js/contenu/articles.js"></script>
     <script src="js/contenu/activites.js"></script>
     <script src="js/contenu/vars.js"></script>
     <script>
-        $( document ).ready(function() {
-            (new Membres()).populateTeamMemberss(function(team) {
-              populateTeamMembers(team);
-            });
-            (new Activites()).init();
-            (new Articles()).populateArticles(function (news) {
-              loadDefaultNews(news);
-            }, {
-              not: ['Actions internes'],
-            });
-            (new Vars()).init();
-        });
+      $( document ).ready(function() {
+          (new Membres()).populateTeamMemberss(function(team) {
+            populateTeamMembers(team);
+          });
+          (new Activites()).init();
+          (new Articles()).populateArticles(function (news) {
+            loadDefaultNews(news);
+          }, {
+            not: ['Actions internes'],
+          });
+          (new Vars()).init();
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>
