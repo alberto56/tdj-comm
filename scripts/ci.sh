@@ -2,6 +2,7 @@
 # Runs the CI pipeline for the project
 set -e
 
+pwd
 docker compose up -d
 # https://github.com/dcycle/docker-html-validate
 find docs/_site -name "index.html" | xargs \
