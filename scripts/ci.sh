@@ -3,6 +3,7 @@
 set -e
 
 pwd
+ls -lah
 docker compose up -d
 # https://github.com/dcycle/docker-html-validate
 find docs/_site -name "index.html" | xargs \
