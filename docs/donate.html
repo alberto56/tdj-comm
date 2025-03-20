@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
     <head>
@@ -9,7 +11,7 @@
 
         <title>Terre des jeunes</title>
 
-        <!-- CSS FILES -->        
+        <!-- CSS FILES -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <link href="css/bootstrap-icons.css" rel="stylesheet">
@@ -18,96 +20,11 @@
 
 
     </head>
-    
+
     <body id="section_1">
 
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-8 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-geo-alt me-2"></i>
-                            Boulevard; Montreal 20, 0150 Oslo, Norway
-                        </p>
+        {% include navbar.html %}
 
-                        <p class="d-flex mb-0">
-                            <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto:info@company.com">
-                                info@terredesjeunes.org
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-youtube"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-<!-- naveee bar -->
-<nav class=" navbar navbar-expand-lg bg-light shadow-lg">
-    <div class="container">
-        <!-- Logo + Nom -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Terre Des Jeunes">
-            <h2 class="fw-bold">Terre des jeunes</h2>
-        </a>
-
-        <!-- Bouton Toggle (pour mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menu de Navigation -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">À propos</a></li>
-                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Causes</a></li>
-                <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Bénévolat</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="news.html" id="navbarLightDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Actualités</a>
-                    <ul class="dropdown-menu dropdown-menu-light">
-                        <li><a class="dropdown-item" href="news.html">Liste des actualités</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link custom-btn custom-border-btn btn btn-primary" href="donate.html">Faire un Don</a>
-                </li>
-                <li class="nav-item ms-lg-3">
-                    <a class="nav-link custom-btn custom-border-btn btn btn-secondary" href="#" data-bs-toggle="modal"
-                        data-bs-target="#authModal">Connexion</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
                 <!-- Modal -->
                 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -156,7 +73,7 @@
                                                     <input type="email" class="form-control" id="emailSignup" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Mot de passe -->
                                                 <div class="col-md-6 mb-3">
@@ -169,7 +86,7 @@
                                                     <input type="password" class="form-control" id="confirmPassword" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Pays -->
                                                 <div class="col-md-6 mb-3">
@@ -193,7 +110,7 @@
                                                     <input type="text" class="form-control" id="antenna" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Fonction -->
                                                 <div class="col-md-6 mb-3">
@@ -206,12 +123,12 @@
                                                     <input type="tel" class="form-control" id="phone" required>
                                                 </div>
                                             </div>
-        
+
                                             <button type="submit" class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
                                         </form>
                                     </div>
-        
-        
+
+
                                 </div>
                             </div>
                         </div>
@@ -236,7 +153,7 @@
                                     <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
                                         <div class="form-check form-check-radio">
                                             <input class="form-check-input" type="radio" name="DonationFrequency" id="DonationFrequencyOne" checked>
-                                            
+
                                             <label class="form-check-label" for="DonationFrequencyOne">
                                                 Journalières
                                             </label>
@@ -246,7 +163,7 @@
                                     <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
                                         <div class="form-check form-check-radio">
                                             <input class="form-check-input" type="radio" name="DonationFrequency" id="DonationFrequencyMonthly">
-                                            
+
                                             <label class="form-check-label" for="DonationFrequencyMonthly">
                                                 Mensuellement
                                             </label>
@@ -314,7 +231,7 @@
                                     <div class="col-lg-6 col-12 form-check-group">
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon1">$</span>
-                                            
+
                                             <input type="text" class="form-control" placeholder="Custom amount" aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
@@ -354,7 +271,7 @@
 
                                         <button type="submit" class="form-control mt-4">
                                             <i class="bi-send custom-icon ms-1 colors-white"> Envoyer</i>
-                                            
+
                                             </button>
                                     </div>
                                 </div>
@@ -371,7 +288,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
                         <img src="images/logo/LOGO 3.png" class="logo img-fluid" alt="">
-                        <p class="text-white section-padding ">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement 
+                        <p class="text-white section-padding ">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement
                             et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes. </p>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -416,8 +333,8 @@
                 <div class="container">
                     <div class="row">
 
-                        
-                        
+
+
                         <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                             <ul class="social-icon">
                                 <li class="social-icon-item">
@@ -436,10 +353,10 @@
                                     <a href="#" class="social-icon-link bi-linkedin"></a>
                                 </li>
 
-                                
+
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -454,7 +371,7 @@
         <script src="js/counter.js"></script>
         <script src="js/custom.js"></script>
         <script>
-            
+
         const translations = {
             en: {
                 home: "Home",
