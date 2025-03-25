@@ -11,7 +11,7 @@
 
         <title>Terre DesJeunes</title>
 
-        <!-- CSS FILES -->        
+        <!-- CSS FILES -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <link href="css/bootstrap-icons.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 
 
     </head>
-    
+
     <body id="section_1">
 
         {% if site.data.config.jekyll != true%}
@@ -81,7 +81,7 @@
                                                     <input type="email" class="form-control" id="emailSignup" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Mot de passe -->
                                                 <div class="col-md-6 mb-3">
@@ -94,7 +94,7 @@
                                                     <input type="password" class="form-control" id="confirmPassword" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Pays -->
                                                 <div class="col-md-6 mb-3">
@@ -118,7 +118,7 @@
                                                     <input type="text" class="form-control" id="antenna" required>
                                                 </div>
                                             </div>
-        
+
                                             <div class="row">
                                                 <!-- Fonction -->
                                                 <div class="col-md-6 mb-3">
@@ -131,12 +131,12 @@
                                                     <input type="tel" class="form-control" id="phone" required>
                                                 </div>
                                             </div>
-        
+
                                             <button type="submit" class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
                                         </form>
                                     </div>
-        
-        
+
+
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,8 @@
    Puis visiter http://0.0.0.0:4000
  </div>
  {% endif %}
- {% include footer_news.html %}
+ {% assign maxArticles = 12 %}
+ {% include footer.html %}
 
     </body>
 </html>
