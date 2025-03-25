@@ -1,0 +1,323 @@
+<!-- footer sections -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <!-- Section Logo et Description -->
+        <div class="col-lg-3 col-12 mb-4">
+          <img src="images/logo/LOGO%203.png" class="logo img-fluid" alt="Logo Terre des Jeunes">
+          <p class="text-white mt-3">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes.</p>
+        </div>
+        <!-- Section Liens Directs -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h5 class="site-footer-title mb-3 text-white">Liens Directs</h5>
+          <ul class="footer-menu list-unstyled">
+            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link text-white">Notre Historique</a></li>
+            <li class="footer-menu-item"><a href="news.html" class="footer-menu-link text-white">Actualités</a></li>
+            <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link text-white">Causes</a></li>
+            <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link text-white">Devenir un Bénévole</a></li>
+          </ul>
+        </div>
+        <!-- Section Infos Contact -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h5 class="site-footer-title mb-3 text-white">Infos Contact</h5>
+          <p class="text-white d-flex align-items-center mb-2">
+            <i class="bi-telephone me-2"></i>
+            <a href="tel:120-240-9600" class="site-footer-link text-white">120-240-9600</a>
+          </p>
+          <p class="text-white d-flex align-items-center mb-2">
+            <i class="bi-envelope me-2"></i>
+            <a href="mailto:info@terredesjeunes.org" class="site-footer-link text-white">donate@terredesjeunes.org</a>
+          </p>
+          <p class="text-white d-flex align-items-center mb-3">
+            <i class="bi-geo-alt me-2"></i>
+            Boulevard, Montreal 20, 0150 Oslo, Norway
+          </p>
+          <a href="#" class="custom-btn btn btn-primary mt-2">Get Direction</a>
+        </div>
+        <!-- Section Réseaux Sociaux -->
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <h5 class="site-footer-title mb-3 text-white">Suivez-nous</h5>
+          <ul class="social-icon list-unstyled d-flex">
+            <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-twitter text-white"></a></li>
+            <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-facebook text-white"></a></li>
+            <li class="social-icon-item me-3"><a href="#" class="social-icon-link bi-instagram text-white"></a></li>
+            <li class="social-icon-item"><a href="#" class="social-icon-link bi-linkedin text-white"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="site-footer-bottom py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="text-white mb-0">&copy; 2025 Terre des Jeunes. Tous droits réservés.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Include Bootstrap JS files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- JAVASCRIPT FILES -->
+  <script   src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    // API keys et URLs (remplacez par vos propres clés)
+    const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
+    const API_KEY = "VOTRE_API_NEWS_API";
+    const REST_COUNTRIES_API = "https://restcountries.com/v3.1/name/";
+
+    // Pays africains et autres sélectionnés
+    // Pays africains et autres sélectionnés
+    const countries = [
+        { name: "Burundi" },
+        { name: "Côte d'Ivoire" },
+        { name: "Ghana" },
+        { name: "Haïti" },
+        { name: "Mali" },
+        { name: "Burkina Faso" },
+        { name: "Niger" },
+        { name: "République Démocratique du Congo", englishName: "Democratic Republic of the Congo" } // Ajout du nom en anglais
+    ];
+
+    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+    const recentNewsContainer = document.getElementById("recentNewsContainer");
+    const countryList = document.getElementById("countryList");
+
+    function loadDefaultNews(defaultArticles) {
+    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+
+    newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
+
+    // Limiter le nombre d'articles affichés à 4
+    const articlesToShow = defaultArticles.slice(0, 6);
+
+    articlesToShow.forEach(article => {
+    const newsBlock = document.createElement("div");
+    newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
+
+    // Tronquer le titre à 50 caractères max
+    const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
+
+    let lirePlus = '';
+    if (typeof article.url !== 'undefined') {
+        lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
+    }
+
+    newsBlock.innerHTML = `
+        <div class="card shadow-sm mb-4" style="border: none;">
+            <div class="card-body text-center">
+                <h5 class="card-title">${truncatedTitle}</h5>
+                <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                ${lirePlus}
+            </div>
+        </div>
+    `;
+
+    newsContainer.appendChild(newsBlock);
+    });
+    }
+
+
+    // Charger les drapeaux des pays et afficher la liste des pays
+    async function loadCountryFlags() {
+        for (const country of countries) {
+            try {
+                const response = await fetch(`${REST_COUNTRIES_API}${encodeURIComponent(country.name)}`);
+                const data = await response.json();
+                const flag = data[0]?.flags?.png || "";
+
+                const li = document.createElement("li");
+                li.className = "list-group-item d-flex align-items-center country-item";
+                li.innerHTML = `
+            <img src="${flag}" class="flag" alt="Drapeau de ${country.name}">
+            ${country.name}
+        `;
+                li.onclick = () => fetchNewsByCountry(country.name);
+                countryList.appendChild(li);
+            } catch (error) {
+                console.error(`Erreur lors de la récupération du drapeau pour ${country.name}:`, error);
+            }
+        }
+    }
+
+    // Récupérer les actualités par pays
+    async function fetchNewsByCountry(countryName) {
+        try {
+            const response = await fetch(`${NEWS_API_URL}?q=${encodeURIComponent(countryName)}&apiKey=${API_KEY}`);
+            const data = await response.json();
+
+            if (data.articles?.length) {
+                displayNews(data.articles);
+            } else {
+                newsContainer.innerHTML = `<p>Aucune actualité trouvée pour ${countryName}.</p>`;
+            }
+        } catch (error) {
+            console.error(`Erreur lors de la récupération des actualités pour ${countryName}:`, error);
+        }
+    }
+
+    // Afficher les actualités dans le conteneur principal
+    function displayNews(articles) {
+        newsContainer.innerHTML = "";
+        articles.forEach(article => {
+            const newsBlock = document.createElement("div");
+            newsBlock.className = "col-lg-6 col-md-6 col-sm-12 mb-4";
+            newsBlock.innerHTML = `
+        <div class="news-block"  style:"height:30px">
+            <img src="${article.urlToImage || 'C:\Users\rodri\OneDrive\Documents\GitHub\TerreDjeunes\images\news'}" alt="${article.title}" class="img-fluid">
+            <h4>${article.title}</h4>
+            <p>${article.description || "Pas de description disponible."}</p>
+            <a href="${article.url}" class="btn btn-primary read-more" target="_blank"><b>Lire plus</b></a>
+        </div>
+    `;
+            newsContainer.appendChild(newsBlock);
+        });
+    }
+
+    // Initialisation
+    loadCountryFlags();
+
+
+    // Gérer les likes et dislikes
+    document.querySelectorAll('.like-icon').forEach(icon => {
+                icon.addEventListener('click', function () {
+                    let likes = parseInt(this.getAttribute('data-likes')) + 1;
+                    this.setAttribute('data-likes', likes);
+                    this.nextElementSibling.textContent = likes;
+                });
+            });
+
+            document.querySelectorAll('.dislike-icon').forEach(icon => {
+                icon.addEventListener('click', function () {
+                    let dislikes = parseInt(this.getAttribute('data-dislikes')) + 1;
+                    this.setAttribute('data-dislikes', dislikes);
+                    this.nextElementSibling.textContent = dislikes;
+                });
+            });
+  </script>
+  <!-- sections team -->
+  <script>
+    //   team Terre des jeunes
+
+    const teamMembers = [
+    { name: "Alice Dupont", role: "Développeuse", image: "images/members/102.png", bio: "Alice est une développeuse passionnée.", social: { facebook: "#", instagram: "#", linkedin: "#" } },
+    { name: "Jean Martin", role: "Designer UX/UI", image: "images/members/membercreat.jpg", bio: "Jean conçoit des expériences utilisateurs.", social: { instagram: "#" } },
+    { name: "Marie Curie", role: "Scientifique", image: "images/c.jpg", bio: "Marie est une pionnière de la physique nucléaire.", social: { facebook: "#", linkedin: "#" } },
+    { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
+    ];
+
+    function populateTeamMembers(teamMembers) {
+    const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
+    teamContainer.innerHTML = `
+           <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
+               ${teamMembers.map((member, index) => `
+                   <div class="col">
+                       <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
+                           <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
+                               style="width: 120px; height: 120px; object-fit: cover;">
+                           <div class="card-body">
+                               <h5 class="card-title">${member.name}</h5>
+                               <p class="card-text text-muted">${member.role}</p>
+                           </div>
+                       </div>
+                   </div>
+               `).join('')}
+           </div>
+       `;
+
+    }
+
+
+           function showModal(index) {
+               const member = teamMembers[index];
+               document.getElementById('modal-name').innerText = member.name;
+               document.getElementById('modal-role').innerText = member.role;
+               document.getElementById('modal-bio').innerText = member.bio;
+
+               // Générer dynamiquement les icônes sociales
+               const socialContainer = document.getElementById('modal-social');
+               socialContainer.innerHTML = '';
+               if (member.social) {
+                   Object.entries(member.social).forEach(([platform, url]) => {
+                       socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
+                   });
+               }
+
+               // Afficher le modal correctement
+               const modalElement = document.getElementById('memberModal');
+               const modalInstance = new bootstrap.Modal(modalElement);
+               modalInstance.show();
+           }
+  </script>
+  <!-- sections team -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+        breakpoints: {
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 40,
+            },
+        },
+    });
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script pour fermer le menu après un clic en mobile -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                if (navbarToggler.getAttribute("aria-expanded") === "true") {
+                    navbarToggler.click(); // Fermer le menu après le clic sur un lien
+                }
+            });
+        });
+    });
+  </script>
+  <!-- ne pas retirer! C'est ici qu'on obtient les infos du content
+    manager! -->
+  <script src="js/contenu/infos.js"></script>
+  <script src="js/contenu/membres.js"></script>
+  <script src="js/contenu/articles.js"></script>
+  <script src="js/contenu/activites.js"></script>
+  <script src="js/contenu/vars.js"></script>
+  <script>
+    $( document ).ready(function() {
+        (new Membres()).populateTeamMemberss(function(team) {
+          populateTeamMembers(team);
+        });
+        (new Activites()).init();
+        (new Articles()).populateArticles(function (news) {
+          loadDefaultNews(news);
+        }, {
+          not: ['Actions internes'],
+        });
+        (new Vars()).init();
+    });
+  </script>
