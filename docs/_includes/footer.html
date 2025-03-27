@@ -126,29 +126,6 @@
     });
     }
 
-
-    // Charger les drapeaux des pays et afficher la liste des pays
-    async function loadCountryFlags() {
-        for (const country of countries) {
-            try {
-                const response = await fetch(`${REST_COUNTRIES_API}${encodeURIComponent(country.name)}`);
-                const data = await response.json();
-                const flag = data[0]?.flags?.png || "";
-
-                const li = document.createElement("li");
-                li.className = "list-group-item d-flex align-items-center country-item";
-                li.innerHTML = `
-            <img src="${flag}" class="flag" alt="Drapeau de ${country.name}">
-            ${country.name}
-        `;
-                li.onclick = () => fetchNewsByCountry(country.name);
-                countryList.appendChild(li);
-            } catch (error) {
-                console.error(`Erreur lors de la récupération du drapeau pour ${country.name}:`, error);
-            }
-        }
-    }
-
     // Récupérer les actualités par pays
     async function fetchNewsByCountry(countryName) {
         try {
@@ -182,10 +159,6 @@
             newsContainer.appendChild(newsBlock);
         });
     }
-
-    // Initialisation
-    loadCountryFlags();
-
 
     // Gérer les likes et dislikes
     document.querySelectorAll('.like-icon').forEach(icon => {
@@ -300,24 +273,27 @@
         });
     });
   </script>
-  <!-- ne pas retirer! C'est ici qu'on obtient les infos du content
-    manager! -->
+  <script src="js/contenu/contenu.js"></script>
   <script src="js/contenu/infos.js"></script>
   <script src="js/contenu/membres.js"></script>
   <script src="js/contenu/articles.js"></script>
   <script src="js/contenu/activites.js"></script>
   <script src="js/contenu/vars.js"></script>
   <script>
-    $( document ).ready(function() {
-        (new Membres()).populateTeamMemberss(function(team) {
-          populateTeamMembers(team);
-        });
-        (new Activites()).init();
-        (new Articles()).populateArticles(function (news) {
-          loadDefaultNews(news);
-        }, {
+    const services = new Services();
+    $( document ).ready(async function() {
+      await services.init({
+        membres: {
+          callback: function(team) {
+            populateTeamMembers(team);
+          },
+        },
+        articles: {
+          callback: function(news) {
+            loadDefaultNews(news);
+          },
           not: ['Actions internes'],
-        });
-        (new Vars()).init();
+        }
+      });
     });
   </script>

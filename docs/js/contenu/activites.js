@@ -4,6 +4,10 @@ class Activites extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/activites.json';
   }
 
+  init2() {
+    this.init();
+  }
+
   selecteur() {
     return '.mettre-activites-ici';
   }

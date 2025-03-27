@@ -1,6 +1,17 @@
-class Infos {
+class Infos extends Service {
   init(options) {
     this.fetchData(options);
+  }
+
+  async preload() {
+    const that = this;
+    $.ajaxSetup({
+      async: false
+    });
+    $.getJSON(this.url(), (data) => {
+      that._data = data;
+    });
+    return this;
   }
 
   url() {
@@ -63,6 +74,10 @@ class Infos {
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
   fetch(callback) {
+    if (typeof this._data !== 'undefined') {
+      callback(JSON.stringify(this._data));
+      return;
+    }
     // Changes every 5 minutes.
     const cachebuster = this.cacheBuster();
     const that = this;
