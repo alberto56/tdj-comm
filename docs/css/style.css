@@ -4,21 +4,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-/* .open-sans-<uniquifier> {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+#country-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.changa-<uniquifier> {
-  font-family: "Changa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
+#country-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+#country-list li:hover {
+  background-color: #e0e0e0;
+}
+
+#country-list img {
+  margin-right: 10px;
+}
+
+#country-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.toggle-button {
+  cursor: pointer;
+  margin-top: 10px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
 
 * {
   font-family: "Open Sans", sans-serif;

@@ -287,7 +287,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-5 col-12">
               <div class="custom-text-box">
                 <h2 class="mb-2"> Historque</h2>
                 <h5 class="mb-3">Terre des jeunes, Organisation à but non lucratif</h5>
@@ -338,36 +338,77 @@
               </div>
             </div>
             <!-- col riel bio -->
-            <div class="col-lg-5 col-12 mb-5 mb-lg-0">
+            <div class="col-lg-4 col-12 mb-5 mb-lg-0">
               <div class="row">
-                <div class="col-lg-5 col-md-8 col-12">
-                  <img src="images/members/membercreat.jpg"
-                    class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" style="width: 510px; height: 350px;">
-                </div>
                 <div class="col-lg-7 col-md-6 col-12">
-                  <div class="custom-text-block">
-                    <h2 class="mb-0 text-center">Riel Huaorani</h2>
-                    <p class="text-muted mb-lg-8 mb-md-4 text-center">Fondateur Terre des jeunes</p>
-                    <p>
-                      Une organisation dédiée à la préservation de l'environnement, promeut l'éducation à l'environnement comme clé pour le développement durable. Elle vise à promouvoir des dynamiques sociales,
-                      à travers une approche participative et critique au sein des communautés et des réseaux de solidarité.
-                      En résumé, Terre des jeunes intègre une éducation environnementale pour préparer la prochaine génération à relever les défis du développement durable.
-                    </p>
-                    <ul class="social-icon mt-4">
-                      <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-twitter"></a>
-                      </li>
-                      <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-facebook"></a>
-                      </li>
-                      <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-instagram"></a>
-                      </li>
-                    </ul>
-                  </div>
+                  <ul id="country-list">
+                    <li>
+                      <img src="https://flagcdn.com/w320/bi.png" alt="Burundi" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Burundi')">Burundi</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/cd.png" alt="République Démocratique du Congo" width="30" /> 
+                      <a href="#" onclick="fetchArticles('DRCongo')">République Démocratique du Congo</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/tg.png" alt="Togo" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Togo')">Togo</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ml.png" alt="Mali" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Mali')">Mali</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ci.png" alt="Côte d'Ivoire" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Cote d\'Ivoire')">Côte d'Ivoire</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ht.png" alt="Haïti" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Haiti')">Haïti</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/sn.png" alt="Sénégal" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Senegal')">Sénégal</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/gm.png" alt="Gambie" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Gambie')">Gambie</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ng.png" alt="Nigeria" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Nigeria')">Nigeria</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/gh.png" alt="Ghana" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Ghana')">Ghana</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ke.png" alt="Kenya" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Kenya')">Kenya</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/ug.png" alt="Ouganda" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Ouganda')">Ouganda</a>
+                    </li>
+                  </ul>
+            
+                  <div class="toggle-button" onclick="toggleCountries()">▼ Voir plus de pays</div>
+            
+                  <ul id="more-countries" class="hidden">
+                    <li>
+                      <img src="https://flagcdn.com/w320/zm.png" alt="Zambie" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Zambie')">Zambie</a>
+                    </li>
+                    <li>
+                      <img src="https://flagcdn.com/w320/mw.png" alt="Malawi" width="30" /> 
+                      <a href="#" onclick="fetchArticles('Malawi')">Malawi</a>
+                    </li>
+                    <!-- Ajoutez d'autres pays ici -->
+                  </ul>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </section>
@@ -1073,6 +1114,29 @@
           });
           (new Vars()).init();
       });
+
+
+      function fetchArticles(country) {
+    // Appeler l'API pour récupérer les articles
+    fetch(`https://api.example.com/articles?country=${country}`)
+      .then(response => response.json())
+      .then(data => {
+        // Traitez les données et affichez les articles
+        console.log(data);
+      })
+      .catch(error => console.error('Erreur:', error));
+  }
+
+  function toggleCountries() {
+    const moreCountries = document.getElementById('more-countries');
+    if (moreCountries.classList.contains('hidden')) {
+      moreCountries.classList.remove('hidden');
+      document.querySelector('.toggle-button').textContent = '▲ Voir moins de pays';
+    } else {
+      moreCountries.classList.add('hidden');
+      document.querySelector('.toggle-button').textContent = '▼ Voir plus de pays';
+    }
+  }
     </script>
   </body>
 </html>
