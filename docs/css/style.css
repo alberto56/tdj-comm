@@ -104,6 +104,36 @@ body {
   font-family: var(--body-font-family);
 }
 
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto; /* Ajuste la hauteur automatiquement */
+  object-fit: cover; /* Remplit l'image sans déformation */
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: none; /* Masqué par défaut */
+  object-fit: contain; /* Ajuste l'image pour être entièrement visible */
+}
+
+@media (max-width: 768px) { /* Tablettes et mobiles */
+  .overlay-image {
+      display: block; /* Affiche l'image superposée sur petits écrans */
+  }
+}
 
 /*---------------------------------------
   TYPOGRAPHY
@@ -580,6 +610,7 @@ strong {
   height: 680px;
   min-height: 680px;
   position: relative;
+  overflow: hidden; /* Assure que rien ne déborde */
 }
 
 .carousel:hover .carousel-control-next-icon,
@@ -587,30 +618,22 @@ strong {
   opacity: 1;
 }
 
-#hero-slide .carousel-item {
-  height: 680px;
-  min-height: 680px;
+#hero-slide .carousel-inner {
+  height: 680px; /* Hauteur fixe pour le carousel inner */
 }
 
-#hero-slide .carousel-caption {
-  background: var(--white-color);
-
-  color:whitesmoke;
-  top: 1px;
-  bottom: -1px;
-  right: 0;
-  left: auto;
-  text-align: right;
-  min-width: 300px;
-  min-height: 680px;
-  padding: 100px 100px 50px 100px;
+#hero-slide .carousel-item {
+  height: 680px; /* Hauteur fixe pour chaque élément du carousel */
 }
 
 .carousel-image {
   display: block;
-  width: 100%;
-  min-height: 680px;
-  border-radius: 10;
+  width: 100%; /* Prend toute la largeur de l'élément parent */
+  height: auto; /* Permet à l'image de garder son ratio d'aspect */
+  min-height: 680px; /* Hauteur minimale */
+  max-height: 100%; /* Assure que l'image ne dépasse jamais la hauteur du parent */
+  object-fit: contain; /* Ajuste l'image pour être entièrement visible */
+  border-radius: 10px; /* Ajoute un arrondi aux coins */
 }
 
 #hero-slide .carousel-indicators-wrap {
@@ -646,7 +669,6 @@ strong {
 .carousel-control-prev-icon:hover {
   background-color: var(--primary-color);
 }
-
 
 /*---------------------------------------
   FEATURE BLOCK
