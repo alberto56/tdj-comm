@@ -48,4 +48,5 @@ class Activites extends Infos {
 </div>
 `;
   }
+
 }

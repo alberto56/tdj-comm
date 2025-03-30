@@ -45,7 +45,7 @@ class Infos extends Service {
     });
   }
 
-  fetchResponseSingle(node) {
+  getResponseSingle(node) {
     let template = this.template();
     const obj = this.variables();
     const that = this;
@@ -54,8 +54,10 @@ class Infos extends Service {
         template = that.replaceVariable(template, prop, node[prop], obj[prop]);
       }
     }
-
-    $(this.selecteur()).append(template);
+    return template;
+  }
+  fetchResponseSingle(node) {
+    $(this.selecteur()).append(this.getResponseSingle(node));
   }
 
   replaceVariable(template, prop, value, type) {
