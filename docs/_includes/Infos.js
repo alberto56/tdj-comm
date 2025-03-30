@@ -3,6 +3,16 @@ class Infos extends Service {
     this.fetchData(options);
   }
 
+  getStruct(title) {
+    let ret = {};
+    this._data.forEach((node) => {
+      if (node.title == title) {
+        ret = node;
+      }
+    });
+    return ret;
+  }
+
   async preload() {
     const that = this;
     $.ajaxSetup({

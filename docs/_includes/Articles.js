@@ -16,6 +16,20 @@ class Articles extends Infos {
     this.init(options);
   }
 
+  getAntennePays(node) {
+    let ret = {
+      'pays': '',
+      'antenne': '',
+      'drapeau': '',
+    };
+    if (typeof node.antenne2[0] != 'undefined') {
+      ret.antenne = node.antenne2[0];
+      ret.pays = this.s('antennes').getPays(ret.antenne);
+      ret.drapeau = this.s('antennes').getDrapeau(ret.antenne);
+    }
+    return ret;
+  }
+
   fetchResponseParsed(response, options) {
     const callback = this._callback;
     let articles = [];
@@ -46,6 +60,11 @@ class Articles extends Infos {
       }
       if (typeof node.url != 'undefined') {
         article.url = 'https://contenu.terredesjeunes.org' + node.url;
+      }
+      article.pays = this.getAntennePays(node);
+
+      if (typeof node.img[0] != 'undefined') {
+        article.image = 'https://contenu.terredesjeunes.org' + node.img[0];
       }
 
       articles.push(article);
