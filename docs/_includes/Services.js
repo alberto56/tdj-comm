@@ -6,11 +6,13 @@ class Services {
     this.activites = await new Activites(this).preload();
     this.articles = await new Articles(this).preload();
     this.vars = await new Vars(this).preload();
+    this.pays = await new Pays(this).preload();
 
     [
       'membres',
       'activites',
       'articles',
+      'pays',
     ].forEach((serviceName) => {
       this[serviceName].init2(settings[serviceName]);
     });
