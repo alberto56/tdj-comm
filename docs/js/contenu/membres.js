@@ -4,7 +4,14 @@ class Membres extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/bios.json';
   }
 
-  populateTeamMemberss(callback, options) {
+  init2(options) {
+    this.populateTeamMembers(
+      options.callback,
+      options,
+    )
+  }
+
+  populateTeamMembers(callback, options) {
     this._callback = callback;
     this.init(options);
   }
@@ -20,7 +27,9 @@ class Membres extends Infos {
     });
 
     const callback = this._callback;
-    callback(teamMembers);
+    if (callback) {
+      callback(teamMembers);
+    }
   }
 
 }

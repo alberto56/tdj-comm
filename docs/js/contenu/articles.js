@@ -4,6 +4,13 @@ class Articles extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/all.json';
   }
 
+  init2(options) {
+    this.populateArticles(
+      options.callback,
+      options,
+    )
+  }
+
   populateArticles(callback, options) {
     this._callback = callback;
     this.init(options);

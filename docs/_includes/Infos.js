@@ -1,6 +1,17 @@
-class Infos {
+class Infos extends Service {
   init(options) {
     this.fetchData(options);
+  }
+
+  async preload() {
+    const that = this;
+    $.ajaxSetup({
+      async: false
+    });
+    $.getJSON(this.url(), (data) => {
+      that._data = data;
+    });
+    return this;
   }
 
   url() {
@@ -34,7 +45,7 @@ class Infos {
     });
   }
 
-  fetchResponseSingle(node) {
+  getResponseSingle(node) {
     let template = this.template();
     const obj = this.variables();
     const that = this;
@@ -43,8 +54,10 @@ class Infos {
         template = that.replaceVariable(template, prop, node[prop], obj[prop]);
       }
     }
-
-    $(this.selecteur()).append(template);
+    return template;
+  }
+  fetchResponseSingle(node) {
+    $(this.selecteur()).append(this.getResponseSingle(node));
   }
 
   replaceVariable(template, prop, value, type) {
@@ -53,7 +66,7 @@ class Infos {
       prefix = 'https://contenu.terredesjeunes.org';
     }
     const valueAndPrefix = prefix + value;
-    return template.replace(new RegExp('{{' + prop + '}}', 'g'), valueAndPrefix);
+    return template.replace(new RegExp('__' + prop + '__', 'g'), valueAndPrefix);
   }
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
@@ -63,6 +76,10 @@ class Infos {
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
   fetch(callback) {
+    if (typeof this._data !== 'undefined') {
+      callback(JSON.stringify(this._data));
+      return;
+    }
     // Changes every 5 minutes.
     const cachebuster = this.cacheBuster();
     const that = this;

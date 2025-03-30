@@ -4,6 +4,10 @@ class Vars extends Infos {
     return 'https://contenu.terredesjeunes.org/api/v1/vars.json';
   }
 
+  init2() {
+    this.init();
+  }
+
   fetchResponseParsed(response, options) {
     if(typeof response.variable == 'undefined') {
       console.log('No variables found in response');
