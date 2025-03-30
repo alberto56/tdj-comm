@@ -24,12 +24,12 @@ class Activites extends Infos {
     return `
 <div class="col-lg-4 col-md-6 col-12 mb-4">
     <div class="custom-block-wrap">
-        <img src="{{image}}"
+        <img src="__image__"
             class="custom-block-image img-fluid" alt="Children Education">
 
         <div class="custom-block">
             <div class="custom-block-body">
-                <h5 class="mb-3">{{title}}</h5>
+                <h5 class="mb-3">__title__</h5>
                 <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
                     kohm tokito</p>
                 <div class="progress mt-4">

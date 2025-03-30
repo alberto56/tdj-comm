@@ -64,7 +64,7 @@ class Infos extends Service {
       prefix = 'https://contenu.terredesjeunes.org';
     }
     const valueAndPrefix = prefix + value;
-    return template.replace(new RegExp('{{' + prop + '}}', 'g'), valueAndPrefix);
+    return template.replace(new RegExp('__' + prop + '__', 'g'), valueAndPrefix);
   }
 
   /** voir https://github.com/tdjeunes/website/blob/master/docs/scripts/fetch-new-content.js  */
