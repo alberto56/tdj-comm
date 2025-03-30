@@ -8,9 +8,7 @@
 
 ## Développement local
 
-    docker compose up
-
-Ensuite aller http://0.0.0.0:4000
+Suivez la procédure au <https://contenu.terredesjeunes.org/procedure-dev-site-web/>
 
 ## Liste de fonctionalités
 
