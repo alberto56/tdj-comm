@@ -296,4 +296,25 @@
         }
       });
     });
+    function fetchArticles(country) {
+    // Appeler l'API pour récupérer les articles
+    fetch(`https://api.example.com/articles?country=${country}`)
+      .then(response => response.json())
+      .then(data => {
+        // Traitez les données et affichez les articles
+        console.log(data);
+      })
+      .catch(error => console.error('Erreur:', error));
+  }
+
+  function toggleCountries() {
+    const moreCountries = document.getElementById('more-countries');
+    if (moreCountries.classList.contains('hidden')) {
+      moreCountries.classList.remove('hidden');
+      document.querySelector('.toggle-button').textContent = '▲ Voir moins de pays';
+    } else {
+      moreCountries.classList.add('hidden');
+      document.querySelector('.toggle-button').textContent = '▼ Voir plus de pays';
+    }
+  }
   </script>
