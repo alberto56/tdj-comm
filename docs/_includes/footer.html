@@ -341,4 +341,17 @@
       document.querySelector('.toggle-button').textContent = '▼ Voir plus de pays';
     }
   }
+  function updateFlag() {
+    const select = document.getElementById('country');
+    const flagImg = document.getElementById('flag');
+    const selectedOption = select.options[select.selectedIndex];
+
+    if (selectedOption.value) {
+      const flagCode = selectedOption.getAttribute('data-flag');
+      flagImg.src = `https://flagcdn.com/w320/${flagCode}.png`; // URL du drapeau
+      flagImg.style.display = 'inline'; // Affiche l'image du drapeau
+    } else {
+      flagImg.style.display = 'none'; // Cache l'image si aucune option n'est sélectionnée
+    }
+  }
   </script>
