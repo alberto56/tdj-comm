@@ -90,40 +90,54 @@
     const countryList = document.getElementById("countryList");
 
     function loadDefaultNews(defaultArticles) {
-    const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+      const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
 
-    newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
+      newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
-    // Limiter le nombre d'articles affichés
-    const articlesToShow = defaultArticles.slice(0, {{ maxArticles }});
+      // Limiter le nombre d'articles affichés
+      const articlesToShow = defaultArticles.slice(0, {{ maxArticles }});
 
-    articlesToShow.forEach(article => {
-    const newsBlock = document.createElement("div");
-    newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
+      articlesToShow.forEach(article => {
+      const newsBlock = document.createElement("div");
+      newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
 
-    // Tronquer le titre à 50 caractères max
-    const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
+      // Tronquer le titre à 50 caractères max
+      const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
 
-    let lirePlus = '';
-    if (typeof article.url !== 'undefined') {
-        lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
-    }
+      let lirePlus = '';
+      if (typeof article.url !== 'undefined') {
+          lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
+      }
 
-    newsBlock.innerHTML = `
-        <div class="card shadow-sm mb-4" style="border: none;">
-            <div class="card-body text-center">
-                <h5 class="card-title">${truncatedTitle}</h5>
-                <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                ${lirePlus}
-            </div>
-        </div>
-    `;
+      let pays = '';
+      if (typeof article.pays !== 'undefined') {
+          if (article.pays.drapeau && article.pays.pays && article.pays.antenne) {
+              pays = `<div class="pays-sur-article">
+                  <img src="${article.pays.drapeau}"
+                      alt="${article.pays.pays}"
+                      class="img-fluid rounded-circle"
+                      style="object-fit: cover;">
+                  <div class="antenne">${article.pays.antenne}</div>
+              </div>`;
+          }
+      }
 
-    newsContainer.appendChild(newsBlock);
-    });
+      newsBlock.innerHTML = `
+          <div class="card shadow-sm mb-4" style="border: none;">
+              <div class="card-body text-center">
+                  ${pays}
+                  <h5 class="card-title">${truncatedTitle}</h5>
+                  <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                      <img src="${article.image}" alt="${article.title}" class="img-fluid rounded"
+                          style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  ${lirePlus}
+              </div>
+          </div>
+      `;
+
+      newsContainer.appendChild(newsBlock);
+      });
     }
 
     // Récupérer les actualités par pays
@@ -273,9 +287,8 @@
         });
     });
   </script>
-  <script src="js/contenu/contenu.js"></script>
+  <script src="js/contenu/contenu.js?token={{ site.time | date: '%s' }}"></script>
   <script src="js/contenu/membres.js"></script>
-  <script src="js/contenu/articles.js"></script>
   <script src="js/contenu/activites.js"></script>
   <script src="js/contenu/vars.js"></script>
   <script>
