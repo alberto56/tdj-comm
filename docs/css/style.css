@@ -2175,3 +2175,16 @@ footer {
 .localdev-warning code {
   color: white;
 }
+
+.pays-sur-article img {
+  display: inline;
+  width: 35px;
+  height: 35px;
+}
+
+.pays-sur-article .antenne {
+  display: inline;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 10px;
+}

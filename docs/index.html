@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- CHARGEMENT DE JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?token={{ site.time | date: '%s' }}" rel="stylesheet">
   </head>
   <body id="section_1">
     {% if site.data.config.jekyll != true%}
@@ -146,7 +146,7 @@
     <!-- sections main principal -->
     <main>
       <!-- slider header -->
-      
+
       <section class="hero-section hero-section-full-height">
         <div class="container-fluid">
 

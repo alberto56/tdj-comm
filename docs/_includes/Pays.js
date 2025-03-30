@@ -8,6 +8,15 @@ class Pays extends Infos {
     this.init();
   }
 
+  getFlag(country) {
+    country = this.getStruct(country);
+
+    if (typeof country.drapeau != 'undefined') {
+      return 'https://contenu.terredesjeunes.org' + country.drapeau;
+    }
+    return '';
+  }
+
   getResponseSingle(node) {
     const contenu = 'https://contenu.terredesjeunes.org';
     const activeAntennes = this.s('antennes').activeForCountry(node.title);
