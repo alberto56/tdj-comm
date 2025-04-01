@@ -22,96 +22,16 @@
     </head>
     
     <body id="section_1">
-
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-8 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-geo-alt me-2"></i>
-                            Boulevard; Montreal 20, 0150 Oslo, Norway
-                        </p>
-
-                        <p class="d-flex mb-0">
-                            <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto:info@company.com">
-                                info@terredesjeunes.org
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-youtube"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-            <!-- nav  -->
-            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-                <div class="container">
-                    <!-- Logo + Nom -->
-                    <a class="navbar-brand d-flex align-items-center" href="index.html">
-                        <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre Des Jeunes">
-                        <h2 class="fw-bold">Terre des jeunes</h2>
-                    </a>
-            
-                    <!-- Bouton Toggle (pour mobile) -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-            
-                    <!-- Menu de Navigation -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">À propos</a></li>
-                            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Causes</a></li>
-                            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Bénévolat</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Actualités</a>
-                                <ul class="dropdown-menu dropdown-menu-light">
-                                    <li><a class="dropdown-item" href="news.html">Liste des actualités</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Contact</a></li>
-                            <li class="nav-item ms-lg-3">
-                                <a class="nav-link custom-btn custom-border-btn btn btn-primary" href="donate.html">Faire un Don</a>
-                            </li>
-                            <li class="nav-item ms-lg-3">
-                                <a class="nav-link custom-btn custom-border-btn btn btn-secondary" href="#" data-bs-toggle="modal"
-                                    data-bs-target="#authModal">Connexion</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
+    {% if site.data.config.jekyll != true%}
+        <div class="localdev-warning">
+          Attention! Vous devez générer le site avec Docker. SVP faire:
+          <code>
+          docker-compose up
+          </code>
+          Puis visiter http://0.0.0.0:4000
+        </div>
+    {% endif %}
+    {% include navbar.html %}
     <!-- Modal -->
     <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
         <div class="modal-dialog">
