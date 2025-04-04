@@ -556,7 +556,8 @@ strong {
 
 .site-header p,
 .site-header p a,
-.site-header .social-icon-link {
+.site-header .social-icon-link,
+.site-header a {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
 }
@@ -2187,4 +2188,9 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 10px;
+}
+
+.tdj-en-chiffres-chiffre {
+  font-size: 2em;
+  font-weight: bold;
 }
