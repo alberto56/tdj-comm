@@ -556,7 +556,8 @@ strong {
 
 .site-header p,
 .site-header p a,
-.site-header .social-icon-link {
+.site-header .social-icon-link,
+.site-header a {
   color: var(--white-color);
   font-size: var(--copyright-font-size);
 }
@@ -2187,4 +2188,59 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 10px;
+}
+
+.tdj-en-chiffres-chiffre {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centre les cartes sur une même ligne */
+  flex-wrap: wrap; /* Permet aux cartes de se déplacer sur plusieurs lignes si nécessaire */
+  margin: 20px 0;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Diminuer le padding */
+  width: 150px; /* Diminuer la largeur */
+  margin: 10px; /* Marge autour des cartes */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.icon {
+  font-size: 36px; /* Diminuer la taille de l'icône */
+  color: #4CAF50; /* Couleur verte */
+  margin-bottom: 10px;
+}
+
+/* Media Queries pour différents écrans */
+@media (max-width: 1200px) {
+  .card {
+      width: 180px; /* Ajuste la largeur sur les écrans moyens */
+  }
+}
+@media (max-width: 900px) {
+  .card {
+      width: 160px; /* Ajuste la largeur sur les écrans plus petits */
+  }
+}
+@media (max-width: 600px) {
+  .card {
+      width: 90%; /* Largeur 90% sur mobile */
+  }
+  h1 {
+      font-size: 2em;
+  }
+  p {
+      font-size: 1em;
+  }
 }

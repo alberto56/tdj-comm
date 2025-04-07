@@ -11,6 +11,8 @@
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -190,33 +192,41 @@
         </div>
       </section>
       <!-- BIENVENUE -->
-      <section class="section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 col-12 text-center mx-auto">
-              <h2 class="mb-5">BIENVENUE DANS L'UNIVERS DE TERRE DES JEUNES</h2>
-            </div>
-            <div class="slider">
-              <div class="slides">
-                <!-- Slide 1 -->
-                <div class="slide">
-                  <img src="images/banner/TTTTT1.jpg" alt="Slide 1">
-                  <!-- <h5>UN AUTRE EST POSSIBLE, NOUS LE CRÉONS</h5> -->
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <img src="images/banner/TTTTT221.jpg" alt="Slide 2">
-                  <!-- <h5>ENSEMBLE, RÉALISONS NOS RÊVES</h5> -->
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <img src="images/banner/TTTTT1.jpg" alt="Slide 3">
-                  <!-- <h5>TRANSFORMONS L'IMPOSSIBLE EN RÉALITÉ</h5> -->
-                </div>
-              </div>
-            </div>
-          </div>
+      <section class="section-padding"> 
+    <h1 class="text-center">Un autre monde est possible. Nous le créons.</h1>
+    <p class="text-center">Nous sommes un partenaire terrain de confiance depuis 1985.</p>
+
+    <div class="container">
+        <div class="card">
+            <i class="material-icons icon">public</i>
+            <h2>Dans</h2>
+            <p>10 pays</p>
         </div>
+        <div class="card">
+            <i class="material-icons icon">verified_user</i>
+            <h2>Accrédité depuis</h2>
+            <p>2016 à l'ONU</p>
+        </div>
+        <div class="card">
+            <i class="material-icons icon">check_circle</i>
+            <h2>Plus de</h2>
+            <p>120 projets menés à terme</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for any future enhancements or animations
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.2)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+
+
       </section>
 <!-- Mission de terredesjeunes -->
 <section class="section-padding section-bg" id="section_2">
@@ -357,7 +367,7 @@
         </div>
       </section>
       <!-- sections d'articles -->
-      <section class="news-section section-padding" id="section_5">
+      <section class="news-section section-padding" id="actualites">
         <div class="container">
           <div class="col-lg-12 col-12 mb-5">
             <h2>Dernières nouvelles</h2>
