@@ -2106,18 +2106,19 @@ footer {
 }
 
 /* team scripts */
-                /* Icônes sociales */
-                .social-icons i {
-                  margin: 0 10px;
-                  font-size: 1.8rem; /* Taille des icônes */
-                  color: #333; /* Couleur par défaut des icônes */
-                  cursor: pointer;
-                  transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
-              }
+        /* Icônes sociales */
+ .social-icons i
+  {
+    margin: 0 10px;
+    font-size: 1.8rem; /* Taille des icônes */
+    color: #333; /* Couleur par défaut des icônes */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
+   }
 
-              .social-icons i:hover {
-                  color: #027933; /* Couleur au survol */
-                  transform: scale(1.2); /* Agrandir l'icône au survol */
+     .social-icons i:hover {
+         color: #027933; /* Couleur au survol */
+          transform: scale(1.2); /* Agrandir l'icône au survol */
               }
 
               .social-icons a {

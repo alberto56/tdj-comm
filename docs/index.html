@@ -18,6 +18,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- CHARGEMENT DE JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -193,31 +194,38 @@
       </section>
       <!-- BIENVENUE -->
       <section class="section-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 col-12 text-center mx-auto">
-              <h2 class="mbdd-5">Un autre monde est possible. Nous le créons.</h2>
-              <h2 class="mb-5">Nous sommes un partenaire terrain de confiance depuis 1985.</h2>
-            </div>
+        <h1 class="text-center">Un autre monde est possible. Nous le créons.</h1>
+        <p class=" text-center">Nous sommes un partenaire terrain de confiance depuis 1985.</p>
+        <div class="container p-10">
+          <div class="card">
+              <i class="material-icons icon">public</i>
+              <h2>Dans</h2>
+              <p>10 pays</p>
           </div>
-          <div class="row">
-            <div class="col-4 text-center mx-auto">
-              <div class="tdj-en-chiffres-texte">Présent dans</div>
-              <div class="tdj-en-chiffres-chiffre">10</div>
-              <div class="tdj-en-chiffres-texte">pays</div>
-            </div>
-            <div class="col-4 text-center mx-auto">
-              <div class="tdj-en-chiffres-texte">Accrédité depuis</div>
-              <div class="tdj-en-chiffres-chiffre">2016</div>
-              <div class="tdj-en-chiffres-texte">à l'ONU</div>
-            </div>
-            <div class="col-4 text-center mx-auto">
-              <div class="tdj-en-chiffres-texte">Plus de</div>
-              <div class="tdj-en-chiffres-chiffre">120</div>
-              <div class="tdj-en-chiffres-texte">projets menés à terme</div>
-            </div>
+          <div class="card">
+              <i class="material-icons icon">verified_user</i>
+              <h2>Accrédité depuis</h2>
+              <p>2016 à l'ONU</p>
           </div>
-        </div>
+          <div class="card">
+              <i class="material-icons icon">check_circle</i>
+              <h2>Plus de</h2>
+              <p>120 projets menés à terme</p>
+          </div>
+      </div>
+  
+      <script>
+          // JavaScript for any future enhancements or animations
+          document.querySelectorAll('.card').forEach(card => {
+              card.addEventListener('mouseenter', () => {
+                  card.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.2)';
+              });
+              card.addEventListener('mouseleave', () => {
+                  card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.1)';
+              });
+          });
+      </script>
+  
     </div>
 
     <script>
