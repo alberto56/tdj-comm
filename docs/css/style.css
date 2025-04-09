@@ -2200,6 +2200,11 @@ footer {
   font-weight: bold;
 }
 
+.tdj-en-chiffres-chiffre {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 .container {
   display: flex;
   justify-content: center; /* Centre les cartes sur une même ligne */
