@@ -4,7 +4,7 @@ set -e
 
 pwd
 ls -lah
-docker compose down
+docker compose -f docker-compose.yml down
 docker network ls | grep tdj_comm || docker network create tdj_comm
 docker compose -f docker-compose.yml up -d
 sleep 3
