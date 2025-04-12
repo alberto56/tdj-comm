@@ -15,4 +15,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run tests
-      run: ./scripts/ci.sh
+      run: ./scripts/ci-sudo.sh
