@@ -2220,7 +2220,7 @@ footer {
   flex-wrap: wrap; /* Permet aux cartes de se déplacer sur plusieurs lignes si nécessaire */
   margin: 20px 0;
 }
-.card {
+.tdj-en-chiffres .card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -2231,7 +2231,7 @@ footer {
   text-align: center;
   border: 1px solid #e0e0e0;
 }
-.card:hover {
+.tdj-en-chiffres .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
