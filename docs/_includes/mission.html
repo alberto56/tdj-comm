@@ -1,0 +1,32 @@
+<section class="section-padding">
+  <h1 class="text-center">Un autre monde est possible. Nous le créons.</h1>
+  <p class=" text-center">Nous sommes un partenaire terrain de confiance depuis 1985.</p>
+  <div class="container p-10">
+    <div class="card">
+      <i class="material-icons icon">public</i>
+      <h2>Dans</h2>
+      <p>10 pays</p>
+    </div>
+    <div class="card">
+      <i class="material-icons icon">verified_user</i>
+      <h2>Accrédité depuis</h2>
+      <p>2016 à l'ONU</p>
+    </div>
+    <div class="card">
+      <i class="material-icons icon">check_circle</i>
+      <h2>Plus de</h2>
+      <p>120 projets menés à terme</p>
+    </div>
+  </div>
+  <script>
+    // JavaScript for any future enhancements or animations
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.2)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.1)';
+        });
+    });
+  </script>
+</section>
