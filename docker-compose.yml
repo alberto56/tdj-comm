@@ -6,3 +6,8 @@ services:
       - 4000:4000
     volumes:
       - ./docs:/srv/jekyll
+
+networks:
+  default:
+    name: tdj_comm
+    external: true
