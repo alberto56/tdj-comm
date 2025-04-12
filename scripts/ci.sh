@@ -4,6 +4,8 @@ set -e
 
 pwd
 ls -lah
+docker network ls | grep tdj_comm || docker network create tdj_comm
 docker compose -f docker-compose.yml up -d
 # https://github.com/dcycle/docker-html-validate
-docker run --rm -v "$(pwd)":/code dcycle/html-validate:3 /code/docs/_site/index.html
+docker run --rm --network tdj_comm dcycle/html-validate:3 http://jekyll:4000 -F text
+docker compose down
