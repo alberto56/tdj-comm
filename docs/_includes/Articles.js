@@ -1,7 +1,7 @@
 class Articles extends Infos {
   url() {
     // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return 'https://contenu.terredesjeunes.org/api/v1/all.json';
+    return '/api/v1/all.json';
   }
 
   init2(options) {
@@ -56,15 +56,15 @@ class Articles extends Infos {
       }
 
       if (typeof node.img[0] != 'undefined') {
-        article.image = 'https://contenu.terredesjeunes.org' + node.img[0];
+        article.image = '' + node.img[0];
       }
       if (typeof node.url != 'undefined') {
-        article.url = 'https://contenu.terredesjeunes.org' + node.url;
+        article.url = '' + node.url;
       }
       article.pays = this.getAntennePays(node);
 
       if (typeof node.img[0] != 'undefined') {
-        article.image = 'https://contenu.terredesjeunes.org' + node.img[0];
+        article.image = '' + node.img[0];
       }
 
       articles.push(article);
