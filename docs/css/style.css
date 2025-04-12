@@ -2106,67 +2106,75 @@ footer {
 }
 
 /* team scripts */
-        /* Icônes sociales */
- .social-icons i
-  {
-    margin: 0 10px;
-    font-size: 1.8rem; /* Taille des icônes */
-    color: #333; /* Couleur par défaut des icônes */
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
-   }
+/* Icônes sociales */
+.social-icons i {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  /* Taille des icônes */
+  color: #333;
+  /* Couleur par défaut des icônes */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Effet de hover */
+}
 
-     .social-icons i:hover {
-         color: #027933; /* Couleur au survol */
-          transform: scale(1.2); /* Agrandir l'icône au survol */
-              }
+.social-icons i:hover {
+  color: #027933;
+  /* Couleur au survol */
+  transform: scale(1.2);
+  /* Agrandir l'icône au survol */
+}
 
-              .social-icons a {
-                  text-decoration: none; /* Supprimer la décoration des liens */
-              }
+.social-icons a {
+  text-decoration: none;
+  /* Supprimer la décoration des liens */
+}
 
 
-              .social-icons i:hover {
-                  color: #027933; /* Couleur bleue lors du survol */
-                  transform: scale(1.2); /* Agrandir l'icône lors du survol */
-              }
+.social-icons i:hover {
+  color: #027933;
+  /* Couleur bleue lors du survol */
+  transform: scale(1.2);
+  /* Agrandir l'icône lors du survol */
+}
 
-              .social-icons a {
-                  text-decoration: none; /* Supprimer la décoration de texte pour les liens */
-              }
+.social-icons a {
+  text-decoration: none;
+  /* Supprimer la décoration de texte pour les liens */
+}
 
-              /* Ajustement du logo et du texte */
-        .navbar-brand img {
-          height: 50px;
-          width: auto;
-      }
+/* Ajustement du logo et du texte */
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
 
-      .navbar-brand h2 {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-      }
+.navbar-brand h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
 
-      /* Ajustement du bouton toggle */
-      .navbar-toggler {
-          border: none;
-          outline: none;
-      }
+/* Ajustement du bouton toggle */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
 
-      /* Ajustement du menu en mobile */
-      @media (max-width: 991px) {
-          .navbar-nav {
-              text-align: center;
-          }
+/* Ajustement du menu en mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
 
-          .nav-item {
-              padding: 10px 0;
-          }
+  .nav-item {
+    padding: 10px 0;
+  }
 
-          .custom-btn {
-              width: 100%; /* Boutons pleine largeur */
-          }
-      }
-
+  .custom-btn {
+    width: 100%;
+    /* Boutons pleine largeur */
+  }
+}
 .localdev-warning {
   background: red;
   padding: 200px 40px;
@@ -2206,7 +2214,7 @@ footer {
   font-weight: bold;
 }
 
-.container {
+.card-container {
   display: flex;
   justify-content: center; /* Centre les cartes sur une même ligne */
   flex-wrap: wrap; /* Permet aux cartes de se déplacer sur plusieurs lignes si nécessaire */
