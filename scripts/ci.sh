@@ -11,3 +11,6 @@ sleep 3
 # https://github.com/dcycle/docker-html-validate
 docker run --rm --network tdj_comm dcycle/html-validate:3 http://jekyll:4000 -F text
 docker compose down
+echo ""
+echo "Done!"
+echo ""
