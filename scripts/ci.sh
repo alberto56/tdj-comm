@@ -8,7 +8,7 @@ rm -rf ./docs/_site
 docker run --rm -v ./docs:/srv/jekyll jekyll/minimal:3.8 jekyll build
 cat ./docs/_site/index.html
 # https://github.com/dcycle/docker-html-validate
-docker run --rm --network tdj_comm -v "$(pwd)":/code dcycle/html-validate:3 /code/docs/_site/index.html
+docker run --user root --rm --network tdj_comm -v "$(pwd)":/code dcycle/html-validate:3 /code/docs/_site/index.html
 echo ""
 echo "Done!"
 echo ""
