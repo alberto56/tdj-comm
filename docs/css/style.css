@@ -2106,66 +2106,75 @@ footer {
 }
 
 /* team scripts */
-                /* Icônes sociales */
-                .social-icons i {
-                  margin: 0 10px;
-                  font-size: 1.8rem; /* Taille des icônes */
-                  color: #333; /* Couleur par défaut des icônes */
-                  cursor: pointer;
-                  transition: color 0.3s ease, transform 0.3s ease; /* Effet de hover */
-              }
+/* Icônes sociales */
+.social-icons i {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  /* Taille des icônes */
+  color: #333;
+  /* Couleur par défaut des icônes */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Effet de hover */
+}
 
-              .social-icons i:hover {
-                  color: #027933; /* Couleur au survol */
-                  transform: scale(1.2); /* Agrandir l'icône au survol */
-              }
+.social-icons i:hover {
+  color: #027933;
+  /* Couleur au survol */
+  transform: scale(1.2);
+  /* Agrandir l'icône au survol */
+}
 
-              .social-icons a {
-                  text-decoration: none; /* Supprimer la décoration des liens */
-              }
+.social-icons a {
+  text-decoration: none;
+  /* Supprimer la décoration des liens */
+}
 
 
-              .social-icons i:hover {
-                  color: #027933; /* Couleur bleue lors du survol */
-                  transform: scale(1.2); /* Agrandir l'icône lors du survol */
-              }
+.social-icons i:hover {
+  color: #027933;
+  /* Couleur bleue lors du survol */
+  transform: scale(1.2);
+  /* Agrandir l'icône lors du survol */
+}
 
-              .social-icons a {
-                  text-decoration: none; /* Supprimer la décoration de texte pour les liens */
-              }
+.social-icons a {
+  text-decoration: none;
+  /* Supprimer la décoration de texte pour les liens */
+}
 
-              /* Ajustement du logo et du texte */
-        .navbar-brand img {
-          height: 50px;
-          width: auto;
-      }
+/* Ajustement du logo et du texte */
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+}
 
-      .navbar-brand h2 {
-          font-size: 1.2rem;
-          margin-bottom: 0;
-      }
+.navbar-brand h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
 
-      /* Ajustement du bouton toggle */
-      .navbar-toggler {
-          border: none;
-          outline: none;
-      }
+/* Ajustement du bouton toggle */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
 
-      /* Ajustement du menu en mobile */
-      @media (max-width: 991px) {
-          .navbar-nav {
-              text-align: center;
-          }
+/* Ajustement du menu en mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
 
-          .nav-item {
-              padding: 10px 0;
-          }
+  .nav-item {
+    padding: 10px 0;
+  }
 
-          .custom-btn {
-              width: 100%; /* Boutons pleine largeur */
-          }
-      }
-
+  .custom-btn {
+    width: 100%;
+    /* Boutons pleine largeur */
+  }
+}
 .localdev-warning {
   background: red;
   padding: 200px 40px;
@@ -2193,4 +2202,64 @@ footer {
 .tdj-en-chiffres-chiffre {
   font-size: 2em;
   font-weight: bold;
+}
+
+.tdj-en-chiffres-chiffre {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.tdj-en-chiffres-chiffre {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Centre les cartes sur une même ligne */
+  flex-wrap: wrap; /* Permet aux cartes de se déplacer sur plusieurs lignes si nécessaire */
+  margin: 20px 0;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Diminuer le padding */
+  width: 150px; /* Diminuer la largeur */
+  margin: 10px; /* Marge autour des cartes */
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.icon {
+  font-size: 36px; /* Diminuer la taille de l'icône */
+  color: #4CAF50; /* Couleur verte */
+  margin-bottom: 10px;
+}
+
+/* Media Queries pour différents écrans */
+@media (max-width: 1200px) {
+  .card {
+      width: 180px; /* Ajuste la largeur sur les écrans moyens */
+  }
+}
+@media (max-width: 900px) {
+  .card {
+      width: 160px; /* Ajuste la largeur sur les écrans plus petits */
+  }
+}
+@media (max-width: 600px) {
+  .card {
+      width: 90%; /* Largeur 90% sur mobile */
+  }
+  h1 {
+      font-size: 2em;
+  }
+  p {
+      font-size: 1em;
+  }
 }
