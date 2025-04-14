@@ -44,3 +44,11 @@ media \
   rsync --archive --exclude='.DS_Store' "$TDJ_CONTENT_REPO_DIR/docs/$dir" "$BASE/docs/"
 
 done
+
+echo ""
+echo "COMMIT AND PUSH"
+echo ""
+
+cd "$BASE" && git add .
+cd "$BASE" && git commit -am 'I am a robot: synchronizing content from TDJ content repo'
+cd "$BASE" && git push origin main
