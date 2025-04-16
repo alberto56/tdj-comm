@@ -30,7 +30,7 @@ class Activites extends Infos {
         <div class="custom-block">
             <div class="custom-block-body">
                 <h5 class="mb-3" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;">__title__</h5>
-                <p>Vrais informations ici.........</p>
+                
             </div>
             <a href="donate.html" class="custom-btn btn">En savoir plus</a>
         </div>
