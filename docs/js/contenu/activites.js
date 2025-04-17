@@ -23,30 +23,20 @@ class Activites extends Infos {
   template() {
     return `
 <div class="col-lg-4 col-md-6 col-12 mb-4">
-    <div class="custom-block-wrap">
+    <div class="custom-block-wrap shadow">
         <img src="__image__"
-            class="custom-block-image img-fluid" alt="Children Education">
+            class="custom-block-image img-fluid" alt="Children Education" style="object-fit: cover; height: 200px; transition: transform 0.3s;">
 
         <div class="custom-block">
             <div class="custom-block-body">
-                <h5 class="mb-3">__title__</h5>
-                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
-                    kohm tokito</p>
-                <div class="progress mt-4">
-                    <div class="progress-bar w-75" role="progressbar"
-                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                    </div>
-                </div>
-                <div class="d-flex align-items-center my-2">
-                    <p class="mb-0"><strong>Raised:</strong> $18,500</p>
-                    <p class="ms-auto mb-0"><strong>Goal:</strong> $32,000</p>
-                </div>
+                <h5 class="mb-3" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;">__title__</h5>
+
             </div>
-            <a href="donate.html" class="custom-btn btn">Donate now</a>
+            <a href="donate.html" class="custom-btn btn">En savoir plus</a>
         </div>
     </div>
 </div>
 `;
-  }
+}
 
 }
