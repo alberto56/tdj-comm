@@ -36,36 +36,6 @@ class Activites extends Infos {
         </div>
     </div>
 </div>
-
-<style>
-    .custom-block-wrap {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-
-    .custom-block-wrap:hover {
-        transform: scale(1.05);
-    }
-
-    .shadow {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .custom-btn {
-        background-color:rgb(3, 15, 27);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    }
-
-    .custom-btn:hover {
-        background-color: #027933;
-    }
-</style>
 `;
 }
 
