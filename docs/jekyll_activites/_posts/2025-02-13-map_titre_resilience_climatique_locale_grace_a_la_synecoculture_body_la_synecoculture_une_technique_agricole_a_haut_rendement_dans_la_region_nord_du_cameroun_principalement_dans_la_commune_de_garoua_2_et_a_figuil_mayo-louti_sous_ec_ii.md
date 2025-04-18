@@ -1,5 +1,6 @@
 ---
 title: "La Synoculture "
+permalink: /synecoculture/
 titre: RESILIENCE LOCALE GRACE A LA SYNOCULTURE AU CAMEROUN
 image: /media/cameroun.png
 ---

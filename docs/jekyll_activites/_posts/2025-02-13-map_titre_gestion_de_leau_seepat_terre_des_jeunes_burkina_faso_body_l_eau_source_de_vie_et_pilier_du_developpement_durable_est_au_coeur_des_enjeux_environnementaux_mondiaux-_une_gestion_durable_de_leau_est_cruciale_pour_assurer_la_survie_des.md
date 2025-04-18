@@ -1,5 +1,6 @@
 ---
 title: "Gestion de l'eau "
+permalink: /eau/
 image: /media/cimg8847.jpg
 documents:
   - /media/generic_pdf.pdf

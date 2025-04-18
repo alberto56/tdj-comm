@@ -1,5 +1,6 @@
 ---
 title: Au secours des mangroves
+permalink: /mangroves/
 image: /media/mangrove_1.jpg
 ---
 **Les mangroves : un écosystème clé pour la planète**
@@ -121,7 +122,7 @@ Fondée en 2012, BEH travaille dans la région de l’Artibonite et la commune d
 
 •	Gestion des déchets : Collecte et décomposition anaérobie pour produire du biogaz transformé en électricité ou gaz en bouteille.
 
-•	Objectifs principaux : 
+•	Objectifs principaux :
 
 
 o	Développement durable et lutte contre le changement climatique.
