@@ -17,6 +17,7 @@ class Activites extends Infos {
     return {
       'title': 'string',
       'image': 'image',
+      'url': 'url',
     };
   }
 
@@ -32,7 +33,7 @@ class Activites extends Infos {
                 <h5 class="mb-3" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%;">__title__</h5>
 
             </div>
-            <a href="donate.html" class="custom-btn btn">En savoir plus</a>
+            <a href="__url__" class="custom-btn btn">En savoir plus</a>
         </div>
     </div>
 </div>
