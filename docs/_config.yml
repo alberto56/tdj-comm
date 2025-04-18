@@ -1,0 +1,6 @@
+defaults:
+  -
+    scope:
+      path: "jekyll_blogposts"
+    values:
+      permalink: "articles/:year/:month/:day/:title:output_ext"
