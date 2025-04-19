@@ -1,6 +1,7 @@
 ---
 title: "Mot du Président 60 printemps 2025: 40 ans d’histoire du Mouvement Terre
   des Jeunes"
+id: 60-printemps-2025
 date: 2025-04-19
 img:
   - image: /media/mdp60-ca2019.jpg
