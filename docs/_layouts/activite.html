@@ -1,8 +1,8 @@
 {% capture inferred_sections2 %}
 
   {% assign _h1 = page.title %}
-  {% if page.img | first %}
-    {% assign _bg = page.img | first %}
+  {% if page.image %}
+    {% assign _bg = page.image %}
   {% else %}
     {% assign _bg = site.data.config.default_header_bg_img %}
   {% endif %}

@@ -1,2 +1,3 @@
 # Just so we can display a warning if we're not on Jekyll
 jekyll: true
+default_header_bg_img: /images/news/medium-shot-volunteers-with-clothing-donations.jpg

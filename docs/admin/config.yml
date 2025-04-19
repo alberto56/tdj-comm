@@ -1,0 +1,19 @@
+---
+---
+{% assign slug = "{{year}}-{{month}}-{{day}}-{{slug}}" %}
+locale: 'fr'
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+backend:
+  # See https://www.netlifycms.org/docs/authentication-backends/#github-backend
+  name: github
+  repo: alberto56/tdj-comm
+  branch: main
+  base_url: https://auth.static.dcycle.com
+  auth_endpoint: auth/github/alberto56
+media_folder: 'docs/media'
+public_folder: "/media"
+collections:
+{% include decap/motsdupresident.yml %}

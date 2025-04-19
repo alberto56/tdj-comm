@@ -2,6 +2,7 @@
 class Services {
   /** Init all the singletons. */
   async init(settings) {
+    this.alerts = await new Alerts(this).preload();
     this.membres = await new Membres(this).preload();
     this.activites = await new Activites(this).preload();
     this.articles = await new Articles(this).preload();
@@ -9,15 +10,11 @@ class Services {
     this.antennes = await new Antennes(this).preload();
     this.pays = await new Pays(this).preload();
 
-    [
-      'membres',
-      'activites',
-      'articles',
-      'pays',
-    ].forEach((serviceName) => {
-      this[serviceName].init2(settings[serviceName]);
-    });
+    const that = this;
 
+    Object.keys(that).forEach(key => {
+      that[key].init2(settings[key]);
+    });
     return this;
   }
   /** Get a singleton. */

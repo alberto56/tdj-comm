@@ -1,0 +1,30 @@
+  - name: 'motsdupresident'
+    create: true
+    label: 'Mots du Président'
+    folder: 'docs/jekyll_motsdupresident/_posts/'
+    slug: '{{slug}}'
+    fields:
+      - label: 'Titre, par exemple Mot du Président 34 Automne 2016: Lancement de la campagne de financement'
+        name: 'title'
+        widget: 'string'
+      - label : 'Identité, sert au chemin de la page, par exemple 60-automne-2016'
+        name: 'id'
+        widget: 'string'
+        required: false
+        hint: 'Sert à créer le lien vers la page, par exemple 60-automne-2016'
+      - label : 'Date, sert pour ordonner les mots du Président, par exemple 2025-04-19'
+        name: 'date'
+        widget: 'string'
+        required: false
+      - label: "Images"
+        name: "img"
+        widget: "list"
+        required: false
+        fields:
+        - {label: Image, name: image, widget: image, required: false}
+        - {label: 'Descriptif pour personnes non-voyantes, par exemple: Cinq personnes en train de planter des arbres', name: alt, widget: string, required: false}
+        - {label: "Descriptif et crédit, par exemple: Plantaiton d'arbre durant la fête de l'arbre 2015 au Cameroun, photo par Jean-Paul Pierre", name: desc, widget: string, required: false}
+      - label: 'Contenu'
+        name: 'body'
+        widget: 'markdown'
+        required: false
