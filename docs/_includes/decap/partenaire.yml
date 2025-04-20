@@ -1,0 +1,15 @@
+  - name: 'partenaire'
+    create: true
+    label: 'Partenaires'
+    folder: 'docs/jekyll_partenaires/_posts/'
+    slug: '{{slug}}'
+    fields:
+      - label: 'Nom'
+        name: 'nom'
+        widget: 'string'
+      - label: Image
+        name: image
+        widget: image
+      - label: 'lien'
+        name: 'lien'
+        widget: 'string'

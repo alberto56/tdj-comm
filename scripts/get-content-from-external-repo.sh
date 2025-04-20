@@ -22,18 +22,8 @@ git checkout master
 git pull github master
 
 for dir in \
-jekyll_activites \
-jekyll_antennes \
-jekyll_bios \
 jekyll_blogposts \
-jekyll_carousel \
 jekyll_categories \
-jekyll_events \
-jekyll_imageinfo \
-jekyll_locations \
-jekyll_pages \
-jekyll_pays \
-jekyll_texts \
 media \
 ; do
 

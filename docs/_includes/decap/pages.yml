@@ -1,0 +1,20 @@
+  - name: 'pages'
+    create: true
+    label: 'Pages'
+    folder: 'docs/jekyll_pages/_posts/'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - label: "Mise en page"
+        name: layout
+        widget: "select"
+        options:
+        - { label: 'Blog', value: 'blog' }
+        - { label: 'Liste de mots du président', value: 'liste_motsdupresident' }
+        - { label: 'Liste des articles', value: 'liste_articles' }
+      - label: 'Chemin'
+        name: 'permalink'
+        widget: 'string'
+        required: false
+        hint: 'Sert à créer le lien vers la page, par exemple /a-propos-de-nous/'
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }

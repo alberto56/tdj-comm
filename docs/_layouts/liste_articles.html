@@ -1,20 +1,16 @@
 {% capture inferred_sections2 %}
 
-  {% assign _crumbs = site.data.config.default_blog_crumbs %}
-  {% include sections/breadcrumb.html %}
-
   {% assign _h1 = page.title %}
-  {% if page.img %}
-    {% assign _bg = page.img | first %}
-  {% else %}
-    {% assign _bg = site.data.config.default_header_bg_img %}
-  {% endif %}
+  {% assign _bg = site.data.config.default_header_bg_img %}
+  {% assign _height = 'short' %}
   {% include sections/h1_hero.html %}
 
   {% include sections/messages.html %}
 
   {% assign _text = content %}
   {% include sections/onlytext.html %}
+
+  {% include sections/articles.html %}
 
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}

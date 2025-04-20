@@ -9,21 +9,13 @@
       </div>
       <div class="col-lg-3 col-12 ms-auto d-lg-block d-none ">
         <ul class="social-icon">
-          <li class="social-icon-item">
-            <a href="#" class="social-icon-link bi-twitter"></a>
-          </li>
-          <li class="social-icon-item">
-            <a href="#" class="social-icon-link bi-facebook"></a>
-          </li>
-          <li class="social-icon-item">
-            <a href="#" class="social-icon-link bi-instagram"></a>
-          </li>
-          <li class="social-icon-item">
-            <a href="#" class="social-icon-link bi-youtube"></a>
-          </li>
-          <li class="social-icon-item">
-            <a href="#" class="social-icon-link bi-whatsapp"></a>
-          </li>
+          {% for item in site.data.config.social %}
+            {% if item.actif %}
+              <li class="social-icon-item">
+                <a href="{{ item.url }}" class="social-icon-link bi-{{ item.icon }}"></a>
+              </li>
+            {% endif %}
+          {% endfor %}
           <li class="social-icon-item">
             <a href="http://terredesjeunes.org/connexion">Connexion</a>
           </li>
@@ -36,8 +28,8 @@
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
   <div class="container">
     <!-- Logo + Nom -->
-    <a class="navbar-brand d-flex align-items-center my-dark-on-light" href="/index.html">
-      <img src="images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre des jeunes">
+    <a class="navbar-brand d-flex align-items-center my-dark-on-light" href="/">
+      <img src="/images/logo/pro233.png" class="logo img-fluid me-2" alt="Logo Terre des jeunes">
       <h2 class="fw-bold logo">Terre des jeunes</h2>
     </a>
     <!-- Bouton Toggle (pour mobile) -->
@@ -48,10 +40,9 @@
     <!-- Menu de Navigation -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Accueil</a></li>
         <li class="nav-item"><a class="nav-link" href="/about.html">À propos</a></li>
-        <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Activités</a></li>
-        <li class="nav-item"><a class="nav-link click-scroll" href="#actualités">Actualités</a></li>
+        <li class="nav-item"><a class="nav-link click-scroll" href="/#activites">Activités</a></li>
+        <li class="nav-item"><a class="nav-link click-scroll" href="/actualites/">Actualités</a></li>
 
         <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
         <li class="nav-item ms-lg-3">
