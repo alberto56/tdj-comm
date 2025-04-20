@@ -32,6 +32,7 @@
         - { label: 'Printemps', value: 'printemps' }
         - { label: 'Été', value: 'été' }
         - { label: 'Automne', value: 'automne' }
+      - label: 'Image'
         name: "img"
         widget: "list"
         required: false
