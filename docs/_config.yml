@@ -8,7 +8,7 @@ defaults:
     scope:
       path: "jekyll_motsdupresident"
     values:
-      permalink: "mots-du-president/:id"
+      permalink: "mots-du-president/:pathid"
   -
     scope:
       path: "jekyll_activites"
