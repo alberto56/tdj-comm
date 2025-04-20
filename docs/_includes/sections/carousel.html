@@ -1,0 +1,26 @@
+<section class="hero-section hero-section-full-height">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-12 p-0">
+        <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            {% for carousel in site.categories.jekyll_carousel %}
+              {% if forloop.first %}
+                {% assign extra_classes = ' active' %}
+                {% assign extra_attr = '' %}
+              {% else %}
+                {% assign extra_classes = '' %}
+                {% assign extra_attr = ' data-bs-interval="2000"' %}
+              {% endif %}
+              <div class="carousel-item{{ extra_classes}}"{{ extra_attr }}>
+                <img src="{{ carousel.image }}"
+                  class="d-block w-100 carousel-image " alt="...">
+                {{ carousel.title }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

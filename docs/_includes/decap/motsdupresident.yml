@@ -14,12 +14,24 @@
         widget: 'string'
         required: false
         hint: 'Sert à créer le lien vers la page, par exemple /mots-du-president/60/'
-      - label : 'Date'
-        name: 'date'
+      - label : 'Numéro'
+        name: 'numero'
         widget: 'string'
         required: false
-        hint: 'Sert à créer le lien vers la page, par exemple 2016-10-01'
-      - label: "Images"
+        hint: 'Par exemple 40, 41, 60, etc.'
+      - label : 'Année'
+        name: 'annee'
+        widget: 'string'
+        required: false
+        hint: 'Par exemple 2016, 2025, etc.'
+      - label: "Saison"
+        name: saison
+        widget: "select"
+        options:
+        - { label: "Hiver (si c'est en décembre, mettre l'année suivante)", value: 'hiver' }
+        - { label: 'Printemps', value: 'printemps' }
+        - { label: 'Été', value: 'été' }
+        - { label: 'Automne', value: 'automne' }
         name: "img"
         widget: "list"
         required: false

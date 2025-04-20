@@ -16,4 +16,14 @@ backend:
 media_folder: 'docs/media'
 public_folder: "/media"
 collections:
+{% include decap/categories.yml %}
 {% include decap/motsdupresident.yml %}
+{% include decap/pages.yml %}
+{% include decap/activites.yml %}
+{% include decap/carousel.yml %}
+{% include decap/pays.yml %}
+{% include decap/antenne.yml %}
+{% include decap/bio.yml %}
+{% include decap/partenaire.yml %}
+{% include decap/textes.yml %}
+{% include decap/variables.yml %}

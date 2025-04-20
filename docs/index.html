@@ -14,165 +14,15 @@
     </div>
     {% endif %}
     {% include navbar.html %}
-    <!-- Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="authModalLabel">Welcome Terre des jeunes</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul class="nav nav-tabs" id="authTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab"
-                  aria-controls="login" aria-selected="true">Connexion</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab"
-                  aria-controls="signup" aria-selected="false">Inscription</a>
-              </li>
-            </ul>
-            <div class="tab-content mt-3 " id="authTabContent">
-              <!-- Connexion Form -->
-              <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                <form class="col-12">
-                  <div class="mb-3">
-                    <label for="emailLogin" class="form-label">Adress Email</label>
-                    <input type="email" class="form-control" id="emailLogin" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="passwordLogin" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control" id="passwordLogin" required>
-                  </div>
-                  <button type="submit" class="btn custom-btn custom-border-btn btn w-100">Se
-                  connecter</button>
-                </form>
-              </div>
-              <!-- Inscription Form -->
-              <!-- Formulaire d'inscription professionnel -->
-              <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                <form>
-                  <div class="row">
-                    <!-- Nom Complet -->
-                    <div class="col-md-6 mb-3">
-                      <label for="fullName" class="form-label">Nom Complet</label>
-                      <input type="text" class="form-control" id="fullName" required>
-                    </div>
-                    <!-- Email -->
-                    <div class="col-md-6 mb-3">
-                      <label for="emailSignup" class="form-label">Adress Email</label>
-                      <input type="email" class="form-control" id="emailSignup" required>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <!-- Mot de passe -->
-                    <div class="col-md-6 mb-3">
-                      <label for="passwordSignup" class="form-label">Mot de passe</label>
-                      <input type="password" class="form-control" id="passwordSignup" required>
-                    </div>
-                    <!-- Confirmer le mot de passe -->
-                    <div class="col-md-6 mb-3">
-                      <label for="confirmPassword" class="form-label">Confirmer le mot de
-                      passe</label>
-                      <input type="password" class="form-control" id="confirmPassword" required>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <!-- Pays -->
-                    <div class="col-md-6 mb-3">
-                      <label for="country" class="form-label">Pays</label>
-                      <div class="d-flex align-items-center">
-                        <img id="flag" src="/images/drapeau-generique.jpg" alt="Drapeau" width="30" class="me-2" style="display: none;"/>
-                        <select class="form-select" id="country" required onchange="updateFlag()">
-                          <option value="" disabled selected>Choisissez votre pays</option>
-                          <option value="CD" data-flag="cd">République Dém. du Congo</option>
-                          <option value="BI" data-flag="bi">Burundi</option>
-                          <option value="US" data-flag="us">États-Unis</option>
-                          <option value="FR" data-flag="fr">France</option>
-                          <option value="NG" data-flag="ng">Nigeria</option>
-                          <option value="IN" data-flag="in">Inde</option>
-                          <option value="GB" data-flag="gb">Royaume-Uni</option>
-                          <option value="DE" data-flag="de">Allemagne</option>
-                          <!-- Ajoutez d'autres pays ici -->
-                        </select>
-                      </div>
-                    </div>
-                    <!-- Antenne -->
-                    <div class="col-md-6 mb-3">
-                      <label for="antenna" class="form-label">Antenne TDJ</label>
-                      <input type="text" class="form-control" id="antenna" required>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <!-- Fonction -->
-                    <div class="col-md-6 mb-3">
-                      <label for="role" class="form-label">Fonction au sein de TDJ</label>
-                      <input type="text" class="form-control" id="role" required>
-                    </div>
-                    <!-- Téléphone -->
-                    <div class="col-md-6 mb-3">
-                      <label for="phone" class="form-label">Numéro de téléphone</label>
-                      <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                  </div>
-                  <button type="submit"
-                    class="btn custom-btn custom-border-btn btn w-100">S'inscrire</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- sections main principal -->
     <main>
       <!-- slider header -->
 
-      <section class="hero-section hero-section-full-height">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12 col-12 p-0">
-              <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="images/slide/78.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item " data-bs-interval="2000">
-                    <img src="images/slide/Tered113.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item " data-bs-interval="2000">
-                    <img src="images/slide/452.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item " data-bs-interval="2000">
-                    <img src="images/slide/Tered113.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item " data-bs-interval="2000">
-                    <img src="images/slide/65.jpg" class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="images/slide/img1.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item " data-bs-interval="2000">
-                    <img src="images/slide/Tered1135.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="images/slide/462.jpg"
-                      class="d-block w-100 carousel-image " alt="...">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>      <!-- BIENVENUE -->
+      {% include sections/carousel.html %}
       {% include mission.html %}
+
+      {% include sections/messages.html %}
+
       <!-- Mission de terredesjeunes -->
       <section class="section-padding section-bg" id="section_2">
         <div class="container">
@@ -281,30 +131,7 @@
 
       {% include sections/activites.html %}
 
-      <!-- sections d'articles -->
-      <section class="news-section section-padding" id="actualites">
-        <div class="container">
-          <div class="col-lg-12 col-12 mb-5">
-            <h2 class="text-center" style="color: #0d570d;">Dernières nouvelles</h2>
-          </div>
-          <div id="countries" class="row">
-            <div class="col-lg-12 col-12">
-              <div id="newsContainer" class="row">
-                <!-- Les articles par défaut seront chargés ici -->
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <a href="news.html" class="custom-btn btn smoothscroll   text-2xl font-bold text-center mb-6">
-            Voir les articles
-            <span class="icon-circle">
-            <i class="fas fa-arrow-right"></i>
-            </span>
-            </a>
-          </div>
-          <div class="col-lg-4"></div>
-        </div>
-      </section>
+      {% include sections/articles.html %}
 
       <!-- createur et membres Terre des jeunes-->
       <section class=" about-section section-padding mx-auto py-10">
@@ -570,6 +397,7 @@
           <div class="swiper-button-prev"></div> -->
       </div>
     </section>
+    {% include sections/subscribe.html %}
     <!-- footer sections -->
     {% assign maxArticles = 6 %}
     {% include footer.html %}

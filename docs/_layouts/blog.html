@@ -1,5 +1,8 @@
 {% capture inferred_sections2 %}
 
+  {% assign _crumbs = site.data.config.default_blog_crumbs %}
+  {% include sections/breadcrumb.html %}
+
   {% assign _h1 = page.title %}
   {% if page.img | first %}
     {% assign _bg = page.img | first %}
@@ -9,6 +12,9 @@
   {% include sections/h1_hero.html %}
 
   {% include sections/messages.html %}
+
+  {% assign _text = content %}
+  {% include sections/onlytext.html %}
 
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}

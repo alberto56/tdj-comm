@@ -1,7 +1,7 @@
 ---
-title: "La Synoculture "
+title: "La Synécoculture"
 permalink: /synecoculture/
-titre: RESILIENCE LOCALE GRACE A LA SYNOCULTURE AU CAMEROUN
+titre: RESILIENCE LOCALE GRACE A LA SYNÉCOCULTURE AU CAMEROUN
 image: /media/cameroun.png
 ---
 **LA SYNECOCULTURE**, une technique agricole à haut rendement dans la région nord du Cameroun (principalement dans la commune de Garoua 2 et à Figuil (Mayo-Louti)) sous EC IICT

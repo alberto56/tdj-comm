@@ -4,7 +4,7 @@
       <div class="row">
         <!-- Section Logo et Description -->
         <div class="col-lg-3 col-12 mb-4">
-          <img src="images/logo/LOGO%203.png" class="logo img-fluid" alt="Logo Terre des Jeunes">
+          <img src="/images/logo/LOGO%203.png" class="logo img-fluid" alt="Logo Terre des Jeunes">
           <p class="text-white mt-3">Nous sommes Terre des Jeunes, un organisme sans but lucratif visant à sensibiliser les jeunes du monde entier à la sauvegarde de l'environnement et à la gestion locale ou régionale du patrimoine naturel et culturel, par et pour les jeunes eux-mêmes.</p>
         </div>
         <!-- Section Liens Directs -->
@@ -15,6 +15,9 @@
             <li class="footer-menu-item"><a href="news.html" class="footer-menu-link text-white">Actualités</a></li>
             <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link text-white">Causes</a></li>
             <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link text-white">Devenir un Bénévole</a></li>
+            {% for item in site.data.config.menu_bas %}
+              <li class="footer-menu-item"><a href="{{ item.url }}" class="footer-menu-link text-white">{{ item.title }}</a></li>
+            {% endfor %}
           </ul>
         </div>
         <!-- Section Infos Contact -->
@@ -57,40 +60,22 @@
       </div>
     </div>
   </footer>
-  <!-- Include Bootstrap JS files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <!-- JAVASCRIPT FILES -->
   <script   src="https://code.jquery.com/jquery-3.7.1.min.js"   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="   crossorigin="anonymous"></script>
-  <script src="/js/bootstrap.min.js"></script>
   <script src="/js/jquery.sticky.js"></script>
-  <script src="/js/click-scroll.js"></script>
   <script src="/js/counter.js"></script>
   <script src="/js/custom.js"></script>
   <script>
-    // API keys et URLs (remplacez par vos propres clés)
-    const NEWS_API_URL = "https://newsapi.org/v2/top-headlines";
-    const API_KEY = "VOTRE_API_NEWS_API";
-    const REST_COUNTRIES_API = "https://restcountries.com/v3.1/name/";
-
-    // Pays africains et autres sélectionnés
-    // Pays africains et autres sélectionnés
-    const countries = [
-        { name: "Burundi" },
-        { name: "Côte d'Ivoire" },
-        { name: "Ghana" },
-        { name: "Haïti" },
-        { name: "Mali" },
-        { name: "Burkina Faso" },
-        { name: "Niger" },
-        { name: "République Démocratique du Congo", englishName: "Democratic Republic of the Congo" } // Ajout du nom en anglais
-    ];
-
     const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
     const recentNewsContainer = document.getElementById("recentNewsContainer");
     const countryList = document.getElementById("countryList");
 
     function loadDefaultNews(defaultArticles) {
       const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
+
+      if (!newsContainer) {
+        return;
+      }
 
       newsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter de nouveaux articles
 
@@ -204,6 +189,9 @@
 
     function populateTeamMembers(teamMembers) {
     const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
+    if (!teamContainer) {
+      return;
+    }
     teamContainer.innerHTML = `
            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
                ${teamMembers.map((member, index) => `

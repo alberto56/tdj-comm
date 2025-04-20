@@ -2,4 +2,4 @@
 ---
 {% include structure/r.css %}
 {% include structure/structure.css %}
-{% include sections/breadcrumb.css %}
+{% include sections/sections.css %}
