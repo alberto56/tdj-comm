@@ -1,0 +1,15 @@
+{% assign template="utilities/category.html" %}
+{% include structure/debug.html %}
+{% assign p="_category" %}{% assign v=_category %}{% include structure/r.html %}
+
+{% if _category != 'jekyll_blogposts' %}
+
+  {% assign _urlencoded = _category | url_encode %}
+
+  <a href="/actualites/" data-add-category="{{ _urlencoded }}" class="tags-block-link my-category">
+    {{ _category }} <span class="badge">...</span>
+  </a>
+{% endif %}
+
+{% assign template="utilities/category.html" %}
+{% include structure/enddebug.html %}
