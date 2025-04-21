@@ -2,7 +2,7 @@
 title: Projet d'Approvisionnement en Eau Potable et Assainissement de Sambasso
 antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 layout: blog
 img:
   - /media/img-20230619-wa0036.jpg

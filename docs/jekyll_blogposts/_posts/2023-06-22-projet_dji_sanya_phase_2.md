@@ -2,7 +2,7 @@
 title: Projet Dji Sanya phase 2
 antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 layout: blog
 img:
   - /media/img-20230603-wa0011.jpg

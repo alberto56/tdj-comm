@@ -2,7 +2,7 @@
 title: Gestion des déchets solides à Sérékeni/Burkina Faso
 antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Déchets
   - Société civile

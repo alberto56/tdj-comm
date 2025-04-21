@@ -2,7 +2,7 @@
 title: Journée Mondiale du lavage des mains avec SEEPAT et KYNAROU
 antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Eau
   - Société civile

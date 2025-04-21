@@ -2,7 +2,7 @@
 title: TDJ, BILADA et les operateurs de Sani-marchés Bobo-Dioulasso
 antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Société civile
   - Sensibilisation
