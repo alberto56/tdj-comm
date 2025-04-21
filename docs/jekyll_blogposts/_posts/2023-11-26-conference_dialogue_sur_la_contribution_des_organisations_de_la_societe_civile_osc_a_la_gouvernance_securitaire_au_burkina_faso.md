@@ -1,9 +1,9 @@
 ---
 title: "Contibution de la société civile (OSC) relative à la sécurité au
   Burkina  Faso "
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Sensibilisation
   - Recherches

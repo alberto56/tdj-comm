@@ -1,2 +1,39 @@
 # Just so we can display a warning if we're not on Jekyll
 jekyll: true
+default_header_bg_img: /images/news/medium-shot-volunteers-with-clothing-donations.jpg
+default_mot_du_president_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Mots du Président"
+    url: "/mots-du-president/"
+default_activites_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Activités"
+    url: "/#activites"
+default_blog_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Actualités"
+    url: "/actualites/"
+menu_bas:
+  - title: "Mots du Président"
+    url: "/mots-du-president/"
+  - title: "Actualités"
+    url: "/actualites/"
+social:
+  - url:
+    icon: twitter
+    actif: false
+  - url: https://www.facebook.com/groups/terredesjeunes/
+    icon: facebook
+    actif: true
+  - url:
+    icon: instagram
+    actif: false
+  - url:
+    icon: youtube
+    actif: false
+  - url:
+    icon: whatsapp
+    actif: false

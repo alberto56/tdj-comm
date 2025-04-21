@@ -1,0 +1,16 @@
+defaults:
+  -
+    scope:
+      path: "jekyll_blogposts"
+    values:
+      permalink: "articles/:year/:month/:day/:title:output_ext"
+  -
+    scope:
+      path: "jekyll_motsdupresident"
+    values:
+      permalink: "mots-du-president/:pathid"
+  -
+    scope:
+      path: "jekyll_activites"
+    values:
+      layout: "activite"

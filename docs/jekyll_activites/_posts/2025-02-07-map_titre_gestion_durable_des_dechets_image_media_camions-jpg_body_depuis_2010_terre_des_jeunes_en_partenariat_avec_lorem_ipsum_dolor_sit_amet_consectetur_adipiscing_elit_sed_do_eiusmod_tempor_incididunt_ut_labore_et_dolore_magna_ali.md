@@ -1,5 +1,6 @@
 ---
 title: "Gestion durable des déchets "
+permalink: /dechets/
 image: /media/camions.jpg
 ---
 **BIOENRGIE DURABLE**

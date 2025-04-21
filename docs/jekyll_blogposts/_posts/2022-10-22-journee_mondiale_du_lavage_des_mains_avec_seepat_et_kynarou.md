@@ -1,8 +1,8 @@
 ---
 title: Journée Mondiale du lavage des mains avec SEEPAT et KYNAROU
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Eau
   - Société civile
@@ -34,7 +34,7 @@ Bien frotter les mains ensemble pendant au moins 20 secondes afin d’enlever un
 Rincer les mains avec de l’eau tiède.
 
 
-Bien sécher les mains avec une serviette. Comme les microbes demeurent quelques jours sur les serviettes de tissu, mieux vaut laver souvent les serviettes à la maison. 
+Bien sécher les mains avec une serviette. Comme les microbes demeurent quelques jours sur les serviettes de tissu, mieux vaut laver souvent les serviettes à la maison.
 
 Dans les endroits publics, il est préférable d’utiliser des serviettes de papier. Essuyer les mains en les tapotant permet d’éviter d’irriter la peau. De même, encourager les enfants à bien assécher leurs mains, car ils ont tendance à s’essuyer le dedans des mains, mais très peu le dessus.
 

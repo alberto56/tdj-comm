@@ -1,0 +1,19 @@
+  - name: 'carousel'
+    create: true
+    label: 'Carousel'
+    folder: 'docs/jekyll_carousel/_posts/'
+    slug: '{{slug}}'
+    fields:
+    - label: Titre
+      name: title
+      width: string
+    - label: lien
+      hint:
+        Dans le format http://example.com/
+      name: lien
+      width: string
+      required: false
+    - label: Image
+      name: image
+      widget: image
+      required: false

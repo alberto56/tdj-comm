@@ -1,8 +1,8 @@
 ---
 title: Sensibilisations des villages de la commune de Bobo-Dioulasso sur l'ATPC
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
-  - Seepat
+  - SEEPAT
 categories:
   - Sensibilisation
   - Eau
