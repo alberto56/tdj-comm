@@ -1,6 +1,6 @@
 ---
 title: Projet d'Approvisionnement en Eau Potable et Assainissement de Sambasso
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
   - Seepat
 layout: blog

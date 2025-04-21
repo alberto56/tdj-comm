@@ -1,6 +1,6 @@
 ---
 title: Séminaire Projet ResisTerre avec l'ONG ID au SENEGAL
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
   - Seepat
 layout: blog

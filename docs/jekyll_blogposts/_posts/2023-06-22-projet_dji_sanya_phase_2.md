@@ -1,6 +1,6 @@
 ---
 title: Projet Dji Sanya phase 2
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
   - Seepat
 layout: blog
@@ -11,9 +11,9 @@ img:
 ---
 Bientôt la fin des travaux du projet Dji Sanya phase 2!
 
-E﻿n rappel, ce projet est le fruit d'une collaboration entre l'association SEEPAT et Bayer AG. Il bénéficie du financement de Bayer AG et va contribuer à l'amélioration des condition d'accès des populations du  village Wérou et de l'école dudit village à l'eau potable et à l'assainissement. 
+E﻿n rappel, ce projet est le fruit d'une collaboration entre l'association SEEPAT et Bayer AG. Il bénéficie du financement de Bayer AG et va contribuer à l'amélioration des condition d'accès des populations du  village Wérou et de l'école dudit village à l'eau potable et à l'assainissement.
 
-L﻿e bilan à ce stade est le suivant: 
+L﻿e bilan à ce stade est le suivant:
 
 1﻿ forage positif d'un débit de 10 M3/h équipé d'un réservoir d'eau de 10 000 litres a été réalisé.
 

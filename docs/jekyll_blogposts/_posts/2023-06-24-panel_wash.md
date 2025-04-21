@@ -1,6 +1,6 @@
 ---
 title: "PANEL WASH "
-antenne: Seepat Burkina Faso
+antenne: SEEPAT
 antenne2:
   - Seepat
 layout: blog
