@@ -2291,13 +2291,3 @@ footer {
 .mettre-activites-ici .custom-btn:hover {
   background-color: #027933;
 }
-
-/* Réduire la marge inférieure de la première section */
-section.news-section {
-  margin-bottom: 5px; /* ajustez la valeur selon votre besoin */
-}
-
-/* Ou réduire la marge supérieure de la deuxième section */
-section.about-section {
-  margin-top: 0px; /* ajustez la valeur selon votre besoin */
-}
