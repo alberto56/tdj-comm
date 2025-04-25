@@ -1,0 +1,20 @@
+{% assign template="articles.html" %}
+{% include structure/debug.html %}
+<!-- sections d'articles -->
+<section class="news-section section-padding" id="actualites" data-cols="{{ _cols }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-12 mb-5">
+        {% include parts/all_facets.html %}
+      </div>
+      <div class="col-lg-8 col-12 mb-5">
+        <h2 class="my-no-articles">Aucun article ne correspond à ces filtres. <a href="/actualites/">Voir toutes les actualités.</a></h2>
+        <div id="newsContainer" class="row">
+          <!-- Les articles par défaut seront chargés ici. Voir Articles.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% assign template="articles.html" %}
+{% include structure/enddebug.html %}

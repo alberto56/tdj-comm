@@ -47,6 +47,7 @@ class Articles extends Infos {
         });
       }
 
+
       if (!show) {
         return;
       }

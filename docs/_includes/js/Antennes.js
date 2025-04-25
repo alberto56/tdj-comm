@@ -13,6 +13,16 @@ class Antennes extends Infos {
     return '';
   }
 
+  getPaysAsArray(antenne) {
+    antenne = this.getStruct(antenne);
+
+    if (typeof antenne.country2 != 'undefined') {
+      return antenne.country2;
+    }
+
+    return [];
+  }
+
   getDrapeau(antenne) {
     const pays = this.getPays(antenne);
     return this.s('pays').getFlag(pays);

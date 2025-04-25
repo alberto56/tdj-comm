@@ -84,7 +84,8 @@
 
       articlesToShow.forEach(article => {
       const newsBlock = document.createElement("div");
-      newsBlock.className = "col-lg-4 col-md-6 col-sm-12 mb-4";
+      newsBlock.className = "col-lg-{{ articleWidth }} col-md-6 col-sm-12 mb-4";
+      newsBlock.setAttribute('data-url-for-filtering', article.url);
 
       // Tronquer le titre à 50 caractères max
       const truncatedTitle = article.title.length > 60 ? article.title.substring(0, 55) + "..." : article.title;
@@ -105,6 +106,10 @@
                   <div class="antenne">${article.pays.antenne}</div>
               </div>`;
           }
+      }
+
+      if (typeof article.image == "undefined") {
+          article.image = "/images/news/medium-shot-volunteers-with-clothing-donations.jpg";
       }
 
       newsBlock.innerHTML = `
@@ -274,7 +279,7 @@
           callback: function(news) {
             loadDefaultNews(news);
           },
-          not: ['Actions internes'],
+          not: typeof _notArticlesOfType == "undefined" ? [] : _notArticlesOfType,
         }
       });
     });

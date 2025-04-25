@@ -95,6 +95,7 @@ class Infos extends Service {
     const that = this;
     const url = that.url() + '?cache-buster=' + cachebuster;
 
+
     const xhr = new XMLHttpRequest();
 
     xhr.open("GET", url, true);

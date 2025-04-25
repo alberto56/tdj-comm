@@ -7,12 +7,10 @@
 
   {% include sections/messages.html %}
 
-  {% assign _text = content %}
-  {% include sections/onlytext.html %}
-
-  {% include sections/articles.html %}
+  {% include sections/all_articles.html %}
 
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}
+{% assign articleWidth = 6 %}
 
 {% include layouts/page.html %}
