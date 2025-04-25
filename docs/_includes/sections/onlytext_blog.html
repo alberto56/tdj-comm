@@ -32,10 +32,31 @@
       </div>
       <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
         <div class="tags-block">
-          <h5 class="mb-3">Categories</h5>
+          <h5 class="mb-3">Catégories</h5>
+          {% assign _facet = "categories" %}
           {% for _category in _categories %}
-            {% include utilities/category.html %}
+            {% include utilities/facet.html %}
           {% endfor %}
+
+          <div class="mt-5 my-show-only-if-there-is-a-country">
+            <h5 class="mb-3">Pays</h5>
+
+            <div class="my-show-only-these-country-buttons">
+              {% for antenne in _antennes %}
+                {% include utilities/antenne2pays.html %}
+                <div class="my-show">{{ __result.title }}</div>
+              {% endfor %}
+            </div>
+
+            {% assign _facet = "pays" %}
+            {% for pays in site.categories.jekyll_pays %}
+              {% assign _drapeau = pays.drapeau %}
+              {% assign _category = pays.title %}
+              <div class="my-country-button" data-country="{{ pays.title }}">
+                {% include utilities/facet.html %}
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

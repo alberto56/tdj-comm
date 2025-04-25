@@ -1,0 +1,14 @@
+.my-category .badge {
+  display: none;
+}
+
+.my-category.disabled {
+  color: #777;
+}
+
+.my-facet-drapeau {
+  height: 20px;
+  width: 20px;
+  margin-top: -2px;
+  margin-right: 4px;
+}

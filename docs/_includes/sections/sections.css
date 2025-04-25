@@ -1,4 +1,6 @@
 {% include sections/breadcrumb.css %}
 {% include sections/h1_hero.css %}
 {% include sections/subscribe.css %}
+{% include sections/articles.css %}
+{% include sections/onlytext_blog.css %}
 {% include sections/subscribe/mailchimp.css %}
