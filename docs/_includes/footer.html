@@ -293,4 +293,23 @@
         }
       });
     });
+
+    $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        },
+        navText: [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ]
+    });
+
   </script>
