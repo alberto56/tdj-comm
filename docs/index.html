@@ -134,40 +134,7 @@
       {% include sections/articles.html %}
 
       <!-- createur et membres Terre des jeunes-->
-      <section class=" about-section section-padding mx-auto py-10">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col-lg-4">
-              <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre des jeunes</h2>
-            </div>
-            <div class="col-lg-4"></div>
-          </div>
-          <div class="row g-4  " id="team-members_UNIQUE">
-            <!-- Les cartes seront générées ici -->
-            <!-- voir js/contenu/membres.js -mettre-membres-ici -->
-          </div>
-        </div>
-        <!-- Modal pour afficher les détails d'un membre -->
-        <!-- Conteneur des cartes des membres -->
-        <div id="team-members" class="row"></div>
-        <!-- Modal pour afficher les détails d'un membre -->
-        <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h3 id="modal-name"></h3>
-                <p id="modal-role"></p>
-                <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
-                <div id="modal-social" class="social-icons"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {% include sections/teamtdj.html%}
       <!-- volunteersections -->
       <section class="volunteer-section section-padding" id="section_4">
         <div class="container">
@@ -279,7 +246,7 @@
                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
                   placeholder="Jackdoe@gmail.com" required>
                 <textarea name="message" rows="5" class="form-control" id="message"
-                  placeholder="Comment puis-vous aidez ?"></textarea>
+                  placeholder="Comment puis-vous aidez?"></textarea>
                 <button type="submit" class="form-control">Envoyer Message</button>
               </form>
             </div>
