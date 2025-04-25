@@ -12,3 +12,8 @@
   margin-top: -2px;
   margin-right: 4px;
 }
+
+.my-selected {
+  background: var(--primary-color);
+  color: var(--white-color);
+}

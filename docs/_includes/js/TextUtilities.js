@@ -7,6 +7,17 @@ class TextUtilities extends Service {
     return noAccents.trim();
   }
 
+  sanitizeArray(arr) {
+    const sanitized = [];
+    for (let i = 0; i < arr.length; i++) {
+      const sanitizedString = this.sanitizeString(arr[i]);
+      if (sanitizedString.length > 0) {
+        sanitized.push(sanitizedString);
+      }
+    }
+    return sanitized;
+  }
+
   removeTags(str) {
     // https://stackoverflow.com/a/41756926/1207752
     return str.replace(/<style[^>]*>.*<\/style>/g, '')

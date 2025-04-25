@@ -37,6 +37,9 @@ class Facet extends Service {
     throw "please use subclass";
   }
 
+  putInButtons(filtered) {
+  }
+
   removeSanitized(value) {
     throw "please use subclass";
   }
@@ -100,6 +103,27 @@ class ListFacet extends Facet {
     if (!this._value.includes(value)) {
       this._value.push(value);
     }
+  }
+
+  putInButtons(filtered) {
+    const that = this;
+
+    if (!that._value.length) {
+      $('.my-category[data-facet=' + that.id() + ']').removeClass('my-selected');
+    }
+
+    $('.my-category').each(function() {
+      if ($( this ).attr('data-facet') == that.id()) {
+        const category = $( this ).attr('data-add-category');
+        const decoded = decodeURI(category);
+        for (const value of that._value) {
+          if (that.s('textUtilities').sanitizeString(value) ==
+            that.s('textUtilities').sanitizeString(decoded)) {
+              $( this ).addClass('my-selected');
+          }
+        }
+      }
+    });
   }
 
   removeSanitized(value) {
@@ -184,7 +208,6 @@ class Article extends Service {
     for (const word of needle.split(' ')) {
       if (word) {
         if (haystack.includes(' ' + word + ' ')) {
-          console.log('Found ' + word);
           return true;
         }
       }
@@ -248,11 +271,27 @@ class Article extends Service {
   }
 
   categoriesOverlap(categories) {
-    return true;
+    return this.overlap(this.categories(), categories);
   }
 
   countriesOverlap(countries) {
-    return true;
+    return this.overlap(this.countries(), countries);
+  }
+
+  overlap(arr1, arr2) {
+    if (arr1.length === 0 || arr2.length === 0) {
+      return false;
+    }
+
+    const asciiArr1 = this.s('textUtilities').sanitizeArray(arr1);
+    const asciiArr2 = this.s('textUtilities').sanitizeArray(arr2);
+
+    for (const item of asciiArr1) {
+      if (asciiArr2.includes(item)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   selector() {
@@ -288,9 +327,26 @@ class Facets extends Service {
   }
 
   init2(addOrRemoveFilter = '') {
+    this.armReinitButton();
     this
       .fetchFromUrl()
       .broadcast();
+  }
+
+  resetAll() {
+    const that = this;
+    Object.keys(that._facets).forEach(key => {
+      that._facets[key]._value = [];
+    });
+    this.broadcast();
+  }
+
+  armReinitButton() {
+    const that = this;
+    $('.my-init-all-facets').off().on('click', function(e) {
+      e.preventDefault();
+      that.resetAll();
+    });
   }
 
   fetchFromUrl() {
@@ -315,7 +371,25 @@ class Facets extends Service {
     this.broadcast();
   }
 
+  showOrHideReinitButton() {
+    let hasValues = false;
+    const that = this;
+    Object.keys(that._facets).forEach(key => {
+      if (that._facets[key]._value.length > 0) {
+        hasValues = true;
+      };
+    });
+
+    if (hasValues) {
+      $('.my-init-all-facets').show();
+    }
+    else {
+      $('.my-init-all-facets').hide();
+    }
+  }
+
   broadcast() {
+    this.showOrHideReinitButton();
     this.putInUrl();
     this.putInDom();
     this.putInButtons();
@@ -332,6 +406,16 @@ class Facets extends Service {
   }
 
   putInDom() {
+    this.showOrHideArticles();
+    this.showOrHideReinitButton();
+    this.fillSearchField();
+  }
+
+  fillSearchField() {
+    $('.my-article-search').val(this._facets['recherche']._value.join(' '));
+  }
+
+  showOrHideArticles() {
     const articles = this.articles();
 
     for (const article of articles) {
@@ -369,7 +453,10 @@ class Facets extends Service {
   }
 
   putInButtons() {
-
+    const that = this;
+    Object.keys(that._facets).forEach(key => {
+      that._facets[key].putInButtons(this.filtered());
+    });
   }
 
   filtered() {
@@ -390,137 +477,5 @@ class Facets extends Service {
     }
     return ret;
   }
-
-
-
-  //   const facets = this.getFacetsFromUrl();
-  //   const allArticles = this.articles(facets);
-  //   const toHide = this.articlesToHide(facets);
-  //   console.log(toHide);
-  // }
-
-  // articlesToHide(facets) {
-  //   const allArticles = this.articles();
-  //   let toHide = [];
-  //   for (const article of allArticles) {
-  //     if (facets['categories'].len && !article.categories.includes(facets.categories)) {
-  //       toHide.push(article);
-  //       console.log('hiding')
-  //     }
-  //     else {
-  //       console.log('not hiding because article noes not contain category')
-  //     }
-  //   }
-  //   return toHide;
-  // }
-
-  // getFacetsFromUrl() {
-  //   return {
-  //     categories: this.facetFilters('categories'),
-  //     pays: this.facetFilters('pays'),
-  //     recherche: this.s('url').var('recherche'),
-  //   }
-  // }
-
-  // hideArticlesNotInFacets(facets) {
-
-  // }
-
-  // facetFilters(facet) {
-  //   let hash = this.s('url').var(facet);
-  //   if (!hash.startsWith('(')) {
-  //     return [];
-  //   }
-  //   if (!hash.endsWith(')')) {
-  //     return [];
-  //   }
-  //   hash = hash.substring(1, hash.length - 1);
-  //   return hash.split(')(');
-  // }
-
-
-  // //   const filtered = this.filteredCategories(addOrRemoveFilter);
-  // //   this.populateClearPill();
-  // //   this.populatePills(filtered);
-  // // }
-
-  // populateClearPill() {
-  //   $('.my-category.clear').each(function() {
-  //   });
-  // }
-
-  // populatePills(filtered) {
-  //   const that = this;
-  //   $('.my-category').each(function() {
-  //     let category = $( this ).attr('data-add-category');
-  //     category = category.replace(/\+/g, ' ');
-  //     if (typeof filtered[category] === 'undefined') {
-  //       $( this ).addClass('disabled');
-  //       $( this ).find('.badge').hide();
-  //     }
-  //     else {
-  //       $( this ).removeClass('disabled');
-  //       $( this ).attr('href', that.getHashWithOrWithoutNewFilter(category));
-  //       $( this ).find('.badge').show().text(filtered[category]['count']);
-  //       $( this ).off().on('click', function(e) {
-  //         that.init2(category);
-  //       });
-  //     }
-  //   });
-  // }
-
-  // getHashWithOrWithoutNewFilter(category) {
-  //   return '/actualites/#categories/(' + encodeURIComponent(category) + ')';
-  // }
-
-  // filteredCategories(addOrRemoveFilter) {
-  //   let categoryFilters = this.categoryFilters();
-  //   if (addOrRemoveFilter) {
-  //     if (categoryFilters.includes(addOrRemoveFilter)) {
-  //       categoryFilters = categoryFilters.filter(function(e) {
-  //         return e !== addOrRemoveFilter;
-  //       });
-  //     }
-  //     else {
-  //       categoryFilters.push(addOrRemoveFilter);
-  //     }
-  //   }
-  //   return this.allCategories(categoryFilters);
-  // }
-
-  // allCategories(filters = []) {
-  //   let ret = {};
-  //   for (const article of this.articles()) {
-  //     // The article should only be considered if it has a category wihin
-  //     // the category filters or if the category filters are empty.
-  //     if (filters.length > 0) {
-  //       let cont = true;
-  //       for (const filter of filters) {
-  //         if (article.categories.includes(filter)) {
-  //           cont = false;
-  //         }
-  //       }
-  //       if (cont) {
-  //         continue;
-  //       }
-  //     }
-
-  //     if (typeof article.categories === 'undefined') {
-  //       continue;
-  //     }
-  //     for (const category of article.categories) {
-  //       if (typeof ret[category] === 'undefined') {
-  //         ret[category] = {
-  //           count: 0,
-  //           articles: []
-  //         };
-  //       }
-  //       ret[category].count++;
-  //       ret[category].articles.push(article);
-  //     }
-  //   }
-  //   return ret;
-  // }
-
 
 }
