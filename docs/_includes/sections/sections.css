@@ -4,3 +4,5 @@
 {% include sections/articles.css %}
 {% include sections/onlytext_blog.css %}
 {% include sections/subscribe/mailchimp.css %}
+{% include sections/testimonial.css %}
+{% include sections/teamtdj.css %}

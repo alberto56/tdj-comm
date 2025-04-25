@@ -1,4 +1,4 @@
 ---
-title: MERCI A TOUS
-image: /media/photo4.jpg
+title: Merci  à tous
+image: /media/cameroun_6.png
 ---

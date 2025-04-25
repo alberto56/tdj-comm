@@ -1,4 +1,4 @@
 ---
-title: 40 ANS QUE NOUS SOMMES ENGAGES
+title: 40 ans que nous sommes engagés
 image: /media/camions.jpg
 ---

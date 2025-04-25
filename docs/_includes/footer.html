@@ -92,7 +92,7 @@
 
       let lirePlus = '';
       if (typeof article.url !== 'undefined') {
-          lirePlus = `<a href="${article.url}" class="btn btn-primary mt-2">Lire plus</a>`;
+          lirePlus = `<a href="${article.url}" class="custom-btn btn mt-2">Lire plus</a>`;
       }
 
       let pays = '';
@@ -207,6 +207,11 @@
                            <div class="card-body">
                                <h5 class="card-title">${member.name}</h5>
                                <p class="card-text text-muted">${member.role}</p>
+                               <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
+                            </div>
                            </div>
                        </div>
                    </div>
@@ -216,28 +221,8 @@
 
     }
 
-
-           function showModal(index) {
-               const member = teamMembers[index];
-               document.getElementById('modal-name').innerText = member.name;
-               document.getElementById('modal-role').innerText = member.role;
-               document.getElementById('modal-bio').innerText = member.bio;
-
-               // Générer dynamiquement les icônes sociales
-               const socialContainer = document.getElementById('modal-social');
-               socialContainer.innerHTML = '';
-               if (member.social) {
-                   Object.entries(member.social).forEach(([platform, url]) => {
-                       socialContainer.innerHTML += `<a href="${url}" target="_blank" class="social-icon mx-1"><i class="fab fa-${platform}"></i></a>`;
-                   });
-               }
-
-               // Afficher le modal correctement
-               const modalElement = document.getElementById('memberModal');
-               const modalInstance = new bootstrap.Modal(modalElement);
-               modalInstance.show();
-           }
   </script>
+
   <!-- sections team -->
   <script>
     const swiper = new Swiper('.swiper-container', {
@@ -298,4 +283,23 @@
         }
       });
     });
+
+    $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        },
+        navText: [
+            '<i class="bi bi-arrow-left"></i>',
+            '<i class="bi bi-arrow-right"></i>'
+        ]
+    });
+
   </script>

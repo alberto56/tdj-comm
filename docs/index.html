@@ -134,40 +134,7 @@
       {% include sections/articles.html %}
 
       <!-- createur et membres Terre des jeunes-->
-      <section class=" about-section section-padding mx-auto py-10">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col-lg-4">
-              <h2 class="text-2xl font-bold text-center mb-6">Équipe de Terre des jeunes</h2>
-            </div>
-            <div class="col-lg-4"></div>
-          </div>
-          <div class="row g-4  " id="team-members_UNIQUE">
-            <!-- Les cartes seront générées ici -->
-            <!-- voir js/contenu/membres.js -mettre-membres-ici -->
-          </div>
-        </div>
-        <!-- Modal pour afficher les détails d'un membre -->
-        <!-- Conteneur des cartes des membres -->
-        <div id="team-members" class="row"></div>
-        <!-- Modal pour afficher les détails d'un membre -->
-        <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="memberModalLabel">Biographie</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h3 id="modal-name"></h3>
-                <p id="modal-role"></p>
-                <p id="modal-bio">Voici la biographie du membre de l'équipe...</p>
-                <div id="modal-social" class="social-icons"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {% include sections/teamtdj.html%}
       <!-- volunteersections -->
       <section class="volunteer-section section-padding" id="section_4">
         <div class="container">
@@ -218,85 +185,16 @@
         </div>
       </section>
       <!-- testimonial sections -->
-      <section class="testimonial-section section-padding section-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-12 mx-auto">
-              <h2 class="mb-lg-3">Temoignage des antennes</h2>
-              <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="carousel-caption">
-                      <h4 class="carousel-title">
-                        Nous avons planté plus de 500 000 arbres,
-                        créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
-                      </h4>
-                      <small class="carousel-name"><span class="carousel-name-title">Antenne Cote d'Ivoire</span>,
-                      Bohui</small>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-caption">
-                      <h4 class="carousel-title">Nous avons planté des eucalyptus, moringas, acacias, ficus et palmiers,
-                        favorisant la biodiversité et répondant aux besoins écologiques de notre région.
-                      </h4>
-                      <small class="carousel-name"><span class="carousel-name-title">SOLIFED RDC</span>,
-                      Partenaire</small>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-caption">
-                      <h4 class="carousel-title">
-                        Nous, l'Antenne du Burundi, avons planté plus de 100 000 arbres,
-                        créant des espaces verts et améliorant la qualité de l'air dans notre communauté.
-                      </h4>
-                      <small class="carousel-name"><span class="carousel-name-title">Antenne Burundi</span>,
-                      Terre des jeunes</small>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-caption">
-                      <h4 class="carousel-title">
-                        L'Haïti témoignent de leurs activités en plantant des arbres, promouvant le recyclage et
-                        développant des solutions de bioénergie durable.
-                      </h4>
-                      <small class="carousel-name"><span class="carousel-name-title">Antenne Haiti</span>,
-                      Terre des jeunes</small>
-                    </div>
-                  </div>
-                  <ol class="carousel-indicators">
-                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                      <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
-                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                    </li>
-                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                      <img src="images/avatar/portrait-young-redhead-bearded-male.jpg"
-                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                    </li>
-                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                      <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
-                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                    </li>
-                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                      <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg"
-                        class="img-fluid rounded-circle avatar-image" alt="avatar">
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {% include sections/testimonial.html %}
       <!-- contact-section -->
       <section class="contact-section section-padding" id="section_6">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
               <div class="contact-info-wrap">
-                <h2>Get in touch</h2>
+                <h2>Contactez-nous</h2>
                 <div class="contact-image-wrap d-flex flex-wrap">
-                  <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                  <img src="images/12.jpg"
                     class="img-fluid avatar-image" alt="">
                   <div class="d-flex flex-column justify-content-center ms-3">
                     <p class="mb-0">Lydie Sandra</p>
@@ -321,15 +219,18 @@
                     donate@terredesjeunes.org
                     </a>
                   </p>
-                  <a href="#" class="custom-btn btn mt-3">Get Direction</a>
+                  <a href="#" class="custom-btn btn mt-3">Obtenir des directions</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-5 col-12 mx-auto">
               <form class="custom-form contact-form" action="#" method="post" role="form">
-                <h2>Contact form</h2>
-                <p class="mb-4">Or, Tu peux juste envoyer un email:
-                  <a href="#">info@terredesjeunes.org</a>
+                <h2>Contact</h2>
+                <p class="mb-4">Tu peux juste envoyer un email:
+                    <i class="bi-envelope me-2"></i>
+                    <a href="mailto:info@terredesjeunes.org">
+                      info@terredesjeunes.org
+                    </a>
                 </p>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-12">
@@ -344,7 +245,7 @@
                 <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
                   placeholder="Jackdoe@gmail.com" required>
                 <textarea name="message" rows="5" class="form-control" id="message"
-                  placeholder="What can we help you?"></textarea>
+                  placeholder="Comment puis-vous aidez ?"></textarea>
                 <button type="submit" class="form-control">Envoyer Message</button>
               </form>
             </div>
