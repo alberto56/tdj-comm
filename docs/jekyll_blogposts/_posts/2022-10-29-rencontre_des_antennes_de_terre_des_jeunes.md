@@ -1,8 +1,8 @@
 ---
 title: Rencontre des antennes de Terre des jeunes
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
 layout: blog
@@ -11,7 +11,7 @@ img:
 ---
 Toutes les antennes de TDJ étaient conviées à se rencontrer en ligne en ce 29 octobre. Malgré quelques problèmes de connexion, nous avons pu échanger sur les différents projets en cours et sur les défis du réseau et le soutien aux antennes.
 
-Voici quelques présentations qui ont eu lieu : 
+Voici quelques présentations qui ont eu lieu :
 
 **Joel en Haïti** a acheté un terrain et fait des essais de compagnionage maraîcher et des arbres fruitiers. Il cherche un autre terrain plus grand pour l'acheter et l'utiliser uniquement pour les activités de plantation de TDJ. Il veut travailler sur un projet d'association des cultures maraîchères irriguées par un système de panneaux solaires pour le pompage de l'eau avec des associations culturelles dans le milieu paysan.
 

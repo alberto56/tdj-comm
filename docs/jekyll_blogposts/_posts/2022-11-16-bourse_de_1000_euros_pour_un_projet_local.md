@@ -1,8 +1,8 @@
 ---
 title: Bourse de 1000 euros pour un projet local
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Developpement Durable
   - Donation
@@ -17,7 +17,7 @@ Terre des jeunes transnational annonce une bourse de 1000 euros (1000 USD) pour 
 * Une description de votre projet
 * Les objectifs quantifiables de votre (x arbres plantés, x personnes formées, etc.)
 * Un échéancier
-* Un budget 
+* Un budget
 
 Le jury est composé des membres du C.A. de Terre dse jeunes transnational et les projets seront sélectionnés selon le pointage suivant:
 

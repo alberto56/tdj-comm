@@ -1,8 +1,8 @@
 ---
 title: Le site web de Terre des jeunes, une courte histoire technique
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
 layout: blog

@@ -1,8 +1,8 @@
 ---
 title: Grande rencontre saisonnière de Terre des jeunes du 5 octobre 2024
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
 layout: blog

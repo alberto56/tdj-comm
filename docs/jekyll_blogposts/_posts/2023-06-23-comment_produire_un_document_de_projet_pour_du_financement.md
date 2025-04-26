@@ -1,14 +1,14 @@
 ---
 title: Comment produire un document de projet pour du financement
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
 layout: blog
 img: []
 ---
-Pour avoir de bonnes chances de trouver du financement, il est crucial de commencer par définir votre projet avant même de penser à des bailleurs de fonds. 
+Pour avoir de bonnes chances de trouver du financement, il est crucial de commencer par définir votre projet avant même de penser à des bailleurs de fonds.
 
 Voici les élements que doivent contenir une bonne présentation de projet:
 
@@ -18,7 +18,7 @@ Les bailleurs de fonds reçoivent des centaires de requêtes. Si votre projet fa
 
 ## Le titre de votre projet doit être très précis
 
-Par exemple, "Système d'irrigation pour une coopérative de 50 familles dans la région de Kloto au Togo, permettant de vendre des légumes durant la saison sèche". 
+Par exemple, "Système d'irrigation pour une coopérative de 50 familles dans la région de Kloto au Togo, permettant de vendre des légumes durant la saison sèche".
 
 ## Inclure 10 photos
 
@@ -30,7 +30,7 @@ Cela vaut la peine de trouver une personne qui connaît bien l'infographie pour 
 
 ## Pas de fautes d'orthographes
 
-Faites relire votre document par une personne qui connaït bien la langue français (ou anglaise si vous faites votre document en anglais). 
+Faites relire votre document par une personne qui connaït bien la langue français (ou anglaise si vous faites votre document en anglais).
 
 ## Format PDF, pas Word
 
@@ -50,16 +50,16 @@ Soyez très claires et chiffrez ce que vous attendez comme résultat de votre pr
 
 ## Inclure les risques et comment vous y ferez face
 
-Un exemple de risque est: 
+Un exemple de risque est:
 
 * L'équipement peut être volé
 * La météo peut ne pas être clémente pour le projet
 
 ## Faire un budget balancé et réaliste
 
-Votre budget doit avoir deux sections: revenus et dépenses, les deux doivent donner le même chiffre. 
+Votre budget doit avoir deux sections: revenus et dépenses, les deux doivent donner le même chiffre.
 
-Incluez le montant que vous demandez au bailleur de fonds dans les sources. Si par exemple, vous demandez à la Fondation XYZ d'avoir 10,000 $USD, 
+Incluez le montant que vous demandez au bailleur de fonds dans les sources. Si par exemple, vous demandez à la Fondation XYZ d'avoir 10,000 $USD,
 
 Voici un exemple simple:
 
@@ -90,7 +90,7 @@ Quelques points à noter:
 * Chiffrez toutes les contributions en nature. Si quelqu'un vous fournit un terrain gratuitement, notez la valeur de ce terrain dans les dépenses et dans les revenus (par exemple: terrain de M. Untel).
 * Précisez la devise des montants (dans cet exemple: $US)
 * Chaque ligne doit être bien réaliste: se le bailleur de fonds vous demande pourquoi vous mettez 2,000 de transports, vous devez être en mesure de répondre de façon très précise. Toutefois, ces précisions n'ont pas leur place dans le document de présentation qui ne peut pas déepasser 3 pages.
-* Incluez des imprévus 
+* Incluez des imprévus
 * Ne gonflez pas les montants: un projet de 10,000 ou 15,000 euros est un projet d'envergure moyenne. Ne dépassez pas ce montant.
 
 ## Faire un calendrier réaliste et concis
@@ -107,6 +107,6 @@ Incluez-y des livrables. Il doit être clair pour le bailleur de fonds comment i
 
 * Conservez toutes vos factures. Si vous faites un achat auprès d'un fournisseur qui n'offre pas de facture, notez la date, le nom de la personne, son numéro de téléphone
 * Mettez à jour très régulièrement vos réseaux sociaux avec des photos et des vidéos du projet
-* Soyez honnêtes: s'il y a des problèmes ou imprévus, dites-le. 
+* Soyez honnêtes: s'il y a des problèmes ou imprévus, dites-le.
 * Gardez informé votre bailleur de fonds de la progression du projet, et des problèmes encourus, de façon honnête et transparente.
 * Ne gardez jamais le silence pour plus d'une semaine.

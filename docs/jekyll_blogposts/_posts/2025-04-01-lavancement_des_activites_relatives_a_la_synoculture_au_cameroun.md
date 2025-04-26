@@ -26,5 +26,5 @@ img:
 
 **D﻿IFFICULTE MAJEURE**
 
-Il faut parcourir environ 2 km pour aller chercher de l’eau dans un autre village dont le forage est actuellement surutilisé par les populations. Après une première récolte, les sillons et casiers peinent à revoir les légumes et autres semences sortir de nouveau du sol, à cause du manque d’eau et des difficultés d’arrosage continu exigé en synécoculture. 
+Il faut parcourir environ 2 km pour aller chercher de l’eau dans un autre village dont le forage est actuellement surutilisé par les populations. Après une première récolte, les sillons et casiers peinent à revoir les légumes et autres semences sortir de nouveau du sol, à cause du manque d’eau et des difficultés d’arrosage continu exigé en synécoculture.
 Nous sommes aujourd’hui fondés de dire que le bénévole sollicité pour assurer l’approvisionnement de l’eau et l’arrosage de la parcelle, tout en nous rassurant de sa bonne volonté et de son engagement à servir le projet est vraiment en peine.

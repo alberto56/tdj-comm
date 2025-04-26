@@ -1,8 +1,8 @@
 ---
 title: Rencontre saisonnière de Terre des jeunes du 22 mars 2025
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
 layout: blog
