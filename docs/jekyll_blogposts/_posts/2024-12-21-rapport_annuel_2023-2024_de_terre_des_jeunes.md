@@ -1,10 +1,11 @@
 ---
 title: Rapport annuel 2023-2024 de Terre des jeunes
-antenne: Québec
+antenne: Mondial
 antenne2:
-  - Québec
+  - Mondial
 categories:
   - Actions internes
+  - Rapports annuels
 layout: blog
 img:
   - /media/screenshot_2024-12-21_at_10.53.38.jpg

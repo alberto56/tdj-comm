@@ -5,6 +5,7 @@ antenne2:
   - Mondial
 categories:
   - Actions internes
+  - Rapports annuels
 layout: blog
 img:
   - /media/rapport-tdj-couverture-2021-2022.jpg
