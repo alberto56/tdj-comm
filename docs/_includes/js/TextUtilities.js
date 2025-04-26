@@ -1,3 +1,17 @@
+class Str {
+  constructor(str) {
+    this.str = str;
+  }
+
+  toString() {
+    return this.str;
+  }
+
+  raw() {
+    return this.str;
+  }
+}
+
 class TextUtilities extends Service {
 
   sanitizeString(str) {
@@ -8,6 +22,10 @@ class TextUtilities extends Service {
     ret = this.cleanUpSpecialChars(ret);
     ret = ret.trim();
     return ret;
+  }
+
+  strFromUriEncoded(str) {
+    return new Str(decodeURIComponent(str));
   }
 
   sanitizeArray(arr) {

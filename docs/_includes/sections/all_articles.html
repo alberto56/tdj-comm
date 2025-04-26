@@ -8,7 +8,19 @@
         {% include parts/all_facets.html %}
       </div>
       <div class="col-lg-8 col-12 mb-5">
-        <h2 class="my-no-articles">Aucun article ne correspond à ces filtres. <a href="/actualites/">Voir toutes les actualités.</a></h2>
+        <h2 class="my-no-articles">Aucun article ne correspond à ces filtres. <a class="my-init-all-facets">Voir toutes les actualités.</a></h2>
+        <h2 class="my-some-articles">Actualités correspondant à votre recherche
+          <span class="my-some-articles-recherche">, mot(s) clé(s):
+            <span class="my-some-articles-value"></span>
+          </span>
+          <span class="my-some-articles-categories">, catégorie(s):
+            <span class="my-some-articles-value"></span>
+          </span>
+          <span class="my-some-articles-pays">, pays:
+            <span class="my-some-articles-value"></span>
+          </span>.
+          <a class="my-init-all-facets">Voir toutes les actualités.</a>
+        </h2>
         <div id="newsContainer" class="row">
           <!-- Les articles par défaut seront chargés ici. Voir Articles.js -->
         </div>

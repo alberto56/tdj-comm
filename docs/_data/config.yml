@@ -1,5 +1,6 @@
 # Just so we can display a warning if we're not on Jekyll
 jekyll: true
+debug: true
 default_header_bg_img: /images/news/medium-shot-volunteers-with-clothing-donations.jpg
 default_mot_du_president_crumbs:
   - title: "Accueil"

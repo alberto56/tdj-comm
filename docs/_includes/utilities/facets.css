@@ -2,8 +2,8 @@
   display: none;
 }
 
-.my-category.disabled {
-  color: #777;
+.my-category.my-disabled {
+  display: none;
 }
 
 .my-facet-drapeau {
@@ -15,5 +15,10 @@
 
 .my-selected {
   background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.my-selected:hover {
+  background: #555;
   color: var(--white-color);
 }

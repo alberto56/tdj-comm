@@ -1,7 +1,7 @@
 class Antennes extends Infos {
   url() {
     // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return 'https://contenu.terredesjeunes.org/api/v1/antennes.json';
+    return '/api/v1/antennes.json';
   }
 
   getPays(antenne) {
