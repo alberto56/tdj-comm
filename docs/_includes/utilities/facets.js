@@ -106,6 +106,7 @@ class ListFacet extends Facet {
   }
 
   putInButtons(filtered) {
+    console.log(filtered);
     const that = this;
 
     if (!that._value.length) {
@@ -117,8 +118,11 @@ class ListFacet extends Facet {
         const category = $( this ).attr('data-add-category');
         const decoded = decodeURI(category);
         for (const value of that._value) {
-          if (that.s('textUtilities').sanitizeString(value) ==
-            that.s('textUtilities').sanitizeString(decoded)) {
+          const sVal = that.s('textUtilities').sanitizeString(value);
+          const sCat = that.s('textUtilities').sanitizeString(decoded);
+          console.log('sVal', sVal);
+          console.log('sCat', sCat);
+          if (sVal == sCat) {
               $( this ).addClass('my-selected');
           }
         }

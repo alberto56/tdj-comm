@@ -1,10 +1,13 @@
 class TextUtilities extends Service {
 
   sanitizeString(str) {
-    const noTags = this.removeTags(str);
-    const lowercase = noTags.toLowerCase();
-    const noAccents = this.cleanUpSpecialChars(lowercase);
-    return noAccents.trim();
+    let ret = str;
+    ret = this.removeTags(ret);
+    ret = ret.toLowerCase();
+    ret = ret.replace(/\+/g, " ");
+    ret = this.cleanUpSpecialChars(ret);
+    ret = ret.trim();
+    return ret;
   }
 
   sanitizeArray(arr) {
