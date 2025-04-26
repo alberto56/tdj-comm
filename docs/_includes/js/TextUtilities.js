@@ -1,10 +1,17 @@
-class Str {
-  constructor(str) {
+class Str extends Service {
+  constructor(services, str) {
+    super(services);
     this.str = str;
   }
 
   toString() {
     return this.str;
+  }
+
+  toUriEncodedAndSanitized() {
+    return encodeURI(
+      this.s('textUtilities').sanitizeString(this.str),
+    );
   }
 
   raw() {
@@ -25,7 +32,7 @@ class TextUtilities extends Service {
   }
 
   strFromUriEncoded(str) {
-    return new Str(decodeURIComponent(str));
+    return new Str(this.services, decodeURIComponent(str));
   }
 
   sanitizeArray(arr) {

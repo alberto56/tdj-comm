@@ -14,12 +14,18 @@ class ListFacet extends Facet {
 
   armFacetController(onChangeCallback) {
     const that = this;
-    $('.my-category[data-facet=' + this.id() + ']').off().on('click', function(e) {
+    $('.my-facet-not-new-page[data-facet=' + this.id() + ']').off().on('click', function(e) {
       e.preventDefault();
       that.toggleAndRemoveOthers(
         that.s('textUtilities').strFromUriEncoded($( this ).attr('data-add-category')),
       );
       onChangeCallback();
+    });
+    $('.my-facet-new-page[data-facet=' + this.id() + ']').each(function() {
+      $( this ).attr(
+        'href',
+        '/actualites/#' + that.id() + '/(' + that.s('textUtilities').strFromUriEncoded($( this ).attr('data-add-category')).toUriEncodedAndSanitized() + ')',
+      );
     });
   }
 

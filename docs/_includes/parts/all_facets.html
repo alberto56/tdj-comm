@@ -26,6 +26,7 @@
     {% for category in site.categories.jekyll_categories %}
       {% assign _category = category.title %}
       {% assign _facet = "categories" %}
+      {% assign _classes = "my-facet-not-new-page" %}
       {% include utilities/facet.html %}
     {% endfor %}
   </div>
@@ -37,6 +38,7 @@
     {% assign _category = pays.title %}
     {% assign _facet = "pays" %}
     {% assign _drapeau = pays.drapeau %}
+    {% assign _classes = "my-facet-not-new-page" %}
     {% include utilities/facet.html %}
     {% endfor %}
   </div>
