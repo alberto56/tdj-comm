@@ -19,6 +19,11 @@
         widget: 'string'
         required: false
         hint: 'Par exemple 40, 41, 60, etc.'
+      - label : 'Date'
+        name: 'date'
+        widget: 'string'
+        required: false
+        hint: 'Par exemple 2016-04-20'
       - label : 'Année'
         name: 'annee'
         widget: 'string'
