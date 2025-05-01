@@ -258,4 +258,21 @@
     });
   </script>
   <script src="/js/contenu/contenu.js?token={{ site.time | date: '%s' }}"></script>
- 
+  <script>
+    const services = new Services();
+    $( document ).ready(async function() {
+      await services.init({
+        membres: {
+          callback: function(team) {
+            populateTeamMembers(team);
+          },
+        },
+        articles: {
+          callback: function(news) {
+            loadDefaultNews(news);
+          },
+          not: typeof _notArticlesOfType == "undefined" ? [] : _notArticlesOfType,
+        }
+      });
+    });
+  </script>
