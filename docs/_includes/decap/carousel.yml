@@ -6,12 +6,12 @@
     fields:
     - label: Titre
       name: title
-      width: string
+      widget: string
     - label: lien
       hint:
         Dans le format http://example.com/
       name: lien
-      width: string
+      widget: string
       required: false
     - label: Image
       name: image
