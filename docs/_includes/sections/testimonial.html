@@ -121,13 +121,26 @@
 <!-- JavaScript pour activer le slider -->
 <script>
    
-        // Ajout des événements pour gérer le clic
-        document.querySelector('.carousel-control-prev').addEventListener('click', function () {
-            carousel.prev();
-        });
+      // Supposons que votre carousel a l'ID 'myCarousel'
+document.querySelector('.carousel-control-prev').addEventListener('click', function () {
+    $('#myCarousel').carousel('prev');
+});
 
-        document.querySelector('.carousel-control-next').addEventListener('click', function () {
-            carousel.next();
-        });
+document.querySelector('.carousel-control-next').addEventListener('click', function () {
+    $('#myCarousel').carousel('next');
     
+    $(document).ready(function() {
+    $('#myCarousel').carousel({
+      interval: 3000, // Temps en millisecondes entre chaque slide
+      ride: 'carousel', // Démarre automatiquement
+      wrap: true // Recommence à zéro après la dernière slide
+    });
+  });
+});
+    
+
+
+
+
+ 
 </script>
