@@ -27,3 +27,4 @@ collections:
 {% include decap/partenaire.yml %}
 {% include decap/textes.yml %}
 {% include decap/variables.yml %}
+{% include decap/temoignages.yml %}
