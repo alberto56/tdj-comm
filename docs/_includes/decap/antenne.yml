@@ -26,4 +26,3 @@
       - { labe;: 'Active', name: 'active', widget: 'boolean', default: true }
       - { label: 'Logo Image (25*25)', name: 'logo_image', widget: 'image', required: false, default: '/media/default-antenna-logo.png' }
       - { label: 'Contenu', name: 'body', widget: 'markdown', required: false }
-      - { label: 'Notes administratives', name: 'notes', widget: 'markdown', required: false }
