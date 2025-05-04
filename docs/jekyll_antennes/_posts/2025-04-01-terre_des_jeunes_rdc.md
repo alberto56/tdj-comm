@@ -5,6 +5,6 @@ email: jmudep@yahoo.fr
 country2:
   - R. D. Congo
 page_url: https://www.terredesjeunes.org/uvira.html
-active: true
+active: false
 logo_image: /media/congo_banniere.png
 ---

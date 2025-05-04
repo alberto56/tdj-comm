@@ -18,7 +18,7 @@ class Pays extends Infos {
   }
 
   getResponseSingle(node) {
-    const contenu = 'https://contenu.terredesjeunes.org';
+    const contenu = '';
     const activeAntennes = this.s('antennes').activeForCountry(node.title);
     let url = contenu + node.url;
     switch (activeAntennes.length) {
