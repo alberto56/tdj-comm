@@ -6,7 +6,7 @@
 {% if _data.type == "text" %}
   {% assign _text = _data.text %}
   {% include sections/contact/funnel_text.html %}
-{% else if _data.type == 'form' %}
+{% elsif _data.type == 'form' %}
   {% include sections/contact/funnel_form.html %}
 {% else %}
   {% include sections/contact/funnel_options.html %}

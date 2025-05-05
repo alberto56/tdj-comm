@@ -1,9 +1,7 @@
-.my-contact-funnel-level {
-  background: green;
-}
-
+.my-contact-funnel-level,
+#my-form,
 .my-contact-form {
-  background: green;
+  display: none;
 }
 
 .my-steps {

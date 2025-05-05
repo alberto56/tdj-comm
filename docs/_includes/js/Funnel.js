@@ -3,6 +3,11 @@ class Funnel extends Service {
   init2() {
     if (this.existsOnPage()) {
       this.initExisting();
+      const that = this;
+      // Back / forward button
+      window.addEventListener('popstate', () => {
+        that.initExisting();
+      });
     }
   }
 
@@ -20,9 +25,9 @@ class Funnel extends Service {
   armSelections() {
     const that = this;
     $('.my-contact-funnel-item').off().on('click', function() {
-      that.s('funnel').showItemsAtLevel(
-        $( this ).attr('data-level') + '-' + $( this ).attr('data-id')
-      );
+      const level = $( this ).attr('data-level') + '-' + $( this ).attr('data-id');
+      that.updateHash(level);
+      that.s('funnel').showItemsAtLevel(level);
     });
   }
 
@@ -35,13 +40,25 @@ class Funnel extends Service {
         .join('-');
 
       that.showItemsAtLevel(all);
+      that.updateHash(all);
     });
   }
 
+  updateHash(level) {
+    const hash = this.s('url').setParam('level', level);
+    if (this.s('url').getHash() !== hash) {
+      this.s('url').setHash(hash);
+    }
+  }
+
   showItemsAtLevel(level) {
-    $('.my-contact-funnel-level').css('background', 'green');
+    $('.my-contact-funnel-level').hide();
+    $('#my-form').hide();
     this.itemsAtLevel(level).each(function() {
-      $( this ).css('background', 'yello');
+      $( this ).show();
+      if ($( this ).attr('data-show-form')) {
+        $('#my-form').show();
+      }
     });
   }
 
