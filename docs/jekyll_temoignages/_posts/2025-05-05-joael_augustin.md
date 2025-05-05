@@ -3,7 +3,7 @@ title: JOAEL Augustin
 source: message du 05 Mai 2025
 image: /media/augustin_joel.jpg
 ---
-Depuis plus de deux décennies  le nom de Terre des Jeunes aux Gonaïves-HAÏTI est une organisation puissante qui évoque plusieurs idées innovantes et inspirantes.  Sachant que  TERRE DES JEUNES fait la promotion des jeunes depuis 1998, reconnaît l'importance et le potentiel de la jeunesse dans la région des Gonaïves. Cela  fait encore que Gonaïves est un lieu où les jeunes sont valorisés et où leur avenir est important.
+Depuis plus de deux décennies  le nom de Terre des Jeunes aux Gonaïves-HAÏTI est une réference qui évoque plusieurs idées innovantes et inspirantes.  Sachant que  TERRE DES JEUNES fait la promotion des jeunes depuis 1998, reconnaît l'importance et le potentiel de la jeunesse dans la région des Gonaïves. Cela  fait encore que Gonaïves est un lieu où les jeunes sont valorisés et où leur avenir est important.
 
 Nos invitations lancées à l'action à chaque fête de l’arbre encouragent les jeunes à être des exemples vivants, à montrer ce que signifie être un jeune des Gonaïves, et à incarner les valeurs et les aspirations de leur communauté, l’amour pour  la nature et les protections de l’environnement tout en créant un sentiment d'appartenance et d'identité collective parmi nos jeunes. 
 
