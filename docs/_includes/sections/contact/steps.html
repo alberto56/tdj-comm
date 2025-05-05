@@ -1,0 +1,26 @@
+{% assign template="sections/contact/steps.html" %}
+{% include structure/debug.html %}
+{% assign p="_level" %}{% assign v=_level %}{% include structure/r.html %}
+
+<div class="my-steps-wrapper">
+  <div class="my-steps">
+    {% assign steps = _level | split: "-" %}
+    {% for step in steps %}
+      <div class="my-step {% if forloop.last %}my-step-current{% else %}my-step-previous{% endif %}" data-step="{{ step }}" data-index="{{ forloop.index }}" data-level="{{ _level }}">
+        <div class="my-step-inner">
+          {{ forloop.index }}
+        </div>
+      </div>
+    {% endfor %}
+    {% if _show_next %}
+      <div class="my-step">
+        <div class="my-step-inner three-dots">
+          ...
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% assign template="sections/contact/steps.html" %}
+{% include structure/debug.html %}

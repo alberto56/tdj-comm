@@ -2,6 +2,7 @@
 ---
 {% include js/Service.js %}
 {% include utilities/utilities.js %}
+{% include js/Funnel.js %}
 {% include js/Alerts.js %}
 {% include js/Url.js %}
 {% include js/UrlBar.js %}

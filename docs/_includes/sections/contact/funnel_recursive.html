@@ -1,0 +1,16 @@
+{% assign template="sections/contact/funnel_recursive.html" %}
+{% include structure/debug.html %}
+{% assign p="_level" %}{% assign v=_level %}{% include structure/r.html %}
+{% assign p="_data" %}{% assign v=_data %}{% include structure/r.html %}
+
+{% if _data.type == "text" %}
+  {% assign _text = _data.text %}
+  {% include sections/contact/funnel_text.html %}
+{% else if _data.type == 'form' %}
+  {% include sections/contact/funnel_form.html %}
+{% else %}
+  {% include sections/contact/funnel_options.html %}
+{% endif %}
+
+{% assign template="sections/contact/funnel_recursive.html" %}
+{% include structure/debug.html %}

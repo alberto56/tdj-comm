@@ -13,6 +13,7 @@ class Services {
     this.url = await new Url(this).preload();
     this.urlBar = await new UrlBar(this).preload();
     this.textUtilities = await new TextUtilities(this).preload();
+    this.funnel = await new Funnel(this).preload();
 
     const that = this;
 

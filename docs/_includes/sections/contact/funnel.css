@@ -1,0 +1,45 @@
+.my-contact-funnel-level {
+  background: green;
+}
+
+.my-contact-form {
+  background: green;
+}
+
+.my-steps {
+  text-align: center;
+}
+
+.my-step {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 0 40px;
+}
+
+.my-step-inner {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 35px;
+}
+
+.my-step-current .my-step-inner {
+  height: 60px;
+  width: 60px;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  line-height: 56px;
+}
+
+.my-step-current .three-dots {
+  line-height: 24px;
+}

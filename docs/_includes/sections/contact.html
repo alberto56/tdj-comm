@@ -1,0 +1,14 @@
+{% assign template="sections/contact.html" %}
+{% include structure/debug.html %}
+<section class="pt-3">
+  <div class="container">
+    {% assign _level = "start" %}
+    {% assign _data = site.data.config.contact %}
+    {% include sections/contact/funnel.html %}
+    <div class="row my-contact-form">
+      {% include sections/contact/formspree.html %}
+    </div>
+  </div>
+</section>
+{% assign template="sections/contact.html" %}
+{% include structure/enddebug.html %}

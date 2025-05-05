@@ -1,0 +1,11 @@
+{% assign template="sections/contact/funnel.html" %}
+{% include structure/debug.html %}
+{% assign p="_level" %}{% assign v=_level %}{% include structure/r.html %}
+{% assign p="_data" %}{% assign v=_data %}{% include structure/r.html %}
+
+<div class="my-contact-funnel row">
+  {% include sections/contact/funnel_recursive.html %}
+</div>
+
+{% assign template="sections/contact/funnel.html" %}
+{% include structure/debug.html %}

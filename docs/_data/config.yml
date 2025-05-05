@@ -38,3 +38,69 @@ social:
   - url:
     icon: whatsapp
     actif: false
+contact:
+  title: "Pour mieux diriger votre requête, SVP choisissez une option"
+  type: options
+  options:
+    bogue:
+      text: "Je souhaite signaler un problème technique"
+      next:
+        title: "Voici comment signaler un problème technique"
+        type: "text"
+        text: |
+          * Assurez-vous d'avoir un compte gratuit sur [GitHub](https://github.com)
+          * Vous render à la [liste des requêtes](https://github.com/tdjeunes/retroaction-site/issues)
+          * Cliquer sur "New issue" (en haut à droite)
+    individu:
+      text: "Je suis un individu"
+      next:
+        title: "Comment pouvons-nous vous aider ?"
+        type: options
+        options:
+          membre:
+            text: "Je suis bénévole de Terre des jeunes"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+          candidat:
+            text: "Je veux devenir bénévole de Terre des jeunes"
+          don:
+            text: "Je souhaite faire un don à Terre des jeunes"
+          autre:
+            text: "Toute autre raison"
+    association:
+      text: "Je représente une association, organisme ou entreprise"
+      next:
+        title: "Comment pouvons-nous vous aider ?"
+        type: options
+        options:
+          membre:
+            text: "Mon association est déjà associée à Terre des jeunes"
+          candidat:
+            text: "Mon association souhaite adhérer à Terre des jeunes"
+          collab:
+            text: "Mon association souhaite collaborer avec Terre des jeunes"
+            next:
+              title: "Quel type de collaboration cherchez-vous ?"
+              type: options
+              options:
+                cash:
+                  text: "Je cherche du financement pour mon association"
+                  stop: "Terre des jeunes ne finance pas d'autres associations."
+                candidat:
+                  text: "Je cherche un partenaire pour un projet pour lequel j'ai déjà du financement"
+                don:
+                  text: "Mon organisme souhaite faire un don à Terre des jeunes"
+                engager:
+                  text: "Mon organisme a du financement et souhaite proposer un projet à Terre des jeunes"
+                candidat:
+                  text: "Mon association désire faire une demande de financement conjointement avec Terre des jeunes"
+                autre:
+                  text: "Toute autre raison"
+    media:
+      text: "Je représente un média"
+      next:
+        title: "Comment pouvons-nous vous aider ?"
+        options:
+          membre:
+            text: "Mon association est déjà associée à Terre des jeunes"
