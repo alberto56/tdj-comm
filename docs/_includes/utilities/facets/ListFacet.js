@@ -38,7 +38,6 @@ class ListFacet extends Facet {
   addBadges(filtered) {
     const info = this.getBadgeInfo(filtered);
 
-    console.log(info);
     $('.my-category[data-facet=' + this.id() + ']').each(function() {
       const value = decodeURI($( this ).attr('data-add-category'))
         .replace(/\+/g, " ");;

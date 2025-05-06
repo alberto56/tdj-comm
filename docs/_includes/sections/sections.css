@@ -7,3 +7,4 @@
 {% include sections/testimonial.css %}
 {% include sections/teamtdj.css %}
 {% include sections/partenaire.css %}
+{% include sections/contact/formspree.css %}
