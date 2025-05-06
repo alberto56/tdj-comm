@@ -106,12 +106,6 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
                     <!-- Carousel controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -126,25 +120,3 @@
         </div>
     </div>
 </section>
-
-<!-- JavaScript pour activer le slider -->
-<script>
-   
-      // Supposons que votre carousel a l'ID 'myCarousel'
-document.querySelector('.carousel-control-prev').addEventListener('click', function () {
-    $('#myCarousel').carousel('prev');
-});
-
-document.querySelector('.carousel-control-next').addEventListener('click', function () {
-    $('#myCarousel').carousel('next');
-    
-    $(document).ready(function() {
-    $('#myCarousel').carousel({
-      interval: 3000, // Temps en millisecondes entre chaque slide
-      ride: 'carousel', // Démarre automatiquement
-      wrap: true // Recommence à zéro après la dernière slide
-    });
-  });
-});
-    
-</script>
