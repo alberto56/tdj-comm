@@ -17,6 +17,13 @@ default_blog_crumbs:
     url: "/"
   - title: "Actualités"
     url: "/actualites/"
+default_syneco_garden_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Activités"
+    url: "/#activites"
+  - title: "Synécoculture"
+    url: "/synecoculture/"
 menu_bas:
   - title: "Mots du Président"
     url: "/mots-du-president/"
