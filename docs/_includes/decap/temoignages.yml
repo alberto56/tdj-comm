@@ -7,7 +7,11 @@
     - label: Nom de la personne
       name: title
       widget: string
-      hint: "Par exemple Jean-Paul Pierre de l'ONU"
+      hint: "Par exemple Jean-Paul Pierre"
+    - label: Fonction de la personne
+      name: fonction
+      widget: string
+      hint: "Par exemple Chargé de projet, ONU"
     - label: Source
       name: source
       widget: string
@@ -17,4 +21,5 @@
       widget: image
       required: false
       hint: "Image associée avec la personne ou l'organisation"
+    - { label: 'Extrait', name: 'extrait', widget: 'markdown' }
     - { label: 'Citation', name: 'body', widget: 'markdown' }
