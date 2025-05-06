@@ -2,6 +2,7 @@
 title: Au secours des mangroves
 permalink: /mangroves/
 image: /media/mangrove_1.jpg
+layout: activite
 ---
 **Les mangroves : un écosystème clé pour la planète**
 

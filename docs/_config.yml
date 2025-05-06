@@ -9,8 +9,3 @@ defaults:
       path: "jekyll_motsdupresident"
     values:
       permalink: "mots-du-president/:pathid"
-  -
-    scope:
-      path: "jekyll_activites"
-    values:
-      layout: "activite"

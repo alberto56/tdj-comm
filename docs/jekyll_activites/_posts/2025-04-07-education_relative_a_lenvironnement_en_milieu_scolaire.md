@@ -2,6 +2,7 @@
 title: Education à l'environnement en milieu scolaire
 permalink: /education/
 image: /media/dsc_1988_fileminimizer_.jpg
+layout: activite
 ---
 L'éducation à l'environnement vise à sensibiliser les individus à l'importance de la protection de l'environnement et à encourager des comportements respectueux de la nature.
 
