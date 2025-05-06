@@ -1,7 +1,13 @@
 {% assign template="sections/contact/funnel_form.html" %}
 {% include structure/debug.html %}
 
-<div class="my-contact-funnel-level my-contact-form my-contact-funnel-level-{{ _level }}" data-level="{{ _level }}" data-show-form="1"></div>
+<div class="my-contact-funnel-level my-contact-hide-on-reset my-contact-funnel-level-{{ _level }}" data-level="{{ _level }}">
+  {% assign _show_next = false %}
+  {% include sections/contact/steps.html %}
+  {% assign _title = "Merci de laisser votre message ici" %}
+  {% include sections/contact/step_title.html %}
+  <div class="my-contact-funnel-level my-contact-form my-contact-funnel-level-{{ _level }}" data-level="{{ _level }}" data-show-form="1" data-show-subject="{{ _subject }}" data-hint="{{ _hint }}"></div>
+</div>
 
 {% assign template="sections/contact/funnel_form.html" %}
 {% include structure/debug.html %}

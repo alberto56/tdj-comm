@@ -1,15 +1,26 @@
 {% comment %}
-  Copié du compte FormSpree le 2025-05-04-00:55:45
+  Copié du compte FormSpree le 2025-05-04-00:55:45.
+  Modifié pour mieux ressembler au design.
 {% endcomment %}
 
-<!-- modify this form HTML and place wherever you want your form -->
-<form id="my-form" action="https://formspree.io/f/xkgrjeqo" method="POST">
-  <label>Email:</label>
-  <input type="email" name="email" />
-  <label>Message:</label>
-  <input type="text" name="message" />
-  <button id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
+<form id="my-form" action="https://formspree.io/f/xkgrjeqo" method="POST" class="custom-form volunteer-form mb-5 mb-lg-0" role="form">
+  <h4 id="my-form-status" class="my-form-status"></h4>
+  <label class="my-visually-hidden-label">Email:</label>
+  <input class="form-control" type="email" name="email" pattern="[^ @]*@[^ @]*" placeholder="moi@example.com" required/>
+  <label class="my-visually-hidden-label">Communiquer avec:</label>
+  <select class="form-control" name="role" id="volunteer-role" required>
+    <option value="mondial" selected>Communiquer avec le secrétariat mondial de Terre des jeunes</option>
+    {% for antenne in site.categories.jekyll_antennes %}
+      {% if antenne.email %}
+        <option value="{{ antenne.email }} {{ antenne.title }} {{ antenne.country }}">Communiquer avec {{ antenne.title }} - {{ antenne.country }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  <input class="form-control my-form-subject" type="text" name="subject" value="J'ai un message pour Terre des jeunes"/>
+  <input class="form-control my-form-confirmation-id" type="hidden" name="confirmation-id" value="ID"/>
+  <label class="my-visually-hidden-label">Message:</label>
+  <textarea name="message" rows="6" class="form-control my-form-message" id="volunteer-message" placeholder="Votre message" required></textarea>
+  <button type="submit" id="my-form-button" class="form-control">Soumettre</button>
 </form>
 
 <!-- Place this script at the end of the body tag -->
@@ -28,19 +39,20 @@
       }
     }).then(response => {
       if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
+        console.log(response);
+        status.innerHTML = "Merci pour votre message. Nous vous reviendrons sous peu. Votre numéro de confirmation est " + $('.my-form-confirmation-id').val() + ".";
         form.reset()
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
             status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
           } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            status.innerHTML = "Une erreur est survenue lors de l'envoi de votre message. Vous pouvez tenter de nous contacter via nos réseaux sociaux."
           }
         })
       }
     }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
+      status.innerHTML = "Une erreur est survenue lors de l'envoi de votre message. Vous pouvez tenter de nous contacter via nos réseaux sociaux."
     });
   }
   form.addEventListener("submit", handleSubmit)

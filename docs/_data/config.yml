@@ -42,15 +42,6 @@ contact:
   title: "Pour mieux diriger votre requête, SVP choisissez une option"
   type: options
   options:
-    bogue:
-      text: "Je souhaite signaler un problème technique"
-      next:
-        title: "Voici comment signaler un problème technique"
-        type: "text"
-        text: |
-          * Assurez-vous d'avoir un compte gratuit sur [GitHub](https://github.com)
-          * Vous render à la [liste des requêtes](https://github.com/tdjeunes/retroaction-site/issues)
-          * Cliquer sur "New issue" (en haut à droite)
     individu:
       text: "Je suis un individu"
       next:
@@ -62,12 +53,29 @@ contact:
             next:
               title: "Comment pouvons-nous vous aider ?"
               type: form
+              subject: "Je suis bénévole de Terre des jeunes"
+              hint: "Votre message SVP."
           candidat:
             text: "Je veux devenir bénévole de Terre des jeunes"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+              subject: "Je veux devenir bénévole de Terre des jeunes"
+              hint: "Précisez dans quel pays vous êtes, dans quel pays vous aimeriez faire du bénévolat, à quelle période et pour combien de temps, et quel type de bénévolat vous recherchez."
           don:
             text: "Je souhaite faire un don à Terre des jeunes"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+              subject: "Je veux faire un don à Terre des jeunes"
+              hint: "Précisez si vous préférenz faire un don en argent ou en matériel; la nature de votre don; le pays ciblé (le cas échéant). Notez que vous pouvez utiliser faire un don directement sur le site web en cliquant sur le bouton Faire un don en-haut du site."
           autre:
             text: "Toute autre raison"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+              subject: "Préciser le sujet de votre message"
+              hint: "Votre message SVP."
     association:
       text: "Je représente une association, organisme ou entreprise"
       next:
@@ -76,8 +84,18 @@ contact:
         options:
           membre:
             text: "Mon association est déjà associée à Terre des jeunes"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+              subject: "Mon association est déjà associée à Terre des jeunes"
+              hint: "Votre message SVP."
           candidat:
             text: "Mon association souhaite adhérer à Terre des jeunes"
+            next:
+              title: "Comment pouvons-nous vous aider ?"
+              type: form
+              subject: "Mon association est déjà associée à Terre des jeunes"
+              hint: "Votre message SVP."
           collab:
             text: "Mon association souhaite collaborer avec Terre des jeunes"
             next:
@@ -104,3 +122,14 @@ contact:
         options:
           membre:
             text: "Mon association est déjà associée à Terre des jeunes"
+    bogue:
+      text: "J'ai un commentaire technique"
+      next:
+        title: "Voici comment signaler un commentaire technique"
+        type: "text"
+        text: |
+          * Assurez-vous d'avoir un compte gratuit sur [GitHub](https://github.com)
+          * Vous render à la [liste des requêtes](https://github.com/tdjeunes/retroaction-site/issues)
+          * Cliquer sur "New issue" (en haut à droite)
+          * Donnez votre commentaire, sans inclure d'informations personnelles
+          * Enregistrer

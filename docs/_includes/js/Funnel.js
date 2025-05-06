@@ -51,20 +51,40 @@ class Funnel extends Service {
     }
   }
 
+  getConfirmationId() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1; // Month is 0-indexed, so add 1
+    const day = today.getDate();
+    const random = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+
+    const confirmationId = year + '-' + month + '-' + day + '-' + random;
+    return confirmationId;
+  }
+
   showItemsAtLevel(level) {
-    $('.my-contact-funnel-level').hide();
-    $('#my-form').hide();
+    $('.my-contact-hide-on-reset').css('background-color', 'green');
+    const that = this;
     this.itemsAtLevel(level).each(function() {
-      $( this ).show();
+      $( this ).css('background-color', 'yellow');
       if ($( this ).attr('data-show-form')) {
-        $('#my-form').show();
+        $('.my-contact-form').css('background-color', 'yellow');
+        $('.my-form-confirmation-id').val(that.getConfirmationId());
+        if ($( this ).attr('data-show-subject')) {
+          $('.my-form-subject').val($( this ).attr('data-show-subject'));
+        }
+        if ($( this ).attr('data-hint')) {
+          $('.my-form-message').attr(
+            'placeholder',
+            $( this ).attr('data-hint')
+          );
+        }
       }
     });
   }
 
   selectorLevel(level) {
     const ret = '.my-contact-funnel-level-' + level;
-    console.log('selectorLevel', ret);
     return ret;
   }
 

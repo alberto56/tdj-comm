@@ -2,7 +2,7 @@
 {% include structure/debug.html %}
 {% assign p="_text" %}{% assign v=_text %}{% include structure/r.html %}
 
-<div class="my-contact-funnel-level my-contact-funnel-level-{{ _level }}" data-level="{{ _level }}">
+<div class="my-contact-funnel-level my-contact-hide-on-reset my-contact-funnel-level-{{ _level }}" data-level="{{ _level }}">
   {% assign _show_next = false %}
   {% include sections/contact/steps.html %}
   <div class="col-12">

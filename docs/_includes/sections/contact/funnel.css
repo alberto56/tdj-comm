@@ -1,7 +1,6 @@
 .my-contact-funnel-level,
-#my-form,
 .my-contact-form {
-  display: none;
+  background-color: green;
 }
 
 .my-steps {
@@ -40,4 +39,20 @@
 
 .my-step-current .three-dots {
   line-height: 24px;
+}
+
+.my-funnel-option {
+  text-align: center;
+  padding: 20px 0 18px;
+}
+
+.my-visually-hidden-label {
+  /* https://www.a11yproject.com/posts/how-to-hide-content/ */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
