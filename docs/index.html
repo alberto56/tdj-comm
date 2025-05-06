@@ -187,51 +187,7 @@
       <!-- testimonial sections -->
       {% include sections/testimonial.html %}
     </main>
-    <!-- sections nos partenaires -->
-    <section class="container mx-auto" id="parteners">
-      <div class="col-lg-12 col-12 text-center mb-4">
-        <h2>Partenaires de Terre des jeunes</h2>
-        <p class="text-muted">Découvrez nos précieux partenaires qui soutiennent nos causes.</p>
-      </div>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://www.ctc-n.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-              <img src="images/partenaires/03.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
-              <p class="text-center">CTCN</p>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://www.un.org/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-              <img src="images/partenaires/04.jpg" alt="Partenaire 1" class="mb-2 mx-auto" style="height: 50px;">
-              <p class="text-center">ONU</p>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://partenaire2.com" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-              <img src="images/partenaires/02.jpg" alt="Partenaire 2" class="mb-2 mx-auto" style="height: 50px;">
-              <p class="text-center">CYCLONE NORD-SUD</p>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://www.biothermica.com/fr" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-              <img src="images/partenaires/01.jpg" alt="Partenaire 3" class="mb-2 mx-auto" style="height: 50px;">
-              <p class="text-center">BIOTERMICA </p>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://www.bioenergiehaiti.org/" target="_blank" class="block p-6 bg-white rounded-lg shadow-md">
-              <img src="images/partenaires/05.jpg" alt="Partenaire 3" class="mb-2 mx-auto" style="height: 50px;">
-              <p class="text-center">BIOENERGIEHAITI</p>
-            </a>
-          </div>
-          <!-- Ajoutez plus de partenaires ici -->
-        </div>
-        <!-- Ajoutez des boutons de navigation si nécessaire -->
-        <!-- <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div> -->
-      </div>
-    </section>
+    {% include sections/partenaire.html %}
     {% include sections/subscribe.html %}
     <!-- footer sections -->
     {% assign maxArticles = 6 %}

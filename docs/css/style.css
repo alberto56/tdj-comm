@@ -1662,23 +1662,6 @@ select.form-select option[data-flag="de"]:before {
   background-image: url('https://cdn.jsdelivr.net/npm/flag-icon-css/flags/4x3/de.svg');
 }
 
-/* partenaires */
-.partner-logo {
-  max-width: 290px;
-  max-height: 170px;
-  object-fit: contain;
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-  transform: scale(1.1);
-}
-
-.section-padding {
-  padding: 50px 0;
-}
-
 /* .slide up main */
 
 .slider {
