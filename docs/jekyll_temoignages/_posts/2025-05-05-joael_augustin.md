@@ -1,5 +1,6 @@
 ---
-title: JOAEL Augustin
+title: JOEL Augustin, Agronome de profession, spécialiste en environnement et en
+  ingénierie sociale,
 source: message du 05 Mai 2025
 image: /media/augustin_joel.jpg
 ---
