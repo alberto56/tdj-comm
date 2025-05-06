@@ -6,7 +6,7 @@ tel: +226 70 55 44 04
 country2:
   - Burkina Faso
 page_url: https://www.terredesjeunes.org/bf.html
-active: false
+active: true
 logo_image: /media/tdj-bf-adopte1-logo.jpg
 ---
 Burkina Faso
