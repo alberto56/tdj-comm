@@ -24,19 +24,6 @@
         widget: 'string'
         required: false
         hint: 'Par exemple 2016-04-20'
-      - label : 'Année'
-        name: 'annee'
-        widget: 'string'
-        required: false
-        hint: 'Par exemple 2016, 2025, etc.'
-      - label: "Saison"
-        name: saison
-        widget: "select"
-        options:
-        - { label: "Hiver (si c'est en décembre, mettre l'année suivante)", value: 'hiver' }
-        - { label: 'Printemps', value: 'printemps' }
-        - { label: 'Été', value: 'été' }
-        - { label: 'Automne', value: 'automne' }
       - label: 'Image'
         name: "img"
         widget: "list"
