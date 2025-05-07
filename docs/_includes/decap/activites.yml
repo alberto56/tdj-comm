@@ -10,6 +10,12 @@
       - label: "Lien permanent, par exemple /education/"
         name: 'permalink'
         widget: 'string'
+      - label: "Layout"
+        name: layout
+        widget: "select"
+        options:
+        - { label: "Activité générique", value: 'activite' }
+        - { label: 'Synécoculture', value: 'synecoculture' }
       - label: Image
         name: image
         widget: image

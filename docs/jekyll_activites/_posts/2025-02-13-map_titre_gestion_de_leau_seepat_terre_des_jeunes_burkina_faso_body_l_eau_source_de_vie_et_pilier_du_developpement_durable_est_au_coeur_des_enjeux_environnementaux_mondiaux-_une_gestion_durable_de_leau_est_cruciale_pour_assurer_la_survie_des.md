@@ -2,6 +2,7 @@
 title: "Gestion de l'eau "
 permalink: /eau/
 image: /media/cimg8847.jpg
+layout: activite
 documents:
   - /media/generic_pdf.pdf
 ---

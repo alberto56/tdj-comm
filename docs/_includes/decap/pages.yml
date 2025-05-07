@@ -12,6 +12,7 @@
         - { label: 'Blog', value: 'blog' }
         - { label: 'Liste de mots du président', value: 'liste_motsdupresident' }
         - { label: 'Liste des articles', value: 'liste_articles' }
+        - { label: 'Contact', value: 'contact' }
       - label: 'Chemin'
         name: 'permalink'
         widget: 'string'
