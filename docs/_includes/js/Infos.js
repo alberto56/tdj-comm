@@ -19,9 +19,18 @@ class Infos extends Service {
       async: false
     });
     $.getJSON(this.url(), (data) => {
-      that._data = data;
+      if (that.key() == '') {
+        that._data = data;
+      }
+      else {
+        that._data = data[that.key()];
+      }
     });
     return this;
+  }
+
+  key() {
+    return '';
   }
 
   url() {

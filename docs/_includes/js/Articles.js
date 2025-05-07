@@ -1,7 +1,11 @@
 class Articles extends Infos {
   url() {
     // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return '/api/v1/all.json';
+    return '/api/v2/all.json';
+  }
+
+  key() {
+    return 'actualites';
   }
 
   init2(options) {
