@@ -3,10 +3,13 @@
     <div class="row">
       <div class="col-lg-12 col-12 p-0">
         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-          <div class="carousel-inner" data-my-sort-by="data-order">
-            {% for carousel in site.categories.jekyll_carousel %}
+          <div class="carousel-inner">
+            {% assign sorted = (site.categories.jekyll_carousel | sort: 'order') %}
+            {% assign extra_classes = ' active' %}
+            {% assign extra_attr = '' %}
+            {% for carousel in sorted %}
               {% if carousel.active %}
-                <div class="carousel-item" data-order="{{ carousel.order }}">
+                <div class="carousel-item{{ extra_classes }}"{{ extra_attr }}>
                   <img src="{{ carousel.image }}"
                     class="d-block w-100 carousel-image " alt="...">
                   <div class="my-carousel-title-wrapper">
@@ -18,17 +21,21 @@
                   </div>
                 </div>
               {% endif %}
+              {% assign extra_classes = '' %}
+              {% assign extra_attr = ' data-bs-interval="2000"' %}
             {% endfor %}
           </div>
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Précéeent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
-{% assign extra_classes = ' active' %}
-{% assign extra_attr = '' %}
-{% assign extra_classes = '' %}
-{% assign extra_attr = ' data-bs-interval="2000"' %}
