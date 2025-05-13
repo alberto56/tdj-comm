@@ -13,4 +13,4 @@ cd thumbor-example
   beta.terredesjeunes.org/media \
   800x,x200,x160,x200,75x75,600x680,x680 \
   ./app/mapping-beta-tdj-comm.json \
-  && TRUE
+  && echo "done"
