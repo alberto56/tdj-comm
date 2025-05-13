@@ -10,7 +10,7 @@
     - { label: 'Active', name: 'active', widget: 'boolean', default: true }
     - label: Order
       hint:
-        -1 vient avant 0 vient avant 1.5 vient avant 2.
+        a vient avant b vient avant z.
       name: order
       widget: string
       required: false
