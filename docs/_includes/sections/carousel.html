@@ -3,22 +3,21 @@
     <div class="row">
       <div class="col-lg-12 col-12 p-0">
         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
+          <div class="carousel-inner" data-my-sort-by="data-order">
             {% for carousel in site.categories.jekyll_carousel %}
-              {% if forloop.first %}
-                {% assign extra_classes = ' active' %}
-                {% assign extra_attr = '' %}
-              {% else %}
-                {% assign extra_classes = '' %}
-                {% assign extra_attr = ' data-bs-interval="2000"' %}
-              {% endif %}
-              <div class="carousel-item{{ extra_classes}}"{{ extra_attr }}>
-                <img src="{{ carousel.image }}"
-                  class="d-block w-100 carousel-image " alt="...">
-                <div class="my-carousel-title">
-                  {{ carousel.title }}
+              {% if carousel.active %}
+                <div class="carousel-item" data-order="{{ carousel.order }}">
+                  <img src="{{ carousel.image }}"
+                    class="d-block w-100 carousel-image " alt="...">
+                  <div class="my-carousel-title-wrapper">
+                    <span class="my-carousel-title">
+                      <span class="my-carousel-title-inner">
+                        {{ carousel.title }}
+                      </span>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
@@ -26,3 +25,10 @@
     </div>
   </div>
 </section>
+
+
+
+{% assign extra_classes = ' active' %}
+{% assign extra_attr = '' %}
+{% assign extra_classes = '' %}
+{% assign extra_attr = ' data-bs-interval="2000"' %}
