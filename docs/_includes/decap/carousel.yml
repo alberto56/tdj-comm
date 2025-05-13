@@ -7,6 +7,13 @@
     - label: Titre
       name: title
       widget: string
+    - { label: 'Active', name: 'active', widget: 'boolean', default: true }
+    - label: Order
+      hint:
+        a vient avant b vient avant z.
+      name: order
+      widget: string
+      required: false
     - label: lien
       hint:
         Dans le format http://example.com/
