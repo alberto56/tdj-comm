@@ -32,8 +32,9 @@
     {
       "url": {{ obj.url | jsonify }},
       "title": {{ obj.title | jsonify }},
+      "categories": {{ obj.categories | jsonify }},
       "content": {{ obj.content | jsonify }},
-      "antennes": {{ obj.antenne2 | jsonify }},
+      "antenne2": {{ obj.antenne2 | jsonify }},
       "img": {{ obj.img | jsonify }}
     }
   {% endfor %}

@@ -1,0 +1,25 @@
+{% for temoignage in site.categories.jekyll_temoignages %}
+
+  {% assign _nom = temoignage.title %}
+  {% assign fin_de_groupe_de_deux = forloop.index | modulo:2 %}
+
+  <div style="background:yellow;">INDEX {{ forloop.index0 }}</div>
+  <div>FIN DE GROUPE {{ fin_de_groupe_de_deux }}</div>
+
+  {% if forloop.first %}
+    <div>START2-1</div>
+  {% elsif fin_de_groupe_de_deux != 0 %}
+    {% if forloop.last == false %}
+      <div>END2-1</div>
+      <div>because fin_de_groupe_de_deux is {{ fin_de_groupe_de_deux }}</div>
+      <div>START2-2</div>
+    {% endif %}
+  {% endif %}
+
+  <div>{{ forloop.index0 }} {{ _nom }}</div>
+
+  {% if forloop.last %}
+    <div>END2-2</div>
+  {% endif %}
+
+{% endfor %}

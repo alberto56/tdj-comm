@@ -28,6 +28,24 @@ class Antennes extends Infos {
     return this.s('pays').getFlag(pays);
   }
 
+  init2() {
+    $('.mettre-nbre-pays-ici').html(this.nbrePays());
+  }
+
+  nbrePays() {
+    let pays = [];
+    this._data.forEach((node) => {
+      if (node.active && node.country2.length > 0) {
+        node.country2.forEach((pays2) => {
+          if (!pays.includes(pays2)) {
+            pays.push(pays2);
+          }
+        });
+      }
+    });
+    return pays.length - 1; // -1 pour le pays "modial"
+  }
+
   activeForCountry(country) {
     let ret = [];
     this._data.forEach((node) => {
