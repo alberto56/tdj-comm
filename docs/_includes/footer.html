@@ -254,4 +254,10 @@
       });
     });
   </script>
-
+  <script src="/js/image-mapping.js?token={{ site.time | date: '%s' }}"></script>
+  <script>
+    // Event listener to execute loadImages function when the page is fully loaded
+    window.addEventListener('load', function() {
+      loadImages("{{ site.data.config.thumbor.image_server_domain }}", "{{ site.data.config.thumbor.image_file_url }}");
+    })
+  </script>

@@ -73,3 +73,7 @@ syneco_metrics_about: |
   Le projet Python [Google Sheets To CVS](https://github.com/dcycle/google-sheets-to-csv) est ensuite utilsé pour prouire un fichier CSV à partir de ces données. Ce CSV est ensuite stocké à https://beta.terredesjeunes.org/data/syneco.csv.
 
   Le projet [Starterkit CSV to D3](https://github.com/dcycle/starterkit-csv-to-d3) est utilisé pour convertir le CSV en graphiques D3.js.
+thumbor:
+  image_file_url: https://image-mapping.terredesjeunes.org/mapping-beta-tdj-comm.json
+  image_server_domain: https://images.terredesjeunes.org
+  enable: true
