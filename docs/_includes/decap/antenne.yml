@@ -23,6 +23,11 @@
         - {{ categorie.title }}
 {% endfor %}
       - { label: 'Page Url', name: 'page_url', widget: 'string', required: false }
-      - { labe;: 'Active', name: 'active', widget: 'boolean', default: true }
+      - { label: 'Active', name: 'active', widget: 'boolean', default: true }
       - { label: 'Logo Image (25*25)', name: 'logo_image', widget: 'image', required: false, default: '/media/default-antenna-logo.png' }
+      - label: "Images"
+        name: "img"
+        widget: "list"
+        required: false
+        field: {label: Image, name: image, widget: image}
       - { label: 'Contenu', name: 'body', widget: 'markdown', required: false }
