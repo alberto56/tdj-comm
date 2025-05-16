@@ -9,7 +9,7 @@
   text-transform: uppercase;
   font-weight: 800;
   color: white;
-  font-size: 2em; /* Réduit la taille de la police */
+  font-size: 2.5em;
 }
 
 @media (min-width: 768px) {
@@ -21,26 +21,6 @@
   }
   .my-carousel-title {
     font-weight: 600;
-    font-size: 3em; /* Ajuste la taille pour les écrans plus grands */
-  }
-}
-
-.my-carousel-title-inner {
-  display: -webkit-box; /* Pour Safari */
-  display: box;
-  -webkit-box-orient: vertical;
-  box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 2; /* Nombre de lignes à afficher */
-  line-clamp: 2; /* Nombre de lignes à afficher */
-  max-height: 4em; /* Ajusté pour permettre deux lignes */
-  font-size: 1.5rem; /* Taille de police par défaut */
-}
-
-/* Styles responsive pour mobile */
-@media (max-width: 600px) {
-  .my-carousel-title-inner {
-    font-size: 1rem; /* Réduit la taille de police sur mobile */
-    max-height: 4em; /* Ajustez pour deux lignes */
+    font-size: 4em;
   }
 }
