@@ -6,7 +6,7 @@ image: /media/dsc_1988_fileminimizer_.jpg
 documents:
   - /media/education_a_l_environnement_et_au_dd.pdf
 ---
-L'éducation à l'environnement vise à sensibiliser les individus à l'importance de la protection de l'environnement et à encourager des comportements respectueux de la nature.
+[L'éducation à l'environnement ](file:///D:/ABIBA/EDUCATION%20A%20L'ENVIRONNEMENT%20ET%20AU%20DD.pdf)vise à sensibiliser les individus à l'importance de la protection de l'environnement et à encourager des comportements respectueux de la nature.
 
 *Elle se base sur l'idée que chacun a un rôle à jouer dans la préservation de la planète.*
 
