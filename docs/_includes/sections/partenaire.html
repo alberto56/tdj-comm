@@ -6,37 +6,14 @@
   </div>
   <div class="row">
     <div class="partner-wrapper">
+      {% for partner in site.categories.jekyll_partenaires %}
       <div class="col-lg-2 col-md-4 col-6">
-        <a href="https://www.ctc-n.org/" target="_blank" class="partner-card">
-          <img src="images/partenaires/03.jpg" alt="Partenaire 1" class="partner-logo">
-          <p>CTCN</p>
+        <a href="{{ partner.url }}" target="_blank" class="partner-card">
+          <img src="{{ partner.image }}" alt="logo de {{ parnter.title }}" class="partner-logo">
+          <p>{{ partner.title }}</p>
         </a>
       </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="https://www.un.org/fr" target="_blank" class="partner-card">
-          <img src="images/partenaires/04.jpg" alt="Partenaire 2" class="partner-logo">
-          <p>ONU</p>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="https://partenaire2.com" target="_blank" class="partner-card">
-          <img src="images/partenaires/02.jpg" alt="Partenaire 3" class="partner-logo">
-          <p>CYCLONE</p>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="https://www.biothermica.com/fr" target="_blank" class="partner-card">
-          <img src="images/partenaires/01.jpg" alt="Partenaire 4" class="partner-logo">
-          <p>BIOTERMICA</p>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <a href="https://www.bioenergiehaiti.org/" target="_blank" class="partner-card">
-          <img src="images/partenaires/05.jpg" alt="Partenaire 5" class="partner-logo">
-          <p>BIOENERGIEHAITI</p>
-        </a>
-      </div>
-      <!-- Ajoutez plus de partenaires ici -->
+      {% endfor %}
     </div>
   </div>
 </section>

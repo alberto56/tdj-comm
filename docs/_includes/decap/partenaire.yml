@@ -5,7 +5,7 @@
     slug: '{{slug}}'
     fields:
       - label: 'Nom'
-        name: 'nom'
+        name: 'title'
         widget: 'string'
       - label: Image
         name: image
