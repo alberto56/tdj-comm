@@ -9,3 +9,13 @@ defaults:
       path: "jekyll_motsdupresident"
     values:
       permalink: "mots-du-president/:pathid"
+  -
+    scope:
+      path: "jekyll_antennes"
+    values:
+      layout: "antenne"
+  -
+    scope:
+      path: "jekyll_redirections"
+    values:
+      layout: "redirect"

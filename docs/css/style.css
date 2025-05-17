@@ -94,8 +94,8 @@
   --border-radius-medium:         20px;
   --border-radius-small:          10px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
+  --font-weight-light:            400;
+  --font-weight-normal:           500;
   --font-weight-semibold:         600;
   --font-weight-bold:             700;
 }
@@ -176,8 +176,7 @@ button {
 }
 
 a {
-  color: var(--p-color);
-  text-decoration: none;
+  color: var(--primary-color);
 }
 
 a:hover {
@@ -1885,6 +1884,18 @@ h1 {
 }
 h2 {
     font-size: 1.5em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1.1em;
 }
 p {
     line-height: 1.6;
