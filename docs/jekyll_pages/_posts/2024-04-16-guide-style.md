@@ -1,5 +1,5 @@
 ---
-title: Guide de style et signature graphique
+title: Guide de style et logo
 layout: page
 permalink: /guide-style/
 ---

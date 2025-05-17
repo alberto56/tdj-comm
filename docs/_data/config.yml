@@ -34,10 +34,8 @@ menu_bas:
     url: "/mots-du-president/"
   - title: "Actualités"
     url: "/actualites/"
-  - title: "Guide de style"
+  - title: "Guide de style et logo"
     url: "/guide-style/"
-  - title: "Logo"
-    url: "/guide-style/logo/"
   - title: "Statuts"
     url: "/statuts/"
 social:
