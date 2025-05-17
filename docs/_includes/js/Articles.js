@@ -51,6 +51,15 @@ class Articles extends Infos {
         });
       }
 
+      if (typeof options !== 'undefined' && typeof options.onlyantenne !== 'undefined') {
+        node.antenne2.forEach((antenne) => {
+          options.onlyantenne.forEach((only) => {
+            if (antenne !== only) {
+              show = false;
+            }
+          });
+        });
+      }
 
       if (!show) {
         return;
