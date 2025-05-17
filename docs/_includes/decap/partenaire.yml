@@ -13,3 +13,6 @@
       - label: 'lien'
         name: 'lien'
         widget: 'string'
+      - label: 'Contenu'
+        name: 'body'
+        widget: 'markdown'
