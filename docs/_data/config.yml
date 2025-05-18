@@ -12,6 +12,11 @@ default_activites_crumbs:
     url: "/"
   - title: "Activités"
     url: "/#activites"
+default_partenaires_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Partenaires"
+    url: "/partenaires/"
 default_blog_crumbs:
   - title: "Accueil"
     url: "/"

@@ -66,10 +66,11 @@ Polices
 * [Changa 400](https://fonts.google.com/specimen/Changa?preview.text=Terre%20des%20jeunes)
 * Open Sans
 
-Icône du monde
+Icônes
 -----
 
-* https://www.freeiconspng.com/img/3009
+* Icônes du monde: https://www.freeiconspng.com/img/3009
+* Icônes: [Bootstrap Icons](https://icons.getbootstrap.com)
 
 Format de texte sur le site (ceci est un h2)
 -----

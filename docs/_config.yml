@@ -19,3 +19,9 @@ defaults:
       path: "jekyll_redirections"
     values:
       layout: "redirect"
+  -
+    scope:
+      path: "jekyll_partenaires"
+    values:
+      layout: "partenaire"
+      permalink: "partenaires/:title"

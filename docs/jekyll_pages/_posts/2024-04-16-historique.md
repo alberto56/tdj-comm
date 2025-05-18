@@ -29,8 +29,6 @@ Le Gouvernement Italien a repris la Fête de l’arbre et l’a faite pendant pl
 
 Suite au succès de la campagne italienne, le Programme des Nations-Unies pour l’Environnement nous a remis, à Mexico, le prestigieux Prix Global 500.
 
-<img src="/media/global_500_tolba_et_moi_1990.jpg">
-
 <img src="/media/global_500.jpg">
 
 En automne 1990 nous participons a une plantation de 10 000 arbres au Burkina Faso avec les Clubs UNESCO. C’est notre première action en Afrique. Le Président de Terre des jeunes est reçu par le Ministre de l’environnement de l’Époque du pays.
