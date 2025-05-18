@@ -92,6 +92,16 @@ le 22 janvier 2016, Terre des jeunes est accréditée au PNUE, Programme des Nat
 
 Le Mouvement continue de grandir en Europe avec des antennes en Finlande et en Grèce et d’autres pays se joignent de temps en temps.
 
+2018
+-----
+
+TDJ Gonaïves organise un grand camp chantier avec une une soixantaine de jeunes pour reboiser un terrain à Passe-Reine avec l'équipe du Québec.
+
+2021
+-----
+
+À partir de 2021, TDJ porte son attention sur l'importance  de la restauration des mangroves, en particulier aux Gonaïves en Haïti. Suite à un financement de l'IUCN et du gouvernement du Québec, c'est autour de 80 000 palétuviers qui sont plantés dans la mangrove de la Grande Saline et des milliers de personnes sensibilisées.
+
 2024
 -----
 
