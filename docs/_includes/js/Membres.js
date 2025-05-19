@@ -22,7 +22,6 @@ class Membres extends Infos {
   fetchResponseParsed(response, options) {
     let teamMembers = [];
     response.forEach((node) => {
-      console.log(node);
       teamMembers.push({
         name: node.title,
         role: node.fonction,
@@ -34,7 +33,6 @@ class Membres extends Infos {
 
     const callback = this._callback;
     if (callback) {
-      console.log('callback with ', teamMembers);
       callback(teamMembers);
     }
   }
