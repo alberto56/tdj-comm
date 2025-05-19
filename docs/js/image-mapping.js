@@ -36,7 +36,7 @@
         if (window.bgImageElements) {
           window.bgImageElements.forEach((item, index) => {
             // assuming width always 100%
-            const newoptimizedUrl = getOptimizedImageUrl(item.imageName, "", Math.round(item.height), mappingData, imageServerDomain);
+            const newoptimizedUrl = getOptimizedImageUrl("/" + item.imageName, "", Math.round(item.height), mappingData, imageServerDomain);
             if (newoptimizedUrl && newoptimizedUrl != item.imageName) {
               item.element.style.backgroundImage = `url(${newoptimizedUrl})`;
             }
@@ -145,13 +145,15 @@ function getRenderedDimensions(img) {
  */
 function getOptimizedImageUrl(dataSrc, width, height, mappingData, imageServerDomain) {
   const dataSize = `${width}x${height}` || '800x';
-  const optimizedSrc = mappingData[dataSrc.replace('/media', '')];
+  if (dataSize !== "x") {
+    const optimizedSrc = mappingData[dataSrc.replace('/media', '')];
 
-  if (optimizedSrc && optimizedSrc[dataSize]) {
-    return imageServerDomain + optimizedSrc[dataSize];
+    if (optimizedSrc && optimizedSrc[dataSize]) {
+      return imageServerDomain + optimizedSrc[dataSize];
+    }
+
+    console.warn("Optimized image path not found for size:", dataSize);
   }
-
-  console.warn("Optimized image path not found for size:", dataSize);
   return dataSrc;
 }
 
