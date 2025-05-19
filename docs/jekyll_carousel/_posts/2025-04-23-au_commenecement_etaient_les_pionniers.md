@@ -1,5 +1,5 @@
 ---
-title: Au commenecement étaient les pionniers
+title: Au commencement étaient les pionniers
 active: true
 order: A
 lien: https://beta.terredesjeunes.org/a-propos/
