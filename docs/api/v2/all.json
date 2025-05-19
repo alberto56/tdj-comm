@@ -46,7 +46,7 @@
       "url": {{ obj.url | jsonify }},
       "title": {{ obj.title | jsonify }},
       "content": {{ obj.content | jsonify }},
-      "nom": {{ obj.nom | jsonify }},
+      "fonction": {{ obj.fonction | jsonify }},
       "image": {{ obj.image | jsonify }}
     }
   {% endfor %}

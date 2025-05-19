@@ -1,6 +1,5 @@
 class Articles extends Infos {
   url() {
-    // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
     return '/api/v2/all.json';
   }
 

@@ -1,6 +1,6 @@
 ---
-title: PRESIDENT NATIONAL BURKINA FASO
-nom: ASSIMI Sanogo
+title: Sanogo ASSIMI
+fonction: PRESIDENT NATIONAL BURKINA FASO
 image: /media/assimi_bf.png
 ---
 Président de l’Association SEEPAT, M. Assimi Sanogo s’est engagé pour les Projets de renforcement des capacités des Organisation de la Société Civile pour l’accès aux financements climatiques. Le soucis d’aider les populations vulnérables et d’apporter sa pierre à l’éducation pour un environnement sain

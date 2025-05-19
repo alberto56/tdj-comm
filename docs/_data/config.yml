@@ -34,6 +34,11 @@ default_antennes_crumbs:
     url: "/"
   - title: "Antennes"
     url: "/antennes/"
+default_bio_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Bios"
+    url: "/bios/"
 menu_bas:
   - title: "Mots du Président"
     url: "/mots-du-president/"

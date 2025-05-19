@@ -4,11 +4,11 @@
     folder: 'docs/jekyll_bios/_posts/'
     slug: '{{slug}}'
     fields:
-      - label: 'Titre, par exemple "Directeur exécutif"'
+      - label: 'Nom'
         name: 'title'
         widget: 'string'
-      - label: 'Nom'
-        name: 'nom'
+      - label: 'Titre (fonction), par exemple "Directeur exécutif"'
+        name: 'fonction'
         widget: 'string'
       - label: Image
         name: image
