@@ -28,3 +28,14 @@
         name: 'instagram'
         widget: 'string'
         required: false
+      - label: "Réseaux sociaux"
+        name: "reseaux"
+        widget: "list"
+        fields:
+        - label: 'Type'
+          name: 'type'
+          widget: 'string'
+          hint: 'ex: facebook, instagram, twitter, linkedin'
+        - label: 'Lien'
+          name: 'lien'
+          widget: 'string'

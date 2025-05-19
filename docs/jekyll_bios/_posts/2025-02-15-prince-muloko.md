@@ -1,6 +1,6 @@
 ---
-fonction: WEB MASTER TDJ RDC
 title: Prince Muloko
+fonction: Webmaster, Terre des jeunes R. D. Congo
 image: /media/prime.jpg
 ---
 

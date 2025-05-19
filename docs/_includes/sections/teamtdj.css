@@ -41,3 +41,6 @@
     background: var(--primary);
 }
 
+.my-tdj-team-section a {
+    text-decoration: none;
+}

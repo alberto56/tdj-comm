@@ -1,6 +1,6 @@
 ---
-title: Cyriaque ADJAFO
-fonction: PRESIDENT NATIONAL TOGO
+title: Cyriaque Adjafo
+fonction: Président national, Togo
 image: /media/cyriaque_adjafo.jpg
 x: https://x.com/CAdjafo
 facebook: beta.terredesjeunes.org

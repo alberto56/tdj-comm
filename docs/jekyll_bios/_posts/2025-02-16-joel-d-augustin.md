@@ -1,6 +1,6 @@
 ---
-fonction: PRESIDENT TDJ GONAIVES-HAITI
 title: Joël D. Augustin
+fonction: Président, Terre des jeunes Gonaïves, Haïti
 image: /media/joel_haiti.jpg
 ---
 Agronome de profession, spécialiste en environnement et en ingénierie sociale, consultant/ animateur social, Ambassadeur CoalitionWILD, coordonnateur Terre des Jeunes en Haïti, expérimenté avec de nombreuses institutions depuis 20 ans :

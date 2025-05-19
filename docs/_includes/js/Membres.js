@@ -22,6 +22,7 @@ class Membres extends Infos {
   fetchResponseParsed(response, options) {
     let teamMembers = [];
     response.forEach((node) => {
+      console.log(node);
       teamMembers.push({
         name: node.title,
         role: node.fonction,

@@ -1,6 +1,6 @@
 ---
-title: Albert ALBALA
-fonction: SECRETAIRE-TRESORIER, TERRE DES JEUNES TRANSNATIONAL
+title: Albert Albala
+fonction: Secrétaire-trésorier, Terre des jeunes transnational
 image: /media/albert_photo_2022.png.jpg
 x: https://x.com/alberto56
 facebook: https://www.facebook.com/albert.albala.3
