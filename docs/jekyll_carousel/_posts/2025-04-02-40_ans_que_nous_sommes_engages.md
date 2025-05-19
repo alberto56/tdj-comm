@@ -1,6 +1,7 @@
 ---
 title: 40 ans que nous sommes engagés
 active: true
-order: "h"
+order: J
+lien: https://beta.terredesjeunes.org/a-propos/
 image: /media/camions.jpg
 ---

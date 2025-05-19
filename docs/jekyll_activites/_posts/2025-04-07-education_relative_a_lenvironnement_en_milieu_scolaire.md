@@ -1,10 +1,12 @@
 ---
 title: Education à l'environnement en milieu scolaire
 permalink: /education/
-image: /media/dsc_1988_fileminimizer_.jpg
 layout: activite
+image: /media/dsc_1988_fileminimizer_.jpg
+documents:
+  - /media/education_a_l_environnement_et_au_dd.pdf
 ---
-L'éducation à l'environnement vise à sensibiliser les individus à l'importance de la protection de l'environnement et à encourager des comportements respectueux de la nature.
+[L'éducation à l'environnement ](file:///D:/ABIBA/EDUCATION%20A%20L'ENVIRONNEMENT%20ET%20AU%20DD.pdf)vise à sensibiliser les individus à l'importance de la protection de l'environnement et à encourager des comportements respectueux de la nature.
 
 *Elle se base sur l'idée que chacun a un rôle à jouer dans la préservation de la planète.*
 
@@ -137,3 +139,5 @@ o	Dispositions légales, organisations et complexité.
 o	Alphabétisation écologique pour tous.
 
 L'éducateur à l'environnement s'adresse au cerveau, à la main, au cœur et à l’esprit, intégrant savoirs, savoir-faire, savoir-être et savoir-devenir. Cela inclut une compréhension approfondie des éléments de base de l'écologie, des lois, et des organisations pertinentes.
+
+![](/media/-_visual_selection.png)

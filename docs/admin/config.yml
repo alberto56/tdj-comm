@@ -28,3 +28,4 @@ collections:
 {% include decap/textes.yml %}
 {% include decap/variables.yml %}
 {% include decap/temoignages.yml %}
+{% include decap/redirections.yml %}

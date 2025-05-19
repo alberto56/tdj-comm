@@ -47,3 +47,6 @@
     flex: 0 0 90%; /* Adjust for mobile screens */
   }
 }
+.partner-wrapper a {
+  text-emphasis: none;
+}
