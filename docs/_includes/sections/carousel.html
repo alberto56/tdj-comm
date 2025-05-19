@@ -1,4 +1,13 @@
 <section class="hero-section hero-section-full-height">
+  <style>
+    @media (max-width: 576px) {
+      .carousel-image {
+        height: 250px; /* Ajustez cette valeur selon vos besoins */
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  </style>
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-12 p-0">
@@ -10,8 +19,7 @@
             {% for carousel in sorted %}
               {% if carousel.active %}
                 <div class="carousel-item{{ extra_classes }}"{{ extra_attr }}>
-                  <img src="{{ carousel.image }}"
-                    class="d-block w-100 carousel-image " alt="...">
+                  <img src="{{ carousel.image }}" class="d-block w-100 carousel-image" alt="...">
                   <div class="my-carousel-title-wrapper">
                     <span class="my-carousel-title">
                       <span class="my-carousel-title-inner">
@@ -27,12 +35,12 @@
           </div>
           <!-- Carousel controls -->
           <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Précéeent</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Suivant</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
           </button>
         </div>
       </div>

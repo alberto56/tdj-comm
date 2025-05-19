@@ -44,3 +44,10 @@
     max-height: 4em; /* Ajustez pour deux lignes */
   }
 }
+@media (max-width: 576px) {
+  .carousel-image {
+    height: 250px; /* Ou toute autre hauteur souhaitée */
+    object-fit: cover; /* Ajuste l'image pour qu'elle couvre tout l'espace */
+    width: 100%; /* Assurez-vous que l'image prend toute la largeur */
+  }
+}
