@@ -24,4 +24,4 @@ defaults:
       path: "jekyll_partenaires"
     values:
       layout: "partenaire"
-      permalink: "partenaires/:title"
+      permalink: "partenaires/:title/"
