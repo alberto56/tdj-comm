@@ -2,9 +2,11 @@
 title: Cyriaque Adjafo
 fonction: Président national, Togo
 image: /media/cyriaque_adjafo.jpg
-x: https://x.com/CAdjafo
-facebook: beta.terredesjeunes.org
-instagram: https://www.linkedin.com/in/cyriaque-adjafo/
+reseaux:
+  - type: twitter-x
+    lien: https://x.com/CAdjafo
+  - type: instagram
+    lien: https://www.linkedin.com/in/cyriaque-adjafo/
 ---
 Terre des Jeunes Togo
 

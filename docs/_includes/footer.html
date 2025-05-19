@@ -190,6 +190,17 @@
     { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
     ];
 
+    function team_reseaux(member) {
+      if (!member.reseaux) {
+        return '';
+      }
+      let ret = '<div class="team-social text-center">';
+      member.reseaux.forEach(function(social) {
+        ret += `<a class="btn btn-square" href="${social.lien}"><i class="bi bi-${social.type}"></i></a>`;
+      });
+      return ret + '</div>';
+    }
+
     function populateTeamMembers(teamMembers) {
     const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
     if (!teamContainer) {
@@ -206,11 +217,7 @@
                            <div class="card-body">
                                <h5 class="card-title">${member.name}</h5>
                                <p class="card-text text-muted">${member.role}</p>
-                               <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
-                            </div>
+                               ${team_reseaux(member)}
                            </div>
                        </div>
                      </a>

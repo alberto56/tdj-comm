@@ -28,6 +28,7 @@ class Membres extends Infos {
         role: node.fonction,
         image: node.image,
         url: node.url,
+        reseaux: node.reseaux,
       });
     });
 

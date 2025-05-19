@@ -2,8 +2,11 @@
 title: Bohui Melaire Kouassi
 fonction: Président exécutif, Terre des jeunes Côte d'Ivoire
 image: /media/whatsapp_image_2025-04-02_a_11.59.48_a33150da.jpg
-x: https://x.com/BohuiMelair
-facebook: https://web.facebook.com/TerreDesJeunesCoteDivoire
+reseaux:
+  - type: x-twitter
+    lien: https://x.com/BohuiMelair
+  - type: facebook
+    lien: https://web.facebook.com/TerreDesJeunesCoteDivoire
 ---
 Président de terre des jeunes Côte d'Ivoire depuis 2007
 Résolument engagé pour la sauvegarde de notre bien commun: La Planète en éduquant, sensibilisant sur les méfaits de nos actions sur l'environnement dans lequel nous existons.

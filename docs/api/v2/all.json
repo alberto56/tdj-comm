@@ -47,7 +47,8 @@
       "title": {{ obj.title | jsonify }},
       "content": {{ obj.content | jsonify }},
       "fonction": {{ obj.fonction | jsonify }},
-      "image": {{ obj.image | jsonify }}
+      "image": {{ obj.image | jsonify }},
+      "reseaux": {{ obj.reseaux | jsonify }}
     }
   {% endfor %}
 {% endcapture %}
