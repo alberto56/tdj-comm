@@ -2,6 +2,6 @@
 title: "Partager notre expertise "
 active: true
 order: L
-lien: https://beta.terredesjeunes.org/about.html
+lien: https://beta.terredesjeunes.org/a-propos/
 image: /media/mangrove.jpg
 ---

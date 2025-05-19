@@ -1,23 +1,12 @@
 {% assign template="sections/antennes_par_pays.html" %}
 {% include structure/debug.html %}
-{% assign p="_antennes" %}{% assign v=_antennes %}{% include structure/r.html %}
 {% assign p="_pays" %}{% assign v=_pays %}{% include structure/r.html %}
 
 <section>
   <div class="container">
     <div class="col-lg-12 col-12 mb-5">
       <ul>
-        {% for antenne in _antennes %}
-          {% if antenne.country == _pays %}
-            {% if antenne.active %}
-              <li>
-                <a href="{{ antenne.page_url }}">
-                  {{ antenne.title }}
-                </a>
-              </li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+        {% include parts/antennes_pays.html %}
       </ul>
     </div>
   </div>

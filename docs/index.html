@@ -28,7 +28,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-12 mb-5 mb-lg-0">
-              <img src="images/c.jpg"
+              <img src="/images/c.jpg"
                 class="custom-text-box-image img-fluid " alt="" style="width: 600px; height: 680px;">
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-12">
@@ -80,7 +80,7 @@
                   <li class="custom-list-item d-flex">
                     <i class="bi-check custom-text-box-icon me-2"></i>
                     Banque Agricole de graines
-                    <a href="about.html" class="nav-link custom-btn custom-border-btn btn">Read-more</a>
+                    <a href="/a-propos/" class="nav-link custom-btn custom-border-btn btn">Read-more</a>
                   </li>
                 </ul>
               </div>
@@ -116,21 +116,11 @@
           </div>
         </div>
       </section>
-      <!-- cta sections de rapports clic -->
-      <section class="cta-section section-padding section-bg mt-4">
-        <div class="container">
-          <div class="row ">
-            <div class="col-lg-7 col-12 ms-auto">
-              <a href="rapports.html" class="custom-btn btn smoothscroll">Rapport D'activités</a>
-              <a href="/actualites/#categories/(rapports%20annuels)" class="me-6">Rapports annuels</a>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {% include sections/rapports.html %}
 
       {% include sections/activites.html %}
 
+      {% assign _show_link_to_all = 'show' %}
       {% include sections/articles.html %}
 
       <!-- createur et membres Terre des jeunes-->
@@ -171,7 +161,7 @@
               </form>
             </div>
             <div class="col-lg-6  col-xs-9 col-md-8  col-12">
-              <img src="images/c.jpg"
+              <img src="/images/c.jpg"
                 class="volunteer-image img-fluid img-responsive center-block d-block d-lg-block mx-auto" alt="">
               <div class="custom-block-body text-center">
                 <h4 class="text-white mt-lg-3 mb-lg-3" data-var="benevolat_page_accueil_titre">Apropos de Bénevolat</h4>
@@ -190,7 +180,6 @@
     {% include sections/partenaire.html %}
     {% include sections/subscribe.html %}
     <!-- footer sections -->
-    {% assign maxArticles = 6 %}
     {% assign maxArticles = 6 %}
     <script>
       const _notArticlesOfType = ['Actions internes'];

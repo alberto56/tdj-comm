@@ -12,6 +12,11 @@ default_activites_crumbs:
     url: "/"
   - title: "Activités"
     url: "/#activites"
+default_partenaires_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Partenaires"
+    url: "/partenaires/"
 default_blog_crumbs:
   - title: "Accueil"
     url: "/"
@@ -24,11 +29,20 @@ default_syneco_garden_crumbs:
     url: "/#activites"
   - title: "Synécoculture"
     url: "/synecoculture/"
+default_antennes_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Antennes"
+    url: "/antennes/"
 menu_bas:
   - title: "Mots du Président"
     url: "/mots-du-president/"
   - title: "Actualités"
     url: "/actualites/"
+  - title: "Guide de style et logo"
+    url: "/guide-style/"
+  - title: "Statuts"
+    url: "/statuts/"
 social:
   - url:
     icon: twitter

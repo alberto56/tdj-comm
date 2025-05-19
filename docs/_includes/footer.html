@@ -11,8 +11,7 @@
         <div class="col-lg-3 col-md-6 col-12 mb-4">
           <h5 class="site-footer-title mb-3 text-white">Liens Directs</h5>
           <ul class="footer-menu list-unstyled">
-            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link text-white">Notre Historique</a></li>
-            <li class="footer-menu-item"><a href="news.html" class="footer-menu-link text-white">Actualités</a></li>
+            <li class="footer-menu-item"><a href="/a-propos/historique/" class="footer-menu-link text-white">Notre Historique</a></li>
             <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link text-white">Causes</a></li>
             <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link text-white">Devenir un Bénévole</a></li>
             {% for item in site.data.config.menu_bas %}
@@ -250,6 +249,7 @@
             loadDefaultNews(news);
           },
           not: typeof _notArticlesOfType == "undefined" ? [] : _notArticlesOfType,
+          onlyantenne: typeof _onlyArticlesOfAntenne == "undefined" ? [] : _onlyArticlesOfAntenne,
         }
       });
     });
