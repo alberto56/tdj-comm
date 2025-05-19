@@ -24,10 +24,16 @@ defaults:
       path: "jekyll_partenaires"
     values:
       layout: "partenaire"
-      permalink: "partenaires/:title"
+      permalink: "partenaires/:title/"
   -
     scope:
       path: "jekyll_bios"
     values:
       layout: "bio"
-      permalink: "bio/:title"
+      permalink: "bios/:title"
+  -
+    scope:
+      path: "jekyll_temoignages"
+    values:
+      layout: "temoignage"
+      permalink: "temoignages/:title/"

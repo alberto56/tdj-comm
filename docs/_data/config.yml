@@ -22,6 +22,11 @@ default_blog_crumbs:
     url: "/"
   - title: "Actualités"
     url: "/actualites/"
+default_temoignage_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Témoignages"
+    url: "/temoignages/"
 default_syneco_garden_crumbs:
   - title: "Accueil"
     url: "/"

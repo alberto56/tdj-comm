@@ -27,7 +27,8 @@
   {% endcapture %}
   {% assign _categories = page.categories %}
   {% assign _antennes = page.antenne2 %}
-  {% include sections/onlytext_blog.html %}
+  {% assign _image = page.image %}
+  {% include sections/text_and_bio.html %}
 
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}
