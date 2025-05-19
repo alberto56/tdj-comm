@@ -15,6 +15,10 @@
   // carousel image
   let carouselSize = { height: null };
 
+  // collect elements which has style background-image: url() and store it globally
+  // we can later replace with optimized image urls
+  collectBackgroundImageElements();
+
   // Fetch the JSON file once
   fetch(imageFileUrl)
       .then(response => {
@@ -24,14 +28,24 @@
           return response.json();
       })
       .then(mappingData => {
-          // Iterate over each <img> element
-          images.forEach(img => {
-            optimizeImage(img, mappingData, imageServerDomain, carouselSize);
+        // Iterate over each <img> element
+        images.forEach(img => {
+          optimizeImage(img, mappingData, imageServerDomain, carouselSize);
+        });
+        // replace optimized images mentioned in styles. ex:- background-image: url(/media/cameroun_9.jpg)
+        if (window.bgImageElements) {
+          window.bgImageElements.forEach((item, index) => {
+            // assuming width always 100%
+            const newoptimizedUrl = getOptimizedImageUrl(item.imageName, "", Math.round(item.height), mappingData, imageServerDomain);
+            if (newoptimizedUrl && newoptimizedUrl != item.imageName) {
+              item.element.style.backgroundImage = `url(${newoptimizedUrl})`;
+            }
           });
+        }
       })
       .catch(error => {
-          console.error('Error fetching or processing JSON:', error);
-          // Optionally handle error, e.g., set a fallback image for all images
+        console.error('Error fetching or processing JSON:', error);
+        // Optionally handle error, e.g., set a fallback image for all images
       });
 }
 
@@ -183,4 +197,59 @@ function optimizeImage(img, mappingData, imageServerDomain, carouselSize) {
 
   const optimizedUrl = getOptimizedImageUrl(dataSrc, width, height, mappingData, imageServerDomain);
   img.src = optimizedUrl;
+}
+
+/**
+ * Collects all DOM elements that have a `background-image` set via CSS,
+ * extracts useful information (URL, image name, dimensions),
+ * and stores the result globally in `window.bgImageElements`.
+ *
+ * Properties stored for each matched element:
+ * - element: The actual DOM element reference.
+ * - backgroundImage: Full background image URL as a string.
+ * - imageName: Extracted image filename from the URL (e.g., "banner.jpg").
+ * - width: Rendered width in pixels.
+ * - height: Rendered height in pixels.
+ *
+ * @example
+ * collectBackgroundImageElements();
+ * console.log(window.bgImageElements);
+ *
+ * @global
+ * @returns {void}
+ */
+function collectBackgroundImageElements() {
+  // Define global store
+  window.bgImageElements = [];
+
+  // Select all elements that have a background image
+  const elementsWithBg = [...document.querySelectorAll('*')].filter(el => {
+    const bg = window.getComputedStyle(el).getPropertyValue('background-image');
+    return bg && bg !== 'none' && bg.includes('url(');
+  });
+
+  // Store data globally
+  elementsWithBg.forEach((el) => {
+    const computedStyle = window.getComputedStyle(el);
+    const bgImage = computedStyle.getPropertyValue('background-image');
+
+    // Extract the image URL
+    const urlMatch = bgImage.match(/url\(["']?(.*?)["']?\)/);
+    const imageUrl = urlMatch ? urlMatch[1] : null;
+
+    // Get dimensions
+    const { width, height } = el.getBoundingClientRect();
+
+    // Extract image name (e.g., from 'https://example.com/images/photo.jpg')
+    const imageName = imageUrl ? imageUrl.split('/').pop().split('?')[0].split('#')[0] : null;
+
+    // Store in global array
+    window.bgImageElements.push({
+      element: el,
+      backgroundImage: imageUrl,
+      imageName,
+      width,
+      height
+    });
+  });
 }
