@@ -2,6 +2,13 @@
 title: Joël D. Augustin
 fonction: Président, Terre des jeunes Gonaïves, Haïti
 image: /media/joel_haiti.jpg
+reseaux:
+  - lien: https://www.facebook.com/dieuseul.augustin
+    type: facebook
+  - lien: https://www.linkedin.com/in/jo%C3%ABl-d-augustin-990a98b3/
+    type: linkedin
+  - lien: https://x.com/joegustyle
+    type: twitter-x
 ---
 Agronome de profession, spécialiste en environnement et en ingénierie sociale, consultant/ animateur social, Ambassadeur CoalitionWILD, coordonnateur Terre des Jeunes en Haïti, expérimenté avec de nombreuses institutions depuis 20 ans :
 

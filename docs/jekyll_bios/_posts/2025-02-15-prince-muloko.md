@@ -2,6 +2,15 @@
 title: Prince Muloko
 fonction: Webmaster, Terre des jeunes R. D. Congo
 image: /media/prime.jpg
+reseaux:
+  - lien: https://www.facebook.com/share/15MQHZtuPv/
+    type: Facebook
+  - lien: https://www.linkedin.com/in/prince-muloko-63b427198/
+    type: linkedin
+  - lien: https://x.com/primemul
+    type: twitter-x
+  - lien: https://www.instagram.com/honprincemul?igsh=YTllN2NrZGV5YjNm
+    type: Instagram
 ---
 
 

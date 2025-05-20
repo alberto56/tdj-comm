@@ -7,6 +7,8 @@ reseaux:
     lien: https://x.com/CAdjafo
   - type: instagram
     lien: https://www.linkedin.com/in/cyriaque-adjafo/
+  - lien: https://www.facebook.com/lecyriaque.adjafo.1
+    type: facebook
 ---
 Terre des Jeunes Togo
 
