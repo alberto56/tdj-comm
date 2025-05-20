@@ -6,10 +6,10 @@ image: /media/whatsapp_image_2025-04-02_a_11.59.48_a33150da.jpg
 reseaux:
   - type: twitter-x
     lien: https://x.com/BohuiMelair
+  - lien: https://www.instagram.com/kouassibohui/#
+    type: instagram
   - type: facebook
     lien: https://web.facebook.com/TerreDesJeunesCoteDivoire
-  - lien: https://www.instagram.com/kouassibohui/#
-    type: Instagram
   - lien: https://www.linkedin.com/in/kouassi-bohui-melaire-83883640/
     type: linkedin
 x: https://x.com/BohuiMelair
