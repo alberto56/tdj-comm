@@ -1,6 +1,6 @@
 ---
 title: Sephanie Milenge Matundanya
-fonction: Secrétaire exécutif, Terre des jeunes R. D. Congo
+fonction: Secrétaire exécutif, R. D. Congo
 image: /media/burundi.jpg
 reseaux:
   - lien: https://www.facebook.com/solifede.rdc
