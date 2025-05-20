@@ -1,6 +1,6 @@
 ---
 title: Christine Alida Ehouman
-fonction: Présidente fondatrice, Terre des jeunes Sénégal
+fonction: Présidente fondatrice, Sénégal
 image: /media/alida_ehouman_senegal.png
 reseaux:
   - lien: https://www.facebook.com/search/top?q=terre%20des%20jeunes-senegal
