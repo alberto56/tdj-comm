@@ -9,7 +9,7 @@ reseaux:
     type: linkedin
   - lien: https://x.com/primemul
     type: twitter-x
-  - lien: https://www.instagram.com/honprincemul
+  - lien: https://www.instagram.com/honprincemul/?igsh=YTllN2NrZGV5YjNm#
     type: Instagram
 ---
 
