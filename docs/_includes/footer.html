@@ -190,6 +190,17 @@
     { name: "Jacques Leblanc", role: "Manager", image: "images/250.jpg", bio: "Jacques excelle en gestion de projets." },
     ];
 
+    function team_reseaux(member) {
+      if (!member.reseaux) {
+        return '';
+      }
+      let ret = '<div class="team-social text-center">';
+      member.reseaux.forEach(function(social) {
+        ret += `<a class="btn btn-square" href="${social.lien}"><i class="bi bi-${social.type}"></i></a>`;
+      });
+      return ret + '</div>';
+    }
+
     function populateTeamMembers(teamMembers) {
     const teamContainer = document.getElementById('team-members');  /*mettre-membres-ici */
     if (!teamContainer) {
@@ -199,19 +210,17 @@
            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
                ${teamMembers.map((member, index) => `
                    <div class="col">
+                     <a href="${member.url}">
                        <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
                            <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
                                style="width: 120px; height: 120px; object-fit: cover;">
                            <div class="card-body">
                                <h5 class="card-title">${member.name}</h5>
                                <p class="card-text text-muted">${member.role}</p>
-                               <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-linkedin"></i></a>
-                            </div>
+                               ${team_reseaux(member)}
                            </div>
                        </div>
+                     </a>
                    </div>
                `).join('')}
            </div>

@@ -1,7 +1,10 @@
 class Membres extends Infos {
   url() {
-    // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return 'https://contenu.terredesjeunes.org/api/v1/bios.json';
+    return '/api/v2/all.json';
+  }
+
+  key() {
+    return 'bios';
   }
 
   init2(options) {
@@ -20,9 +23,11 @@ class Membres extends Infos {
     let teamMembers = [];
     response.forEach((node) => {
       teamMembers.push({
-        name: node.nom,
-        role: node.title,
-        image: 'https://contenu.terredesjeunes.org' + node.image,
+        name: node.title,
+        role: node.fonction,
+        image: node.image,
+        url: node.url,
+        reseaux: node.reseaux,
       });
     });
 

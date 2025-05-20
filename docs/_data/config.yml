@@ -22,6 +22,11 @@ default_blog_crumbs:
     url: "/"
   - title: "Actualités"
     url: "/actualites/"
+default_temoignage_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Témoignages"
+    url: "/temoignages/"
 default_syneco_garden_crumbs:
   - title: "Accueil"
     url: "/"
@@ -34,6 +39,11 @@ default_antennes_crumbs:
     url: "/"
   - title: "Antennes"
     url: "/antennes/"
+default_bio_crumbs:
+  - title: "Accueil"
+    url: "/"
+  - title: "Bios"
+    url: "/bios/"
 menu_bas:
   - title: "Mots du Président"
     url: "/mots-du-president/"
