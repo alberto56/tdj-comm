@@ -51,3 +51,15 @@
     width: 100%; /* Assurez-vous que l'image prend toute la largeur */
   }
 }
+
+.my-carousel-title-inner {
+  display: -webkit-box; /* Pour Safari */
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* Nombre de lignes à afficher */
+  line-clamp: 2; /* Nombre de lignes à afficher */
+  max-height: 4em; /* Ajusté pour permettre deux lignes */
+  font-size: 1.5rem; /* Taille de police par défaut */
+}
