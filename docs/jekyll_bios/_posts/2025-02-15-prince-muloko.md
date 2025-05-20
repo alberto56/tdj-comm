@@ -5,6 +5,8 @@ image: /media/prime.jpg
 reseaux:
   - lien: https://www.facebook.com/honprincemul
     type: Facebook
+  - lien: https://www.linkedin.com/in/prince-muloko-63b427198/
+    type: linkedin
 ---
 
 
