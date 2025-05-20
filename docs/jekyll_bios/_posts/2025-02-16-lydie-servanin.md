@@ -1,6 +1,6 @@
 ---
-title: VICE-PRESIDENTE DE TERRE DES JEUNES TRANSNATIONAL
-nom: LYDIE SERVANIN
+title: Lydie Servanin
+fonction: Vice-Présidente, Terre des jeunes transnational
 image: /media/lydie_serv.jpg
 ---
 Membre fondatrice du projet Bioénergie Haïti aux Gonaïves qui vise à créer un modèle viable de gestion des déchets avec co-énergie solaire/biogaz. De plus, elle possède une longue expérience en gestion de projet, d'une part dans le domaine du web où elle a mené à terme des dizaines de projets et, d’autre part, en environnement depuis plus de 25 ans.

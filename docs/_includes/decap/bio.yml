@@ -4,11 +4,11 @@
     folder: 'docs/jekyll_bios/_posts/'
     slug: '{{slug}}'
     fields:
-      - label: 'Titre, par exemple "Directeur exécutif"'
+      - label: 'Nom'
         name: 'title'
         widget: 'string'
-      - label: 'Nom'
-        name: 'nom'
+      - label: 'Titre (fonction), par exemple "Directeur exécutif"'
+        name: 'fonction'
         widget: 'string'
       - label: Image
         name: image
@@ -16,15 +16,14 @@
       - label: 'Contenu'
         name: 'body'
         widget: 'markdown'
-      - label: 'x'
-        name: 'x'
-        widget: 'string'
-        required: false
-      - label: 'facebook'
-        name: 'facebook'
-        widget: 'string'
-        required: false
-      - label: 'instagram'
-        name: 'instagram'
-        widget: 'string'
-        required: false
+      - label: "Réseaux sociaux"
+        name: "reseaux"
+        widget: "list"
+        fields:
+        - label: 'Type'
+          name: 'type'
+          widget: 'string'
+          hint: 'ex: facebook, instagram, twitter-x, linkedin'
+        - label: 'Lien'
+          name: 'lien'
+          widget: 'string'
