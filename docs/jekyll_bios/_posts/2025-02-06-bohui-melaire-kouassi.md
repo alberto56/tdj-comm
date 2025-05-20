@@ -1,6 +1,6 @@
 ---
-title: Président Exécutif Côte d'Ivoire
-fonction: Président exécutif, Terre des jeunes Côte d'Ivoire
+title: " Président exécutif, Terre des jeunes Côte d'Ivoire"
+fonction: Président Exécutif Côte d'Ivoire
 nom: Bohui Melaire Kouassi
 image: /media/whatsapp_image_2025-04-02_a_11.59.48_a33150da.jpg
 reseaux:
