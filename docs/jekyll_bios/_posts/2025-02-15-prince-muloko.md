@@ -8,7 +8,7 @@ reseaux:
   - lien: https://www.linkedin.com/in/prince-muloko-63b427198/
     type: linkedin
   - lien: https://x.com/primemul
-    type: twitter.x
+    type: twitter-x
 ---
 
 
