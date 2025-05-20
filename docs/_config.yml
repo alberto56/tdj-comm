@@ -25,3 +25,15 @@ defaults:
     values:
       layout: "partenaire"
       permalink: "partenaires/:title/"
+  -
+    scope:
+      path: "jekyll_bios"
+    values:
+      layout: "bio"
+      permalink: "bios/:title"
+  -
+    scope:
+      path: "jekyll_temoignages"
+    values:
+      layout: "temoignage"
+      permalink: "temoignages/:title/"

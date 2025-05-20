@@ -10,15 +10,17 @@
   <div class="testimonial">
       {{ _citation | markdownify }}
   </div>
-  <div class="media" style="display: flex; align-items: center;">
-    <img src="{{ _img }}" alt="" style="width: 75px; height: 75px; border-radius: 50%;">
-    <div class="media-body" style="margin-left: 10px;">
-      <div class="overview">
-        <div class="name"><b>{{ _nom }}</b></div>
-        <div class="details">{{ _fonction }}</div>
+  <a href="{{ _url }}">
+    <div class="media" style="display: flex; align-items: center;">
+      <img src="{{ _img }}" alt="" style="width: 75px; height: 75px; border-radius: 50%;">
+      <div class="media-body" style="margin-left: 10px;">
+        <div class="overview">
+          <div class="name"><b>{{ _nom }}</b></div>
+          <div class="details">{{ _fonction }}</div>
+        </div>
       </div>
     </div>
-  </div>
+    </a>
 </div>
 
 {% assign template="sectin/testimonial/testimonial_single.html" %}
