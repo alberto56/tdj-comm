@@ -10,6 +10,8 @@ reseaux:
     lien: https://web.facebook.com/TerreDesJeunesCoteDivoire
   - lien: https://www.linkedin.com/in/kouassi-bohui-melaire-83883640/
     type: linkedin
+  - lien: https://www.instagram.com/kouassibohui/
+    type: Instagram
 x: https://x.com/BohuiMelair
 ---
 Président de terre des jeunes Côte d'Ivoire depuis 2007
