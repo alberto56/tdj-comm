@@ -5,10 +5,10 @@ image: /media/cyriaque_adjafo.jpg
 reseaux:
   - type: twitter-x
     lien: https://x.com/CAdjafo
-  - type: instagram
-    lien: https://www.linkedin.com/in/cyriaque-adjafo/
   - lien: https://www.facebook.com/lecyriaque.adjafo.1
     type: facebook
+  - type: instagram
+    lien: https://www.linkedin.com/in/cyriaque-adjafo/
 ---
 Terre des Jeunes Togo
 
