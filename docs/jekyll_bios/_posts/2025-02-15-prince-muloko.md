@@ -6,9 +6,9 @@ reseaux:
   - lien: https://x.com/primemul
     type: twitter-x
   - lien: https://www.facebook.com/share/15MQHZtuPv/
-    type: Facebook
+    type: facebook
   - lien: https://www.instagram.com/honprincemul?igsh=YTllN2NrZGV5YjNm
-    type: Instagram
+    type: instagram
   - lien: https://www.linkedin.com/in/prince-muloko-63b427198/
     type: linkedin
 ---

@@ -9,7 +9,7 @@ reseaux:
   - type: facebook
     lien: https://web.facebook.com/TerreDesJeunesCoteDivoire
   - lien: https://www.instagram.com/kouassibohui/#
-    type: Instagram
+    type: instagram
   - lien: https://www.linkedin.com/in/kouassi-bohui-melaire-83883640/
     type: linkedin
 x: https://x.com/BohuiMelair
