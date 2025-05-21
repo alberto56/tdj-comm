@@ -32,11 +32,9 @@
         required: false
         fields:
         - label: 'Structure'
+          name: 'structure'
           widget: 'select'
           options:
           - { label: 'Carousel', value: 'carousel' }
           hint: 'ex: facebook, instagram, twitter-x, linkedin'
-        - label: 'Lien'
-          name: 'lien'
-          widget: 'string'
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
