@@ -1,0 +1,12 @@
+{% assign template="structure/section.html" %}
+{% include structure/debug.html %}
+{% assign p="_section" %}{% assign v=_section %}{% include structure/r.html %}
+
+{% if _section == _carousel %}
+  {% include sections/carousel.html %}
+{% else %}
+  <div class="my-build-error-to-display-with-js">unknown section _section</div>
+{% endif %}
+
+{% assign template="structure/section.html" %}
+{% include structure/enddebug.html %}

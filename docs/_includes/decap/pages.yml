@@ -9,13 +9,34 @@
         name: layout
         widget: "select"
         options:
-        - { label: 'Blog', value: 'blog' }
-        - { label: 'Liste de mots du président', value: 'liste_motsdupresident' }
-        - { label: 'Liste des articles', value: 'liste_articles' }
-        - { label: 'Contact', value: 'contact' }
+        - { label: 'apropos', value: 'apropos' }
+        - { label: 'blog', value: 'blog' }
+        - { label: 'contact', value: 'contact' }
+        - { label: 'don', value: 'don' }
+        - { label: 'liste_antennes', value: 'liste_antennes' }
+        - { label: 'liste_articles', value: 'liste_articles' }
+        - { label: 'liste_bios', value: 'liste_bios' }
+        - { label: 'liste_motsdupresident', value: 'liste_motsdupresident' }
+        - { label: 'liste_partenaires', value: 'liste_partenaires' }
+        - { label: 'liste_temoignages', value: 'liste_temoignages' }
+        - { label: 'page', value: 'page' }
+        - { label: 'Page structurée (expérimental)', value: 'page2' }
       - label: 'Chemin'
         name: 'permalink'
         widget: 'string'
         required: false
         hint: 'Sert à créer le lien vers la page, par exemple /a-propos-de-nous/'
+      - label: "Sections (expérimental)"
+        name: "sections"
+        widget: "list"
+        required: false
+        fields:
+        - label: 'Structure'
+          widget: 'select'
+          options:
+          - { label: 'Carousel', value: 'carousel' }
+          hint: 'ex: facebook, instagram, twitter-x, linkedin'
+        - label: 'Lien'
+          name: 'lien'
+          widget: 'string'
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
