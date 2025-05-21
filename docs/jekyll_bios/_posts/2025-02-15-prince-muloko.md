@@ -1,6 +1,6 @@
 ---
 title: Prince Muloko
-fonction: Webmaster, Terre des jeunes R. D. Congo
+fonction: Webmaster, Terre des jeunes R. D. C
 image: /media/prime.jpg
 reseaux:
   - lien: https://x.com/primemul
