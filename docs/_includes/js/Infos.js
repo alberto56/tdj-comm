@@ -82,7 +82,7 @@ class Infos extends Service {
   replaceVariable(template, prop, value, type) {
     let prefix = '';
     if (type == 'image') {
-      prefix = 'https://contenu.terredesjeunes.org';
+      prefix = '';
     }
     const valueAndPrefix = prefix + value;
     return template.replace(new RegExp('__' + prop + '__', 'g'), valueAndPrefix);
