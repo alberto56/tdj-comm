@@ -44,11 +44,8 @@ scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
   -r * root@"$IP":docker-tdj-images
 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
   root@"$IP" "cd docker-tdj-images && export THUMBOR_SECURITY_KEY=$THUMBOR_SECURITY_KEY && ./scripts/install-docker-and-rebuild-optimized-images.sh"
-echo "Checking that mapping-beta-tdj-comm.json exists"
-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
-  root@"$IP" "ls -lah docker-tdj-images/thumbor-example"
 scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
-  root@"$IP":docker-tdj-images/thumbor-example/mapping-beta-tdj-comm.json mapping-beta-tdj-comm.json
+  root@"$IP":docker-tdj-images/thumbor-example/unversioned/mapping-beta-tdj-comm.json mapping-beta-tdj-comm.json
 cat mapping-beta-tdj-comm.json
 rm -rf tdj-image-mapping
 ssh-agent bash -c 'ssh-add "$TDJ_IMAGE_MAP_DEPLOY_PRIVATE_KEY"; git clone git@github.com:alberto56/tdj-image-mapping.git'
