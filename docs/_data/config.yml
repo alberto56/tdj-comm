@@ -45,6 +45,10 @@ default_bio_crumbs:
   - title: "Bios"
     url: "/bios/"
 menu_bas:
+  - title: "Causes"
+    url: "/#activites"
+  - title: "Historique"
+    url: "/a-propos/historique/"
   - title: "Mots du Président"
     url: "/mots-du-president/"
   - title: "Actualités"
@@ -53,6 +57,8 @@ menu_bas:
     url: "/guide-style/"
   - title: "Statuts"
     url: "/statuts/"
+  - title: "Contactez-nous"
+    url: "/contact/"
 social:
   - url:
     icon: twitter
