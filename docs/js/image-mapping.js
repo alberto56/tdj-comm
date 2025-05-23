@@ -12,7 +12,6 @@
   // Select all <img> elements with data-optimized-size attribute and src
   // should begins with /media in the document.
   const optimizedImages = document.querySelectorAll('img[data-optimized-size][src^="/media"]');
-  console.log(optimizedImages);
   // collect elements which has style background-image: url() and store it globally
   // we can later replace with optimized image urls
   collectBackgroundImageElements();
