@@ -1,7 +1,7 @@
 class Pays extends Infos {
   url() {
-    // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return 'https://contenu.terredesjeunes.org/api/v1/pays.json';
+    // Voir /api/v1 pour détais.
+    return '/api/v1/pays.json';
   }
 
   init2() {
@@ -12,7 +12,7 @@ class Pays extends Infos {
     country = this.getStruct(country);
 
     if (typeof country.drapeau != 'undefined') {
-      return 'https://contenu.terredesjeunes.org' + country.drapeau;
+      return country.drapeau;
     }
     return '';
   }

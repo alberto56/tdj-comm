@@ -12,7 +12,7 @@ img:
 ---
 Le samedi 22 juin a eu lieu la traditionnelle rencontre du réseau Terre des jeunes.
 
-* Stéphanie et Ramazan de SOLIFEDE (Solidarité des femmes, filles et enfants) de R. D. Congo, présentent leur organisme [qui a été admis au réseau Terre des jeunes en avril 2024](https://contenu.terredesjeunes.org/jekyll_blogposts/2024/04/25/solifede.html) active en Uvira.
+* Stéphanie et Ramazan de SOLIFEDE (Solidarité des femmes, filles et enfants) de R. D. Congo, présentent leur organisme [qui a été admis au réseau Terre des jeunes en avril 2024](/jekyll_blogposts/2024/04/25/solifede.html) active en Uvira.
 * Alida de Terre des jeunes Sénégal nous parle des activités de sa branche de Terre des jeunes, qui implique des démarches administratives et de formations et son travail conjoint avec Bohui Mélaire de Terre des jeunes Côte d'Ivoire.
 * Jacques KAMBETI de Imaginer et Construire le Congo de Demain (ICCOD-ONG), une organisation environnementale pygmée travaillant dans le sud Kuvi, en R. D. Congo. Il nous parle de ses activités de distribution de plants et ses activités de support aux enafnts Pygmées.
 * Micheline Sagesse de Terre des jeunes Jean-Rabel nous parle du projet Jarden Femmes qui s'est soldé par un succès.

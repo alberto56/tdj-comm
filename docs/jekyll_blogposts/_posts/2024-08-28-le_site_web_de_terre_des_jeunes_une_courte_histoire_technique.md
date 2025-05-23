@@ -58,7 +58,7 @@ N'ayant pas de budget (en temps ou en argent) pour faire une refonte graphique d
 
 J'ai ensuite créé un site secondaire basé sur Jekyll avec le CMS [Decap, précédemment connu sous le nom de NetlifyCMS](https://decapcms.org), pour gérer le contenu et produire du JSON qui est ensuite consommé par le site principal.
 
-Par exemple, https://contenu.terredesjeunes.org/api/v1/all.json contient les articles créés après le passage à Jekyll, et un script JavaScript, http://www.terredesjeunes.org/scripts/fetch-new-content.js, consomme ce contenu et l'affiche sur https://www.terredesjeunes.org.
+Par exemple, /api/v1/all.json contient les articles créés après le passage à Jekyll, et un script JavaScript, http://www.terredesjeunes.org/scripts/fetch-new-content.js, consomme ce contenu et l'affiche sur https://www.terredesjeunes.org.
 
 J'en ai même fait une [courte vidéo sur YouTube](https://www.youtube.com/watch?v=Loj6AKme5JY).
 
@@ -100,7 +100,7 @@ En octobre 2022, nous avons fossilisé le site web Drupal, que nous hébergeons 
 
 ### Le nouveau contenu
 
-Un autre site web, basé sur Jekyll et utilisant Decap, est aussi hébergé sur GitHub au <https://github.com/tdjeunes/website-content> et utilise GitHub Pages. Les membres du réseau Terre des jeunes peuvent utiliser l'interface conviviale de Decap, ou encore le code source directement, pour mettre à jour le contenu qui est ensuite disponible au <https://contenu.terredesjeunes.org>. Par exemple, vous y trouverez la page <https://contenu.terredesjeunes.org/jekyll_blogposts/2024/07/06/projet_jaden_fanm_jardin_des_femmes_a_jean-rabel_haiti.html> dont le code source est au <https://github.com/tdjeunes/website-content/blob/master/docs/jekyll_blogposts/_posts/2024-07-06-projet_jaden_fanm_jardin_des_femmes_a_jean-rabel_haiti.md>
+Un autre site web, basé sur Jekyll et utilisant Decap, est aussi hébergé sur GitHub au <https://github.com/tdjeunes/website-content> et utilise GitHub Pages. Les membres du réseau Terre des jeunes peuvent utiliser l'interface conviviale de Decap, ou encore le code source directement, pour mettre à jour le contenu qui est ensuite disponible au <https://contenu.terredesjeunes.org>. Par exemple, vous y trouverez la page </jekyll_blogposts/2024/07/06/projet_jaden_fanm_jardin_des_femmes_a_jean-rabel_haiti.html> dont le code source est au <https://github.com/tdjeunes/website-content/blob/master/docs/jekyll_blogposts/_posts/2024-07-06-projet_jaden_fanm_jardin_des_femmes_a_jean-rabel_haiti.md>
 
 ### La page d'accueil du site fossilisé consomme le nouveau contenu
 

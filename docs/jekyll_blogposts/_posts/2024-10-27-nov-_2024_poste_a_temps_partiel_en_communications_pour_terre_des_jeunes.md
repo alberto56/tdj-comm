@@ -27,7 +27,7 @@ La candidate ou le candidat idéal:
 * A un compte gratuit sur github.com
 * A un compte sur google.com
 * A une connaissance techniques sur le web (CSS, HTML, JavaScript)
-* Comprendra les concepts mis de l'avant dans https://contenu.terredesjeunes.org/jekyll_blogposts/2024/08/28/le_site_web_de_terre_des_jeunes_une_courte_histoire_technique.html
+* Comprendra les concepts mis de l'avant dans /jekyll_blogposts/2024/08/28/le_site_web_de_terre_des_jeunes_une_courte_histoire_technique.html
 * Connais les bases du design graphique
 
 Les tâches seront:

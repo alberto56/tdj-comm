@@ -12,4 +12,4 @@ img:
 ---
 Veuillez trouver ci-joint le rapport annuel 2023-2024 de Terre des jeunes.
 
-[RAPPORT ANNUEL 2023-2024](https://contenu.terredesjeunes.org/media/tdj-rapport-annuel-2024.docx.compressed.pdf).
+[RAPPORT ANNUEL 2023-2024](/media/tdj-rapport-annuel-2024.docx.compressed.pdf).

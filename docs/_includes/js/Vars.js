@@ -1,7 +1,7 @@
 class Vars extends Infos {
   url() {
-    // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
-    return 'https://contenu.terredesjeunes.org/api/v1/vars.json';
+    // Voir /api/v1 pour détais.
+    return '/api/v1/vars.json';
   }
 
   init2() {

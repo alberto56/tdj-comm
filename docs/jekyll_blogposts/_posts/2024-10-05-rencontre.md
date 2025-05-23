@@ -21,13 +21,13 @@ Le 5 octobre 2024 a eu lieu la traditionnelle rencontre de Terre des jeunes par 
 * Jean Nkeshima de TDJ Burundi.
 * Dieuseul Augustin de TDJ Gonaïves (Haïti)
 
-M. Kembeti nous parle des dernières activités de ICCOD. [Plus d'informatiosn ici](https://contenu.terredesjeunes.org/jekyll_blogposts/2024/10/04/iccod.html).
+M. Kembeti nous parle des dernières activités de ICCOD. [Plus d'informatiosn ici](/jekyll_blogposts/2024/10/04/iccod.html).
 
-Stéphanie de SOLIFEDE nous parle de ses projets d'arbres fruitiers pour enfants vulnérables, et charbon vert. [Plus d'informatiosn ici](https://contenu.terredesjeunes.org/jekyll_blogposts/2024/10/03/solifede.html).
+Stéphanie de SOLIFEDE nous parle de ses projets d'arbres fruitiers pour enfants vulnérables, et charbon vert. [Plus d'informatiosn ici](/jekyll_blogposts/2024/10/03/solifede.html).
 
 Alida de TDJ Sénégal nous parle de la mise en place de son bureau exécutif.
 
-M. Bohui Mélaire de TDJ Côte d'Ivoire nous parle du climat un peu déréglé dans son pays. Il parle de son accueil de M. François qui est arrivé dans son pays avec des dons à distribuer dans les dispensaires. [Plus d'informations ici](https://contenu.terredesjeunes.org/jekyll_blogposts/2024/08/27/cote_divoire_don_de_materiel_medical_pour_un_dispensaire_de_kongonou.html).
+M. Bohui Mélaire de TDJ Côte d'Ivoire nous parle du climat un peu déréglé dans son pays. Il parle de son accueil de M. François qui est arrivé dans son pays avec des dons à distribuer dans les dispensaires. [Plus d'informations ici](/jekyll_blogposts/2024/08/27/cote_divoire_don_de_materiel_medical_pour_un_dispensaire_de_kongonou.html).
 
 Nous discutons des modes de financement des activités: les cotisations des membres, certains organisations internationales, et des activités génératrices de revenu telles que la location de motos.
 

@@ -1,6 +1,6 @@
 class Antennes extends Infos {
   url() {
-    // Voir https://contenu.terredesjeunes.org/api/v1 pour détais.
+    // Voir /api/v1 pour détais.
     return '/api/v1/antennes.json';
   }
 
