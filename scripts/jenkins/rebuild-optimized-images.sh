@@ -54,5 +54,5 @@ cp ../mapping-beta-tdj-comm.json ./docs/mapping-beta-tdj-comm.json
 git add ./docs/mapping-beta-tdj-comm.json
 git config --global user.email "do-not-reply@mediatribe.net"
 git config --global user.name "Jenkins (I am a robot)"
-git commit -m "Jenkins automatically updating mapping-beta-tdj-comm.json"
+git commit -m "Jenkins automatically updating mapping-beta-tdj-comm.json" | echo "mapping-beta-tdj-comm.json probably has no changes
 ssh-agent bash -c 'ssh-add "$TDJ_IMAGE_MAP_DEPLOY_PRIVATE_KEY"; git push origin main'
