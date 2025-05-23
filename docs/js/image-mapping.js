@@ -79,7 +79,7 @@ function getImageSize(img) {
  */
 function getOptimizedImageUrl(dataSrc, dataSize, mappingData, imageServerDomain) {
   console.log(dataSrc);
-  const optimizedSrc = mappingData[dataSrc];
+  const optimizedSrc = mappingData[dataSrc.replace('/media', '')];
 
   if (optimizedSrc && optimizedSrc[dataSize]) {
     return imageServerDomain + optimizedSrc[dataSize];
