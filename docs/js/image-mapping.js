@@ -25,6 +25,8 @@
       return response.json();
     })
     .then(mappingData => {
+      // Store mappingData globally to access in news block
+      globalMappingData = mappingData;
       // Iterate over each <img> element
       optimizedImages.forEach(img => {
         optimizeImage(img, mappingData, imageServerDomain);
@@ -78,9 +80,7 @@ function getImageSize(img) {
  * @returns {string} - Optimized image URL.
  */
 function getOptimizedImageUrl(dataSrc, dataSize, mappingData, imageServerDomain) {
-  console.log(dataSrc);
   const optimizedSrc = mappingData[dataSrc.replace('/media', '')];
-
   if (optimizedSrc && optimizedSrc[dataSize]) {
     return imageServerDomain + optimizedSrc[dataSize];
   }
@@ -102,7 +102,6 @@ function optimizeImage(img, mappingData, imageServerDomain) {
   if (!dataSize) return;
 
   const optimizedUrl = getOptimizedImageUrl(dataSrc, dataSize, mappingData, imageServerDomain);
-  console.log(optimizedUrl);
   if (optimizedUrl != "") {
     img.src = optimizedUrl;
   }
