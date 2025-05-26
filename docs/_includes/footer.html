@@ -47,6 +47,9 @@
   <script src="/js/counter.js"></script>
   <script src="/js/custom.js"></script>
   <script>
+    // we will store the image optmization map file in globalMappingData variable. Later we can access
+    // globalMappingData in news block to map the news block images.
+    let globalMappingData = null;
     const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
     const recentNewsContainer = document.getElementById("recentNewsContainer");
     const countryList = document.getElementById("countryList");
@@ -93,13 +96,25 @@
           article.image = "/images/news/medium-shot-volunteers-with-clothing-donations.jpg";
       }
 
+      let imgSrc = article.image;
+      if (globalMappingData && imgSrc.startsWith("/media")) {
+        // fetch optimized Image Url for news block images.
+        const optimizePath = getOptimizedImageUrl(article.image, "604x400", globalMappingData, "{{ site.data.config.thumbor.image_server_domain }}");
+        if (optimizePath != "") {
+          imgSrc = optimizePath;
+        }
+      } else {
+        // Optional: wait or retry
+        console.warn('Global Mapping data not loaded yet.');
+      }
+
       newsBlock.innerHTML = `
           <div class="card shadow-sm mb-4" style="border: none;">
               <div class="card-body text-center">
                   ${pays}
                   <h5 class="card-title">${truncatedTitle}</h5>
                   <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                      <img src="${article.image}" alt="${article.title}" class="img-fluid rounded" data-optimized-size="604x200"
+                      <img src="${imgSrc}" alt="${article.title}" class="img-fluid rounded" data-optimized-size="604x200"
                           style="width: 100%; height: 100%; object-fit: cover;">
                   </div>
                   ${lirePlus}
@@ -196,7 +211,7 @@
                      <a href="${member.url}">
                        <div class="card text-center shadow-sm" style="cursor: pointer; border: none;" onclick="showModal(${index})">
                            <img src="${member.image}" class="card-img-top rounded-circle mx-auto mt-3" alt="${member.name}"
-                              data-optimized-size="120x120" style="width: 120px; height: 120px; object-fit: cover;">
+                              style="width: 120px; height: 120px; object-fit: cover;">
                            <div class="card-body">
                                <h5 class="card-title">${member.name}</h5>
                                <p class="card-text text-muted">${member.role}</p>
@@ -208,9 +223,7 @@
                `).join('')}
            </div>
        `;
-
     }
-
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
