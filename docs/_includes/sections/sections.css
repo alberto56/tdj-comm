@@ -10,5 +10,6 @@
 {% include sections/contact/formspree.css %}
 {% include sections/syneco/maps.css %}
 {% include sections/syneco/syneco.css %}
+{% include sections/syneco/metrics.css %}
 {% include sections/carousel.css %}
 {% include sections/h1_hero_tdj_loves.css %}
