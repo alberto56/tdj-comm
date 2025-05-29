@@ -2,8 +2,21 @@
 {% include structure/debug.html %}
 {% assign p="_section" %}{% assign v=_section %}{% include structure/r.html %}
 
-{% if _section == _carousel %}
-  {% include sections/carousel.html %}
+{% if _section.structure == 'breadcrumb' %}
+  {% assign _crumbs = _section.crumbs %}
+  {% include sections/breadcrumb.html %}
+{% else if _section.structure == 'image_content' %}
+  {% assign _image = _section.image %}
+  {% assign _content = _section.content %}
+  {% include sections/image_content.html %}
+{% else if _section.structure == 'content_image' %}
+  {% assign _image = _section.image %}
+  {% assign _content = _section.content %}
+  {% include sections/content_image.html %}
+{% else if _section.structure == 'message' %}
+  {% assign _message = _section.message %}
+  {% assign _type = _section.type %}
+  {% include sections/message.html %}
 {% else %}
   <div class="my-build-error-to-display-with-js">unknown section _section</div>
 {% endif %}

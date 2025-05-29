@@ -29,3 +29,4 @@ collections:
 {% include decap/variables.yml %}
 {% include decap/temoignages.yml %}
 {% include decap/redirections.yml %}
+{% include decap/pages_v2.yml %}

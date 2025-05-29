@@ -18,6 +18,11 @@ defaults:
       layout: "antenne"
   -
     scope:
+      path: "jekyll_pages_v2"
+    values:
+      layout: "page2"
+  -
+    scope:
       path: "jekyll_redirections"
     values:
       layout: "redirect"

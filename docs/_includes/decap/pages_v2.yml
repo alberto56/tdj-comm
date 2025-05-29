@@ -1,0 +1,41 @@
+  - name: 'pages_v2'
+    create: true
+    label: 'Pages (expérimental)'
+    folder: 'docs/jekyll_pages_v2/_posts/'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - label: 'Chemin (permalink)'
+        name: 'permalink'
+        widget: 'string'
+        required: false
+        hint: 'Sert à créer le lien vers la page, par exemple /a-propos-de-nous/'
+      - label: "Sections (expérimental)"
+        name: "sections"
+        widget: "list"
+        required: false
+        fields:
+        - label: 'Structure'
+          name: 'structure'
+          widget: 'select'
+          options:
+          - { label: 'Breadcrumb', value: 'breadcrumb' }
+          - { label: 'Message', value: 'message' }
+          - { label: 'Image and content', value: 'image_content' }
+          - { label: 'Content and image', value: 'content_image' }
+        - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+      - { label: 'Message', name: 'message', widget: 'markdown', required: false }
+      - { label: 'Type', name: 'type', widget: 'markdown', required: false }
+      - label: 'Crumbs'
+        name: 'crumbs'
+        widget: "list"
+        required: false
+        fields:
+        - label: 'Title'
+          name: 'title'
+          widget: 'string'
+        - label: 'Url'
+          name: 'url'
+          widget: 'string'
+      - { label: 'Image', name: 'image', widget: 'markdown', required: false }
+      - { label: 'Content', name: 'content', widget: 'markdown', required: false }
