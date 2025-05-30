@@ -60,9 +60,9 @@ menu_bas:
   - title: "Contactez-nous"
     url: "/contact/"
 social:
-  - url:
-    icon: twitter
-    actif: false
+  - url: https://www.linkedin.com/company/terre-des-jeunes
+    icon: linkedin
+    actif: true
   - url: https://www.facebook.com/groups/terredesjeunes/
     icon: facebook
     actif: true
