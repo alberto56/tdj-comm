@@ -23,19 +23,19 @@
           - { label: 'Message', value: 'message' }
           - { label: 'Image and content', value: 'image_content' }
           - { label: 'Content and image', value: 'content_image' }
-        - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-      - { label: 'Message', name: 'message', widget: 'markdown', required: false }
-      - { label: 'Type', name: 'type', widget: 'markdown', required: false }
-      - label: 'Crumbs'
-        name: 'crumbs'
-        widget: "list"
-        required: false
-        fields:
-        - label: 'Title'
-          name: 'title'
-          widget: 'string'
-        - label: 'Url'
-          name: 'url'
-          widget: 'string'
-      - { label: 'Image', name: 'image', widget: 'markdown', required: false }
-      - { label: 'Content', name: 'content', widget: 'markdown', required: false }
+        - { label: 'Message', name: 'message', widget: 'string', required: false }
+        - { label: 'Type', name: 'type', widget: 'string', required: false }
+        - label: 'Crumbs'
+          name: 'crumbs'
+          widget: "list"
+          required: false
+          fields:
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Url'
+            name: 'url'
+            widget: 'string'
+        - { label: 'Image', name: 'image', widget: 'image', required: false }
+        - { label: 'Content', name: 'content', widget: 'markdown', required: false }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
