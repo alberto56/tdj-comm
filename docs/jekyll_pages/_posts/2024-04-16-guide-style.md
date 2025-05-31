@@ -13,6 +13,8 @@ Le Logo de Terre des jeunes
 
 <a class="custom-btn btn" href="/logo/logo-tdj-blanc-x.svg">Obtenir le logo en blanc</a>
 
+<a class="custom-btn btn" href="/logo/logo-tdj40-vert-x.svg">Obtenir le logo en vert du 40e avec contour blanc</a>
+
 ### Autres formats
 
 {: .table.table-striped }
@@ -48,6 +50,12 @@ Le Logo de Terre des jeunes
 | Vert | Transparent | Affinity Photo | non | n/a | [logo-tdj-vert-x.afdesign.zip](/logo/logo-tdj-vert-x.afdesign.zip) |
 | Vert | Transparent | png | non | 2144px | [logo-tdj-vert-x.png](/logo/logo-tdj-vert-x.png) |
 | Vert | Transparent | svg | non | n/a | [logo-tdj-vert-x.svg](/logo/logo-tdj-vert-x.svg) |
+
+### Le logo du 40e de Terre des jeunes
+
+* [version afdesign avec contour blanc](/logo/logo-tdj40-vert-outline-blanc-x.afdesign)
+* [version afdesign](/logo/logo-tdj40-vert-x.afdesign)
+* [version svg avec contour blanc](/logo/logo-tdj40-vert-x.svg)
 
 ### Le logo utilisé de 1985 à 2025
 
