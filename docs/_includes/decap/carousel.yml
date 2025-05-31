@@ -24,3 +24,12 @@
       name: image
       widget: image
       required: false
+    - label: Position
+      hint:
+        Où se trouve l'action dans cette photo.
+      name: position
+      options:
+        - { label: 'Centre', value: 'center' }
+        - { label: 'Haut', value: 'top' }
+      widget: select
+      required: false
