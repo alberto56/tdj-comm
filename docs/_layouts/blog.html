@@ -32,4 +32,5 @@
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}
 
+{% assign _decap_path = page.path | replace: '.md', '' | replace: 'jekyll_blogposts/_posts/', '/admin/#/collections/blog/entries/' %}
 {% include layouts/page.html %}

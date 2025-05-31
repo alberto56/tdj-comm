@@ -15,5 +15,5 @@ cd thumbor-example
 ./scripts/generate-image-map.sh \
   ./app/my-media \
   beta.terredesjeunes.org/media \
-  x800,604x400,604x200,800x,200x,800x800 \
+  x800,604x400,604x200,800x,200x,800x800,604x \
   ./app/unversioned/mapping-beta-tdj-comm.json

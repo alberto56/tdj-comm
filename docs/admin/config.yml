@@ -16,6 +16,7 @@ backend:
 media_folder: 'docs/media'
 public_folder: "/media"
 collections:
+{% include decap/articles.yml %}
 {% include decap/categories.yml %}
 {% include decap/motsdupresident.yml %}
 {% include decap/pages.yml %}

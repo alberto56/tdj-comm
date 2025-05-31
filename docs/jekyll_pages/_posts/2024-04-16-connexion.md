@@ -7,9 +7,6 @@ Connexion au site de Terre des jeunes
 
 Vous aurez besoin d'un compte gratuit <a href="https://github.com">GitHub</a> et des bonnes permissions. Si vous avez des questions, voir la vidéo ci-dessous, ou contacter Albert par WhatsApp pour obtenir les bonnes permissions. *Veuillez noter qu'il peut prendre jusqu'à cinq minutes pour que vous changements apparaissent sur le site*
 <div class="tdj-button-wrapper">
-  <a class="btn btn-primary" href="http://contenu.terredesjeunes.org/admin/" title="Ajouter du contenu au site pré-2025">Connexion au site pre-2025</a>
-</div>
-<div class="tdj-button-wrapper">
   <a class="btn btn-primary" href="http://beta.terredesjeunes.org/admin/" title="Ajouter du contenu au site 2025">Connexion au site version 2025</a>
 </div>
 <div class="tdj-button-wrapper">
