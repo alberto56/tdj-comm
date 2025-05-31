@@ -108,6 +108,11 @@
         console.warn('Global Mapping data not loaded yet.');
       }
 
+      let objPos = "";
+      if (article.position == 'top') {
+        objPos = "object-position: top;";
+      }
+
       newsBlock.innerHTML = `
           <div class="card shadow-sm mb-4" style="border: none;">
               <div class="card-body text-center">
@@ -115,9 +120,9 @@
                   <h5 class="card-title">${truncatedTitle}</h5>
                   <div style="width: 100%; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
                       <img src="${imgSrc}" alt="${article.title}" class="img-fluid rounded" data-optimized-size="800x"
-                          style="width: 100%; height: 100%; object-fit: cover;">
+                          style="width: 100%; height: 100%; object-fit: cover; ${objPos}">
                   </div>
-                  ${lirePlus}AA${article.position}BB
+                  ${lirePlus}
               </div>
           </div>
       `;

@@ -66,6 +66,7 @@ class Articles extends Infos {
       let article = {
         title: node.title,
         description: node.excerpt,
+        position: node.position ? node.position : '',
       }
 
       if (typeof node.img[0] != 'undefined') {

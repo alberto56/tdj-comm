@@ -8,6 +8,7 @@ categories:
 layout: blog
 img:
   - /media/screenshot_2025-01-19_at_10.10.53.jpg
+position: top
 ---
 Félicitations à SOLIFEDE d'Uvira dans l'est de la R.D. Congo, qui a remporté la première bourse du C.A. de Terre des jeunes pour 2025.
 

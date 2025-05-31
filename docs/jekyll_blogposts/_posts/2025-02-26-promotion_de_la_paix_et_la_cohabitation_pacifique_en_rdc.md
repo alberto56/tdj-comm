@@ -19,6 +19,7 @@ img:
   - /media/rdc_3.jpg
   - /media/rdc_4.jpg
   - /media/rdc5.jpg
+position: top
 ---
 Dans le cadre de la promotion de la paix et de la cohabitation pacifique, la SOLIFEDE-RDC a organisé un match de football pour la paix, rassemblant les enfants de nos clubs ainsi que ceux déplacés en raison de la situation sécuritaire qui affecte particulièrement les enfants de la RDC et du Kivu.
 
