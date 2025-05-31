@@ -2,6 +2,9 @@
 title: Tierra de los Jóvenes en México
 permalink: /mexico/
 country: Mexique
+liens:
+  - document: /media/tdj-mexico.pdf
+    texte: Declaración Oficial de Representación
 country2:
   - Mexique
 page_url: /media/tdj-mexico.pdf
