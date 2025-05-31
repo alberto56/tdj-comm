@@ -14,9 +14,15 @@
         - label: 'Text'
           name: 'texte'
           widget: 'string'
+          required: false
           hint: 'ex: Notre charte'
+        - label: 'Document'
+          name: 'document'
+          required: false
+          widget: 'file'
         - label: 'Lien'
           name: 'lien'
+          required: false
           widget: 'string'
           hint: 'ex: http://example.com/charte'
       - label: "Email"
@@ -35,7 +41,7 @@
 {% for categorie in site.categories.jekyll_pays %}
         - {{ categorie.title }}
 {% endfor %}
-      - { label: 'Page Url', name: 'page_url', widget: 'string', required: false }
+      - { label: 'Page Url (désuet)', name: 'page_url', widget: 'string', required: false }
       - { label: 'Active', name: 'active', widget: 'boolean', default: true }
       - { label: 'Logo Image (25*25)', name: 'logo_image', widget: 'image', required: false, default: '/media/default-antenna-logo.png' }
       - label: "Images"
