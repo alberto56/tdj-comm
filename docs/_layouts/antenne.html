@@ -10,12 +10,17 @@
 
   {% include sections/messages.html %}
 
+  {% capture links %}
+    {% assign _links = page.liens %}
+    {% include parts/list_of_links.html %}
+  {% endcapture %}
+
   {% if page.img[0] %}
     {% assign _image = page.img[0] %}
-    {% assign _content = content %}
+    {% assign _content = content | append: links %}
     {% include sections/image_content.html %}
   {% else %}
-    {% assign _text = content %}
+    {% assign _text = content | append: links %}
     {% include sections/onlytext.html %}
   {% endif %}
 
