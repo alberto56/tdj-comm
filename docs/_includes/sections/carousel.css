@@ -24,3 +24,12 @@
     font-size: 4em;
   }
 }
+
+/**
+ * Quand dans le content manager on dit que l'action de l'image
+ * est en haut, on veut que le focus soit en haut si l'image est
+ * trop haute.
+ */
+.my-carousel .carousel-position-top img {
+  height: auto;
+}

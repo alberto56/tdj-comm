@@ -1,4 +1,4 @@
-<section class="hero-section hero-section-full-height">
+<section class="my-carousel hero-section hero-section-full-height">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-12 p-0">
@@ -8,8 +8,11 @@
             {% assign extra_classes = ' active' %}
             {% assign extra_attr = '' %}
             {% for carousel in sorted %}
+              {% if carousel.position %}
+                {% assign extra_classes = extra_classes | append: ' carousel-position-' | append: carousel.position %}
+              {% endif %}
               {% if carousel.active %}
-                <div class="carousel-item {{carousel.position}}{{ extra_classes }}"{{ extra_attr }}>
+                <div class="carousel-item {{ extra_classes }}"{{ extra_attr }}>
                   <img src="{{ carousel.image }}" class="d-block w-100 carousel-image" alt="..." data-optimized-size="800x800">
                   <div class="my-carousel-title-wrapper">
                     <span class="my-carousel-title">
