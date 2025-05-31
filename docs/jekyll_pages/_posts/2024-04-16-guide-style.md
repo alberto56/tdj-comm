@@ -56,6 +56,7 @@ Le Logo de Terre des jeunes
 * [version afdesign avec contour blanc](/logo/logo-tdj40-vert-outline-blanc-x.afdesign)
 * [version afdesign](/logo/logo-tdj40-vert-x.afdesign)
 * [version svg avec contour blanc](/logo/logo-tdj40-vert-x.svg)
+* [version png 800 x 355 vert avec contour blanc sur fond transparent](/logo/logo-tdj40-vert-outline-blanc-x-800-355.png)
 
 ### Le logo utilisé de 1985 à 2025
 
