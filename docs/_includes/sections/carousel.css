@@ -1,7 +1,9 @@
 .my-carousel-title-wrapper {
   position: absolute;
-  top: 40px;
+  bottom: 40px;
   left: 40px;
+  top: auto;
+  width: 80%;
 }
 
 .my-carousel-title {
@@ -9,7 +11,7 @@
   text-transform: uppercase;
   font-weight: 800;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 
 @media (min-width: 768px) {
@@ -17,11 +19,10 @@
     bottom: 80px;
     left: 80px;
     top: auto;
-    width: 60%;
   }
   .my-carousel-title {
     font-weight: 600;
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
