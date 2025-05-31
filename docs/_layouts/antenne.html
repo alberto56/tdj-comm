@@ -10,8 +10,14 @@
 
   {% include sections/messages.html %}
 
-  {% assign _text = content %}
-  {% include sections/onlytext.html %}
+  {% if page.img[0] %}
+    {% assign _image = page.img[0] %}
+    {% assign _content = content %}
+    {% include sections/image_content.html %}
+  {% else %}
+    {% assign _text = content %}
+    {% include sections/onlytext.html %}
+  {% endif %}
 
   <script>
     const _onlyArticlesOfAntenne = ['{{ page.title }}'];

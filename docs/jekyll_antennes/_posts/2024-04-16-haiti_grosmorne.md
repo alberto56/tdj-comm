@@ -1,5 +1,6 @@
 ---
 title: Gros-Morne (Haïti)
+permalink: /grosmorne/
 country: Haïti
 country2:
   - Haïti

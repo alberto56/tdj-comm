@@ -1,5 +1,6 @@
 ---
 title: SEEPAT
+permalink: /burkina-faso/
 country: Burkina Faso
 email: associationseepat@gmai.com
 tel: +226 70 55 44 04

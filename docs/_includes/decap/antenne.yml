@@ -5,7 +5,20 @@
     slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: false }
+      - { label: 'Lien, par exemple /mexico/', name: 'permalink', widget: 'string', required: false }
       - { label: 'Pays', name: 'country', widget: 'string', required: false }
+      - label: "Liens"
+        name: "liens"
+        widget: "list"
+        fields:
+        - label: 'Text'
+          name: 'texte'
+          widget: 'string'
+          hint: 'ex: Notre charte'
+        - label: 'Lien'
+          name: 'lien'
+          widget: 'string'
+          hint: 'ex: http://example.com/charte'
       - label: "Email"
         name: email
         widget: "string"

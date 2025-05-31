@@ -83,6 +83,7 @@ class Articles extends Infos {
 
       articles.push(article);
     });
+
     callback(articles);
   }
 }

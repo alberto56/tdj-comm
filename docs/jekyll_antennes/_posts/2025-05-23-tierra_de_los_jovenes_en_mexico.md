@@ -1,5 +1,6 @@
 ---
 title: Tierra de los Jóvenes en México
+permalink: /mexico/
 country: Mexique
 country2:
   - Mexique

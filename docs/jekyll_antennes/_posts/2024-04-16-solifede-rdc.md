@@ -1,5 +1,6 @@
 ---
 title: SOLIFEDE
+permalink: /solifede/
 country: R. D. Congo
 country2:
   - R. D. Congo

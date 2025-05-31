@@ -55,6 +55,11 @@
     const countryList = document.getElementById("countryList");
 
     function loadDefaultNews(defaultArticles) {
+      if (!defaultArticles || defaultArticles.length === 0) {
+        $('.my-hide-if-no-articles').hide();
+        return;
+      }
+
       const newsContainer = document.getElementById("newsContainer"); // Assurez-vous que l'élément existe
 
       if (!newsContainer) {

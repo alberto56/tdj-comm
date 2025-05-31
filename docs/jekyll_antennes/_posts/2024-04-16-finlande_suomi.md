@@ -1,5 +1,6 @@
 ---
 title: Metsäelo ry Finlande
+permalink: /suomi/
 country: Finlande
 country2:
   - Finlande

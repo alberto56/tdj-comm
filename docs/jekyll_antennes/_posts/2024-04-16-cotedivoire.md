@@ -1,5 +1,6 @@
 ---
 title: Côte d'Ivoire
+permalink: /cotedivoire/
 country: Côte d'Ivoire
 email: meltdj@live.com
 tel: + 225 0153600001

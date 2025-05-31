@@ -1,5 +1,6 @@
 ---
 title: Terre des jeunes Martinique
+permalink: /martinique/
 country: Martinique
 country2:
   - Martinique

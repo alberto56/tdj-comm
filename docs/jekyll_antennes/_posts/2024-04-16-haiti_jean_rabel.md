@@ -1,5 +1,6 @@
 ---
 title: TDJ/Jean-Rabel, Haïti
+permalink: /jean-rabel/
 country: Haïti
 country2:
   - Haïti

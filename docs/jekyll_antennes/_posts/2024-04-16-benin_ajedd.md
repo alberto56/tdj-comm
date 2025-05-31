@@ -1,6 +1,7 @@
 ---
 title: AJEDD (Association des Jeunes Environnementalistes pour un Développement
   Durable)
+permalink: /benin/
 country: Bénin
 country2:
   - Bénin

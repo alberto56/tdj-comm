@@ -1,5 +1,6 @@
 ---
 title: Gonaïves, Haïti
+permalink: /gonaives/
 country: Haïti
 country2:
   - Haïti
