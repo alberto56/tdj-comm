@@ -5,6 +5,9 @@
 {% if _height == 'short' %}
   {% assign extra_section_classes = ' short-header-section' %}
 {% endif %}
+{% if _bgpos == 'top' %}
+  {% assign extra_section_classes = extra_section_classes | append: ' my-hero-bgpos-top' %}
+{% endif %}
 <section class="news-detail-header-section text-center{{ extra_section_classes }}" style="background-image: url({{ _bg }})">
   <div class="section-overlay"></div>
   <div class="container">

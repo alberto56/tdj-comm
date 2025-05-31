@@ -6,3 +6,7 @@
 .my-h1-hero-supertext {
   font-weight: bold;
 }
+
+.news-detail-header-section.my-hero-bgpos-top {
+  background-position: top center;
+}
