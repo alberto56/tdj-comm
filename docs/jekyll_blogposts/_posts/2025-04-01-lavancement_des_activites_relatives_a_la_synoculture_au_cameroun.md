@@ -16,6 +16,7 @@ img:
   - /media/cameroun_11.jpg
   - /media/cameroun_7.jpg
   - /media/cameroun_13.jpg
+position: top
 ---
 **[L﻿ES POINTS SAILLANTS DES ACTIVITES](https://www.facebook.com/share/v/14yMrgvWTp/?mibextid=wwXIfr)**
 
