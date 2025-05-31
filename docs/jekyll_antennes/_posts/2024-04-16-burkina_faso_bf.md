@@ -9,6 +9,5 @@ country2:
 page_url: https://www.terredesjeunes.org/bf.html
 active: true
 logo_image: /media/tdj-bf-adopte1-logo.jpg
-permalink: /bf/
 ---
 Burkina Faso
