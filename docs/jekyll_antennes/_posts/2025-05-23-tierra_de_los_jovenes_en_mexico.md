@@ -5,6 +5,10 @@ country: Mexique
 liens:
   - document: /media/tdj-mexico.pdf
     texte: Declaración Oficial de Representación
+  - document: /media/mexico-acta_constitutiva.pdf
+    texte: Acta constitutiva
+  - document: /media/mexico-csf_marso2025.pdf
+    texte: Cédula de identificación fiscal
 country2:
   - Mexique
 page_url: /media/tdj-mexico.pdf
