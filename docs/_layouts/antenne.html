@@ -10,10 +10,12 @@
 
   {% include sections/messages.html %}
 
-  {% capture links %}
-    {% assign _links = page.liens %}
-    {% include parts/list_of_links.html %}
-  {% endcapture %}
+  {% if page.liens %}
+    {% capture links %}
+      {% assign _links = page.liens %}
+      {% include parts/list_of_links.html %}
+    {% endcapture %}
+  {% endif %}
 
   {% if page.img[0] %}
     {% assign _image = page.img[0] %}
@@ -33,4 +35,5 @@
   {% endcapture %}
 {% assign inferred_sections = inferred_sections | append: inferred_sections2 %}
 
+{% assign _decap_path = page.path | replace: '.md', '' | replace: 'jekyll_antennes/_posts/', '/admin/#/collections/antenne/entries/' %}
 {% include layouts/page.html %}
