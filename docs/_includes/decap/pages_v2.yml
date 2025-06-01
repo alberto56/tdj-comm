@@ -23,9 +23,10 @@
           - { label: 'Message', value: 'message' }
           - { label: 'Image and content', value: 'image_content' }
           - { label: 'Content and image', value: 'content_image' }
-        - { label: 'Message', name: 'message', widget: 'string', required: false }
-        - { label: 'Type', name: 'type', widget: 'string', required: false }
+        - { label: 'Message', name: 'message', widget: 'string', required: false, hint: 'some text [only:message]' }
+        - { label: 'Type', name: 'type', widget: 'string', required: false, hint: 'type of message, e.g. "info", "warning", "error" [only:message]' }
         - label: 'Crumbs'
+          hint: 'Breadcrumbs [only:breadcrumb]'
           name: 'crumbs'
           widget: "list"
           required: false
@@ -36,6 +37,6 @@
           - label: 'Url'
             name: 'url'
             widget: 'string'
-        - { label: 'Image', name: 'image', widget: 'image', required: false }
-        - { label: 'Content', name: 'content', widget: 'markdown', required: false }
+        - { label: 'Image', name: 'image', widget: 'image', required: false, hint: 'select an image [only:image_content,content_image]' }
+        - { label: 'Content', name: 'content', widget: 'markdown', required: false, hint: 'some text [only:image_content,content_image]' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
