@@ -15,27 +15,68 @@
         widget: "list"
         required: false
         fields:
-        - label: 'Structure'
-          name: 'structure'
-          widget: 'select'
-          options:
-          - { label: 'Breadcrumb', value: 'breadcrumb' }
-          - { label: 'Message', value: 'message' }
-          - { label: 'Image and content', value: 'image_content' }
-          - { label: 'Content and image', value: 'content_image' }
-        - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-      - { label: 'Message', name: 'message', widget: 'markdown', required: false }
-      - { label: 'Type', name: 'type', widget: 'markdown', required: false }
-      - label: 'Crumbs'
-        name: 'crumbs'
-        widget: "list"
-        required: false
-        fields:
-        - label: 'Title'
-          name: 'title'
-          widget: 'string'
-        - label: 'Url'
-          name: 'url'
-          widget: 'string'
-      - { label: 'Image', name: 'image', widget: 'markdown', required: false }
-      - { label: 'Content', name: 'content', widget: 'markdown', required: false }
+          - label: "Sections (expérimental)"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Breadcrumb"
+                name: "breadcrumb"
+                widget: "object"
+                fields:
+                  - { label: 'Structure', name: 'structure', widget: 'hidden', default: 'breadcrumb' }
+                  - label: 'Crumbs'
+                    name: 'crumbs'
+                    widget: 'list'
+                    fields:
+                      - { label: 'Title', name: 'title', widget: 'string' }
+                      - { label: 'URL', name: 'url', widget: 'string' }
+
+              - label: "Message"
+                name: "message"
+                widget: "object"
+                fields:
+                  - { label: 'Structure', name: 'structure', widget: 'hidden', default: 'message' }
+                  - { label: 'Message', name: 'message', widget: 'markdown' }
+                  - { label: 'Type', name: 'type', widget: 'markdown', required: false }
+
+              - label: "Image and Content"
+                name: "image_content"
+                widget: "object"
+                fields:
+                  - { label: 'Structure', name: 'structure', widget: 'hidden', default: 'image_content' }
+                  - { label: 'Image', name: 'image', widget: 'image' }
+                  - { label: 'Content', name: 'content', widget: 'markdown' }
+
+              - label: "Content and Image"
+                name: "content_image"
+                widget: "object"
+                fields:
+                  - { label: 'Structure', name: 'structure', widget: 'hidden', default: 'content_image' }
+                  - { label: 'Content', name: 'content', widget: 'markdown' }
+                  - { label: 'Image', name: 'image', widget: 'image' }
+
+      #   - label: 'Structure'
+      #     name: 'structure'
+      #     widget: 'select'
+      #     options:
+      #     - { label: 'Breadcrumb', value: 'breadcrumb' }
+      #     - { label: 'Message', value: 'message' }
+      #     - { label: 'Image and content', value: 'image_content' }
+      #     - { label: 'Content and image', value: 'content_image' }
+      #   - { label: 'Content', name: 'body', widget: 'markdown', required: false, hint: "select an image [only:message]"}
+      # - { label: 'Message', name: 'message', widget: 'markdown', required: false, hint: "select an image [only:message]"}
+      # - { label: 'Type', name: 'type', widget: 'markdown', required: false }
+      # - label: 'Crumbs'
+      #   name: 'crumbs'
+      #   widget: "list"
+      #   required: false
+      #   hint: "select an image [only:breadcrumb]"
+      #   fields:
+      #   - label: 'Title'
+      #     name: 'title'
+      #     widget: 'string'
+      #   - label: 'Url'
+      #     name: 'url'
+      #     widget: 'string'
+      # - { label: 'Image', name: 'image', widget: 'markdown', required: false, hint: "select an image [only:image_content, content_image]"}
+      # - { label: 'Content', name: 'content', widget: 'markdown', required: false, hint: "some text [only:image_content, content_image]"}
