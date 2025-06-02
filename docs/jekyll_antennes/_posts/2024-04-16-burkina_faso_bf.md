@@ -8,7 +8,7 @@ country2:
   - Burkina Faso
 page_url: https://beta.terredesjeunes.org/
 active: true
-logo_image: /media/tdj-bf-adopte1-logo.jpg
+logo_image: /media/burkina_seepat_logo.png
 img:
   - /media/sepat_1.jpg
   - /media/sepat_2.jpg
