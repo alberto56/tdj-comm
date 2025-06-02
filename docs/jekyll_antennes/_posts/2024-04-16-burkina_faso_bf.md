@@ -6,7 +6,7 @@ email: associationseepat@gmai.com
 tel: +226 70 55 44 04
 country2:
   - Burkina Faso
-page_url: https://www.terredesjeunes.org/seepat/
+page_url: https://www.terredesjeunes.org/seepat.html
 active: true
 logo_image: /media/burkina_seepat_logo.png
 img:
