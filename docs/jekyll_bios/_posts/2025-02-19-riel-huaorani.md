@@ -1,7 +1,7 @@
 ---
 title: Riel HUAORANI
 fonction: Président-fondateur de Terre des jeunes transnational
-image: /media/riel.jpeg
+image: /media/riel_presi.jpg
 reseaux:
   - type: facebook
     lien: https://web.facebook.com/profile.php/?id=100011966714118&_rdc=1&_rdr#
