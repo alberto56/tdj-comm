@@ -13,7 +13,7 @@ tags:
   - journéedel'environnement
 img:
   - /media/20170725075637_020.jpg
-position: top
+position: center
 ---
 ### **JOURNEE MONDIALE DE L’ENVIRONNEMENT**
 
