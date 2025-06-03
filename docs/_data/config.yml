@@ -60,6 +60,8 @@ menu_bas:
     url: "/statuts/"
   - title: "Contactez-nous"
     url: "/contact/"
+  - title: "Statut technique"
+    url: "/admin/status/"
 social:
   - url: https://www.linkedin.com/company/terre-des-jeunes
     icon: linkedin

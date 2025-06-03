@@ -23,6 +23,7 @@
           - { label: 'Message', value: 'message' }
           - { label: 'Image and content', value: 'image_content' }
           - { label: 'Content and image', value: 'content_image' }
+          - { label: 'Status', value: 'status' }
         - { label: 'Message', name: 'message', widget: 'string', required: false, hint: 'some text [only:message]' }
         - { label: 'Type', name: 'type', widget: 'string', required: false, hint: 'type of message, e.g. "info", "warning", "error" [only:message]' }
         - label: 'Crumbs'

@@ -40,6 +40,15 @@
     }
   {% endfor %}
 {% endcapture %}
+{% capture pays %}
+  {% for obj in site.categories.jekyll_pays %}
+    {% if forloop.first %}{% else %},{% endif %}
+    {
+      "url": {{ obj.url | jsonify }},
+      "title": {{ obj.title | jsonify }}
+    }
+  {% endfor %}
+{% endcapture %}
 {% capture bios %}
   {% for obj in site.categories.jekyll_bios %}
     {% if forloop.first %}{% else %},{% endif %}
@@ -70,5 +79,6 @@
   "activites": [{{ activites }}],
   "actualites": [{{ actualites }}],
   "bios": [{{ bios }}],
+  "pays": [{{ pays }}],
   "mots": [{{ mots }}]
 }
