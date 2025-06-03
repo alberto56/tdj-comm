@@ -17,7 +17,7 @@
         default: 'pays'
       - label: 'Chemin'
         hint:
-          par exemple "/haiti/" ou "/rdc/".
+          par exemple "/regions/haiti/" ou "/regions/rdc/".
         name: 'permalink'
         widget: 'string'
         required: false
