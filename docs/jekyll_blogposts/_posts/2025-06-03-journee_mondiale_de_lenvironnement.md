@@ -12,8 +12,8 @@ layout: blog
 tags:
   - journéedel'environnement
 img:
-  - /media/20170725075637_020.jpg
-position: center
+  - /media/cherissons_notre_environnement.jpg
+position: top
 ---
 ### **JOURNEE MONDIALE DE L’ENVIRONNEMENT**
 
