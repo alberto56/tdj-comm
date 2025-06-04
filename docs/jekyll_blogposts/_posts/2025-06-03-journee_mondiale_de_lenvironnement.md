@@ -15,9 +15,9 @@ img:
   - /media/cherissons_notre_environnement.jpg
 position: top
 ---
-### **JOURNEE MONDIALE DE L’ENVIRONNEMENT**
+**JOURNEE MONDIALE DE L’ENVIRONNEMENT**
 
-### 
+
 ***« Mettre fin à la pollution plastique mondiale »***
 
 
@@ -29,7 +29,7 @@ Elle a pour objectif de sensibiliser le public aux enjeux de protection de l’e
 \
 Le 5 juin 2025, à l’occasion de la Journée mondiale de l’environnement, le monde entier s’unit pour dire non à la pollution plastique. Placée sous le thème « Mettre fin à la pollution plastique mondiale », cette édition met en avant des solutions concrètes, des engagements déterminants et un appel à l’action collective afin de protéger notre santé, nos écosystèmes et notre avenir commun.
 
-#### 
+
 **Quelles sont les effets de la pollution plastique sur l’environnement.**
 
 
