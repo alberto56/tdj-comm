@@ -5,6 +5,8 @@ country: Finlande
 liens:
   - lien: https://www.facebook.com/groups/320350169300515/
     texte: Groupe Facebook de Metsäelo ry
+  - lien: https://[archives_site]/suomi.html
+    texte: "Archives: page web avant 2025"
 country2:
   - Finlande
 page_url: https://www.terredesjeunes.org/suomi.html
