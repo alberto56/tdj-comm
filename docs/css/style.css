@@ -1768,7 +1768,7 @@ select.form-select option[data-flag="de"]:before {
   color: #f80814;
 }
 
-.card {
+.tdj-en-chiffres .card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -1814,11 +1814,11 @@ width: 24px;
 height: 24px;
 }
 
-.card {
+.tdj-en-chiffres .card {
 transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+.tdj-en-chiffres .card:hover {
 transform: scale(1.05);
 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -2110,17 +2110,17 @@ footer {
 
 /* Media Queries pour différents écrans */
 @media (max-width: 1200px) {
-  .card {
+  .tdj-en-chiffres .card {
       width: 180px; /* Ajuste la largeur sur les écrans moyens */
   }
 }
 @media (max-width: 900px) {
-  .card {
+  .tdj-en-chiffres .card {
       width: 160px; /* Ajuste la largeur sur les écrans plus petits */
   }
 }
 @media (max-width: 600px) {
-  .card {
+  .tdj-en-chiffres .card {
       width: 90%; /* Largeur 90% sur mobile */
   }
   h1 {

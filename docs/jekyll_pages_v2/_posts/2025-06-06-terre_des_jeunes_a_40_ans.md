@@ -1,6 +1,0 @@
----
-title: Terre des jeunes a 40 ans !
-permalink: /40e/
-sections:
-  - structure: image_content
----
