@@ -23,8 +23,12 @@
         widget: "image"
       - label: 'Vidéo'
         required: false
-        name: "Vidéo"
+        name: "video"
         widget: "file"
+      - label: 'Une image de la vidéo'
+        required: false
+        name: "video_poster"
+        widget: "img"
       - label: 'Contenu'
         name: 'body'
         widget: 'markdown'
