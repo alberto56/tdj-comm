@@ -1,0 +1,31 @@
+  - name: 'cartes_40e'
+    create: true
+    label: 'Cartes du 40e'
+    folder: 'docs/jekyll_cartes40e/_posts/'
+    slug: '{{slug}}'
+    fields:
+      - label: 'Titre'
+        name: 'title'
+        widget: 'string'
+        hint: "Par exemple Un mot de la Présidente de TDJ Sénégal"
+      - label: "Antenne"
+        required: false
+        name: antenne
+        widget: "select"
+        multiple: true
+        options:
+{% for antenne in site.categories.jekyll_antennes %}
+        - {{ antenne.title }}
+{% endfor %}
+      - label: 'Image'
+        required: false
+        name: "img"
+        widget: "image"
+      - label: 'Vidéo'
+        required: false
+        name: "Vidéo"
+        widget: "file"
+      - label: 'Contenu'
+        name: 'body'
+        widget: 'markdown'
+        required: false
