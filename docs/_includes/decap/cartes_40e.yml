@@ -28,7 +28,7 @@
       - label: 'Une image de la vidéo'
         required: false
         name: "video_poster"
-        widget: "img"
+        widget: "image"
       - label: 'Contenu'
         name: 'body'
         widget: 'markdown'

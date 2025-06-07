@@ -1,0 +1,24 @@
+{% for obj in site.categories.jekyll_cartes40e %}
+
+{% assign modalid = 'tdjcartemodal' | append: forloop.index %}
+
+{% assign _title = obj.title %}
+
+{% if obj.img %}
+  {% assign _modalid = modalid %}
+  {% assign _img = obj.img %}
+  {% include sections/collage/image.html %}
+{% endif %}
+
+{% if obj.video %}
+  {% assign _video = obj.video %}
+  {% assign _video_poster = obj.video_poster %}
+  {% include sections/collage/video.html %}
+{% endif %}
+
+{% if obj.content and obj.content != "" %}
+  {% assign _content = obj.content %}
+  {% include sections/collage/text.html %}
+{% endif %}
+
+{% endfor %}
