@@ -20,11 +20,14 @@
       - label: 'Image'
         required: false
         name: "img"
-        widget: "image"
+        widget: "list"
+        field: {label: Image, name: img, widget: image}
       - label: 'Vidéo'
         required: false
+        hint: "Pour une video /media/video.mp4, assurez-vous qu'il y a aussi une fichier media/video.mp4.jpg avec une image de la vidéo"
         name: "video"
-        widget: "file"
+        widget: "list"
+        field: {label: Vieo, name: video, widget: file}
       - label: 'Une image de la vidéo'
         required: false
         name: "video_poster"

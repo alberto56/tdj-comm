@@ -5,15 +5,18 @@
 {% assign _title = obj.title %}
 
 {% if obj.img %}
-  {% assign _modalid = modalid %}
-  {% assign _img = obj.img %}
-  {% include sections/collage/image.html %}
+  {% for img in obj.img %}
+    {% assign _modalid = modalid | append: '-' | append: forloop.index %}
+    {% assign _img = img %}
+    {% include sections/collage/image.html %}
+  {% endfor %}
 {% endif %}
 
 {% if obj.video %}
-  {% assign _video = obj.video %}
-  {% assign _video_poster = obj.video_poster %}
-  {% include sections/collage/video.html %}
+  {% for video in obj.video %}
+    {% assign _video = video %}
+    {% include sections/collage/video.html %}
+  {% endfor %}
 {% endif %}
 
 {% if obj.content and obj.content != "" %}

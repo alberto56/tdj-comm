@@ -1,6 +1,10 @@
 ---
-title: TDJ Jean-Rabel, Haïti, célèbre le 40e de TDJ
+title: Activités du 40e à Gros-Morne, Haïti
 antenne:
-  - TDJ/Jean-Rabel, Haïti
-img: /media/40e-jean-rabel.jpeg
+  - Gros-Morne (Haïti)
+img:
+  - /media/40-grosmorne-1.jpeg
+  - /media/40-grosmorne-3.jpeg
+video:
+  - /media/40-grosmorne-4.mp4
 ---
