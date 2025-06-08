@@ -1,0 +1,14 @@
+---
+---
+[
+  {% for obj in site.categories.jekyll_cartes40e %}
+  {% if forloop.first %}{% else %},{% endif %}
+  {
+    "title": {{ obj.title | jsonify }},
+    "antenne": {{ obj.antenne | jsonify }},
+    "img": {{ obj.img | jsonify }},
+    "video": {{ obj.video | jsonify }},
+    "content": {{ obj.content | jsonify }}
+  }
+  {% endfor %}
+]
