@@ -13,8 +13,8 @@
           {% if item.section == section %}
             <div class="col-lg-6 col-12">
               <div class="news-block">
-                <img src="{{ item.image | default '/archives/avant-2025/sites/terredesjeunes.org/files/imagecache/tdj_image_ressource/imagefield_default_images/Screen%20shot%202011-04-21%20at%2012.05.41%20PM.png '}}">
-                {{ item.title }}
+                <div><img src="{{ item.img }}"></div>
+                <h3>{{ item.title }}</h3>
                 <ul>
                 {% for link in item.liens %}
                   <li>

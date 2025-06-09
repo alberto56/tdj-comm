@@ -30,5 +30,5 @@
           required: false
           widget: 'string'
           hint: 'ex: http://example.com/charte'
-      - { label: 'Image', name: 'img', widget: 'image', required: false, default: '/archives/avant-2025/sites/all/modules/contrib/filefield/icons/application-pdf.png' }
+      - { label: 'Image', name: 'img', widget: 'image', required: false, default: '/archives/avant-2025/sites/terredesjeunes.org/files/imagecache/tdj_image_ressource/imagefield_default_images/Screen%20shot%202011-04-21%20at%2012.05.41%20PM.png' }
       - { label: 'Contenu', name: 'body', widget: 'markdown', required: false }
