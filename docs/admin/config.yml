@@ -32,3 +32,4 @@ collections:
 {% include decap/redirections.yml %}
 {% include decap/pages_v2.yml %}
 {% include decap/cartes_40e.yml %}
+{% include decap/formations.yml %}

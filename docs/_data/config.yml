@@ -3,6 +3,21 @@ jekyll: true
 archives: www.terredesjeunes.org
 debug: true
 default_header_bg_img: /images/news/medium-shot-volunteers-with-clothing-donations.jpg
+categories_ressources:
+  # Proviennent tels quels du site pré-2025
+  - 'TEXTES GÉNÉRAUX SUR LA PROBLÉMATIQUE ENVIRONNEMENTALE : DÉVELOPPEMENT DURABLE et SURVOL DE LA CRISE ÉCOLOGIQUE'
+  - 'AGRICULTURE URBAINE'
+  - 'AGRICULTURE'
+  - "L'ARBRE ET LE REBOISEMENT"
+  - "QUALITÉ DE L'AIR ET LES EFFETS DE LA COMBUSTION DU PLASTIQUE"
+  - 'GESTION DES DÉCHETS'
+  - 'GESTION DES SOLS'
+  - 'CONSTRUCTION ÉCOLOGIQUE (des idées pour construire différement)'
+  - 'CHANGEMENTS CLIMATIQUES'
+  - 'BIODIVERSITÉ'
+  - 'ACTUALITÉ SCIENTIFIQUE'
+  - "RESSOURCES PÉDAGOGIQUES POUR ENSEIGNANTS ET ÉLÈVES"
+  - "AUTRES RESSOURCES"
 default_mot_du_president_crumbs:
   - title: "Accueil"
     url: "/"
@@ -62,6 +77,8 @@ menu_bas:
     url: "/contact/"
   - title: "Statut technique"
     url: "/admin/status/"
+  - title: "Ressources pour les formations"
+    url: "/formations/ressources/"
 social:
   - url: https://www.linkedin.com/company/terre-des-jeunes
     icon: linkedin

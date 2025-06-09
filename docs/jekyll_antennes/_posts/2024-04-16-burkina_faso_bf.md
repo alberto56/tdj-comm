@@ -4,6 +4,9 @@ permalink: /burkina-faso/
 country: Burkina Faso
 email: associationseepat@gmai.com
 tel: +226 70 55 44 04
+liens:
+  - lien: /archives/avant-2025/bf.html
+    texte: "Archives: page web avant 2025 (TDJ BF)"
 country2:
   - Burkina Faso
 page_url: https://www.terredesjeunes.org/seepat.html
