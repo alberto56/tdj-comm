@@ -1,0 +1,24 @@
+{% assign template="sections/formations.html" %}
+{% include structure/debug.html %}
+<section>
+  <div class="container">
+    {% for section in site.data.config.formations_sections %}
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-title">{{ section }}</h2>
+        </div>
+      </div>
+      <div class="row">
+        {% for item in site.categories.jekyll_formations %}
+          <div class="col-lg-6 col-12">
+            <div class="news-block">
+              {{ item.title }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% assign template="sections/formations.html" %}
+{% include structure/enddebug.html %}

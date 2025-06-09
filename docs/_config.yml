@@ -23,6 +23,11 @@ defaults:
       layout: "page2"
   -
     scope:
+      path: "jekyll_pages_v3"
+    values:
+      layout: "page3"
+  -
+    scope:
       path: "jekyll_redirections"
     values:
       layout: "redirect"

@@ -28,10 +28,6 @@
         name: "video"
         widget: "list"
         field: {label: Vieo, name: video, widget: file}
-      - label: 'Une image de la vidéo'
-        required: false
-        name: "video_poster"
-        widget: "image"
       - label: 'Contenu'
         name: 'body'
         widget: 'markdown'

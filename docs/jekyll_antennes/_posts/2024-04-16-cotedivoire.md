@@ -4,6 +4,9 @@ permalink: /cotedivoire/
 country: Côte d'Ivoire
 email: meltdj@live.com
 tel: + 225 0153600001
+liens:
+  - lien: /archives/avant-2025/cotedivoire.html
+    texte: "Archives: page web avant 2025"
 country2:
   - Côte d'Ivoire
 page_url: https://www.terredesjeunes.org/cotedivoire.html
