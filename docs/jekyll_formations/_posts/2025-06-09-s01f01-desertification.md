@@ -5,5 +5,5 @@ section: "TEXTES GÉNÉRAUX SUR LA PROBLÉMATIQUE ENVIRONNEMENTALE : DÉVELOPPEM
 liens:
   - texte: Entrée wikipédia
     lien: http://fr.wikipedia.org/wiki/Desertification
-img: /media/default-antenna-logo.png
+img: /archives/avant-2025/sites/terredesjeunes.org/files/imagecache/tdj_image_ressource/Screen%20shot%202011-04-21%20at%2012.50.56%20PM.png
 ---

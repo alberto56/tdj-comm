@@ -9,8 +9,8 @@
         name: section
         widget: "select"
         options:
-{% for section in site.data.config.formations_sections %}
-        - {{ section }}
+{% for section in site.data.config.categories_ressources %}
+        - "{{ section }}"
 {% endfor %}
       - label: "Liens"
         name: "liens"
@@ -30,5 +30,5 @@
           required: false
           widget: 'string'
           hint: 'ex: http://example.com/charte'
-      - { label: 'Image', name: 'img', widget: 'image', required: false, default: '/media/default-antenna-logo.png' }
+      - { label: 'Image', name: 'img', widget: 'image', required: false, default: '/archives/avant-2025/sites/all/modules/contrib/filefield/icons/application-pdf.png' }
       - { label: 'Contenu', name: 'body', widget: 'markdown', required: false }
