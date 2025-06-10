@@ -79,6 +79,10 @@ menu_bas:
     url: "/admin/status/"
   - title: "Ressources pour les formations"
     url: "/formations/ressources/"
+  - title: "Lancer une antenne"
+    url: "/lancer-une-antenne.html"
+  - title: "Archives"
+    url: "/archives/"
 social:
   - url: https://www.linkedin.com/company/terre-des-jeunes
     icon: linkedin
