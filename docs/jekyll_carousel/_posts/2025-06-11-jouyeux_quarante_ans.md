@@ -1,5 +1,5 @@
 ---
-title: JOUYEUX QUARANTE ANS
+title: JOYEUX QUARANTE ANS
 active: true
 order: A
 image: /media/presentation1.gif
