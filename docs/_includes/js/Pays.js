@@ -25,7 +25,7 @@ class Pays extends Infos {
       case 0:
         return;
       case 1:
-        url = activeAntennes[0].page_url;
+        url = activeAntennes[0].url;
         break;
       default:
         break;

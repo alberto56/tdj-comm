@@ -1,14 +1,30 @@
 ---
 ---
 [
-  {% for obj in site.categories.jekyll_cartes40e %}
+  {% assign first_card_has_been_shown = 0 %}
+  {% for pays in site.categories.jekyll_pays %}
   {% if forloop.first %}{% else %},{% endif %}
   {
-    "title": {{ obj.title | jsonify }},
-    "antenne": {{ obj.antenne | jsonify }},
-    "img": {{ obj.img | jsonify }},
-    "video": {{ obj.video | jsonify }},
-    "content": {{ obj.content | jsonify }}
+    "title": {{ pays.title | jsonify }},
+    "flag": {{ pays.drapeau | jsonify }},
+    "cards": [
+      {% for antenne in site.categories.jekyll_antennes %}
+      {% for card in site.categories.jekyll_cartes40e %}
+      {% if antenne.pays[0] == pays.title %}
+      {% if card.antenne[0] == antenne.title %}
+      {% if first_card_has_been_shown %},{% else %}{% endif %}
+      {% assign first_card_has_been_shown = 1 %}
+      {
+        "title": {{ card.title | jsonify }},
+        "img": {{ card.img | jsonify }},
+        "video": {{ card.video | jsonify }},
+        "content": {{ card.content | jsonify }}
+      }
+      {% endif %}
+      {% endif %}
+      {% endfo4 %}
+      {% endfor %}
+    ]
   }
   {% endfor %}
 ]

@@ -95,4 +95,8 @@ class MyCollage3 {
   }
 }
 
-MyCollage3.instance().init();
+loadJSON('/api/v2/cards.json', function(data) {
+  MyCollage3.instance().init();
+}, function(err) {
+  console.error('Error loading cards:', err);
+});
