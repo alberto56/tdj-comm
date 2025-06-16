@@ -1,3 +1,0 @@
----
----
-{{ site.categories.jekyll_bios | jsonify }}

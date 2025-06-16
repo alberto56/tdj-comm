@@ -1,3 +1,0 @@
----
-title: Developpement Durable
----
