@@ -3,7 +3,7 @@ backend:
   repo: alberto56/tdj-comm
   branch: main
   base_url: https://suresh-issue-82.dcycleproject.org
-  auth_endpoint: /auth/github/repo/6946e4087c6e2b059bec6740
+  auth_endpoint: /auth/github/repo/694f516318f56cc358266561
 media_folder: static/uploads
 public_folder: /uploads
 collections:
